@@ -420,8 +420,20 @@ class Analyzer:
                 continue
             w = int.from_bytes(img.read(a, 2), 'big')
             if w == 0x1781 or (w >> 8) == 0x0F:
-                out.append(a)
-        return out
+                # walk back over the rest of a Softune prologue:
+                # ST ri,@-r15 / STM0 / STM1 / ST RP,@-r15
+                b = a
+                for _ in range(12):
+                    p = b - 2
+                    if p < s or p in self.insns:
+                        break
+                    pw = int.from_bytes(img.read(p, 2), 'big')
+                    if (pw & 0xFFF0) == 0x1700 or (pw >> 8) in (0x8E, 0x8F) or pw == 0x1781:
+                        b = p
+                    else:
+                        break
+                out.append(b)
+        return sorted(set(out))
 
     def table_candidates(self):
         """Runs of >=3 aligned big-endian words pointing into code, where at least
