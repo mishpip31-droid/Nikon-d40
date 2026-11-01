@@ -48,7 +48,7 @@ entry,file_off,name,source,insns,bytes,blocks,returns,bad_at,callers,callees,os_
 0xc0e2c,0xe2c,,prologue,21,46,3,1,,0,0,,0,1,0,,medium
 0xc0e4e,0xe4e,,call,23,50,6,1,,14,0,,0,0,0,,medium
 0xc0e7e,0xe7e,,tailjmp,3,6,2,0,,1,0,,0,0,1,,high
-0xc0e84,0xe84,,prologue,73,156,14,1,,0,10,40:-21*1 40:-38*1 40:-40*1,0,0,0,,medium
+0xc0e82,0xe82,,prologue,74,158,14,1,,0,10,40:-21*1 40:-38*1 40:-40*1,0,0,0,,medium
 0xc0f1a,0xf1a,,call,260,620,22,1,,1,22,40:-23*3 40:-46*7 40:-47*4 40:-48*3,0,0,0,,medium
 0xc1102,0x1102,,call,11,28,4,1,,8,0,,0,0,0,,medium
 0xc111e,0x111e,,call,19,48,4,1,,1,2,,0,0,0,,medium
@@ -142,8 +142,7 @@ entry,file_off,name,source,insns,bytes,blocks,returns,bad_at,callers,callees,os_
 0xc2d10,0x2d10,,call,11,26,5,1,,4,0,,0,0,0,,medium
 0xc2d2a,0x2d2a,,call,13,32,5,1,,5,0,,0,0,0,,medium
 0xc2d4a,0x2d4a,,call,14,34,5,1,,1,0,,0,0,0,,medium
-0xc2d6c,0x2d6c,,call,1,2,1,0,,1,0,,0,0,0,,medium
-0xc2d6e,0x2d6e,,prologue,31,78,1,1,,0,3,,0,0,0,,medium
+0xc2d6c,0x2d6c,,call+prologue,32,80,1,1,,1,3,,0,0,0,,medium
 0xc2dbc,0x2dbc,,call,9,26,1,1,,1,0,,0,0,0,,high
 0xc2dd6,0x2dd6,,call,15,36,4,1,,1,0,,0,0,0,,high
 0xc2df8,0x2df8,,call,103,214,30,1,,1,10,,0,0,0,,high
@@ -197,10 +196,8 @@ entry,file_off,name,source,insns,bytes,blocks,returns,bad_at,callers,callees,os_
 0xc3c08,0x3c08,,call+prologue,31,76,1,1,,1,1,40:-23*1 40:-46*1 40:-47*1,0,0,0,,medium
 0xc3c54,0x3c54,,call,16,38,1,1,,1,0,40:-23*1,0,0,0,,medium
 0xc3c7a,0x3c7a,,call+prologue,55,132,10,1,,1,1,40:-23*2,0,0,0,,medium
-0xc3ce2,0x3ce2,,call,1,2,1,0,,4,0,,0,0,0,,medium
-0xc3ce4,0x3ce4,,prologue,115,278,17,1,,0,2,40:-23*2,0,0,0,,medium
-0xc3da6,0x3da6,,call,1,2,1,0,,1,0,,0,0,0,,medium
-0xc3da8,0x3da8,,prologue,115,270,16,1,,0,1,40:-23*2 40:-46*1 40:-47*2,0,0,0,,medium
+0xc3ce2,0x3ce2,,call+prologue,116,280,17,1,,4,2,40:-23*2,0,0,0,,medium
+0xc3da6,0x3da6,,call+prologue,116,272,16,1,,1,1,40:-23*2 40:-46*1 40:-47*2,0,0,0,,medium
 0xc3e74,0x3e74,,call+prologue,25,58,1,1,,2,0,40:-23*1 40:-46*1 40:-47*1,0,0,0,,medium
 0xc3eae,0x3eae,,call+prologue,25,60,1,1,,1,0,40:-23*1 40:-46*1 40:-47*1,0,0,0,,medium
 0xc3eea,0x3eea,,call+prologue,28,62,4,1,,1,0,40:-23*1 40:-46*1 40:-47*1,0,0,0,,medium
@@ -221,25 +218,25 @@ entry,file_off,name,source,insns,bytes,blocks,returns,bad_at,callers,callees,os_
 0xc471c,0x471c,,call,157,338,29,1,,1,1,,0,0,0,,medium
 0xc484c,0x484c,,tailjmp,2,4,1,1,,1,0,,0,0,0,,medium
 0xc4850,0x4850,,call,28,62,8,1,,1,0,,0,0,0,,medium
-0xc4890,0x4890,,prologue,39,80,1,1,,0,3,,0,0,0,,medium
+0xc488e,0x488e,,prologue,40,82,1,1,,0,3,,0,0,0,,medium
 0xc48e0,0x48e0,,call,280,726,63,1,,1,1,,0,0,0,,medium
 0xc4b7e,0x4b7e,,tailjmp,27,54,6,1,,1,0,,0,0,0,,medium
 0xc4bb4,0x4bb4,,call,131,306,31,1,,8,0,,0,0,0,,medium
-0xc4c92,0x4c92,,prologue,39,80,1,1,,0,3,,0,0,0,,medium
+0xc4c90,0x4c90,,prologue,40,82,1,1,,0,3,,0,0,0,,medium
 0xc4ce2,0x4ce2,,call,92,216,19,1,,1,0,,0,0,0,,medium
-0xc4dba,0x4dba,,prologue,39,80,1,1,,0,3,,0,0,0,,medium
+0xc4db8,0x4db8,,prologue,40,82,1,1,,0,3,,0,0,0,,medium
 0xc4e0a,0x4e0a,,call,183,470,43,1,,1,1,,0,0,0,,medium
 0xc4fa8,0x4fa8,,tailjmp,27,54,6,1,,1,0,,0,0,0,,medium
-0xc4fe0,0x4fe0,,prologue,40,84,1,1,,0,3,,0,0,0,,medium
+0xc4fde,0x4fde,,prologue,41,86,1,1,,0,3,,0,0,0,,medium
 0xc5034,0x5034,,call,144,360,33,1,,1,0,,0,0,0,,medium
-0xc519c,0x519c,,prologue,40,84,1,1,,0,3,,0,0,0,,medium
+0xc519a,0x519a,,prologue,41,86,1,1,,0,3,,0,0,0,,medium
 0xc51f0,0x51f0,,call,103,250,23,1,,1,0,,0,0,0,,medium
-0xc52ea,0x52ea,,prologue,40,84,1,1,,0,3,,0,0,0,,medium
+0xc52e8,0x52e8,,prologue,41,86,1,1,,0,3,,0,0,0,,medium
 0xc533e,0x533e,,call,173,426,39,1,,1,1,,0,0,0,,medium
 0xc54b0,0x54b0,,tailjmp,27,54,6,1,,1,0,,0,0,0,,medium
-0xc54e8,0x54e8,,prologue,42,92,1,1,,0,3,,0,0,0,,medium
+0xc54e6,0x54e6,,prologue,43,94,1,1,,0,3,,0,0,0,,medium
 0xc5544,0x5544,,call,92,212,19,1,,1,0,,0,0,0,,medium
-0xc5618,0x5618,,prologue,42,92,1,1,,0,3,,0,0,0,,medium
+0xc5616,0x5616,,prologue,43,94,1,1,,0,3,,0,0,0,,medium
 0xc5674,0x5674,,call,238,612,55,1,,1,1,,0,0,0,,medium
 0xc58a0,0x58a0,,tailjmp,27,54,6,1,,1,0,,0,0,0,,medium
 0xc58d6,0x58d6,,prologue,166,344,27,1,,0,1,,0,0,0,,medium
@@ -275,7 +272,7 @@ entry,file_off,name,source,insns,bytes,blocks,returns,bad_at,callers,callees,os_
 0xc674c,0x674c,,constptr,40,98,4,1,,0,0,40:-48*1,0,0,0,,medium
 0xc67ae,0x67ae,,constptr,21,50,3,1,,0,0,40:-48*1,0,0,0,,medium
 0xc67de,0x67de,,call,73,164,5,1,,1,0,40:-106*1 40:-46*1 40:-48*1 40:-67*3 40:-68*1,0,0,0,,medium
-0xc6884,0x6884,,prologue,72,154,17,1,,0,8,,0,0,0,,medium
+0xc6882,0x6882,,prologue,73,156,17,1,,0,8,,0,0,0,,medium
 0xc68e4,0x68e4,,call,203,444,36,1,,1,2,40:-23*2,0,0,0,,medium
 0xc6a82,0x6a82,,tailjmp,3,6,1,1,,1,0,,0,0,0,,medium
 0xc6a88,0x6a88,,call,187,406,32,1,,1,4,40:-23*2,0,0,0,,medium
@@ -297,7 +294,7 @@ entry,file_off,name,source,insns,bytes,blocks,returns,bad_at,callers,callees,os_
 0xc7206,0x7206,,call,388,840,90,1,,1,4,40:-23*1,0,0,0,,high
 0xc748e,0x748e,,tailjmp,1,2,1,0,,1,0,,0,0,0,,high
 0xc7490,0x7490,,tailjmp,50,114,12,1,,1,0,,0,0,0,,high
-0xc74f6,0x74f6,,prologue,629,1338,125,1,,0,1,,0,0,0,,medium
+0xc74f4,0x74f4,,prologue,630,1340,125,1,,0,1,,0,0,0,,medium
 0xc76d0,0x76d0,,tailjmp,387,800,71,1,,1,0,,0,0,0,,medium
 0xc791c,0x791c,,call,204,448,62,1,,1,0,,0,0,0,,high
 0xc7ada,0x7ada,,call,258,598,69,1,,12,1,,0,0,0,@@@@@@@@,high
@@ -305,7 +302,7 @@ entry,file_off,name,source,insns,bytes,blocks,returns,bad_at,callers,callees,os_
 0xc7d30,0x7d30,,call,67,152,16,1,,1,2,,0,0,0,,high
 0xc7dc8,0x7dc8,,call,269,604,60,1,,1,3,,0,0,0,,high
 0xc7ff2,0x7ff2,,call,25,58,5,1,,1,1,,0,0,0,,high
-0xc802e,0x802e,,prologue,796,1740,154,1,,0,8,,0,0,0,,medium
+0xc802c,0x802c,,prologue,797,1742,154,1,,0,8,,0,0,0,,medium
 0xc86bc,0x86bc,,call,140,300,22,1,,1,1,,0,0,0,,medium
 0xc87e0,0x87e0,,call,44,100,9,1,,1,0,,0,0,0,,medium
 0xc8844,0x8844,,prologue,192,412,38,1,,0,2,,0,0,0,,medium
@@ -315,8 +312,8 @@ entry,file_off,name,source,insns,bytes,blocks,returns,bad_at,callers,callees,os_
 0xc8b5a,0x8b5a,,gapstart,12,30,4,1,,0,0,,0,0,0,,low
 0xc8b78,0x8b78,,gapstart,15,38,5,1,,0,0,,0,0,0,,low
 0xc8b9e,0x8b9e,,call,81,184,15,1,,2,1,,0,0,0,,medium
-0xc8c58,0x8c58,,prologue,60,132,14,1,,0,2,,0,0,0,,medium
-0xc8cde,0x8cde,,prologue,96,210,22,1,,0,1,,0,0,0,,medium
+0xc8c56,0x8c56,,prologue,61,134,14,1,,0,2,,0,0,0,,medium
+0xc8cdc,0x8cdc,,prologue,97,212,22,1,,0,1,,0,0,0,,medium
 0xc8db0,0x8db0,,prologue,23,54,4,1,,0,4,,0,0,0,,medium
 0xc8de6,0x8de6,,call,293,616,45,1,,1,3,,0,0,0,,medium
 0xc9032,0x9032,,tailjmp,3,6,1,1,,1,0,,0,0,0,,medium
@@ -386,12 +383,11 @@ entry,file_off,name,source,insns,bytes,blocks,returns,bad_at,callers,callees,os_
 0xcbc46,0xbc46,,call,30,70,3,1,,2,2,,0,0,0,,medium
 0xcbc86,0xbc86,,gapstart,41,84,1,1,,0,0,,0,0,0,,medium
 0xcbcda,0xbcda,,gapstart,34,70,1,1,,0,0,,0,0,0,,medium
-0xcbd20,0xbd20,,call,1,2,1,0,,5,0,,0,0,0,,medium
-0xcbd22,0xbd22,,prologue,25,52,3,1,,0,1,,0,0,0,,medium
+0xcbd20,0xbd20,,call+prologue,26,54,3,1,,5,1,,0,0,0,,medium
 0xcbd4e,0xbd4e,,call,8,16,5,1,,1,0,,0,0,0,,medium
 0xcbd5e,0xbd5e,,call,25,54,4,1,,1,1,,0,0,0,,high
 0xcc6b2,0xc6b2,,call,63,132,3,1,,1,0,,0,0,0,,medium
-0xcc736,0xc736,,prologue,1054,2196,240,1,,0,1,,0,0,0,,medium
+0xcc734,0xc734,,prologue,1055,2198,240,1,,0,1,,0,0,0,,medium
 0xccf42,0xcf42,,tailjmp,3,6,1,1,,1,0,,0,0,0,,medium
 0xccf48,0xcf48,,call,644,1412,143,1,,1,4,40:-48*1,0,0,0,,high
 0xcd2a2,0xd2a2,,tailjmp,221,466,51,1,,1,0,,0,0,0,,high
@@ -402,7 +398,7 @@ entry,file_off,name,source,insns,bytes,blocks,returns,bad_at,callers,callees,os_
 0xcd720,0xd720,,call,134,276,33,1,,2,0,,0,0,0,,medium
 0xcd830,0xd830,,gapstart,146,304,36,1,,0,0,,0,0,0,,medium
 0xcd95c,0xd95c,,gapstart,38,90,12,1,,0,0,,0,0,0,,medium
-0xcd9b8,0xd9b8,,prologue,92,192,23,1,,0,1,,0,0,0,,medium
+0xcd9b6,0xd9b6,,prologue,93,194,23,1,,0,1,,0,0,0,,medium
 0xcda78,0xda78,,call,136,296,40,1,,2,0,,0,0,0,,medium
 0xcdbb2,0xdbb2,,prologue,79,158,21,1,,0,3,,0,0,0,,medium
 0xcdc44,0xdc44,,call,13,30,5,1,,1,0,,0,0,0,,medium
@@ -428,7 +424,7 @@ entry,file_off,name,source,insns,bytes,blocks,returns,bad_at,callers,callees,os_
 0xce6de,0xe6de,,gapstart,27,62,3,1,,0,0,,0,0,0,,medium
 0xce71a,0xe71a,,prologue,44,94,6,1,,0,1,,0,0,0,,medium
 0xce778,0xe778,,call,20,44,3,1,,1,1,,0,0,0,,high
-0xce7a0,0xe7a0,,prologue,131,318,5,1,,0,21,,0,0,0,,medium
+0xce79e,0xe79e,,prologue,132,320,5,1,,0,21,,0,0,0,,medium
 0xce84a,0xe84a,,call,48,120,9,1,,2,0,,0,0,0,,medium
 0xce8c0,0xe8c0,,call,174,454,21,1,,1,1,,0,0,0,,medium
 0xcea82,0xea82,,tailjmp,1,2,1,1,,1,0,,0,0,0,,medium
@@ -492,17 +488,14 @@ entry,file_off,name,source,insns,bytes,blocks,returns,bad_at,callers,callees,os_
 0xd1f78,0x11f78,,call,17,44,3,1,,1,0,,0,0,0,,medium
 0xd1fa2,0x11fa2,,call,34,78,3,1,,1,0,,0,0,0,,medium
 0xd1fee,0x11fee,,call,41,106,6,1,,1,0,,0,0,0,,medium
-0xd2056,0x12056,,call,1,2,1,0,,1,0,,0,0,0,,medium
-0xd2058,0x12058,,prologue,238,536,41,1,,0,1,,0,0,0,,medium
-0xd2270,0x12270,,call,1,2,1,0,,1,0,,0,0,0,,medium
-0xd2272,0x12272,,prologue,93,216,15,1,,0,1,,0,0,0,,medium
+0xd2056,0x12056,,call+prologue,239,538,41,1,,1,1,,0,0,0,,medium
+0xd2270,0x12270,,call+prologue,94,218,15,1,,1,1,,0,0,0,,medium
 0xd234a,0x1234a,,call,1454,3276,87,0,,1,3,,0,0,0,,medium
 0xd2ba0,0x12ba0,,tailjmp,358,778,18,0,,1,0,,0,0,0,,medium
 0xd2eaa,0x12eaa,,tailjmp,91,222,1,1,,1,0,,0,0,0,,medium
 0xd2f88,0x12f88,,call,18,44,7,1,,2,0,,0,0,0,,high
 0xd2fb4,0x12fb4,,call+prologue,17,46,4,1,,1,2,,0,0,0,,medium
-0xd2fe2,0x12fe2,,call,1,2,1,0,,1,0,,0,0,0,,medium
-0xd2fe4,0x12fe4,,prologue,19,46,3,1,,0,1,,0,0,0,,low
+0xd2fe2,0x12fe2,,call+prologue,20,48,3,1,,1,1,,0,0,0,,medium
 0xd300c,0x1300c,,prologue,75,176,21,1,,0,7,,0,0,0,,medium
 0xd30bc,0x130bc,,call,16,38,3,1,,1,0,,1,0,0,,medium
 0xd319a,0x1319a,,call,89,210,26,0,,4,2,,1,0,0,,medium
@@ -518,15 +511,15 @@ entry,file_off,name,source,insns,bytes,blocks,returns,bad_at,callers,callees,os_
 0xd366c,0x1366c,,call,28,62,5,1,,1,1,,0,0,0,,medium
 0xd36aa,0x136aa,,call,19,44,4,1,,1,0,,1,0,0,,medium
 0xd375e,0x1375e,,gapstart,50,110,7,1,,0,0,,0,0,0,,medium
-0xd37b0,0x137b0,,prologue,136,294,28,1,,0,1,,0,0,0,,medium
-0xd389c,0x1389c,,prologue,135,298,20,1,,0,1,,0,0,0,,medium
+0xd37ae,0x137ae,,prologue,137,296,28,1,,0,1,,0,0,0,,medium
+0xd389a,0x1389a,,prologue,136,300,20,1,,0,1,,0,0,0,,medium
 0xd3962,0x13962,,gapstart,52,114,7,1,,0,0,,0,0,0,,medium
-0xd39b6,0x139b6,,prologue,119,260,24,1,,0,2,,3,0,0,,medium
+0xd39b4,0x139b4,,prologue,120,262,24,1,,0,2,,3,0,0,,medium
 0xd3af6,0x13af6,,tailjmp,45,92,7,1,,1,1,,0,0,18,,medium
-0xd3c0e,0x13c0e,,prologue,78,176,12,1,,0,2,,0,0,0,,medium
-0xd3cc0,0x13cc0,,prologue,73,156,15,1,,0,1,,0,0,0,,medium
-0xd3d50,0x13d50,,prologue,29,62,1,1,,0,1,,0,0,0,,medium
-0xd3d90,0x13d90,,prologue,31,68,1,1,,0,1,,0,0,0,,medium
+0xd3c0a,0x13c0a,,prologue,80,180,12,1,,0,2,,0,0,0,,medium
+0xd3cbe,0x13cbe,,prologue,74,158,15,1,,0,1,,0,0,0,,medium
+0xd3d4e,0x13d4e,,prologue,30,64,1,1,,0,1,,0,0,0,,medium
+0xd3d8e,0x13d8e,,prologue,32,70,1,1,,0,1,,0,0,0,,medium
 0xd3dd4,0x13dd4,,gapstart,50,108,7,1,,0,0,,0,0,0,,medium
 0xd3e20,0x13e20,,call,18,42,5,1,,1,2,,0,0,0,,medium
 0xd3e46,0x13e46,,call,46,108,7,1,,1,0,,0,0,0,,medium
@@ -640,8 +633,7 @@ entry,file_off,name,source,insns,bytes,blocks,returns,bad_at,callers,callees,os_
 0xd6eac,0x16eac,,call,39,92,3,1,,1,3,40:-48*4,0,0,0,,high
 0xd6eea,0x16eea,,call,11,30,1,1,,1,3,,0,0,0,,high
 0xd6f08,0x16f08,,call,94,238,5,1,,2,1,40:-25*1 40:-48*4,0,0,0,,medium
-0xd6f9e,0x16f9e,,call,1,2,1,0,,1,0,,0,0,0,,medium
-0xd6fa0,0x16fa0,,prologue,70,174,4,1,,0,1,40:-25*1 40:-48*2,0,0,0,,medium
+0xd6f9e,0x16f9e,,call+prologue,71,176,4,1,,1,1,40:-25*1 40:-48*2,0,0,0,,medium
 0xd702e,0x1702e,,constptr,107,246,4,1,,0,1,40:-48*1,0,0,0,,medium
 0xd7124,0x17124,,constptr,289,640,16,1,,0,1,40:-48*5,0,0,0,,medium
 0xd7340,0x17340,,tailjmp,2,4,1,1,,1,0,,0,0,0,,medium
@@ -656,7 +648,7 @@ entry,file_off,name,source,insns,bytes,blocks,returns,bad_at,callers,callees,os_
 0xd763a,0x1763a,,call,167,374,33,1,,1,5,,0,0,0,,high
 0xd7798,0x17798,,call,31,76,7,1,,1,3,,0,0,0,,high
 0xd77e4,0x177e4,,call,11,24,4,1,,5,0,,0,0,0,,high
-0xd7800,0x17800,,prologue,93,226,16,1,,0,8,40:-21*1,0,0,0,,medium
+0xd77fc,0x177fc,,prologue,95,230,16,1,,0,8,40:-21*1,0,0,0,,medium
 0xd78e2,0x178e2,,call,67,152,14,1,,1,4,40:-46*1 40:-47*1,0,0,0,,medium
 0xd7978,0x17978,,call,21,48,4,1,,1,2,,0,0,0,,medium
 0xd79a2,0x179a2,,call,65,152,17,1,,7,4,,0,0,0,,medium
@@ -727,12 +719,9 @@ entry,file_off,name,source,insns,bytes,blocks,returns,bad_at,callers,callees,os_
 0xd928c,0x1928c,,call,1,2,1,1,,1,0,,0,0,0,,medium
 0xd928e,0x1928e,,call,8,22,1,1,,1,1,,0,0,0,,medium
 0xd92a4,0x192a4,,prologue,23,56,1,1,,0,1,,0,0,0,,medium
-0xd92dc,0x192dc,,constptr,1,2,1,0,,0,0,,0,0,0,,low
-0xd92de,0x192de,,prologue,53,128,6,1,,0,1,40:-48*1,0,0,0,,medium
-0xd935e,0x1935e,,constptr,1,2,1,0,,0,0,,0,0,0,,low
-0xd9360,0x19360,,prologue,102,240,11,1,,0,1,40:-48*1,0,0,0,,medium
-0xd9434,0x19434,,constptr,1,2,1,0,,0,0,,0,0,0,,low
-0xd9436,0x19436,,prologue,60,156,4,1,,0,1,,0,0,0,,medium
+0xd92dc,0x192dc,,prologue,54,130,6,1,,0,1,40:-48*1,0,0,0,,medium
+0xd935e,0x1935e,,prologue,103,242,11,1,,0,1,40:-48*1,0,0,0,,medium
+0xd9434,0x19434,,prologue,61,158,4,1,,0,1,,0,0,0,,medium
 0xd94d2,0x194d2,,prologue,33,82,5,1,,0,1,40:-48*1,0,0,0,,medium
 0xd9524,0x19524,,constptr,12,26,1,1,,0,0,40:-48*1,0,0,0,,low
 0xd953e,0x1953e,,call,14,36,1,1,,1,1,,0,0,0,,medium
@@ -760,7 +749,7 @@ entry,file_off,name,source,insns,bytes,blocks,returns,bad_at,callers,callees,os_
 0xd9e5a,0x19e5a,,prologue,11,26,1,1,,0,1,,0,0,0,,low
 0xd9e74,0x19e74,,call,87,192,18,1,,1,2,40:-20*2 40:-23*1,0,0,0,,high
 0xd9f34,0x19f34,,constptr,39,92,7,1,,0,3,40:-23*1,0,0,0,,medium
-0xd9f92,0x19f92,,prologue,134,302,21,1,,0,13,40:-21*1 40:-27*1,0,0,0,,medium
+0xd9f90,0x19f90,,prologue,135,304,21,1,,0,13,40:-21*1 40:-27*1,0,0,0,,medium
 0xda0b4,0x1a0b4,,call,85,182,12,1,,1,0,,0,0,0,,medium
 0xda13e,0x1a13e,,call,45,106,4,1,,1,1,40:-38*1 40:-40*1,0,0,0,,medium
 0xda1a0,0x1a1a0,,call,31,72,8,1,,1,0,,0,0,0,,medium
@@ -774,8 +763,7 @@ entry,file_off,name,source,insns,bytes,blocks,returns,bad_at,callers,callees,os_
 0xda422,0x1a422,,call,15,32,3,1,,1,0,,0,0,0,,medium
 0xda440,0x1a440,,call,13,30,3,1,,1,0,,0,1,0,,medium
 0xda45a,0x1a45a,,call,46,120,3,1,,2,2,,0,0,0,,high
-0xda4c8,0x1a4c8,,constptr,1,2,1,0,,0,0,,0,0,0,,low
-0xda4ca,0x1a4ca,,prologue,54,122,9,1,,0,4,,0,0,0,,medium
+0xda4c8,0x1a4c8,,prologue,55,124,9,1,,0,4,,0,0,0,,medium
 0xda544,0x1a544,,constptr,3,10,1,0,,0,0,,0,0,0,,low
 0xda54e,0x1a54e,,prologue,148,332,26,1,,0,3,40:-39*1,0,0,0,,medium
 0xda686,0x1a686,,prologue,16,36,1,1,,0,2,40:-39*1,0,0,0,,low
@@ -790,7 +778,7 @@ entry,file_off,name,source,insns,bytes,blocks,returns,bad_at,callers,callees,os_
 0xda8b8,0x1a8b8,,call,13,30,3,1,,1,0,,0,0,0,,medium
 0xda8d0,0x1a8d0,,call,19,38,4,1,,5,0,,0,0,0,,medium
 0xda8f6,0x1a8f6,,constptr,1,2,1,1,,0,0,,0,0,0,,low
-0xda8fa,0x1a8fa,,prologue,145,332,24,1,,0,12,40:-27*4 40:-46*2 40:-48*2,0,0,0,,medium
+0xda8f8,0x1a8f8,,prologue,146,334,24,1,,0,12,40:-27*4 40:-46*2 40:-48*2,0,0,0,,medium
 0xdaa06,0x1aa06,,call,391,886,43,1,,1,2,40:-46*2 40:-47*1,0,0,0,,medium
 0xdad42,0x1ad42,,tailjmp,4,8,1,1,,1,0,,0,0,0,,medium
 0xdad4a,0x1ad4a,,call,44,110,7,1,,3,3,40:-48*1,0,0,0,,medium
@@ -805,10 +793,8 @@ entry,file_off,name,source,insns,bytes,blocks,returns,bad_at,callers,callees,os_
 0xdb51e,0x1b51e,,call,673,1518,60,1,,1,1,40:-46*3 40:-47*2,0,0,0,,medium
 0xdb8f8,0x1b8f8,,call,64,148,6,1,,1,2,40:-21*2 40:-27*1 40:-39*1 40:-47*1 40:-48*2,0,0,0,,medium
 0xdb980,0x1b980,,call,55,130,4,1,,2,4,40:-25*1 40:-27*1 40:-46*1,0,0,0,,medium
-0xdba02,0x1ba02,,call,1,2,1,0,,1,0,,0,0,0,,medium
-0xdba04,0x1ba04,,prologue,39,84,6,1,,0,1,40:-46*2,0,0,0,,medium
-0xdba58,0x1ba58,,call,1,2,1,0,,1,0,,0,0,0,,medium
-0xdba5a,0x1ba5a,,prologue,35,76,4,1,,0,1,40:-46*2,0,0,0,,medium
+0xdba02,0x1ba02,,call+prologue,40,86,6,1,,1,1,40:-46*2,0,0,0,,medium
+0xdba58,0x1ba58,,call+prologue,36,78,4,1,,1,1,40:-46*2,0,0,0,,medium
 0xdbaa6,0x1baa6,,call,75,172,13,1,,4,4,40:-48*2,0,0,0,,high
 0xdbb52,0x1bb52,,call+ptrtable,35,78,1,0,,1,2,40:-27*1 40:-38*1 40:-40*1 40:-48*2,0,0,1,,medium
 0xdbba0,0x1bba0,,constptr,60,134,11,1,,0,6,40:-27*1 40:-46*2,0,0,0,,medium
@@ -907,7 +893,7 @@ entry,file_off,name,source,insns,bytes,blocks,returns,bad_at,callers,callees,os_
 0xdffe0,0x1ffe0,,call,25,54,9,1,,8,0,,0,0,0,,medium
 0xe0012,0x20012,,call,38,76,6,1,,3,0,,0,0,0,,medium
 0xe004a,0x2004a,,call,38,76,6,1,,4,0,,0,0,0,,medium
-0xe0084,0x20084,,prologue,66,164,9,1,,0,12,40:-21*1 40:-39*1,0,0,0,,medium
+0xe0082,0x20082,,prologue,67,166,9,1,,0,12,40:-21*1 40:-39*1,0,0,0,,medium
 0xe0128,0x20128,,call,6,12,1,1,,1,3,,0,0,0,,medium
 0xe0134,0x20134,,call,6,12,1,1,,1,3,,0,0,0,,medium
 0xe0140,0x20140,,call,11,22,1,1,,1,8,,0,0,0,,medium
@@ -1012,7 +998,7 @@ entry,file_off,name,source,insns,bytes,blocks,returns,bad_at,callers,callees,os_
 0xe3246,0x23246,,call,43,96,10,1,,1,3,,0,0,0,,medium
 0xe32a6,0x232a6,,call,353,798,47,1,,1,5,,0,0,0,,medium
 0xe358a,0x2358a,,call,40,84,5,1,,2,1,,0,0,0,,medium
-0xe35d8,0x235d8,,prologue,66,142,10,1,,0,3,,0,0,0,,medium
+0xe35d4,0x235d4,,prologue,68,146,10,1,,0,3,,0,0,0,,medium
 0xe364c,0x2364c,,call,49,130,8,1,,1,0,,0,0,0,,medium
 0xe36ce,0x236ce,,call,151,346,18,1,,1,3,,0,0,1,,medium
 0xe3800,0x23800,,call,85,196,15,1,,1,1,,1,0,0,,medium
@@ -1100,8 +1086,7 @@ entry,file_off,name,source,insns,bytes,blocks,returns,bad_at,callers,callees,os_
 0xe6a48,0x26a48,,call,190,418,32,1,,1,0,,0,0,0,,medium
 0xe6ba2,0x26ba2,,call,53,130,6,1,,1,0,,0,0,0,,medium
 0xe6c24,0x26c24,,call,81,188,18,1,,1,0,,0,0,1,,medium
-0xe6ce0,0x26ce0,,constptr,1,2,1,0,,0,0,,0,0,0,,low
-0xe6ce2,0x26ce2,,prologue,195,446,32,1,,0,5,,0,0,0,,medium
+0xe6ce0,0x26ce0,,prologue,196,448,32,1,,0,5,,0,0,0,,medium
 0xe6e92,0x26e92,,call,28,72,1,1,,1,1,,0,0,0,,medium
 0xe6eda,0x26eda,,call,19,52,3,1,,1,0,,0,0,0,,medium
 0xe6f0c,0x26f0c,,call,332,748,40,1,,1,3,,0,0,0,,medium
@@ -1113,8 +1098,7 @@ entry,file_off,name,source,insns,bytes,blocks,returns,bad_at,callers,callees,os_
 0xe734c,0x2734c,,constptr,26,68,1,1,,0,0,,0,0,0,,medium
 0xe7390,0x27390,,call,242,612,27,1,,2,1,,0,0,0,,medium
 0xe755a,0x2755a,,call,62,152,5,1,,1,1,,0,0,0,,medium
-0xe75dc,0x275dc,,call,1,2,1,0,,1,0,,0,0,0,,medium
-0xe75de,0x275de,,prologue,122,294,9,1,,0,6,,0,0,0,,medium
+0xe75dc,0x275dc,,call+prologue,123,296,9,1,,1,6,,0,0,0,,medium
 0xe76f0,0x276f0,,call,9,24,3,1,,3,0,,0,0,0,,medium
 0xe7700,0x27700,,call,13,34,3,1,,1,0,,0,0,0,,high
 0xe7720,0x27720,,call,31,74,9,1,,1,6,,0,0,0,,high
@@ -1223,7 +1207,7 @@ entry,file_off,name,source,insns,bytes,blocks,returns,bad_at,callers,callees,os_
 0xeb5bc,0x2b5bc,,call,33,74,11,1,,1,0,,0,0,0,,medium
 0xeb604,0x2b604,,call,57,126,11,1,,1,0,,0,0,0,,medium
 0xeb678,0x2b678,,call,45,96,13,1,,1,0,,0,0,0,,medium
-0xeb6d6,0x2b6d6,,prologue,58,130,14,1,,0,7,40:-21*2,0,0,0,,medium
+0xeb6d4,0x2b6d4,,prologue,59,132,14,1,,0,7,40:-21*2,0,0,0,,medium
 0xeb742,0x2b742,,call,49,112,11,1,,1,4,,0,0,0,,medium
 0xeb7a4,0x2b7a4,,call,36,82,5,1,,7,0,,1,0,0,,medium
 0xeb80e,0x2b80e,,call,57,134,11,1,,1,8,,0,0,0,,medium
@@ -1262,8 +1246,7 @@ entry,file_off,name,source,insns,bytes,blocks,returns,bad_at,callers,callees,os_
 0xec7cc,0x2c7cc,,prologue,54,128,9,1,,0,6,,0,0,0,,medium
 0xec84c,0x2c84c,,call,198,408,27,1,,8,1,,0,0,0,,medium
 0xec9cc,0x2c9cc,,call,53,128,11,1,,2,2,,0,0,0,,medium
-0xeca42,0x2ca42,,constptr,1,2,1,0,,0,0,,0,0,0,,low
-0xeca44,0x2ca44,,prologue,77,184,12,1,,0,5,,0,0,0,,medium
+0xeca42,0x2ca42,,prologue,78,186,12,1,,0,5,,0,0,0,,medium
 0xecafc,0x2cafc,,call,143,350,27,1,,1,6,,0,0,0,,medium
 0xecc54,0x2cc54,,tailjmp,3,6,1,1,,1,0,,0,0,0,,medium
 0xecc5a,0x2cc5a,,call,15,38,1,1,,1,0,40:-48*1,0,0,0,,medium
@@ -1271,8 +1254,7 @@ entry,file_off,name,source,insns,bytes,blocks,returns,bad_at,callers,callees,os_
 0xeccd4,0x2ccd4,,constptr,15,36,1,1,,0,0,40:-23*1,0,0,0,,low
 0xeccf8,0x2ccf8,,constptr,24,60,1,1,,0,0,,0,0,0,,medium
 0xecd34,0x2cd34,,constptr,39,96,1,1,,0,0,,0,0,0,,medium
-0xecd94,0x2cd94,,call,1,2,1,0,,1,0,,0,0,0,,medium
-0xecd96,0x2cd96,,prologue,37,92,4,1,,0,2,,0,0,0,,medium
+0xecd94,0x2cd94,,call+prologue,38,94,4,1,,1,2,,0,0,0,,medium
 0xecdec,0x2cdec,,call,1,4,1,0,,1,0,,0,0,0,,medium
 0xecdf0,0x2cdf0,,prologue,23,54,3,1,,0,1,,0,0,0,,medium
 0xece22,0x2ce22,,prologue,30,74,4,1,,0,1,,0,0,0,,medium
@@ -1286,11 +1268,9 @@ entry,file_off,name,source,insns,bytes,blocks,returns,bad_at,callers,callees,os_
 0xed0cc,0x2d0cc,,call,38,94,6,1,,4,1,,0,0,0,,medium
 0xed126,0x2d126,,prologue,62,142,8,1,,0,3,40:-67*3 40:-68*1,0,0,0,,medium
 0xed1aa,0x2d1aa,,call,27,72,1,1,,1,0,,0,0,0,,medium
-0xed1f2,0x2d1f2,,constptr,1,2,1,0,,0,0,,0,0,0,,low
-0xed1f4,0x2d1f4,,prologue,59,142,5,1,,0,2,,0,0,0,,medium
+0xed1f2,0x2d1f2,,prologue,60,144,5,1,,0,2,,0,0,0,,medium
 0xed27c,0x2d27c,,constptr,9,24,1,1,,0,0,40:-48*1,0,0,0,,low
-0xed294,0x2d294,,constptr,1,2,1,0,,0,0,,0,0,0,,low
-0xed296,0x2d296,,prologue,21,50,3,1,,0,2,,0,0,0,,medium
+0xed294,0x2d294,,prologue,22,52,3,1,,0,2,,0,0,0,,medium
 0xed2c2,0x2d2c2,,call,16,38,4,1,,1,0,40:-48*1,0,0,0,,high
 0xed2e8,0x2d2e8,,call,29,68,6,1,,1,1,40:-48*1,0,0,0,,high
 0xed32c,0x2d32c,,call,92,230,12,1,,1,4,40:-48*2,0,0,0,,medium
@@ -1375,8 +1355,7 @@ entry,file_off,name,source,insns,bytes,blocks,returns,bad_at,callers,callees,os_
 0xf0468,0x30468,,call,13,30,3,1,,1,0,40:-39*1,0,0,0,,high
 0xf0484,0x30484,,call,57,134,11,1,,7,3,,0,0,0,,medium
 0xf0500,0x30500,,call,55,120,11,1,,9,0,,0,0,0,,medium
-0xf056c,0x3056c,,ptrtable,1,2,1,0,,0,0,,0,0,1,,low
-0xf056e,0x3056e,,prologue,56,130,10,1,,0,5,,0,0,0,,medium
+0xf056c,0x3056c,,prologue,57,132,10,1,,0,5,,0,0,1,,medium
 0xf05d2,0x305d2,,gapstart,126,342,1,1,,0,0,,0,0,0,,medium
 0xf0728,0x30728,,gapstart,19,54,1,1,,0,0,,0,0,0,,low
 0xf075e,0x3075e,,call,40,92,10,1,,2,2,,0,0,0,,medium
@@ -1416,7 +1395,7 @@ entry,file_off,name,source,insns,bytes,blocks,returns,bad_at,callers,callees,os_
 0xf16b0,0x316b0,,call,9,20,3,1,,1,0,,0,0,0,,high
 0xf16c2,0x316c2,,constptr,155,368,22,1,,0,4,,0,0,0,,medium
 0xf17fa,0x317fa,,constptr,101,244,17,1,,0,6,,0,0,0,,medium
-0xf18e2,0x318e2,,prologue,141,322,7,1,,0,5,40:-21*2 40:-23*2 40:-39*1 40:-46*5,0,0,0,,medium
+0xf18e0,0x318e0,,prologue,142,324,7,1,,0,5,40:-21*2 40:-23*2 40:-39*1 40:-46*5,0,0,0,,medium
 0xf19ba,0x319ba,,call,6,14,1,1,,1,0,40:-48*1,0,0,0,,medium
 0xf19c8,0x319c8,,call,17,44,1,1,,1,1,40:-23*1 40:-47*1,0,0,0,,medium
 0xf19f4,0x319f4,,constptr,15,38,1,1,,0,0,40:-48*1,0,0,0,,low
@@ -1429,13 +1408,13 @@ entry,file_off,name,source,insns,bytes,blocks,returns,bad_at,callers,callees,os_
 0xf2172,0x32172,,call,39,78,1,1,,91,0,,0,0,0,,high
 0xf21c0,0x321c0,,call,39,78,1,1,,16,0,,0,0,0,,high
 0xf220e,0x3220e,,call,36,72,1,1,,28,0,,0,0,0,,high
-0xf3034,0x33034,,prologue,160,372,11,1,,0,1,,0,0,0,,medium
+0xf3032,0x33032,,prologue,161,374,11,1,,0,1,,0,0,0,,medium
 0xf3176,0x33176,,call,16,36,3,1,,1,1,,0,0,0,,medium
 0xf3196,0x33196,,prologue,4,8,1,1,,0,1,,0,0,0,,low
 0xf319e,0x3319e,,call,72,160,13,1,,1,1,,0,0,0,,medium
 0xf321a,0x3321a,,call,68,146,7,1,,2,1,,0,0,0,,medium
 0xf328e,0x3328e,,call,34,84,3,1,,2,0,,0,0,0,,medium
-0xf32d0,0x332d0,,prologue,18,40,3,1,,0,1,,0,0,0,,low
+0xf32ce,0x332ce,,prologue,19,42,3,1,,0,1,,0,0,0,,low
 0xf32f0,0x332f0,,call,91,206,13,1,,1,2,,0,0,0,,medium
 0xf3388,0x33388,,call,54,120,9,1,,1,3,,0,0,0,,medium
 0xf33f4,0x333f4,,call,28,68,12,1,,1,0,,0,0,0,,medium
@@ -1447,11 +1426,10 @@ entry,file_off,name,source,insns,bytes,blocks,returns,bad_at,callers,callees,os_
 0xf3816,0x33816,,call,19,40,3,1,,3,0,,0,0,0,,medium
 0xf383e,0x3383e,,prologue,10,20,3,1,,0,2,,0,0,0,,low
 0xf384e,0x3384e,,call,94,218,9,1,,1,3,,0,0,0,,medium
-0xf8000,0x38000,,call,1,2,1,0,,1,0,,0,0,0,,medium
-0xf8002,0x38002,,prologue,113,256,7,1,,0,1,40:-25*9 40:-27*1 40:-67*1,0,1,0,,medium
+0xf8000,0x38000,,call+prologue,114,258,7,1,,1,1,40:-25*9 40:-27*1 40:-67*1,0,1,0,,medium
 0xf80fe,0x380fe,,constptr,9,22,4,1,,0,0,,0,0,0,,low
 0xf8114,0x38114,,call,15,34,5,1,,1,0,40:-23*1,0,0,0,,medium
-0xf8138,0x38138,,prologue,31,66,8,1,,0,5,40:-21*1,0,0,0,,medium
+0xf8136,0x38136,,prologue,32,68,8,1,,0,5,40:-21*1,0,0,0,,medium
 0xf816e,0x3816e,,call,39,96,10,1,,1,6,40:-47*1,0,0,0,,medium
 0xf81ce,0x381ce,,call,16,42,3,1,,1,4,,0,0,0,,medium
 0xf81f4,0x381f4,,call,11,26,1,1,,1,3,,0,0,0,,medium
@@ -1481,21 +1459,21 @@ entry,file_off,name,source,insns,bytes,blocks,returns,bad_at,callers,callees,os_
 0xf8aa2,0x38aa2,,prologue,49,112,1,1,,0,0,40:-46*1 40:-47*1 40:-63*1,0,0,1,,medium
 0xf8b12,0x38b12,,prologue,54,124,1,1,,0,0,40:-46*1 40:-47*1 40:-63*1,0,0,1,,medium
 0xf8b8e,0x38b8e,,prologue,63,144,1,1,,0,0,40:-46*1 40:-47*1 40:-63*1,0,0,1,,medium
-0xf8c20,0x38c20,,prologue,65,146,4,1,,0,3,40:-38*1 40:-40*1,0,0,0,,medium
+0xf8c1e,0x38c1e,,prologue,66,148,4,1,,0,3,40:-38*1 40:-40*1,0,0,1,,medium
 0xf8cb0,0x38cb0,,call,25,56,1,1,,1,1,40:-38*1 40:-40*1,0,0,0,,medium
 0xf8ce8,0x38ce8,,call,13,30,3,1,,1,0,40:-39*1,0,0,0,,high
-0xf8d06,0x38d06,,prologue,72,152,8,1,,0,0,40:-23*2 40:-25*1 40:-38*2 40:-40*2,0,1,0,,medium
-0xf8da0,0x38da0,,prologue,202,472,12,1,,0,1,40:-23*3 40:-46*3 40:-47*3,1,0,0,,medium
+0xf8d04,0x38d04,,prologue,73,154,8,1,,0,0,40:-23*2 40:-25*1 40:-38*2 40:-40*2,0,1,1,,medium
+0xf8d9e,0x38d9e,,prologue,203,474,12,1,,0,1,40:-23*3 40:-46*3 40:-47*3,1,0,11,,medium
 0xf8ef8,0x38ef8,,prologue,9,22,1,1,,0,1,,0,0,1,,low
 0xf8f0e,0x38f0e,,prologue,43,100,1,1,,0,0,40:-23*2 40:-46*2 40:-47*2,0,0,1,,medium
 0xf8f72,0x38f72,,prologue,31,66,1,1,,0,0,40:-23*1 40:-46*1 40:-47*1,0,0,1,,medium
-0xf8fb6,0x38fb6,,prologue,106,232,15,1,,0,1,40:-46*1 40:-47*1,0,0,0,,medium
+0xf8fb4,0x38fb4,,prologue,107,234,15,1,,0,1,40:-46*1 40:-47*1,0,0,4,,medium
 0xf909e,0x3909e,,call,18,46,3,1,,1,0,,1,0,0,,medium
-0xf913a,0x3913a,,prologue,96,226,1,1,,0,1,40:-46*2 40:-47*2 40:-63*2,0,0,0,,medium
+0xf9138,0x39138,,prologue,97,228,1,1,,0,1,40:-46*2 40:-47*2 40:-63*2,0,0,1,,medium
 0xf921c,0x3921c,,prologue,40,100,1,1,,0,0,40:-46*1 40:-47*1,0,0,1,,medium
 0xf9280,0x39280,,call,23,54,5,1,,1,0,40:-48*2,0,0,0,,high
-0xf92b8,0x392b8,,prologue,22,54,1,1,,0,1,,0,0,0,,medium
-0xf92f0,0x392f0,,prologue,35,82,1,1,,0,1,40:-38*1 40:-40*1,0,0,0,,medium
+0xf92b6,0x392b6,,prologue,23,56,1,1,,0,1,,0,0,1,,medium
+0xf92ee,0x392ee,,prologue,36,84,1,1,,0,1,40:-38*1 40:-40*1,0,0,1,,medium
 0xf9342,0x39342,,prologue,19,46,4,1,,0,2,,0,0,1,,low
 0xf9370,0x39370,,prologue,19,46,4,1,,0,2,,0,0,1,,low
 0xf939e,0x3939e,,prologue,33,78,4,1,,0,3,,0,0,1,,medium
@@ -1511,7 +1489,7 @@ entry,file_off,name,source,insns,bytes,blocks,returns,bad_at,callers,callees,os_
 0xf95de,0x395de,,prologue,36,84,3,1,,0,1,40:-46*1 40:-47*1,0,0,1,,medium
 0xf9626,0x39626,,ptrtable,1,4,1,0,,0,0,,0,0,1,,low
 0xf962a,0x3962a,,prologue,6,14,1,1,,0,1,,0,0,0,,low
-0xf963a,0x3963a,,prologue,74,168,13,1,,0,7,40:-21*1,0,0,0,,medium
+0xf9638,0x39638,,prologue,75,170,13,1,,0,7,40:-21*1,0,0,0,,medium
 0xf96e2,0x396e2,,call,35,78,8,0,,1,4,,0,0,0,,medium
 0xf9726,0x39726,,call,35,82,3,1,,4,0,40:-46*1 40:-47*1,0,0,0,,medium
 0xf9774,0x39774,,call,49,112,6,1,,5,0,40:-46*1 40:-47*1,0,0,0,,medium

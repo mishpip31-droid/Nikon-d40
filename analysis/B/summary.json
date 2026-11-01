@@ -1,9 +1,9 @@
 {
  "image": "B",
  "file": "BD400111.bin",
- "functions": 5005,
- "instructions": 318168,
- "code_bytes_covered": 778124,
+ "functions": 4685,
+ "instructions": 318846,
+ "code_bytes_covered": 779480,
  "image_bytes": 3997696,
  "functions_with_bad_decode": 0,
  "unresolved_indirect_jumps": 201,
@@ -12,8 +12,8 @@
   "call": 2180,
   "tailjmp": 1002,
   "atlas": 89,
-  "constptr": 70,
-  "ptrtable": 97,
+  "constptr": 42,
+  "ptrtable": 72,
   "prologue": 1433,
   "gapstart": 209
  },

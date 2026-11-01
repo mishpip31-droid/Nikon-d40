@@ -73,6 +73,7 @@ class Analyzer:
         self.ijumps = defaultdict(list)
         self.icalls_unres = defaultdict(int)
         self.os_calls = defaultdict(set)
+        self.fnptr = set()  # constants stored as values or passed as call args
         self.bad = {}
 
     def add_entry(self, a, src):
@@ -159,6 +160,9 @@ class Analyzer:
         return False
 
     def do_call(self, entry, ins, regs):
+        for r in (4, 5, 6, 7):
+            if r in regs and self.img.is_code_addr(regs[r]):
+                self.fnptr.add(regs[r])
         if ins.flow == 'call':
             t = ins.target
         else:
@@ -248,6 +252,10 @@ class Analyzer:
             if name.startswith('DMOV'):
                 kind = 'W' if ins.ops.split(',')[1].startswith('@0x') else 'R'
             self.dacc[ins.direct][kind].add(entry)
+        if name == 'ST' and ins.ops.startswith('r'):
+            src = int(ins.ops.split(',')[0][1:])
+            if src in regs and self.img.is_code_addr(regs[src]):
+                self.fnptr.add(regs[src])
         m = ACC_RE.search(ins.ops)
         if m and '@(' not in ins.ops:
             r = int(m.group(1))
@@ -283,11 +291,7 @@ class Analyzer:
         for stage in range(10):
             n0 = len(self.funcs)
             # function pointers loaded as constants by accepted code
-            cands = set()
-            for fn, cs in list(self.consts.items()):
-                for c in cs:
-                    if self.img.is_code_addr(c) and c not in self.funcs:
-                        cands.add(c)
+            cands = {c for c in self.fnptr if c not in self.funcs}
             self.try_candidates(cands, 'constptr')
             self.try_candidates(self.table_candidates(), 'ptrtable')
             if len(self.funcs) == n0:
@@ -296,8 +300,7 @@ class Analyzer:
         # prologue functions may load further pointers
         for stage in range(10):
             n0 = len(self.funcs)
-            cands = {c for cs in self.consts.values() for c in cs
-                     if self.img.is_code_addr(c) and c not in self.funcs}
+            cands = {c for c in self.fnptr if c not in self.funcs}
             self.try_candidates(cands, 'constptr')
             self.try_candidates(self.table_candidates(), 'ptrtable')
             if len(self.funcs) == n0:
@@ -305,12 +308,57 @@ class Analyzer:
         for stage in range(20):
             n0 = len(self.funcs)
             self.try_candidates(self.gap_candidates(), 'gapstart')
-            cands = {c for cs in self.consts.values() for c in cs
-                     if self.img.is_code_addr(c) and c not in self.funcs}
+            cands = {c for c in self.fnptr if c not in self.funcs}
             self.try_candidates(cands, 'constptr')
             if len(self.funcs) == n0:
                 break
+        for stage in range(10):
+            n0 = len(self.funcs)
+            tg, enc = self.callsite_candidates()
+            self.try_candidates(tg, 'callsite')
+            self.try_candidates(enc, 'callsite_encl')
+            self.try_candidates({c for c in self.fnptr if c not in self.funcs}, 'constptr')
+            if len(self.funcs) == n0:
+                break
         self.ptr_refs = self.ptr_scan()
+
+    def callsite_candidates(self):
+        """'LDI:32 #X,r12 ; CALL[:D] @r12' found in unexplored bytes: X is a
+        callee; the nearest preceding prologue is a candidate for the caller."""
+        img = self.img
+        s, e, fo, _ = img.maps[0]
+        d = img.data
+        targets, encl = set(), set()
+        for off in range(0, e - s - 8, 2):
+            a = s + off
+            if a in self.insns:
+                continue
+            if d[off] == 0x9F and d[off + 1] == 0x8C and \
+                    d[off + 6:off + 8] in (b'\x97\x1c', b'\x9f\x1c', b'\x97\x0c', b'\x9f\x0c'):
+                x = int.from_bytes(d[off + 2:off + 6], 'big')
+                if img.is_code_addr(x) and x not in self.funcs:
+                    targets.add(x)
+                # nearest preceding prologue start
+                b = a - 2
+                lim = a - 0x1000
+                while b > max(s, lim) and b not in self.insns:
+                    w = int.from_bytes(img.read(b, 2), 'big')
+                    if w == 0x1781 or (w >> 8) == 0x0F:
+                        c = b
+                        for _ in range(12):
+                            p = c - 2
+                            if p in self.insns:
+                                break
+                            pw = int.from_bytes(img.read(p, 2), 'big')
+                            if (pw & 0xFFF0) == 0x1700 or (pw >> 8) in (0x8E, 0x8F) \
+                                    or pw == 0x1781:
+                                c = p
+                            else:
+                                break
+                        encl.add(c)
+                        break
+                    b -= 2
+        return targets, encl
 
     def gap_candidates(self):
         """First instruction address after the end of accepted code (skipping NOP/
@@ -600,7 +648,7 @@ def main():
         'functions_with_bad_decode': sum(1 for f in an.funcs.values() if f['bad']),
         'unresolved_indirect_jumps': sum(f['ijump'] for f in an.funcs.values()),
         'sources': {s: sum(1 for v in an.sources.values() if any(x.startswith(s) for x in v))
-                    for s in ('vector', 'call', 'tailjmp', 'atlas', 'constptr', 'ptrtable', 'prologue', 'gapstart')},
+                    for s in ('vector', 'call', 'tailjmp', 'atlas', 'constptr', 'ptrtable', 'prologue', 'gapstart', 'callsite')},
         'strings': len(str_by_cpu),
         'memory_addresses_referenced': len(an.acc),
         'direct_io_addresses': len(an.dacc),
