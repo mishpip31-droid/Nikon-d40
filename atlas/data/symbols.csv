@@ -139,3 +139,18 @@ exif_tag_table,B_111,0xd743c,0x9743c,static_v16,Data: EXIF tag descriptors 16 by
 exif_usercomment_writer,B_111,0x741f6,0x341f6,static_v16,ASCII prefix + 36 bytes from 0x83CED112 / spaces / 0x83D288A0
 exif_software_writer,B_111,0x73904,0x33904,static_v16,Copies version string via pointer 0xEFBF0
 exif_usercomment_reader,B_111,0x572bc,0x172bc,static_v16,Playback: tag 0x9286 of existing file -> 0x83D288A0
+task1_card_writer,B_111,0x6d8d0,0x2d8d0,static_v16,Takes chunks from channel 0x83CEB088 and CF_write to file in 0x83CEB0B8
+task11_nef_data,B_111,0x48464,0x8464,static_v16,NEF data: block 0x4009 compression or uncompressed copy by 0x83CE974B bits
+nef_compressor_driver,B_111,0x49656,0x9656,static_v16,Block 0x4009: raw desc+0x14 -> file_job+0x0C+0x29200; 3040x2014; size -> file_job+0x18
+nef_curve_load_1,B_111,0x4984a,0x984a,static_v16,4096 u16 from ROM 0xCC894 (683 levels) -> 0x40092000
+nef_curve_load_2,B_111,0x49882,0x9882,static_v16,4096 u16 from ROM 0xCA894 -> 0x40092000
+nef_huffman_table,B_111,0xce8c8,0x8e8c8,static_v16,Data: 13 Huffman codes (12-bit left aligned code + 4-bit length)
+file_builder_dispatch,B_111,0x77f46,0x37f46,static_v16,Kind 0 -> JPEG 0x7821C; kind 1 -> NEF 0x77F70
+nef_file_builder,B_111,0x77f70,0x37f70,static_v16,Header 0x76E86 then data A (+0x10) and data B (+0x0C+0x29200) in chunks
+task12_file_writer,B_111,0x77686,0x37686,static_v16,File jobs from 0x438E8; starts task 13
+task13_file_writer,B_111,0x776d2,0x376d2,static_v16,File jobs from 0x439FE
+write_channel_put,B_111,0x773ba,0x373ba,static_v16,Two-slot channel put (ptr size state) + set_flg
+write_channel_get,B_111,0x77412,0x37412,static_v16,Two-slot channel get
+CF_write,B_111,0x6c360,0x2c360,static_v16,FS wrapper: resource 20 + core 0xB7DF4
+CF_create,B_111,0x6c44c,0x2c44c,static_v16,FS wrapper: resource 20 + core 0xB7ACE
+fs_volume_table,B_111,0x83cf0308,,static_v16,RAM: volumes stride 0x11A5C; device ops via fields +4+0x14/+0x18/+0x1C
