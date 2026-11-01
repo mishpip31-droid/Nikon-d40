@@ -331,7 +331,7 @@ class Analyzer:
                 self.funcs[e] = self.explore(e, known)
         print(f'{label}: {len(self.funcs)} funcs', file=sys.stderr, flush=True)
 
-    def closure_ok(self, entry, limit=400):
+    def closure_ok(self, entry, limit=400, strict=False):
         """Tentatively explore entry and its new callees; reject on any invalid
         decode or overlap with already accepted instructions."""
         if entry in self.rejected or entry in self.insns:
@@ -354,6 +354,8 @@ class Analyzer:
                     return False
                 if e == entry and not (f['ret'] or f['tail'] or f['ijump']):
                     return False
+                if e == entry and strict and (not f['ret'] or f['insns'] < 3):
+                    return False
             for a in tmp.insns:
                 if a in self.insns:
                     return False
@@ -363,7 +365,7 @@ class Analyzer:
         for c in sorted(cands):
             if c in self.funcs or c in self.rejected:
                 continue
-            if self.closure_ok(c):
+            if self.closure_ok(c, strict=(src == 'gapstart')):
                 self.add_entry(c, src)
                 acc += 1
                 self.explore_pending()
