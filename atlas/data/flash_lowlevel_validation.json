@@ -1,0 +1,4215 @@
+{
+  "base_sha256": "b9df48d461e875dce4ba84da88164af170dfc48ad9f7674859623bad0401032e",
+  "camera_tested": false,
+  "physical_flash_tested": false,
+  "recovery_proven": false,
+  "identity": [
+    {
+      "identity": "0xbf235b",
+      "already_locked": 0,
+      "selected_kind": 1,
+      "commands": [
+        {
+          "pc": "0x83ce8682",
+          "address": "0x4aaaa",
+          "value": "0xaa"
+        },
+        {
+          "pc": "0x83ce868a",
+          "address": "0x45554",
+          "value": "0x55"
+        },
+        {
+          "pc": "0x83ce8692",
+          "address": "0x4aaaa",
+          "value": "0x90"
+        },
+        {
+          "pc": "0x83ce86bc",
+          "address": "0x400aaa",
+          "value": "0xf0"
+        }
+      ],
+      "syscalls": [
+        {
+          "pc": "0x83ce8678",
+          "code": "0xfffffff8",
+          "args": [
+            2211357672,
+            2211357648,
+            2211357644,
+            0
+          ]
+        },
+        {
+          "pc": "0x83ce86c8",
+          "code": "0xfffffff9",
+          "args": [
+            2211357672,
+            2211357648,
+            2211357644,
+            0
+          ]
+        }
+      ],
+      "return": 2211357672,
+      "instructions": 42
+    },
+    {
+      "identity": "0xbf0000",
+      "already_locked": 0,
+      "selected_kind": 1,
+      "commands": [
+        {
+          "pc": "0x83ce8682",
+          "address": "0x4aaaa",
+          "value": "0xaa"
+        },
+        {
+          "pc": "0x83ce868a",
+          "address": "0x45554",
+          "value": "0x55"
+        },
+        {
+          "pc": "0x83ce8692",
+          "address": "0x4aaaa",
+          "value": "0x90"
+        },
+        {
+          "pc": "0x83ce86bc",
+          "address": "0x400aaa",
+          "value": "0xf0"
+        }
+      ],
+      "syscalls": [
+        {
+          "pc": "0x83ce8678",
+          "code": "0xfffffff8",
+          "args": [
+            2211357672,
+            2211357648,
+            2211357644,
+            0
+          ]
+        },
+        {
+          "pc": "0x83ce86c8",
+          "code": "0xfffffff9",
+          "args": [
+            2211357672,
+            2211357648,
+            2211357644,
+            0
+          ]
+        }
+      ],
+      "return": 2211357672,
+      "instructions": 42
+    },
+    {
+      "identity": "0x122f9",
+      "already_locked": 0,
+      "selected_kind": 0,
+      "commands": [
+        {
+          "pc": "0x83ce8682",
+          "address": "0x4aaaa",
+          "value": "0xaa"
+        },
+        {
+          "pc": "0x83ce868a",
+          "address": "0x45554",
+          "value": "0x55"
+        },
+        {
+          "pc": "0x83ce8692",
+          "address": "0x4aaaa",
+          "value": "0x90"
+        },
+        {
+          "pc": "0x83ce86bc",
+          "address": "0x400aaa",
+          "value": "0xf0"
+        }
+      ],
+      "syscalls": [
+        {
+          "pc": "0x83ce8678",
+          "code": "0xfffffff8",
+          "args": [
+            2211357672,
+            2211357648,
+            2211357644,
+            0
+          ]
+        },
+        {
+          "pc": "0x83ce86c8",
+          "code": "0xfffffff9",
+          "args": [
+            2211357672,
+            2211357648,
+            2211357644,
+            0
+          ]
+        }
+      ],
+      "return": 2211357672,
+      "instructions": 43
+    },
+    {
+      "identity": "0xffffffff",
+      "already_locked": 0,
+      "selected_kind": 0,
+      "commands": [
+        {
+          "pc": "0x83ce8682",
+          "address": "0x4aaaa",
+          "value": "0xaa"
+        },
+        {
+          "pc": "0x83ce868a",
+          "address": "0x45554",
+          "value": "0x55"
+        },
+        {
+          "pc": "0x83ce8692",
+          "address": "0x4aaaa",
+          "value": "0x90"
+        },
+        {
+          "pc": "0x83ce86bc",
+          "address": "0x400aaa",
+          "value": "0xf0"
+        }
+      ],
+      "syscalls": [
+        {
+          "pc": "0x83ce8678",
+          "code": "0xfffffff8",
+          "args": [
+            2211357672,
+            2211357648,
+            2211357644,
+            0
+          ]
+        },
+        {
+          "pc": "0x83ce86c8",
+          "code": "0xfffffff9",
+          "args": [
+            2211357672,
+            2211357648,
+            2211357644,
+            0
+          ]
+        }
+      ],
+      "return": 2211357672,
+      "instructions": 43
+    },
+    {
+      "identity": "0xbf235b",
+      "already_locked": 1,
+      "selected_kind": 1,
+      "commands": [
+        {
+          "pc": "0x83ce8682",
+          "address": "0x4aaaa",
+          "value": "0xaa"
+        },
+        {
+          "pc": "0x83ce868a",
+          "address": "0x45554",
+          "value": "0x55"
+        },
+        {
+          "pc": "0x83ce8692",
+          "address": "0x4aaaa",
+          "value": "0x90"
+        },
+        {
+          "pc": "0x83ce86bc",
+          "address": "0x400aaa",
+          "value": "0xf0"
+        }
+      ],
+      "syscalls": [],
+      "return": 2211357672,
+      "instructions": 34
+    },
+    {
+      "identity": "0xbf0000",
+      "already_locked": 1,
+      "selected_kind": 1,
+      "commands": [
+        {
+          "pc": "0x83ce8682",
+          "address": "0x4aaaa",
+          "value": "0xaa"
+        },
+        {
+          "pc": "0x83ce868a",
+          "address": "0x45554",
+          "value": "0x55"
+        },
+        {
+          "pc": "0x83ce8692",
+          "address": "0x4aaaa",
+          "value": "0x90"
+        },
+        {
+          "pc": "0x83ce86bc",
+          "address": "0x400aaa",
+          "value": "0xf0"
+        }
+      ],
+      "syscalls": [],
+      "return": 2211357672,
+      "instructions": 34
+    },
+    {
+      "identity": "0x122f9",
+      "already_locked": 1,
+      "selected_kind": 0,
+      "commands": [
+        {
+          "pc": "0x83ce8682",
+          "address": "0x4aaaa",
+          "value": "0xaa"
+        },
+        {
+          "pc": "0x83ce868a",
+          "address": "0x45554",
+          "value": "0x55"
+        },
+        {
+          "pc": "0x83ce8692",
+          "address": "0x4aaaa",
+          "value": "0x90"
+        },
+        {
+          "pc": "0x83ce86bc",
+          "address": "0x400aaa",
+          "value": "0xf0"
+        }
+      ],
+      "syscalls": [],
+      "return": 2211357672,
+      "instructions": 35
+    },
+    {
+      "identity": "0xffffffff",
+      "already_locked": 1,
+      "selected_kind": 0,
+      "commands": [
+        {
+          "pc": "0x83ce8682",
+          "address": "0x4aaaa",
+          "value": "0xaa"
+        },
+        {
+          "pc": "0x83ce868a",
+          "address": "0x45554",
+          "value": "0x55"
+        },
+        {
+          "pc": "0x83ce8692",
+          "address": "0x4aaaa",
+          "value": "0x90"
+        },
+        {
+          "pc": "0x83ce86bc",
+          "address": "0x400aaa",
+          "value": "0xf0"
+        }
+      ],
+      "syscalls": [],
+      "return": 2211357672,
+      "instructions": 35
+    }
+  ],
+  "polling": {
+    "ready_or_transition_cases": 1024,
+    "confirmed_error_cases": [
+      {
+        "return": 0,
+        "instructions": 23,
+        "reads": 2
+      },
+      {
+        "return": 0,
+        "instructions": 23,
+        "reads": 2
+      }
+    ],
+    "persistent_busy_cases": [
+      {
+        "kind": 0,
+        "expected_bit7": 0,
+        "return": null,
+        "bounded_run_exhausted": true,
+        "last_pc": "0x83ce8c7c",
+        "reads": 358
+      },
+      {
+        "kind": 0,
+        "expected_bit7": 128,
+        "return": null,
+        "bounded_run_exhausted": true,
+        "last_pc": "0x83ce8c7c",
+        "reads": 358
+      },
+      {
+        "kind": 1,
+        "expected_bit7": 0,
+        "return": null,
+        "bounded_run_exhausted": true,
+        "last_pc": "0x83ce8c84",
+        "reads": 455
+      },
+      {
+        "kind": 1,
+        "expected_bit7": 128,
+        "return": null,
+        "bounded_run_exhausted": true,
+        "last_pc": "0x83ce8c84",
+        "reads": 455
+      }
+    ],
+    "scope": "No local counter, clock read or watchdog service occurs in this loop; external watchdog/reset not modeled"
+  },
+  "program_word": {
+    "successful_cases": 24,
+    "cases": [
+      {
+        "kind": 0,
+        "word": "0x0",
+        "locked": 0,
+        "commands": [
+          {
+            "pc": "0x83ce8c22",
+            "address": "0x400aaa",
+            "value": "0xaa"
+          },
+          {
+            "pc": "0x83ce8c2c",
+            "address": "0x400554",
+            "value": "0x55"
+          },
+          {
+            "pc": "0x83ce8c36",
+            "address": "0x400aaa",
+            "value": "0xa0"
+          },
+          {
+            "pc": "0x83ce8c3a",
+            "address": "0x180000",
+            "value": "0x0"
+          }
+        ],
+        "return": 1,
+        "instructions": 54
+      },
+      {
+        "kind": 0,
+        "word": "0x0",
+        "locked": 1,
+        "commands": [
+          {
+            "pc": "0x83ce8c22",
+            "address": "0x400aaa",
+            "value": "0xaa"
+          },
+          {
+            "pc": "0x83ce8c2c",
+            "address": "0x400554",
+            "value": "0x55"
+          },
+          {
+            "pc": "0x83ce8c36",
+            "address": "0x400aaa",
+            "value": "0xa0"
+          },
+          {
+            "pc": "0x83ce8c3a",
+            "address": "0x180000",
+            "value": "0x0"
+          }
+        ],
+        "return": 1,
+        "instructions": 46
+      },
+      {
+        "kind": 0,
+        "word": "0x80",
+        "locked": 0,
+        "commands": [
+          {
+            "pc": "0x83ce8c22",
+            "address": "0x400aaa",
+            "value": "0xaa"
+          },
+          {
+            "pc": "0x83ce8c2c",
+            "address": "0x400554",
+            "value": "0x55"
+          },
+          {
+            "pc": "0x83ce8c36",
+            "address": "0x400aaa",
+            "value": "0xa0"
+          },
+          {
+            "pc": "0x83ce8c3a",
+            "address": "0x180000",
+            "value": "0x80"
+          }
+        ],
+        "return": 1,
+        "instructions": 54
+      },
+      {
+        "kind": 0,
+        "word": "0x80",
+        "locked": 1,
+        "commands": [
+          {
+            "pc": "0x83ce8c22",
+            "address": "0x400aaa",
+            "value": "0xaa"
+          },
+          {
+            "pc": "0x83ce8c2c",
+            "address": "0x400554",
+            "value": "0x55"
+          },
+          {
+            "pc": "0x83ce8c36",
+            "address": "0x400aaa",
+            "value": "0xa0"
+          },
+          {
+            "pc": "0x83ce8c3a",
+            "address": "0x180000",
+            "value": "0x80"
+          }
+        ],
+        "return": 1,
+        "instructions": 46
+      },
+      {
+        "kind": 0,
+        "word": "0x7f",
+        "locked": 0,
+        "commands": [
+          {
+            "pc": "0x83ce8c22",
+            "address": "0x400aaa",
+            "value": "0xaa"
+          },
+          {
+            "pc": "0x83ce8c2c",
+            "address": "0x400554",
+            "value": "0x55"
+          },
+          {
+            "pc": "0x83ce8c36",
+            "address": "0x400aaa",
+            "value": "0xa0"
+          },
+          {
+            "pc": "0x83ce8c3a",
+            "address": "0x180000",
+            "value": "0x7f"
+          }
+        ],
+        "return": 1,
+        "instructions": 54
+      },
+      {
+        "kind": 0,
+        "word": "0x7f",
+        "locked": 1,
+        "commands": [
+          {
+            "pc": "0x83ce8c22",
+            "address": "0x400aaa",
+            "value": "0xaa"
+          },
+          {
+            "pc": "0x83ce8c2c",
+            "address": "0x400554",
+            "value": "0x55"
+          },
+          {
+            "pc": "0x83ce8c36",
+            "address": "0x400aaa",
+            "value": "0xa0"
+          },
+          {
+            "pc": "0x83ce8c3a",
+            "address": "0x180000",
+            "value": "0x7f"
+          }
+        ],
+        "return": 1,
+        "instructions": 46
+      },
+      {
+        "kind": 0,
+        "word": "0x1234",
+        "locked": 0,
+        "commands": [
+          {
+            "pc": "0x83ce8c22",
+            "address": "0x400aaa",
+            "value": "0xaa"
+          },
+          {
+            "pc": "0x83ce8c2c",
+            "address": "0x400554",
+            "value": "0x55"
+          },
+          {
+            "pc": "0x83ce8c36",
+            "address": "0x400aaa",
+            "value": "0xa0"
+          },
+          {
+            "pc": "0x83ce8c3a",
+            "address": "0x180000",
+            "value": "0x1234"
+          }
+        ],
+        "return": 1,
+        "instructions": 54
+      },
+      {
+        "kind": 0,
+        "word": "0x1234",
+        "locked": 1,
+        "commands": [
+          {
+            "pc": "0x83ce8c22",
+            "address": "0x400aaa",
+            "value": "0xaa"
+          },
+          {
+            "pc": "0x83ce8c2c",
+            "address": "0x400554",
+            "value": "0x55"
+          },
+          {
+            "pc": "0x83ce8c36",
+            "address": "0x400aaa",
+            "value": "0xa0"
+          },
+          {
+            "pc": "0x83ce8c3a",
+            "address": "0x180000",
+            "value": "0x1234"
+          }
+        ],
+        "return": 1,
+        "instructions": 46
+      },
+      {
+        "kind": 0,
+        "word": "0xa55a",
+        "locked": 0,
+        "commands": [
+          {
+            "pc": "0x83ce8c22",
+            "address": "0x400aaa",
+            "value": "0xaa"
+          },
+          {
+            "pc": "0x83ce8c2c",
+            "address": "0x400554",
+            "value": "0x55"
+          },
+          {
+            "pc": "0x83ce8c36",
+            "address": "0x400aaa",
+            "value": "0xa0"
+          },
+          {
+            "pc": "0x83ce8c3a",
+            "address": "0x180000",
+            "value": "0xa55a"
+          }
+        ],
+        "return": 1,
+        "instructions": 54
+      },
+      {
+        "kind": 0,
+        "word": "0xa55a",
+        "locked": 1,
+        "commands": [
+          {
+            "pc": "0x83ce8c22",
+            "address": "0x400aaa",
+            "value": "0xaa"
+          },
+          {
+            "pc": "0x83ce8c2c",
+            "address": "0x400554",
+            "value": "0x55"
+          },
+          {
+            "pc": "0x83ce8c36",
+            "address": "0x400aaa",
+            "value": "0xa0"
+          },
+          {
+            "pc": "0x83ce8c3a",
+            "address": "0x180000",
+            "value": "0xa55a"
+          }
+        ],
+        "return": 1,
+        "instructions": 46
+      },
+      {
+        "kind": 0,
+        "word": "0xffff",
+        "locked": 0,
+        "commands": [],
+        "return": 1,
+        "instructions": 13
+      },
+      {
+        "kind": 0,
+        "word": "0xffff",
+        "locked": 1,
+        "commands": [],
+        "return": 1,
+        "instructions": 13
+      },
+      {
+        "kind": 1,
+        "word": "0x0",
+        "locked": 0,
+        "commands": [
+          {
+            "pc": "0x83ce8c4a",
+            "address": "0x4aaaa",
+            "value": "0xaa"
+          },
+          {
+            "pc": "0x83ce8c52",
+            "address": "0x45554",
+            "value": "0x55"
+          },
+          {
+            "pc": "0x83ce8c5a",
+            "address": "0x4aaaa",
+            "value": "0xa0"
+          },
+          {
+            "pc": "0x83ce8c5e",
+            "address": "0x180000",
+            "value": "0x0"
+          }
+        ],
+        "return": 1,
+        "instructions": 52
+      },
+      {
+        "kind": 1,
+        "word": "0x0",
+        "locked": 1,
+        "commands": [
+          {
+            "pc": "0x83ce8c4a",
+            "address": "0x4aaaa",
+            "value": "0xaa"
+          },
+          {
+            "pc": "0x83ce8c52",
+            "address": "0x45554",
+            "value": "0x55"
+          },
+          {
+            "pc": "0x83ce8c5a",
+            "address": "0x4aaaa",
+            "value": "0xa0"
+          },
+          {
+            "pc": "0x83ce8c5e",
+            "address": "0x180000",
+            "value": "0x0"
+          }
+        ],
+        "return": 1,
+        "instructions": 44
+      },
+      {
+        "kind": 1,
+        "word": "0x80",
+        "locked": 0,
+        "commands": [
+          {
+            "pc": "0x83ce8c4a",
+            "address": "0x4aaaa",
+            "value": "0xaa"
+          },
+          {
+            "pc": "0x83ce8c52",
+            "address": "0x45554",
+            "value": "0x55"
+          },
+          {
+            "pc": "0x83ce8c5a",
+            "address": "0x4aaaa",
+            "value": "0xa0"
+          },
+          {
+            "pc": "0x83ce8c5e",
+            "address": "0x180000",
+            "value": "0x80"
+          }
+        ],
+        "return": 1,
+        "instructions": 52
+      },
+      {
+        "kind": 1,
+        "word": "0x80",
+        "locked": 1,
+        "commands": [
+          {
+            "pc": "0x83ce8c4a",
+            "address": "0x4aaaa",
+            "value": "0xaa"
+          },
+          {
+            "pc": "0x83ce8c52",
+            "address": "0x45554",
+            "value": "0x55"
+          },
+          {
+            "pc": "0x83ce8c5a",
+            "address": "0x4aaaa",
+            "value": "0xa0"
+          },
+          {
+            "pc": "0x83ce8c5e",
+            "address": "0x180000",
+            "value": "0x80"
+          }
+        ],
+        "return": 1,
+        "instructions": 44
+      },
+      {
+        "kind": 1,
+        "word": "0x7f",
+        "locked": 0,
+        "commands": [
+          {
+            "pc": "0x83ce8c4a",
+            "address": "0x4aaaa",
+            "value": "0xaa"
+          },
+          {
+            "pc": "0x83ce8c52",
+            "address": "0x45554",
+            "value": "0x55"
+          },
+          {
+            "pc": "0x83ce8c5a",
+            "address": "0x4aaaa",
+            "value": "0xa0"
+          },
+          {
+            "pc": "0x83ce8c5e",
+            "address": "0x180000",
+            "value": "0x7f"
+          }
+        ],
+        "return": 1,
+        "instructions": 52
+      },
+      {
+        "kind": 1,
+        "word": "0x7f",
+        "locked": 1,
+        "commands": [
+          {
+            "pc": "0x83ce8c4a",
+            "address": "0x4aaaa",
+            "value": "0xaa"
+          },
+          {
+            "pc": "0x83ce8c52",
+            "address": "0x45554",
+            "value": "0x55"
+          },
+          {
+            "pc": "0x83ce8c5a",
+            "address": "0x4aaaa",
+            "value": "0xa0"
+          },
+          {
+            "pc": "0x83ce8c5e",
+            "address": "0x180000",
+            "value": "0x7f"
+          }
+        ],
+        "return": 1,
+        "instructions": 44
+      },
+      {
+        "kind": 1,
+        "word": "0x1234",
+        "locked": 0,
+        "commands": [
+          {
+            "pc": "0x83ce8c4a",
+            "address": "0x4aaaa",
+            "value": "0xaa"
+          },
+          {
+            "pc": "0x83ce8c52",
+            "address": "0x45554",
+            "value": "0x55"
+          },
+          {
+            "pc": "0x83ce8c5a",
+            "address": "0x4aaaa",
+            "value": "0xa0"
+          },
+          {
+            "pc": "0x83ce8c5e",
+            "address": "0x180000",
+            "value": "0x1234"
+          }
+        ],
+        "return": 1,
+        "instructions": 52
+      },
+      {
+        "kind": 1,
+        "word": "0x1234",
+        "locked": 1,
+        "commands": [
+          {
+            "pc": "0x83ce8c4a",
+            "address": "0x4aaaa",
+            "value": "0xaa"
+          },
+          {
+            "pc": "0x83ce8c52",
+            "address": "0x45554",
+            "value": "0x55"
+          },
+          {
+            "pc": "0x83ce8c5a",
+            "address": "0x4aaaa",
+            "value": "0xa0"
+          },
+          {
+            "pc": "0x83ce8c5e",
+            "address": "0x180000",
+            "value": "0x1234"
+          }
+        ],
+        "return": 1,
+        "instructions": 44
+      },
+      {
+        "kind": 1,
+        "word": "0xa55a",
+        "locked": 0,
+        "commands": [
+          {
+            "pc": "0x83ce8c4a",
+            "address": "0x4aaaa",
+            "value": "0xaa"
+          },
+          {
+            "pc": "0x83ce8c52",
+            "address": "0x45554",
+            "value": "0x55"
+          },
+          {
+            "pc": "0x83ce8c5a",
+            "address": "0x4aaaa",
+            "value": "0xa0"
+          },
+          {
+            "pc": "0x83ce8c5e",
+            "address": "0x180000",
+            "value": "0xa55a"
+          }
+        ],
+        "return": 1,
+        "instructions": 52
+      },
+      {
+        "kind": 1,
+        "word": "0xa55a",
+        "locked": 1,
+        "commands": [
+          {
+            "pc": "0x83ce8c4a",
+            "address": "0x4aaaa",
+            "value": "0xaa"
+          },
+          {
+            "pc": "0x83ce8c52",
+            "address": "0x45554",
+            "value": "0x55"
+          },
+          {
+            "pc": "0x83ce8c5a",
+            "address": "0x4aaaa",
+            "value": "0xa0"
+          },
+          {
+            "pc": "0x83ce8c5e",
+            "address": "0x180000",
+            "value": "0xa55a"
+          }
+        ],
+        "return": 1,
+        "instructions": 44
+      },
+      {
+        "kind": 1,
+        "word": "0xffff",
+        "locked": 0,
+        "commands": [],
+        "return": 1,
+        "instructions": 13
+      },
+      {
+        "kind": 1,
+        "word": "0xffff",
+        "locked": 1,
+        "commands": [],
+        "return": 1,
+        "instructions": 13
+      }
+    ],
+    "DQ5_failure": {
+      "commands": [
+        {
+          "pc": "0x83ce8c22",
+          "address": "0x400aaa",
+          "value": "0xaa"
+        },
+        {
+          "pc": "0x83ce8c2c",
+          "address": "0x400554",
+          "value": "0x55"
+        },
+        {
+          "pc": "0x83ce8c36",
+          "address": "0x400aaa",
+          "value": "0xa0"
+        },
+        {
+          "pc": "0x83ce8c3a",
+          "address": "0x180000",
+          "value": "0x1234"
+        },
+        {
+          "pc": "0x83ce8cc4",
+          "address": "0x400aaa",
+          "value": "0xf0"
+        }
+      ],
+      "return": 0,
+      "instructions": 69
+    }
+  },
+  "program_range": {
+    "cases": [
+      {
+        "kind": 0,
+        "length_arg": 0,
+        "bytes_programmed_or_compared": 0,
+        "return": 1,
+        "instructions": 39
+      },
+      {
+        "kind": 0,
+        "length_arg": 1,
+        "bytes_programmed_or_compared": 2,
+        "return": 1,
+        "instructions": 112
+      },
+      {
+        "kind": 0,
+        "length_arg": 2,
+        "bytes_programmed_or_compared": 2,
+        "return": 1,
+        "instructions": 112
+      },
+      {
+        "kind": 0,
+        "length_arg": 3,
+        "bytes_programmed_or_compared": 4,
+        "return": 1,
+        "instructions": 153
+      },
+      {
+        "kind": 0,
+        "length_arg": 4,
+        "bytes_programmed_or_compared": 4,
+        "return": 1,
+        "instructions": 153
+      },
+      {
+        "kind": 0,
+        "length_arg": 5,
+        "bytes_programmed_or_compared": 6,
+        "return": 1,
+        "instructions": 227
+      },
+      {
+        "kind": 0,
+        "length_arg": 6,
+        "bytes_programmed_or_compared": 6,
+        "return": 1,
+        "instructions": 227
+      },
+      {
+        "kind": 0,
+        "length_arg": 7,
+        "bytes_programmed_or_compared": 8,
+        "return": 1,
+        "instructions": 301
+      },
+      {
+        "kind": 0,
+        "length_arg": 8,
+        "bytes_programmed_or_compared": 8,
+        "return": 1,
+        "instructions": 301
+      },
+      {
+        "kind": 0,
+        "length_arg": 9,
+        "bytes_programmed_or_compared": 10,
+        "return": 1,
+        "instructions": 375
+      },
+      {
+        "kind": 0,
+        "length_arg": 10,
+        "bytes_programmed_or_compared": 10,
+        "return": 1,
+        "instructions": 375
+      },
+      {
+        "kind": 0,
+        "length_arg": 11,
+        "bytes_programmed_or_compared": 12,
+        "return": 1,
+        "instructions": 449
+      },
+      {
+        "kind": 0,
+        "length_arg": 12,
+        "bytes_programmed_or_compared": 12,
+        "return": 1,
+        "instructions": 449
+      },
+      {
+        "kind": 1,
+        "length_arg": 0,
+        "bytes_programmed_or_compared": 0,
+        "return": 1,
+        "instructions": 39
+      },
+      {
+        "kind": 1,
+        "length_arg": 1,
+        "bytes_programmed_or_compared": 2,
+        "return": 1,
+        "instructions": 110
+      },
+      {
+        "kind": 1,
+        "length_arg": 2,
+        "bytes_programmed_or_compared": 2,
+        "return": 1,
+        "instructions": 110
+      },
+      {
+        "kind": 1,
+        "length_arg": 3,
+        "bytes_programmed_or_compared": 4,
+        "return": 1,
+        "instructions": 151
+      },
+      {
+        "kind": 1,
+        "length_arg": 4,
+        "bytes_programmed_or_compared": 4,
+        "return": 1,
+        "instructions": 151
+      },
+      {
+        "kind": 1,
+        "length_arg": 5,
+        "bytes_programmed_or_compared": 6,
+        "return": 1,
+        "instructions": 223
+      },
+      {
+        "kind": 1,
+        "length_arg": 6,
+        "bytes_programmed_or_compared": 6,
+        "return": 1,
+        "instructions": 223
+      },
+      {
+        "kind": 1,
+        "length_arg": 7,
+        "bytes_programmed_or_compared": 8,
+        "return": 1,
+        "instructions": 295
+      },
+      {
+        "kind": 1,
+        "length_arg": 8,
+        "bytes_programmed_or_compared": 8,
+        "return": 1,
+        "instructions": 295
+      },
+      {
+        "kind": 1,
+        "length_arg": 9,
+        "bytes_programmed_or_compared": 10,
+        "return": 1,
+        "instructions": 367
+      },
+      {
+        "kind": 1,
+        "length_arg": 10,
+        "bytes_programmed_or_compared": 10,
+        "return": 1,
+        "instructions": 367
+      },
+      {
+        "kind": 1,
+        "length_arg": 11,
+        "bytes_programmed_or_compared": 12,
+        "return": 1,
+        "instructions": 439
+      },
+      {
+        "kind": 1,
+        "length_arg": 12,
+        "bytes_programmed_or_compared": 12,
+        "return": 1,
+        "instructions": 439
+      }
+    ],
+    "readback_rejects_corruption_after_successful_bit7_poll": [
+      {
+        "corrupted_halfword_offset": 0,
+        "bit_flip": 0,
+        "poll_bit7_unchanged": true,
+        "return": 0,
+        "instructions": 360
+      },
+      {
+        "corrupted_halfword_offset": 4,
+        "bit_flip": 0,
+        "poll_bit7_unchanged": true,
+        "return": 0,
+        "instructions": 396
+      },
+      {
+        "corrupted_halfword_offset": 6,
+        "bit_flip": 0,
+        "poll_bit7_unchanged": true,
+        "return": 0,
+        "instructions": 414
+      },
+      {
+        "corrupted_halfword_offset": 8,
+        "bit_flip": 0,
+        "poll_bit7_unchanged": true,
+        "return": 0,
+        "instructions": 432
+      },
+      {
+        "corrupted_halfword_offset": 10,
+        "bit_flip": 0,
+        "poll_bit7_unchanged": true,
+        "return": 0,
+        "instructions": 450
+      }
+    ],
+    "note": "Odd lengths round up to a full halfword; actual updater ranges are even. Host model instantly commits non-FFFF words; no electrical simulation."
+  },
+  "blank_check": [
+    {
+      "length_arg": 0,
+      "bad_halfword": null,
+      "return": 1,
+      "instructions": 15
+    },
+    {
+      "length_arg": 1,
+      "bad_halfword": null,
+      "return": 1,
+      "instructions": 31
+    },
+    {
+      "length_arg": 1,
+      "bad_halfword": 0,
+      "return": 0,
+      "instructions": 20
+    },
+    {
+      "length_arg": 1,
+      "bad_halfword": 0,
+      "return": 0,
+      "instructions": 20
+    },
+    {
+      "length_arg": 2,
+      "bad_halfword": null,
+      "return": 1,
+      "instructions": 31
+    },
+    {
+      "length_arg": 2,
+      "bad_halfword": 0,
+      "return": 0,
+      "instructions": 20
+    },
+    {
+      "length_arg": 2,
+      "bad_halfword": 0,
+      "return": 0,
+      "instructions": 20
+    },
+    {
+      "length_arg": 3,
+      "bad_halfword": null,
+      "return": 1,
+      "instructions": 47
+    },
+    {
+      "length_arg": 3,
+      "bad_halfword": 0,
+      "return": 0,
+      "instructions": 20
+    },
+    {
+      "length_arg": 3,
+      "bad_halfword": 1,
+      "return": 0,
+      "instructions": 36
+    },
+    {
+      "length_arg": 16,
+      "bad_halfword": null,
+      "return": 1,
+      "instructions": 143
+    },
+    {
+      "length_arg": 16,
+      "bad_halfword": 0,
+      "return": 0,
+      "instructions": 20
+    },
+    {
+      "length_arg": 16,
+      "bad_halfword": 7,
+      "return": 0,
+      "instructions": 132
+    },
+    {
+      "length_arg": 64,
+      "bad_halfword": null,
+      "return": 1,
+      "instructions": 527
+    },
+    {
+      "length_arg": 64,
+      "bad_halfword": 0,
+      "return": 0,
+      "instructions": 20
+    },
+    {
+      "length_arg": 64,
+      "bad_halfword": 31,
+      "return": 0,
+      "instructions": 516
+    }
+  ],
+  "erase_commands": {
+    "cases": [
+      {
+        "kind": 0,
+        "length": 8192,
+        "erase_commands": 1,
+        "return": 1,
+        "instructions": 54
+      },
+      {
+        "kind": 0,
+        "length": 65536,
+        "erase_commands": 1,
+        "return": 1,
+        "instructions": 54
+      },
+      {
+        "kind": 1,
+        "length": 8192,
+        "erase_commands": 2,
+        "return": 1,
+        "instructions": 114
+      },
+      {
+        "kind": 1,
+        "length": 65536,
+        "erase_commands": 16,
+        "return": 1,
+        "instructions": 702
+      }
+    ],
+    "failure_resets_read_mode": {
+      "return": 0,
+      "instructions": 77
+    }
+  },
+  "erase_geometry": {
+    "geometry_cases": [
+      {
+        "address": "0x180123",
+        "length": "0x100",
+        "calls": [
+          [
+            "erase",
+            1572864,
+            65536
+          ],
+          [
+            "blank",
+            1572864,
+            65536
+          ]
+        ],
+        "return": 1,
+        "instructions": 42
+      },
+      {
+        "address": "0x180000",
+        "length": "0x20000",
+        "calls": [
+          [
+            "erase",
+            1572864,
+            65536
+          ],
+          [
+            "blank",
+            1572864,
+            65536
+          ],
+          [
+            "erase",
+            1638400,
+            65536
+          ],
+          [
+            "blank",
+            1638400,
+            65536
+          ]
+        ],
+        "return": 1,
+        "instructions": 64
+      },
+      {
+        "address": "0x3f0123",
+        "length": "0x2000",
+        "calls": [
+          [
+            "erase",
+            4128768,
+            8192
+          ],
+          [
+            "blank",
+            4128768,
+            8192
+          ],
+          [
+            "erase",
+            4136960,
+            8192
+          ],
+          [
+            "blank",
+            4136960,
+            8192
+          ]
+        ],
+        "return": 1,
+        "instructions": 84
+      },
+      {
+        "address": "0x3ee000",
+        "length": "0x14000",
+        "calls": [
+          [
+            "erase",
+            4063232,
+            65536
+          ],
+          [
+            "blank",
+            4063232,
+            65536
+          ],
+          [
+            "erase",
+            4128768,
+            8192
+          ],
+          [
+            "blank",
+            4128768,
+            8192
+          ],
+          [
+            "erase",
+            4136960,
+            8192
+          ],
+          [
+            "blank",
+            4136960,
+            8192
+          ],
+          [
+            "erase",
+            4145152,
+            8192
+          ],
+          [
+            "blank",
+            4145152,
+            8192
+          ],
+          [
+            "erase",
+            4153344,
+            8192
+          ],
+          [
+            "blank",
+            4153344,
+            8192
+          ],
+          [
+            "erase",
+            4161536,
+            8192
+          ],
+          [
+            "blank",
+            4161536,
+            8192
+          ],
+          [
+            "erase",
+            4169728,
+            8192
+          ],
+          [
+            "blank",
+            4169728,
+            8192
+          ],
+          [
+            "erase",
+            4177920,
+            8192
+          ],
+          [
+            "blank",
+            4177920,
+            8192
+          ],
+          [
+            "erase",
+            4186112,
+            8192
+          ],
+          [
+            "blank",
+            4186112,
+            8192
+          ],
+          [
+            "erase",
+            4194304,
+            65536
+          ],
+          [
+            "blank",
+            4194304,
+            65536
+          ]
+        ],
+        "return": 1,
+        "instructions": 296
+      },
+      {
+        "address": "0x400000",
+        "length": "0x10000",
+        "calls": [
+          [
+            "erase",
+            4194304,
+            65536
+          ],
+          [
+            "blank",
+            4194304,
+            65536
+          ]
+        ],
+        "return": 1,
+        "instructions": 42
+      }
+    ],
+    "failure_cases": [
+      {
+        "failure": "erase",
+        "calls": [
+          "erase"
+        ],
+        "return": 0,
+        "instructions": 32
+      },
+      {
+        "failure": "blank",
+        "calls": [
+          "erase",
+          "blank"
+        ],
+        "return": 0,
+        "instructions": 40
+      }
+    ],
+    "scope": "Geometry and failure propagation real CPU; inner erase and blank verification separately tested, replaced here by recording hooks"
+  },
+  "admission": {
+    "input_order": [
+      "RAM905E_nonzero",
+      "RAM905A_nonzero",
+      "RAM9054_nonzero",
+      "MMIO107_bit5",
+      "RAM971E_bit6",
+      "RAMB168_nonzero",
+      "OS_poll_success"
+    ],
+    "cases": [
+      {
+        "input_bits": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1
+        ],
+        "accepted": true
+      },
+      {
+        "input_bits": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          0
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          1
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          1,
+          1
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          0,
+          0,
+          0,
+          1,
+          1,
+          0,
+          0
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          0,
+          0,
+          0,
+          1,
+          1,
+          0,
+          1
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          0
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          0,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          1,
+          1
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          0,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          0,
+          0,
+          1,
+          0,
+          1,
+          1,
+          0
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          0,
+          0,
+          1,
+          0,
+          1,
+          1,
+          1
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          0,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          0,
+          0,
+          1,
+          1,
+          0,
+          0,
+          1
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          0,
+          0,
+          1,
+          1,
+          0,
+          1,
+          0
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          0,
+          0,
+          1,
+          1,
+          0,
+          1,
+          1
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          0,
+          0,
+          1,
+          1,
+          1,
+          0,
+          0
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          0,
+          0,
+          1,
+          1,
+          1,
+          0,
+          1
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          1,
+          1
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          0,
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          0,
+          1,
+          0,
+          0,
+          1,
+          0,
+          1
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          0,
+          1,
+          0,
+          0,
+          1,
+          1,
+          0
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          0,
+          1,
+          0,
+          0,
+          1,
+          1,
+          1
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          1
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          1
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          0,
+          1,
+          0,
+          1,
+          1,
+          0,
+          0
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          0,
+          1,
+          0,
+          1,
+          1,
+          0,
+          1
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          0,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          0,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          0,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          0,
+          1,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          0,
+          1,
+          1,
+          0,
+          0,
+          1,
+          0
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          0,
+          1,
+          1,
+          0,
+          0,
+          1,
+          1
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          0,
+          1,
+          1,
+          0,
+          1,
+          0,
+          0
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          0,
+          1,
+          1,
+          0,
+          1,
+          0,
+          1
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          0,
+          1,
+          1,
+          0,
+          1,
+          1,
+          0
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          0,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          0,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          0,
+          1,
+          1,
+          1,
+          0,
+          0,
+          1
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          0,
+          1,
+          1,
+          1,
+          0,
+          1,
+          0
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          0,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          0,
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          0,
+          1,
+          1,
+          1,
+          1,
+          0,
+          1
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          0,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          1,
+          0,
+          0,
+          0,
+          1,
+          1,
+          0
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          1,
+          0,
+          0,
+          0,
+          1,
+          1,
+          1
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          1
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          1,
+          1
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          1,
+          0,
+          0,
+          1,
+          1,
+          0,
+          0
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          1,
+          0,
+          0,
+          1,
+          1,
+          0,
+          1
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          1,
+          0,
+          0,
+          1,
+          1,
+          1,
+          0
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          1,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          1,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          1,
+          0,
+          1,
+          0,
+          0,
+          1,
+          1
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          1,
+          0,
+          1,
+          0,
+          1,
+          1,
+          0
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          1,
+          0,
+          1,
+          0,
+          1,
+          1,
+          1
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          1,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          1,
+          0,
+          1,
+          1,
+          0,
+          0,
+          1
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          1,
+          0,
+          1,
+          1,
+          0,
+          1,
+          0
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          1,
+          0,
+          1,
+          1,
+          0,
+          1,
+          1
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          1,
+          0,
+          1,
+          1,
+          1,
+          0,
+          0
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          1,
+          0,
+          1,
+          1,
+          1,
+          0,
+          1
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          1,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          1,
+          1
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          1,
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          1,
+          1,
+          0,
+          0,
+          1,
+          0,
+          1
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          1,
+          1,
+          0,
+          0,
+          1,
+          1,
+          0
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          1,
+          1,
+          0,
+          0,
+          1,
+          1,
+          1
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          1,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          1,
+          1,
+          0,
+          1,
+          0,
+          0,
+          1
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          1,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          1,
+          1,
+          0,
+          1,
+          0,
+          1,
+          1
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          1,
+          1,
+          0,
+          1,
+          1,
+          0,
+          0
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          1,
+          1,
+          0,
+          1,
+          1,
+          0,
+          1
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          0
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          1,
+          1,
+          0,
+          1,
+          1,
+          1,
+          1
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          1,
+          1,
+          1,
+          0,
+          0,
+          1,
+          0
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          1,
+          1,
+          1,
+          0,
+          0,
+          1,
+          1
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          1,
+          1,
+          1,
+          0,
+          1,
+          0,
+          0
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          1,
+          1,
+          1,
+          0,
+          1,
+          0,
+          1
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          0
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0,
+          1
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          0
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          1,
+          1
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          0,
+          1
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        "accepted": false
+      },
+      {
+        "input_bits": [
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "accepted": false
+      }
+    ],
+    "scope": "Original AB646 and 40DDA executed. MMIO values and OS poll result supplied; physical meanings not all established."
+  },
+  "handshake": {
+    "cases": [
+      {
+        "ack_after_wait": 0,
+        "clock_step": 50,
+        "clock_start": "0x3e8",
+        "waits": 0,
+        "timeout_arguments": [],
+        "request_byte": "0x80",
+        "return": 1,
+        "instructions": 41
+      },
+      {
+        "ack_after_wait": 1,
+        "clock_step": 50,
+        "clock_start": "0x3e8",
+        "waits": 1,
+        "timeout_arguments": [
+          500
+        ],
+        "request_byte": "0x80",
+        "return": 1,
+        "instructions": 71
+      },
+      {
+        "ack_after_wait": 3,
+        "clock_step": 50,
+        "clock_start": "0x3e8",
+        "waits": 3,
+        "timeout_arguments": [
+          500,
+          450,
+          400
+        ],
+        "request_byte": "0x80",
+        "return": 1,
+        "instructions": 131
+      },
+      {
+        "ack_after_wait": null,
+        "clock_step": 100,
+        "clock_start": "0x3e8",
+        "waits": 5,
+        "timeout_arguments": [
+          500,
+          400,
+          300,
+          200,
+          100
+        ],
+        "request_byte": "0x80",
+        "return": 0,
+        "instructions": 182
+      },
+      {
+        "ack_after_wait": 5,
+        "clock_step": 100,
+        "clock_start": "0x3e8",
+        "waits": 5,
+        "timeout_arguments": [
+          500,
+          400,
+          300,
+          200,
+          100
+        ],
+        "request_byte": "0x80",
+        "return": 0,
+        "instructions": 182
+      },
+      {
+        "ack_after_wait": 2,
+        "clock_step": 249,
+        "clock_start": "0x3e8",
+        "waits": 2,
+        "timeout_arguments": [
+          500,
+          251
+        ],
+        "request_byte": "0x80",
+        "return": 1,
+        "instructions": 101
+      },
+      {
+        "ack_after_wait": 2,
+        "clock_step": 250,
+        "clock_start": "0x3e8",
+        "waits": 2,
+        "timeout_arguments": [
+          500,
+          250
+        ],
+        "request_byte": "0x80",
+        "return": 0,
+        "instructions": 92
+      },
+      {
+        "ack_after_wait": 1,
+        "clock_step": 100,
+        "clock_start": "0xfffffff0",
+        "waits": 1,
+        "timeout_arguments": [
+          500
+        ],
+        "request_byte": "0x80",
+        "return": 1,
+        "instructions": 71
+      },
+      {
+        "ack_after_wait": null,
+        "clock_step": 100,
+        "clock_start": "0xfffffff0",
+        "waits": 5,
+        "timeout_arguments": [
+          500,
+          400,
+          300,
+          200,
+          100
+        ],
+        "request_byte": "0x80",
+        "return": 0,
+        "instructions": 182
+      }
+    ],
+    "scope": "Original request/ack/time-budget logic and C13F2 clock accessor; external command consumer, OS waits and MMIO clock values modeled. Time unit not established."
+  },
+  "tail": {
+    "cases": [
+      {
+        "success": false,
+        "display_flag": 0,
+        "delay_arguments": [],
+        "serial_clock_high_count": 0,
+        "terminal_pc": "0x83ce88de",
+        "MMIO_writes": [
+          {
+            "pc": "0x83ce88d4",
+            "address": "0x40040308",
+            "value": "0x80170400",
+            "size": 4
+          },
+          {
+            "pc": "0x83ce88dc",
+            "address": "0x50000106",
+            "value": "0x10",
+            "size": 1
+          }
+        ],
+        "return": 0,
+        "instructions": 11
+      },
+      {
+        "success": false,
+        "display_flag": 1,
+        "delay_arguments": [],
+        "serial_clock_high_count": 0,
+        "terminal_pc": "0x83ce88de",
+        "MMIO_writes": [
+          {
+            "pc": "0x83ce88ca",
+            "address": "0x40040308",
+            "value": "0x8009c600",
+            "size": 4
+          },
+          {
+            "pc": "0x83ce88dc",
+            "address": "0x50000106",
+            "value": "0x10",
+            "size": 1
+          }
+        ],
+        "return": 0,
+        "instructions": 12
+      },
+      {
+        "success": true,
+        "display_flag": 0,
+        "delay_arguments": [
+          5000,
+          1,
+          2,
+          3,
+          4,
+          5,
+          2,
+          2,
+          6,
+          7,
+          8
+        ],
+        "serial_clock_high_count": 16,
+        "terminal_pc": "0x83ce88de",
+        "MMIO_writes": [
+          {
+            "pc": "0x83ce88ae",
+            "address": "0x40040308",
+            "value": "0x800f0c00",
+            "size": 4
+          },
+          {
+            "pc": "0x83ce8edc",
+            "address": "0x50000103",
+            "value": "0x2",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce8eee",
+            "address": "0x50000103",
+            "value": "0x2",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce8fd4",
+            "address": "0x5000010b",
+            "value": "0x0",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce8fdc",
+            "address": "0x5000010d",
+            "value": "0x0",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce8fee",
+            "address": "0x5000010b",
+            "value": "0x2",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce8ffa",
+            "address": "0x5000010b",
+            "value": "0x3",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce9006",
+            "address": "0x5000010b",
+            "value": "0x2",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce8fee",
+            "address": "0x5000010b",
+            "value": "0x2",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce8ffa",
+            "address": "0x5000010b",
+            "value": "0x3",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce9006",
+            "address": "0x5000010b",
+            "value": "0x2",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce8fee",
+            "address": "0x5000010b",
+            "value": "0x2",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce8ffa",
+            "address": "0x5000010b",
+            "value": "0x3",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce9006",
+            "address": "0x5000010b",
+            "value": "0x2",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce8fee",
+            "address": "0x5000010b",
+            "value": "0x2",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce8ffa",
+            "address": "0x5000010b",
+            "value": "0x3",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce9006",
+            "address": "0x5000010b",
+            "value": "0x2",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce8fee",
+            "address": "0x5000010b",
+            "value": "0x2",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce8ffa",
+            "address": "0x5000010b",
+            "value": "0x3",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce9006",
+            "address": "0x5000010b",
+            "value": "0x2",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce8fee",
+            "address": "0x5000010b",
+            "value": "0x2",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce8ffa",
+            "address": "0x5000010b",
+            "value": "0x3",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce9006",
+            "address": "0x5000010b",
+            "value": "0x2",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce8ff2",
+            "address": "0x5000010b",
+            "value": "0x0",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce8ffa",
+            "address": "0x5000010b",
+            "value": "0x1",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce9006",
+            "address": "0x5000010b",
+            "value": "0x0",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce8ff2",
+            "address": "0x5000010b",
+            "value": "0x0",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce8ffa",
+            "address": "0x5000010b",
+            "value": "0x1",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce9006",
+            "address": "0x5000010b",
+            "value": "0x0",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce8ff2",
+            "address": "0x5000010b",
+            "value": "0x0",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce8ffa",
+            "address": "0x5000010b",
+            "value": "0x1",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce9006",
+            "address": "0x5000010b",
+            "value": "0x0",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce8ff2",
+            "address": "0x5000010b",
+            "value": "0x0",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce8ffa",
+            "address": "0x5000010b",
+            "value": "0x1",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce9006",
+            "address": "0x5000010b",
+            "value": "0x0",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce8ff2",
+            "address": "0x5000010b",
+            "value": "0x0",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce8ffa",
+            "address": "0x5000010b",
+            "value": "0x1",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce9006",
+            "address": "0x5000010b",
+            "value": "0x0",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce8ff2",
+            "address": "0x5000010b",
+            "value": "0x0",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce8ffa",
+            "address": "0x5000010b",
+            "value": "0x1",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce9006",
+            "address": "0x5000010b",
+            "value": "0x0",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce8ff2",
+            "address": "0x5000010b",
+            "value": "0x0",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce8ffa",
+            "address": "0x5000010b",
+            "value": "0x1",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce9006",
+            "address": "0x5000010b",
+            "value": "0x0",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce8fee",
+            "address": "0x5000010b",
+            "value": "0x2",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce8ffa",
+            "address": "0x5000010b",
+            "value": "0x3",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce9006",
+            "address": "0x5000010b",
+            "value": "0x2",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce8ff2",
+            "address": "0x5000010b",
+            "value": "0x0",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce8ffa",
+            "address": "0x5000010b",
+            "value": "0x1",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce9006",
+            "address": "0x5000010b",
+            "value": "0x0",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce8ff2",
+            "address": "0x5000010b",
+            "value": "0x0",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce8ffa",
+            "address": "0x5000010b",
+            "value": "0x1",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce900a",
+            "address": "0x5000010b",
+            "value": "0x0",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce9012",
+            "address": "0x5000010d",
+            "value": "0x8",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce8f24",
+            "address": "0x40040300",
+            "value": "0x0",
+            "size": 2
+          },
+          {
+            "pc": "0x83ce8f2e",
+            "address": "0x40040004",
+            "value": "0x0",
+            "size": 2
+          },
+          {
+            "pc": "0x83ce8f3a",
+            "address": "0x40040002",
+            "value": "0x302",
+            "size": 2
+          },
+          {
+            "pc": "0x83ce8f40",
+            "address": "0x40040002",
+            "value": "0x300",
+            "size": 2
+          },
+          {
+            "pc": "0x83ce8f52",
+            "address": "0x50000103",
+            "value": "0x2",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce8f64",
+            "address": "0x50000106",
+            "value": "0x0",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce8f74",
+            "address": "0x40040000",
+            "value": "0x80c0",
+            "size": 2
+          },
+          {
+            "pc": "0x83ce8f78",
+            "address": "0x40040000",
+            "value": "0xc0",
+            "size": 2
+          },
+          {
+            "pc": "0x83ce8f82",
+            "address": "0x40060004",
+            "value": "0x0",
+            "size": 2
+          },
+          {
+            "pc": "0x83ce88dc",
+            "address": "0x50000106",
+            "value": "0x10",
+            "size": 1
+          }
+        ],
+        "return": 8,
+        "instructions": 360
+      },
+      {
+        "success": true,
+        "display_flag": 1,
+        "delay_arguments": [
+          5000,
+          1,
+          2,
+          3,
+          4,
+          5,
+          2,
+          2,
+          6,
+          7,
+          8
+        ],
+        "serial_clock_high_count": 16,
+        "terminal_pc": "0x83ce88de",
+        "MMIO_writes": [
+          {
+            "pc": "0x83ce88a6",
+            "address": "0x40040308",
+            "value": "0x80048000",
+            "size": 4
+          },
+          {
+            "pc": "0x83ce8edc",
+            "address": "0x50000103",
+            "value": "0x2",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce8eee",
+            "address": "0x50000103",
+            "value": "0x2",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce8fd4",
+            "address": "0x5000010b",
+            "value": "0x0",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce8fdc",
+            "address": "0x5000010d",
+            "value": "0x0",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce8fee",
+            "address": "0x5000010b",
+            "value": "0x2",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce8ffa",
+            "address": "0x5000010b",
+            "value": "0x3",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce9006",
+            "address": "0x5000010b",
+            "value": "0x2",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce8fee",
+            "address": "0x5000010b",
+            "value": "0x2",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce8ffa",
+            "address": "0x5000010b",
+            "value": "0x3",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce9006",
+            "address": "0x5000010b",
+            "value": "0x2",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce8fee",
+            "address": "0x5000010b",
+            "value": "0x2",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce8ffa",
+            "address": "0x5000010b",
+            "value": "0x3",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce9006",
+            "address": "0x5000010b",
+            "value": "0x2",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce8fee",
+            "address": "0x5000010b",
+            "value": "0x2",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce8ffa",
+            "address": "0x5000010b",
+            "value": "0x3",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce9006",
+            "address": "0x5000010b",
+            "value": "0x2",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce8fee",
+            "address": "0x5000010b",
+            "value": "0x2",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce8ffa",
+            "address": "0x5000010b",
+            "value": "0x3",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce9006",
+            "address": "0x5000010b",
+            "value": "0x2",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce8fee",
+            "address": "0x5000010b",
+            "value": "0x2",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce8ffa",
+            "address": "0x5000010b",
+            "value": "0x3",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce9006",
+            "address": "0x5000010b",
+            "value": "0x2",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce8ff2",
+            "address": "0x5000010b",
+            "value": "0x0",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce8ffa",
+            "address": "0x5000010b",
+            "value": "0x1",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce9006",
+            "address": "0x5000010b",
+            "value": "0x0",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce8ff2",
+            "address": "0x5000010b",
+            "value": "0x0",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce8ffa",
+            "address": "0x5000010b",
+            "value": "0x1",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce9006",
+            "address": "0x5000010b",
+            "value": "0x0",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce8ff2",
+            "address": "0x5000010b",
+            "value": "0x0",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce8ffa",
+            "address": "0x5000010b",
+            "value": "0x1",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce9006",
+            "address": "0x5000010b",
+            "value": "0x0",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce8ff2",
+            "address": "0x5000010b",
+            "value": "0x0",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce8ffa",
+            "address": "0x5000010b",
+            "value": "0x1",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce9006",
+            "address": "0x5000010b",
+            "value": "0x0",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce8ff2",
+            "address": "0x5000010b",
+            "value": "0x0",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce8ffa",
+            "address": "0x5000010b",
+            "value": "0x1",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce9006",
+            "address": "0x5000010b",
+            "value": "0x0",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce8ff2",
+            "address": "0x5000010b",
+            "value": "0x0",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce8ffa",
+            "address": "0x5000010b",
+            "value": "0x1",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce9006",
+            "address": "0x5000010b",
+            "value": "0x0",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce8ff2",
+            "address": "0x5000010b",
+            "value": "0x0",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce8ffa",
+            "address": "0x5000010b",
+            "value": "0x1",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce9006",
+            "address": "0x5000010b",
+            "value": "0x0",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce8fee",
+            "address": "0x5000010b",
+            "value": "0x2",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce8ffa",
+            "address": "0x5000010b",
+            "value": "0x3",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce9006",
+            "address": "0x5000010b",
+            "value": "0x2",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce8ff2",
+            "address": "0x5000010b",
+            "value": "0x0",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce8ffa",
+            "address": "0x5000010b",
+            "value": "0x1",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce9006",
+            "address": "0x5000010b",
+            "value": "0x0",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce8ff2",
+            "address": "0x5000010b",
+            "value": "0x0",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce8ffa",
+            "address": "0x5000010b",
+            "value": "0x1",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce900a",
+            "address": "0x5000010b",
+            "value": "0x0",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce9012",
+            "address": "0x5000010d",
+            "value": "0x8",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce8f24",
+            "address": "0x40040300",
+            "value": "0x0",
+            "size": 2
+          },
+          {
+            "pc": "0x83ce8f2e",
+            "address": "0x40040004",
+            "value": "0x0",
+            "size": 2
+          },
+          {
+            "pc": "0x83ce8f3a",
+            "address": "0x40040002",
+            "value": "0x302",
+            "size": 2
+          },
+          {
+            "pc": "0x83ce8f40",
+            "address": "0x40040002",
+            "value": "0x300",
+            "size": 2
+          },
+          {
+            "pc": "0x83ce8f52",
+            "address": "0x50000103",
+            "value": "0x2",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce8f64",
+            "address": "0x50000106",
+            "value": "0x0",
+            "size": 1
+          },
+          {
+            "pc": "0x83ce8f74",
+            "address": "0x40040000",
+            "value": "0x80c0",
+            "size": 2
+          },
+          {
+            "pc": "0x83ce8f78",
+            "address": "0x40040000",
+            "value": "0xc0",
+            "size": 2
+          },
+          {
+            "pc": "0x83ce8f82",
+            "address": "0x40060004",
+            "value": "0x0",
+            "size": 2
+          },
+          {
+            "pc": "0x83ce88dc",
+            "address": "0x50000106",
+            "value": "0x10",
+            "size": 1
+          }
+        ],
+        "return": 8,
+        "instructions": 359
+      }
+    ],
+    "scope": "Original success/failure tail including serial MMIO writes executed; delays are hooks, peripheral effects not modeled. Both reach terminal self-loop; no direct jump to B reset in this fragment."
+  },
+  "ack_consumer": {
+    "cases": [
+      {
+        "request": 0,
+        "ack": 0,
+        "OS_task_exit_called": false,
+        "MMIO106": "0xff",
+        "syscall_codes": [
+          "0xffffffd0"
+        ]
+      },
+      {
+        "request": 0,
+        "ack": 1,
+        "OS_task_exit_called": false,
+        "MMIO106": "0xff",
+        "syscall_codes": [
+          "0xffffffd0"
+        ]
+      },
+      {
+        "request": 1,
+        "ack": 0,
+        "OS_task_exit_called": false,
+        "MMIO106": "0xff",
+        "syscall_codes": [
+          "0xffffffd0"
+        ]
+      },
+      {
+        "request": 1,
+        "ack": 1,
+        "OS_task_exit_called": true,
+        "MMIO106": "0xef",
+        "syscall_codes": [
+          "0xffffffd0",
+          "0xffffffeb"
+        ]
+      }
+    ],
+    "scope": "Original receive-side callback, OS event and task-exit modeled; receipt and transport of acknowledgement are not emulated"
+  },
+  "recovery_evidence": {
+    "omitted_image_region": {
+      "file_start": "0xb0000",
+      "file_end_exclusive": "0xe0000",
+      "bytes": 196608,
+      "all_FF": true
+    },
+    "B_entry_vector": {
+      "CPU": "0xefffc",
+      "value": "0xc0f90"
+    },
+    "loader_metadata_reference": {
+      "CPU": "0xffbc0",
+      "image_value": "0xffffffff",
+      "reader_CPU": "0xab6c8"
+    },
+    "scope": "Update-file padding does not establish physical flash contents. Separate writer covers CPU 0xf0000..0x120000, but invocation and recovery semantics are unresolved."
+  },
+  "result": "PASS"
+}

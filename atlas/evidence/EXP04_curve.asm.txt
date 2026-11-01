@@ -1,0 +1,24 @@
+002f8ca0 00338ca0 9f8d00000466 LDI:32    #0x466,r13
+002f8ca6 00338ca6 0240         LDUB      @(r13+r4),r0
+002f8ca8 00338ca8 c181         LDI:8     #0x18,r1
+002f8caa 00338caa aa10         CMP       r1,r0
+002f8cac 00338cac e315         BNE       0x338cd8
+002f8cae 00338cae 1708         ST        r8,@-r15
+002f8cb0 00338cb0 9f8883eb586c LDI:32    #0x83eb586c,r8
+002f8cb6 00338cb6 9f8000336952 LDI:32    #0x336952,r0
+002f8cbc 00338cbc 9f8100001000 LDI:32    #0x1000,r1
+002f8cc2 00338cc2 0502         LDUH      @r0,r2
+002f8cc4 00338cc4 1582         STH       r2,@r8
+002f8cc6 00338cc6 a420         ADD       #0x2,r0
+002f8cc8 00338cc8 a428         ADD       #0x2,r8
+002f8cca 00338cca a5f1         ADD2      #-1,r1
+002f8ccc 00338ccc e3fa         BNE       0x338cc2
+002f8cce 00338cce 9f8483eb586c LDI:32    #0x83eb586c,r4
+002f8cd4 00338cd4 0708         LD        @r15+,r8
+002f8cd6 00338cd6 9720         RET       
+002f8cd8 00338cd8 8ff0         STM1      (r11,r10,r9,r8)
+002f8cda 00338cda 1781         ST        RP,@-r15
+002f8cdc 00338cdc 0f04         ENTER     #0x10
+002f8cde 00338cde 9f8883eb586c LDI:32    #0x83eb586c,r8
+002f8ce4 00338ce4 9f8c00323c2e LDI:32    #0x323c2e,r12
+002f8cea 00338cea 970c         JMP       @r12

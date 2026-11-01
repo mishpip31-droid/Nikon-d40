@@ -1,0 +1,416 @@
+{
+  "version": 10,
+  "firmware_sha256": "0cc92921d6b2ad5d5cfa070abeebdd9aaca224d326e42a26339e3ac384270394",
+  "result": "PASS",
+  "hardware_tests": 0,
+  "models": [
+    "serial send and receive/DMA replacement",
+    "instant abstract memory writes",
+    "explicit status bytes",
+    "immediate OS mailbox/event success",
+    "delay logging with no time unit",
+    "nonnegative remainder-by-32 helper"
+  ],
+  "limits": [
+    "No physical chip identification, EEPROM capacity or hardware persistence proof",
+    "No A/B protocol or complete task scheduler reconstructed"
+  ],
+  "write_boundary_cases": 320,
+  "write_example": {
+    "address": 287,
+    "length": 65,
+    "chunks": [
+      [
+        287,
+        1
+      ],
+      [
+        288,
+        32
+      ],
+      [
+        320,
+        32
+      ]
+    ],
+    "trace": [
+      {
+        "kind": "tx",
+        "hex": "05",
+        "n": 1
+      },
+      {
+        "kind": "rx",
+        "n": 1,
+        "command": 5,
+        "hex": "00"
+      },
+      {
+        "kind": "tx",
+        "hex": "05",
+        "n": 1
+      },
+      {
+        "kind": "rx",
+        "n": 1,
+        "command": 5,
+        "hex": "00"
+      },
+      {
+        "kind": "tx",
+        "hex": "06",
+        "n": 1
+      },
+      {
+        "kind": "tx",
+        "hex": "02011f",
+        "n": 3
+      },
+      {
+        "kind": "tx",
+        "hex": "05",
+        "n": 1,
+        "address": 287
+      },
+      {
+        "kind": "tx",
+        "hex": "05",
+        "n": 1
+      },
+      {
+        "kind": "rx",
+        "n": 1,
+        "command": 5,
+        "hex": "00"
+      },
+      {
+        "kind": "tx",
+        "hex": "06",
+        "n": 1
+      },
+      {
+        "kind": "tx",
+        "hex": "020120",
+        "n": 3
+      },
+      {
+        "kind": "tx",
+        "hex": "162738495a6b7c8d9eafc0d1e2f30415263748596a7b8c9daebfd0e1f2031425",
+        "n": 32,
+        "address": 288
+      },
+      {
+        "kind": "tx",
+        "hex": "05",
+        "n": 1
+      },
+      {
+        "kind": "rx",
+        "n": 1,
+        "command": 5,
+        "hex": "00"
+      },
+      {
+        "kind": "tx",
+        "hex": "06",
+        "n": 1
+      },
+      {
+        "kind": "tx",
+        "hex": "020140",
+        "n": 3
+      },
+      {
+        "kind": "tx",
+        "hex": "364758697a8b9cadbecfe0f102132435465768798a9bacbdcedff00112233445",
+        "n": 32,
+        "address": 320
+      }
+    ],
+    "events": [
+      [
+        2,
+        16384
+      ],
+      [
+        3,
+        8192
+      ]
+    ]
+  },
+  "read_cases": 16,
+  "scratch_clobber_cases": 24,
+  "busy_boundary": [
+    {
+      "busy_samples": 0,
+      "samples": 1,
+      "delays": [],
+      "error": false,
+      "completion_events": [
+        [
+          2,
+          16384
+        ],
+        [
+          3,
+          8192
+        ]
+      ]
+    },
+    {
+      "busy_samples": 1,
+      "samples": 2,
+      "delays": [
+        2
+      ],
+      "error": false,
+      "completion_events": [
+        [
+          2,
+          16384
+        ],
+        [
+          3,
+          8192
+        ]
+      ]
+    },
+    {
+      "busy_samples": 2,
+      "samples": 3,
+      "delays": [
+        2,
+        2
+      ],
+      "error": false,
+      "completion_events": [
+        [
+          2,
+          16384
+        ],
+        [
+          3,
+          8192
+        ]
+      ]
+    },
+    {
+      "busy_samples": 3,
+      "samples": 4,
+      "delays": [
+        2,
+        2,
+        2
+      ],
+      "error": false,
+      "completion_events": [
+        [
+          2,
+          16384
+        ],
+        [
+          3,
+          8192
+        ]
+      ]
+    },
+    {
+      "busy_samples": 4,
+      "samples": 5,
+      "delays": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "error": false,
+      "completion_events": [
+        [
+          2,
+          16384
+        ],
+        [
+          3,
+          8192
+        ]
+      ]
+    },
+    {
+      "busy_samples": 5,
+      "samples": 6,
+      "delays": [
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "error": true,
+      "completion_events": [
+        [
+          2,
+          16384
+        ],
+        [
+          3,
+          8192
+        ]
+      ]
+    },
+    {
+      "busy_samples": 6,
+      "samples": 6,
+      "delays": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "error": true,
+      "completion_events": [
+        [
+          2,
+          16384
+        ],
+        [
+          3,
+          8192
+        ]
+      ]
+    }
+  ],
+  "status_decode_cases": 256,
+  "startup_examples": {
+    "valid": {
+      "flags": 0,
+      "sum_mod256": 0,
+      "steps": 13534,
+      "request": "00000000000000008000c00004002000"
+    },
+    "all_zero": {
+      "flags": 96,
+      "sum_mod256": 0,
+      "steps": 12641,
+      "request": "00000000000000008000c00004002000"
+    },
+    "all_ff": {
+      "flags": 80,
+      "sum_mod256": 128,
+      "steps": 12644,
+      "request": "00000000000000008000c00004002000"
+    },
+    "valid_with_existing_error": {
+      "flags": 64,
+      "sum_mod256": 0,
+      "steps": 13534,
+      "request": "00000000000000008000c00004002000"
+    }
+  },
+  "startup_checksum_cases": 60,
+  "task1_activation_cases": [
+    {
+      "initial_3cc9a": 0,
+      "starts": [
+        [
+          10,
+          0
+        ],
+        [
+          9,
+          257
+        ],
+        [
+          4,
+          4294967041
+        ]
+      ]
+    },
+    {
+      "initial_3cc9a": 8,
+      "starts": [
+        [
+          10,
+          0
+        ],
+        [
+          9,
+          257
+        ],
+        [
+          4,
+          4294967041
+        ],
+        [
+          2,
+          0
+        ]
+      ]
+    }
+  ],
+  "task1_startup_gate": [
+    [
+      209,
+      4,
+      4294959103
+    ],
+    [
+      209,
+      9,
+      4294966815
+    ],
+    [
+      208,
+      2,
+      16384
+    ],
+    [
+      208,
+      6,
+      4096
+    ],
+    [
+      208,
+      9,
+      16
+    ]
+  ],
+  "syscall_dispatch": {
+    "0xc1": {
+      "table_cpu": 1044038,
+      "handler_cpu": 1046992
+    },
+    "0xc3": {
+      "table_cpu": 1044042,
+      "handler_cpu": 1047074
+    },
+    "0xd0": {
+      "table_cpu": 1044068,
+      "handler_cpu": 1046582
+    },
+    "0xd1": {
+      "table_cpu": 1044070,
+      "handler_cpu": 1046726
+    },
+    "0xd2": {
+      "table_cpu": 1044072,
+      "handler_cpu": 1046766
+    },
+    "0xd9": {
+      "table_cpu": 1044086,
+      "handler_cpu": 1045638
+    },
+    "0xda": {
+      "table_cpu": 1044088,
+      "handler_cpu": 1045582
+    },
+    "0xe9": {
+      "table_cpu": 1044118,
+      "handler_cpu": 1045828
+    }
+  },
+  "byte_callback_cases": 14,
+  "hardware_transfer_setup_cases": 5,
+  "btstl_cases": 1024
+}

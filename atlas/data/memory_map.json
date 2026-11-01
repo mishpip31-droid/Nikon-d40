@@ -1,0 +1,46 @@
+{
+  "address_unit": "bytes",
+  "range_convention": "half-open",
+  "B_rom_base": "0x40000",
+  "A_code_base_candidate_supported_by_reset": "0xc0000",
+  "B_copies": [
+    {
+      "source_file_start": "0x1144c4",
+      "source_file_end": "0x11cb6c",
+      "ram_start": "0x83cdffb0",
+      "ram_end": "0x83ce8658",
+      "length": "0x86a8",
+      "evidence_pc": "0xc12b4"
+    },
+    {
+      "source_file_start": "0x11cb6c",
+      "source_file_end": "0x11d52a",
+      "ram_start": "0x83ce8658",
+      "ram_end": "0x83ce9016",
+      "length": "0x9be",
+      "evidence_pc": "0xc12d2"
+    }
+  ],
+  "B_zero_region": {
+    "ram_start": "0x83ce9018",
+    "ram_end": "0x83d02148",
+    "length": "0x19130",
+    "evidence_pc": "0xc128a"
+  },
+  "free_ram_proven": false,
+  "free_executable_rom_proven": false,
+  "B_persistent_settings_journal": {
+    "cpu_starts": [
+      "0x180000",
+      "0x190000"
+    ],
+    "file_starts": [
+      "0x140000",
+      "0x150000"
+    ],
+    "sector_size": "0x10000",
+    "descriptor_file": "0x9535c",
+    "not_free_patch_space": true,
+    "evidence": "B_storage_scan.asm.txt; B_storage_commit_and_compare.asm.txt"
+  }
+}

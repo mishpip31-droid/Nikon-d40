@@ -1,0 +1,382 @@
+{
+  "version": 10,
+  "date": "2026-10-28",
+  "model": "Nikon D40",
+  "basis": "Subjective equal-weight research checklist, not fraction of firmware bytes/functions or installation reliability",
+  "completed": 15,
+  "total": 48,
+  "computed_percent": 31.25,
+  "rounded_estimate_percent": 30,
+  "hardware_test_runs": 0,
+  "areas": [
+    {
+      "id": "format_boot",
+      "name": "Формат и старт",
+      "evidence": [
+        "README_RU.md",
+        "data/firmware_inventory.json",
+        "data/memory_map.json"
+      ],
+      "questions": [
+        {
+          "complete": true,
+          "criterion": "Зафиксировать точные файлы, хеши, размеры и CRC"
+        },
+        {
+          "complete": true,
+          "criterion": "Согласовать адреса кода с файлами A и B"
+        },
+        {
+          "complete": true,
+          "criterion": "Разобрать стартовые копирования ROM→RAM и BSS в B"
+        },
+        {
+          "complete": false,
+          "criterion": "Восстановить все условия запуска и поведение при повреждении образа"
+        }
+      ],
+      "completed": 3,
+      "total": 4
+    },
+    {
+      "id": "a_internal",
+      "name": "Внутренние функции A",
+      "evidence": [
+        "README_RU.md",
+        "data/A_111_to_112_diff.json",
+        "A_STARTUP_RU.md",
+        "data/a_startup_validation.json",
+        "data/a_tasks.csv",
+        "A_MEMORY_TASKS_RU.md",
+        "data/a_memory_validation.json"
+      ],
+      "questions": [
+        {
+          "complete": true,
+          "criterion": "Установить начальную структуру кода и векторов A и сравнить версии"
+        },
+        {
+          "complete": false,
+          "criterion": "Назначить периферийные регистры и связанные функции A"
+        },
+        {
+          "complete": false,
+          "criterion": "Восстановить задачи управления и их взаимодействие в A"
+        },
+        {
+          "complete": false,
+          "criterion": "Разобрать алгоритмы контроля питания и батареи"
+        }
+      ],
+      "completed": 1,
+      "total": 4
+    },
+    {
+      "id": "rtos",
+      "name": "ОС и прерывания",
+      "evidence": [
+        "README_RU.md",
+        "data/symbols.csv",
+        "A_STARTUP_RU.md",
+        "data/a_startup_validation.json",
+        "data/a_tasks.csv",
+        "A_MEMORY_TASKS_RU.md",
+        "data/a_memory_validation.json"
+      ],
+      "questions": [
+        {
+          "complete": true,
+          "criterion": "Найти REALOS/FR, системный вызов INT 0x40 и исследованные точки входа"
+        },
+        {
+          "complete": false,
+          "criterion": "Восстановить полный перечень задач и правила планирования"
+        },
+        {
+          "complete": false,
+          "criterion": "Установить назначение всех используемых обработчиков прерываний"
+        },
+        {
+          "complete": false,
+          "criterion": "Проверить тайминги, блокировки и взаимодействие задач"
+        }
+      ],
+      "completed": 1,
+      "total": 4
+    },
+    {
+      "id": "control",
+      "name": "Управление оборудованием и обмен",
+      "evidence": [
+        "STORAGE_AND_TONE_RU.md",
+        "data/transport_commands.json",
+        "A_MEMORY_TASKS_RU.md",
+        "data/a_memory_validation.json"
+      ],
+      "questions": [
+        {
+          "complete": true,
+          "criterion": "Разобрать структуру очереди команд и исследованный путь синхронизации настроек"
+        },
+        {
+          "complete": false,
+          "criterion": "Установить удалённые стороны обмена и полный протокол"
+        },
+        {
+          "complete": false,
+          "criterion": "Восстановить управление затвором, зеркалом и объективом"
+        },
+        {
+          "complete": false,
+          "criterion": "Восстановить считывание сенсора и его калибровку"
+        }
+      ],
+      "completed": 1,
+      "total": 4
+    },
+    {
+      "id": "ui",
+      "name": "Меню и действия",
+      "evidence": [
+        "README_RU.md",
+        "data/menus.json",
+        "VALIDATION.json"
+      ],
+      "questions": [
+        {
+          "complete": true,
+          "criterion": "Извлечь связный граф 205 описаний экранов и диспетчерские таблицы"
+        },
+        {
+          "complete": true,
+          "criterion": "Проверить действия Optimize image и связь исследованных настроек Custom с рабочими полями"
+        },
+        {
+          "complete": false,
+          "criterion": "Восстановить поведение всех экранов, строк и динамических переходов"
+        },
+        {
+          "complete": false,
+          "criterion": "Проверить реальные кнопки, отображение и состояние после перезапуска"
+        }
+      ],
+      "completed": 2,
+      "total": 4
+    },
+    {
+      "id": "storage",
+      "name": "Постоянные настройки",
+      "evidence": [
+        "STORAGE_AND_TONE_RU.md",
+        "VALIDATION_v2.json",
+        "A_MEMORY_TASKS_RU.md",
+        "data/a_memory_validation.json"
+      ],
+      "questions": [
+        {
+          "complete": true,
+          "criterion": "Разобрать журнал, CRC, пути загрузки и записи и проверить ограниченную модель"
+        },
+        {
+          "complete": false,
+          "criterion": "Установить все события сохранения и сброса каждого поля"
+        },
+        {
+          "complete": false,
+          "criterion": "Подтвердить поведение при прерывании записи и следующем запуске"
+        },
+        {
+          "complete": false,
+          "criterion": "Разобрать все заводские калибровки и специальные блоки"
+        }
+      ],
+      "completed": 1,
+      "total": 4
+    },
+    {
+      "id": "ptp",
+      "name": "USB/PTP",
+      "evidence": [
+        "README_RU.md",
+        "data/ptp_properties.csv",
+        "data/ptp_operations.csv"
+      ],
+      "questions": [
+        {
+          "complete": true,
+          "criterion": "Составить карту 92 свойств и 35 записей операций"
+        },
+        {
+          "complete": false,
+          "criterion": "Восстановить семантику всех протокольных обработчиков"
+        },
+        {
+          "complete": false,
+          "criterion": "Проверить реальный перенос кривой через USB"
+        },
+        {
+          "complete": false,
+          "criterion": "Проверить сеансы, ошибки и переподключение устройства"
+        }
+      ],
+      "completed": 1,
+      "total": 4
+    },
+    {
+      "id": "color_parameters",
+      "name": "Подготовка параметров цвета",
+      "evidence": [
+        "COLOR_PROCESSING_RU.md",
+        "NUMERIC_PIPELINE_RU.md",
+        "VALIDATION_v6.json"
+      ],
+      "questions": [
+        {
+          "complete": true,
+          "criterion": "Разобрать матрицы, коррекцию оттенка и упаковку коэффициентов"
+        },
+        {
+          "complete": true,
+          "criterion": "Разобрать построение кривой, округление и загрузку параметров"
+        },
+        {
+          "complete": true,
+          "criterion": "Разобрать выбор и развёртку профилей насыщенности"
+        },
+        {
+          "complete": false,
+          "criterion": "Восстановить весь баланс белого и зависимости от калибровки сенсора"
+        }
+      ],
+      "completed": 3,
+      "total": 4
+    },
+    {
+      "id": "pixel",
+      "name": "Пиксельный тракт и кодирование",
+      "evidence": [
+        "PIXEL_PIPELINE_RU.md",
+        "STAGE_ORDER_RU.md",
+        "NUMERIC_PIPELINE_RU.md"
+      ],
+      "questions": [
+        {
+          "complete": false,
+          "criterion": "Подтвердить полную семантику аппаратных регистров обработки"
+        },
+        {
+          "complete": false,
+          "criterion": "Подтвердить действительный порядок стадий и арифметику ASIC"
+        },
+        {
+          "complete": false,
+          "criterion": "Сопоставить сквозную модель RAW→JPEG с результатами D40"
+        },
+        {
+          "complete": false,
+          "criterion": "Подтвердить согласованность NEF, превью и MakerNotes после изменения"
+        }
+      ],
+      "completed": 0,
+      "total": 4
+    },
+    {
+      "id": "filesystem",
+      "name": "Файловая система и карта",
+      "evidence": [
+        "README_RU.md",
+        "PIXEL_PIPELINE_RU.md",
+        "UPDATER_RU.md"
+      ],
+      "questions": [
+        {
+          "complete": false,
+          "criterion": "Восстановить структуру файловой системы и обслуживающие задачи"
+        },
+        {
+          "complete": false,
+          "criterion": "Разобрать создание снимков во всех форматах и режимах"
+        },
+        {
+          "complete": false,
+          "criterion": "Проверить буферы, ограничения памяти и пропускную способность записи"
+        },
+        {
+          "complete": false,
+          "criterion": "Проверить заполнение карты, извлечение и ошибки ввода-вывода"
+        }
+      ],
+      "completed": 0,
+      "total": 4
+    },
+    {
+      "id": "update",
+      "name": "Механизм обновления",
+      "evidence": [
+        "UPDATER_RU.md",
+        "data/updater_validation.json",
+        "FLASH_LOWLEVEL_RU.md",
+        "data/flash_lowlevel_validation.json"
+      ],
+      "questions": [
+        {
+          "complete": true,
+          "criterion": "Разобрать и выполнить поиск имени, предварительную проверку и CRC с явными внешними моделями"
+        },
+        {
+          "complete": true,
+          "criterion": "Разобрать и выполнить управление диапазонами записи и повторами с заглушками физических операций"
+        },
+        {
+          "complete": false,
+          "criterion": "Восстановить все условия допуска, аппаратную синхронизацию и физический протокол flash"
+        },
+        {
+          "complete": false,
+          "criterion": "Подтвердить установку, перезапуск и работу на конкретной камере"
+        }
+      ],
+      "completed": 2,
+      "total": 4
+    },
+    {
+      "id": "recovery_reduction",
+      "name": "Восстановление и сокращение",
+      "evidence": [
+        "MODIFICATION_PLAN_RU.md",
+        "UPDATER_RU.md",
+        "RECOVERY_RU.md"
+      ],
+      "questions": [
+        {
+          "complete": false,
+          "criterion": "Доказать свободное исполняемое место и зависимости удаляемых функций"
+        },
+        {
+          "complete": false,
+          "criterion": "Создать и проверить работоспособную прошивку с одним режимом"
+        },
+        {
+          "complete": false,
+          "criterion": "Подтвердить аварийное восстановление после неполной записи"
+        },
+        {
+          "complete": false,
+          "criterion": "Пройти аппаратную матрицу проверок модификации"
+        }
+      ],
+      "completed": 0,
+      "total": 4
+    }
+  ],
+  "limitations": [
+    "Критерии выбраны автором; это ориентир для планирования, а не независимое измерение.",
+    "48 пунктов имеют одинаковый вес для подсчёта, но разную сложность и трудоёмкость.",
+    "Частично исследованные незакрытые пункты не получают дробного зачёта.",
+    "Проверки CRC всех байтов не означают понимания всех байтов.",
+    "Условия ограниченного исполнения и заглушки описаны в соответствующих отчётах."
+  ],
+  "v8_note": "Progress inside open criteria: flash command/status logic and admission/handshake executed under models; documented service path found, no hardware recovery test. Checklist unchanged.",
+  "v9_note": "A task initialization executed under a shadow MMIO model; task interaction, peripheral meaning and R330 recovery remain unresolved. Same 48 criteria; score unchanged.",
+  "v10_note": "One A 1.12 task interaction and memory protocol/checksum executed with explicit transfer/OS models. Full task roles, all calibration data and A/B protocol still open; same 48 criteria."
+}

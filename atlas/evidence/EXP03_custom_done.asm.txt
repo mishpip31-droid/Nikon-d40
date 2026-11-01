@@ -1,0 +1,16 @@
+002f8a96 00338a96 9f8083cee49c LDI:32    #0x83cee49c,r0
+002f8a9c 00338a9c 0401         LD        @r0,r1
+002f8a9e 00338a9e c0cd         LDI:8     #0xc,r13
+002f8aa0 00338aa0 0110         LDUH      @(r13+r1),r0
+002f8aa2 00338aa2 c0ed         LDI:8     #0xe,r13
+002f8aa4 00338aa4 0111         LDUH      @(r13+r1),r1
+002f8aa6 00338aa6 a610         ADD       r1,r0
+002f8aa8 00338aa8 a800         CMP       #0x0,r0
+002f8aaa 00338aaa e305         BNE       0x338ab6
+002f8aac 00338aac 9f8083ce58db LDI:32    #0x83ce58db,r0
+002f8ab2 00338ab2 c001         LDI:8     #0x0,r1
+002f8ab4 00338ab4 1601         STB       r1,@r0
+002f8ab6 00338ab6 1708         ST        r8,@-r15
+002f8ab8 00338ab8 9f8883cee49c LDI:32    #0x83cee49c,r8
+002f8abe 00338abe 9f8c0014430a LDI:32    #0x14430a,r12
+002f8ac4 00338ac4 970c         JMP       @r12

@@ -1,0 +1,29 @@
+Original B 1.11; bounded listing, no ASIC pixel arithmetic.
+0007e8de 000be8de 8b4c         MOV       r4,r12
+0007e8e0 000be8e0 b414         LSL       #1,r4
+0007e8e2 000be8e2 8b40         MOV       r4,r0
+0007e8e4 000be8e4 b180         LSR       #24,r0
+0007e8e6 000be8e6 c7f2         LDI:8     #0x7f,r2
+0007e8e8 000be8e8 ac20         SUB       r2,r0
+0007e8ea 000be8ea f60b         BN:D      0xbe902
+0007e8ec 000be8ec b474         LSL       #7,r4
+0007e8ee 000be8ee b5f2         LSL       #31,r2
+0007e8f0 000be8f0 9224         OR        r2,r4
+0007e8f2 000be8f2 c1f1         LDI:8     #0x1f,r1
+0007e8f4 000be8f4 ac01         SUB       r0,r1
+0007e8f6 000be8f6 fc07         BLE:D     0xbe906
+0007e8f8 000be8f8 b214         LSR       r1,r4
+0007e8fa 000be8fa b9fc         ASR       #31,r12
+0007e8fc 000be8fc 9ac4         EOR       r12,r4
+0007e8fe 000be8fe 9f20         RET:D     
+0007e900 000be900 acc4         SUB       r12,r4
+0007e902 000be902 9f20         RET:D     
+0007e904 000be904 c004         LDI:8     #0x0,r4
+0007e906 000be906 a80c         CMP       #0x0,r12
+0007e908 000be908 f703         BP:D      0xbe910
+0007e90a 000be90a cff4         LDI:8     #0xff,r4
+0007e90c 000be90c 9f20         RET:D     
+0007e90e 000be90e 8b24         MOV       r2,r4
+0007e910 000be910 9784         EXTSB     r4
+0007e912 000be912 9f20         RET:D     
+0007e914 000be914 b014         LSR       #1,r4

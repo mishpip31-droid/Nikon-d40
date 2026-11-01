@@ -1,0 +1,47 @@
+{
+  "version": 12,
+  "date": "2026-10-28",
+  "result": "PASS_WITH_MODELED_LCD_OS_AND_SYNC",
+  "firmware_built": "experimental_firmware_EXP02/D40_Cinema2383_EXP02_MENU_NOT_CAMERA_TESTED.bin",
+  "new_menu_camera_tested": false,
+  "user_reported_EXP01_trial": true,
+  "physical_power_cycle_test": false,
+  "coverage_completed": 15,
+  "coverage_total": 48,
+  "originals_and_EXP01_unchanged": {
+    "d40_research/BD400111.bin": "b9df48d461e875dce4ba84da88164af170dfc48ad9f7674859623bad0401032e",
+    "d40_research/AD400111.bin": "ff96a874d3a22f9c18c610bd5bf55f4e6a53603c865fdb8e913a1d53591db5c9",
+    "d40_research/AD400112.bin": "0cc92921d6b2ad5d5cfa070abeebdd9aaca224d326e42a26339e3ac384270394",
+    "D40_Cinema2383_Firmware_EXP01/firmware/D40_Cinema2383_EXP01_NOT_CAMERA_TESTED.bin": "8abfda8cc67f787be867fd3d348fd38fcc27b8e041702625d182a968052148a8"
+  },
+  "EXP02_sha256": "56de8eda261cd13655a09a981ede0f2e56dd5236b308714c5fafe3ebc413d22b",
+  "EXP02_size": 3997696,
+  "EXP02_crc": "3e70",
+  "new_menu_RAM_allocations": 0,
+  "read_only_rows_tested_paths_only": true,
+  "models": [
+    "LCD rectangle/glyph painting",
+    "divide-by-two helper",
+    "palette and a menu visual-state query",
+    "event-set/delay OS calls",
+    "settings synchronization 0x1468ae"
+  ],
+  "counts": {
+    "language_span_cases": 18060,
+    "actual_font_measurements": 15,
+    "compositor_runs": 2,
+    "dispatcher_cases": 8,
+    "navigation_steps": 256,
+    "exit_without_apply": 8,
+    "pre_save_reload_cases": 256,
+    "new_instruction_cases": 1664,
+    "base_atlas_regressions": 10
+  },
+  "new_tools_sha256": {
+    "build_menu_experiment.py": "b20bdff063c1a0aed62eab60873e5a61d14b6d708e198579ea0b1438ee097797",
+    "check_menu_integration.py": "d6a4114852ca189b202c6f1c6387fb7ebfacf1fced023870ac6201b00cd128d4",
+    "check_menu_binary.py": "a86a68f02815070a59981f99f8ed97326fa2be696e2e49f020d5321a96bf3e21",
+    "fr_menu_runtime_machine.py": "719bcf533879854418e74125cbc6d1058731a8170666360dbf3d6f6dc8f6fdc0"
+  },
+  "historical_results": "v1-v11 preserved; v11 menu tests rerun"
+}

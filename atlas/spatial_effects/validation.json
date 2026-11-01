@@ -1,0 +1,19 @@
+{
+  "result": "PASS_HOST_REFERENCE",
+  "checks": 107,
+  "full_size": [
+    3008,
+    2000
+  ],
+  "scratch_bytes_all_effects": 24816,
+  "host_full_size_seconds": 0.293,
+  "camera_speed_measured": false,
+  "firmware_modified": false,
+  "assumed_format": "planar 8-bit YCbCr 4:2:2; range supplied by caller",
+  "limitations": [
+    "no camera memory ownership/cache validation",
+    "glow uses low-resolution max mask and has block-grid bias",
+    "grain uses small constant cells, not calibrated film statistics",
+    "no target FR build or installed effect"
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "upstream_tree_sha": "89ad7354b6d721260b3e999061fefc51f3580ee0",
+  "sources": [
+    {
+      "url": "https://github.com/simeonpilgrim/nikon-firmware-tools/blob/main/dfr/dfr/Program.cs",
+      "local_input_sha256": "66cf14b1b79019fe8c221234362913501d9d9bae9efdf3d92ff32a957a212f16",
+      "use": "FR opcode metadata only; derived table and original license included"
+    },
+    {
+      "url": "https://github.com/gphoto/libgphoto2/blob/master/camlibs/ptp2/ptp.h",
+      "local_input_sha256": "b0911ed8578c8cdb8804763f33b575f1fb0d1cd58af4b3199c973c5737a574cd",
+      "use": "Protocol identifier names"
+    }
+  ]
+}

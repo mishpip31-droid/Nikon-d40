@@ -1,0 +1,159 @@
+{
+  "firmware_sha256": "b9df48d461e875dce4ba84da88164af170dfc48ad9f7674859623bad0401032e",
+  "address_domains": "cpu_pc explicitly denotes current execution address, including RAM when >=0x80000000",
+  "symbols": [
+    {
+      "name": "update_menu_availability",
+      "firmware": "B_111",
+      "cpu_pc": "0x140fe4",
+      "file_offset": "0x100fe4",
+      "confidence": "static",
+      "note": "Calls candidate selection and adjusts menu count"
+    },
+    {
+      "name": "update_choose_B_then_A",
+      "firmware": "B_111",
+      "cpu_pc": "0xab5cc",
+      "file_offset": "0x6b5cc",
+      "confidence": "static",
+      "note": "B name match takes precedence; searches A only if no matching B filename"
+    },
+    {
+      "name": "update_entry_preconditions",
+      "firmware": "B_111",
+      "cpu_pc": "0xab646",
+      "file_offset": "0x6b646",
+      "confidence": "partial_static",
+      "note": "Physical meanings and full hardware prerequisites remain unresolved"
+    },
+    {
+      "name": "update_match_directory_name",
+      "firmware": "B_111",
+      "cpu_pc": "0xabe82",
+      "file_offset": "0x6be82",
+      "confidence": "bounded_execution",
+      "note": "Original matching code; directory operations modeled in memory"
+    },
+    {
+      "name": "update_B_size_gate",
+      "firmware": "B_111",
+      "cpu_pc": "0xabbfe",
+      "file_offset": "0x6bbfe",
+      "confidence": "bounded_execution",
+      "note": "Requires exact 0x3D0000 byte size"
+    },
+    {
+      "name": "update_B_identity_and_version",
+      "firmware": "B_111",
+      "cpu_pc": "0xabce4",
+      "file_offset": "0x6bce4",
+      "confidence": "bounded_execution",
+      "note": "Plain identity string and copied version prefix; file operations modeled"
+    },
+    {
+      "name": "update_A_size_gate_in_B",
+      "firmware": "B_111",
+      "cpu_pc": "0xabc6e",
+      "file_offset": "0x6bc6e",
+      "confidence": "bounded_execution",
+      "note": "Accepts 0x40000 or 0x40002; not an execution of A firmware"
+    },
+    {
+      "name": "update_A_header_reader_in_B",
+      "firmware": "B_111",
+      "cpu_pc": "0xabe28",
+      "file_offset": "0x6be28",
+      "confidence": "bounded_execution",
+      "note": "Reads six bytes from A file through modeled file operations"
+    },
+    {
+      "name": "update_menu_yes_action",
+      "firmware": "B_111",
+      "cpu_pc": "0x1416dc",
+      "file_offset": "0x1016dc",
+      "confidence": "static",
+      "note": "Calls the update coordinator after menu preparation"
+    },
+    {
+      "name": "update_coordinator",
+      "firmware": "B_111",
+      "cpu_pc": "0xab88e",
+      "file_offset": "0x6b88e",
+      "confidence": "static",
+      "note": "Checks state, reads image, checks CRC, synchronizes and invokes writer"
+    },
+    {
+      "name": "update_load_B_image",
+      "firmware": "B_111",
+      "cpu_pc": "0xab97c",
+      "file_offset": "0x6b97c",
+      "confidence": "static",
+      "note": "Reads 0x3D0000 bytes to 0x81000000 and checks count"
+    },
+    {
+      "name": "update_hardware_handshake",
+      "firmware": "B_111",
+      "cpu_pc": "0xab9f8",
+      "file_offset": "0x6b9f8",
+      "confidence": "partial_static",
+      "note": "Command and waits found; physical protocol not established"
+    },
+    {
+      "name": "crc16_xmodem_original",
+      "firmware": "B_111",
+      "cpu_pc": "0x44ccc",
+      "file_offset": "0x4ccc",
+      "confidence": "bounded_execution",
+      "note": "265 CPU test vectors; full images use exact loop model and independent CRC"
+    },
+    {
+      "name": "update_RAM_writer_wrapper",
+      "firmware": "B_111",
+      "cpu_pc": "0x6b430",
+      "file_offset": "0x2b430",
+      "confidence": "static",
+      "note": "Transfers to RAM 0x83CE86CE"
+    },
+    {
+      "name": "update_RAM_writer_entry",
+      "firmware": "B_111",
+      "cpu_pc": "0x83ce86ce",
+      "file_offset": "0x11cbe2",
+      "confidence": "static",
+      "note": "RAM copy of file 0x11CBE2; full entry preamble not emulated"
+    },
+    {
+      "name": "update_RAM_supervisor",
+      "firmware": "B_111",
+      "cpu_pc": "0x83ce877c",
+      "file_offset": "0x11cc90",
+      "confidence": "bounded_execution",
+      "note": "Executed through 0x83CE8892; physical erase/program calls stubbed"
+    },
+    {
+      "name": "update_RAM_flash_erase",
+      "firmware": "B_111",
+      "cpu_pc": "0x83ce8954",
+      "file_offset": "0x11ce68",
+      "confidence": "partial_static",
+      "note": "Physical flash command function; not executed in v7 tests"
+    },
+    {
+      "name": "update_RAM_flash_program",
+      "firmware": "B_111",
+      "cpu_pc": "0x83ce89e0",
+      "file_offset": "0x11cef4",
+      "confidence": "partial_static",
+      "note": "Physical flash command function; not executed in v7 tests"
+    },
+    {
+      "name": "update_RAM_compare_tag16",
+      "firmware": "B_111",
+      "cpu_pc": "0x83ce8e96",
+      "file_offset": "0x11d3aa",
+      "confidence": "bounded_execution",
+      "note": "Original comparison executed in wallpaper branch tests"
+    }
+  ],
+  "camera_tested": false
+}

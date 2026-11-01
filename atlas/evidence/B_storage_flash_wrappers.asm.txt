@@ -1,0 +1,27 @@
+Static bounded listing; code/data boundaries and delay slots require review.
+Original B SHA256: b9df48d461e875dce4ba84da88164af170dfc48ad9f7674859623bad0401032e
+FILE     CPU_PC   BYTES        MNEMONIC  OPERANDS
+0002b40c 0006b40c 1781         ST        RP,@-r15
+0002b40e 0006b40e 0f01         ENTER     #0x4
+0002b410 0006b410 9f8c83ce8954 LDI:32    #0x83ce8954,r12
+0002b416 0006b416 971c         CALL      @r12
+0002b418 0006b418 9f90         LEAVE     
+0002b41a 0006b41a 0781         LD        @r15+,RP
+0002b41c 0006b41c 9720         RET       
+0002b41e 0006b41e 1781         ST        RP,@-r15
+0002b420 0006b420 0f01         ENTER     #0x4
+0002b422 0006b422 9f8c83ce89e0 LDI:32    #0x83ce89e0,r12
+0002b428 0006b428 971c         CALL      @r12
+0002b42a 0006b42a 9f90         LEAVE     
+0002b42c 0006b42c 0781         LD        @r15+,RP
+0002b42e 0006b42e 9720         RET       
+0002b430 0006b430 1781         ST        RP,@-r15
+0002b432 0006b432 9f8c83ce86ce LDI:32    #0x83ce86ce,r12
+0002b438 0006b438 971c         CALL      @r12
+0002b43a 0006b43a 0781         LD        @r15+,RP
+0002b43c 0006b43c 9720         RET       
+0002b43e 0006b43e 1781         ST        RP,@-r15
+0002b440 0006b440 9f8c83ce88e0 LDI:32    #0x83ce88e0,r12
+0002b446 0006b446 971c         CALL      @r12
+0002b448 0006b448 0781         LD        @r15+,RP
+0002b44a 0006b44a 9720         RET       

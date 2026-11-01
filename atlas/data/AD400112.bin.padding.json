@@ -1,0 +1,23 @@
+[
+  {
+    "start": "0x0003234a",
+    "end_exclusive": "0x00033000",
+    "size": 3254,
+    "fill": "ff",
+    "usable_for_patch": false
+  },
+  {
+    "start": "0x0003390c",
+    "end_exclusive": "0x00038000",
+    "size": 18164,
+    "fill": "ff",
+    "usable_for_patch": false
+  },
+  {
+    "start": "0x0003e0dc",
+    "end_exclusive": "0x0003eb00",
+    "size": 2596,
+    "fill": "ff",
+    "usable_for_patch": false
+  }
+]

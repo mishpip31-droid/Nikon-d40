@@ -1,0 +1,22 @@
+{
+  "version": 7,
+  "updater_report": "data/updater_validation.json",
+  "updater_result": "PASS",
+  "originals_and_EXP01_unchanged": {
+    "d40_research/BD400111.bin": "b9df48d461e875dce4ba84da88164af170dfc48ad9f7674859623bad0401032e",
+    "d40_research/AD400111.bin": "ff96a874d3a22f9c18c610bd5bf55f4e6a53603c865fdb8e913a1d53591db5c9",
+    "d40_research/AD400112.bin": "0cc92921d6b2ad5d5cfa070abeebdd9aaca224d326e42a26339e3ac384270394",
+    "D40_Cinema2383_Firmware_EXP01/firmware/D40_Cinema2383_EXP01_NOT_CAMERA_TESTED.bin": "8abfda8cc67f787be867fd3d348fd38fcc27b8e041702625d182a968052148a8"
+  },
+  "new_tool_syntax": "PASS",
+  "coverage": {
+    "completed": 15,
+    "total": 48,
+    "estimate_percent": 30,
+    "meaning": "Research-plan metric, not whole-firmware code coverage or installability"
+  },
+  "camera_tested": false,
+  "installability_proven": false,
+  "recovery_proven": false,
+  "prior_results": "Historical validation reports retained; unrelated tests were not re-run for v7"
+}

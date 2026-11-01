@@ -1,0 +1,2744 @@
+{
+  "firmware_sha256": "b9df48d461e875dce4ba84da88164af170dfc48ad9f7674859623bad0401032e",
+  "result": "PASS",
+  "camera_connected": false,
+  "firmware_modified": false,
+  "ASIC_pixel_arithmetic_emulated": false,
+  "new_instruction_checks": 21,
+  "float_to_integer": {
+    "original_routine": "0xBE8DE",
+    "finite_cases": 2066,
+    "observed_rule": "truncate toward zero, saturate signed32 on finite overflow",
+    "examples": [
+      {
+        "float32": 0.0,
+        "integer": 0
+      },
+      {
+        "float32": -0.0,
+        "integer": 0
+      },
+      {
+        "float32": 0.5,
+        "integer": 0
+      },
+      {
+        "float32": -0.5,
+        "integer": 0
+      },
+      {
+        "float32": 1.5,
+        "integer": 1
+      },
+      {
+        "float32": -1.5,
+        "integer": -1
+      },
+      {
+        "float32": 1.899999976158142,
+        "integer": 1
+      },
+      {
+        "float32": -1.899999976158142,
+        "integer": -1
+      },
+      {
+        "float32": 511.989990234375,
+        "integer": 511
+      },
+      {
+        "float32": -511.989990234375,
+        "integer": -511
+      },
+      {
+        "float32": 512.5,
+        "integer": 512
+      },
+      {
+        "float32": -512.5,
+        "integer": -512
+      },
+      {
+        "float32": 1023.989990234375,
+        "integer": 1023
+      },
+      {
+        "float32": -1023.989990234375,
+        "integer": -1023
+      },
+      {
+        "float32": 2147483520.0,
+        "integer": 2147483520
+      },
+      {
+        "float32": -2147483648.0,
+        "integer": -2147483648
+      },
+      {
+        "float32": 2147483648.0,
+        "integer": 2147483647
+      },
+      {
+        "float32": -4294967296.0,
+        "integer": -2147483648
+      }
+    ],
+    "NaN_and_infinity_tested": false,
+    "ASIC_pixel_rounding_inferred_from_this": false
+  },
+  "static_luts": {
+    "entries_checked": 8448,
+    "sqrt": {
+      "minimum": 0,
+      "maximum": 4095,
+      "first_8": [
+        0,
+        64,
+        91,
+        111,
+        128,
+        143,
+        157,
+        169
+      ],
+      "last_8": [
+        4092,
+        4092,
+        4093,
+        4093,
+        4094,
+        4094,
+        4095,
+        4095
+      ],
+      "zero_count": 1,
+      "white_4095_count": 2,
+      "first_4095_index": 4094,
+      "descending_steps": 0
+    },
+    "square": {
+      "minimum": 0,
+      "maximum": 4094,
+      "first_8": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "last_8": [
+        4080,
+        4082,
+        4084,
+        4086,
+        4088,
+        4090,
+        4092,
+        4094
+      ],
+      "zero_count": 46,
+      "white_4095_count": 0,
+      "first_4095_index": null,
+      "descending_steps": 0
+    },
+    "rescale": {
+      "minimum": 0,
+      "maximum": 4095,
+      "first_8": [
+        0,
+        16,
+        32,
+        48,
+        64,
+        80,
+        96,
+        112
+      ],
+      "last_8": [
+        3983,
+        3999,
+        4015,
+        4031,
+        4047,
+        4063,
+        4079,
+        4095
+      ],
+      "zero_count": 1,
+      "white_4095_count": 1,
+      "first_4095_index": 255,
+      "descending_steps": 0
+    },
+    "square_half_tie_indices": [],
+    "hypothetical_direct_compositions_NOT_actual_pixel_path": {
+      "square_of_sqrt": {
+        "minimum_error": -1,
+        "maximum_error": 1,
+        "exact_count": 3072,
+        "error_histogram": {
+          "-1": 497,
+          "0": 3072,
+          "1": 527
+        }
+      },
+      "sqrt_of_square": {
+        "minimum_error": -45,
+        "maximum_error": 18,
+        "exact_count": 3072,
+        "error_histogram": {
+          "-45": 1,
+          "-44": 1,
+          "-43": 1,
+          "-42": 1,
+          "-41": 1,
+          "-40": 1,
+          "-39": 1,
+          "-38": 1,
+          "-37": 1,
+          "-36": 1,
+          "-35": 1,
+          "-34": 1,
+          "-33": 1,
+          "-32": 1,
+          "-31": 1,
+          "-30": 1,
+          "-29": 1,
+          "-28": 1,
+          "-27": 1,
+          "-26": 1,
+          "-25": 1,
+          "-24": 1,
+          "-23": 1,
+          "-22": 1,
+          "-21": 1,
+          "-20": 1,
+          "-19": 1,
+          "-18": 1,
+          "-17": 1,
+          "-16": 1,
+          "-15": 1,
+          "-14": 2,
+          "-13": 2,
+          "-12": 2,
+          "-11": 2,
+          "-10": 3,
+          "-9": 3,
+          "-8": 4,
+          "-7": 6,
+          "-6": 8,
+          "-5": 12,
+          "-4": 15,
+          "-3": 27,
+          "-2": 61,
+          "-1": 319,
+          "0": 3072,
+          "1": 364,
+          "2": 75,
+          "3": 32,
+          "4": 17,
+          "5": 9,
+          "6": 6,
+          "7": 5,
+          "8": 4,
+          "9": 3,
+          "10": 2,
+          "11": 2,
+          "12": 2,
+          "13": 1,
+          "14": 1,
+          "15": 1,
+          "16": 1,
+          "17": 1,
+          "18": 1
+        }
+      }
+    }
+  },
+  "tone_builder": {
+    "custom_and_fallback_cases": [
+      {
+        "path": "main",
+        "case": "default_rom",
+        "instructions": 92199,
+        "output": {
+          "minimum": 9,
+          "maximum": 4095,
+          "first_8": [
+            9,
+            12,
+            16,
+            19,
+            23,
+            27,
+            31,
+            35
+          ],
+          "last_8": [
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095
+          ],
+          "zero_count": 0,
+          "white_4095_count": 496,
+          "first_4095_index": 3600,
+          "descending_steps": 0
+        }
+      },
+      {
+        "path": "main",
+        "case": "ascending_12bit",
+        "instructions": 92199,
+        "output": {
+          "minimum": 0,
+          "maximum": 4094,
+          "first_8": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "last_8": [
+            4088,
+            4089,
+            4090,
+            4091,
+            4092,
+            4093,
+            4094,
+            4094
+          ],
+          "zero_count": 1,
+          "white_4095_count": 0,
+          "first_4095_index": null,
+          "descending_steps": 0
+        }
+      },
+      {
+        "path": "main",
+        "case": "descending_12bit",
+        "instructions": 92199,
+        "output": {
+          "minimum": 1,
+          "maximum": 4095,
+          "first_8": [
+            4095,
+            4094,
+            4093,
+            4092,
+            4091,
+            4090,
+            4089,
+            4088
+          ],
+          "last_8": [
+            7,
+            6,
+            5,
+            4,
+            3,
+            2,
+            1,
+            1
+          ],
+          "zero_count": 0,
+          "white_4095_count": 1,
+          "first_4095_index": 0,
+          "descending_steps": 4094
+        }
+      },
+      {
+        "path": "main",
+        "case": "alternating_0_4095",
+        "instructions": 92199,
+        "output": {
+          "minimum": 0,
+          "maximum": 4095,
+          "first_8": [
+            0,
+            2047,
+            4095,
+            2047,
+            0,
+            2047,
+            4095,
+            2047
+          ],
+          "last_8": [
+            0,
+            2047,
+            4095,
+            2047,
+            0,
+            2047,
+            4095,
+            4095
+          ],
+          "zero_count": 1024,
+          "white_4095_count": 1025,
+          "first_4095_index": 2,
+          "descending_steps": 2046
+        }
+      },
+      {
+        "path": "main",
+        "case": "constant_white",
+        "instructions": 92199,
+        "output": {
+          "minimum": 4095,
+          "maximum": 4095,
+          "first_8": [
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095
+          ],
+          "last_8": [
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095
+          ],
+          "zero_count": 0,
+          "white_4095_count": 4096,
+          "first_4095_index": 0,
+          "descending_steps": 0
+        }
+      },
+      {
+        "path": "main",
+        "case": "constant_zero",
+        "instructions": 92199,
+        "output": {
+          "minimum": 0,
+          "maximum": 0,
+          "first_8": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "last_8": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "zero_count": 4096,
+          "white_4095_count": 0,
+          "first_4095_index": null,
+          "descending_steps": 0
+        }
+      },
+      {
+        "path": "main",
+        "case": "malformed_u16",
+        "instructions": 96295,
+        "output": {
+          "minimum": 0,
+          "maximum": 4095,
+          "first_8": [
+            0,
+            0,
+            1,
+            2047,
+            4094,
+            4094,
+            4095,
+            4095
+          ],
+          "last_8": [
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095
+          ],
+          "zero_count": 512,
+          "white_4095_count": 2560,
+          "first_4095_index": 6,
+          "descending_steps": 255
+        }
+      },
+      {
+        "path": "alternate",
+        "case": "default_rom",
+        "instructions": 92205,
+        "output": {
+          "minimum": 9,
+          "maximum": 4095,
+          "first_8": [
+            9,
+            12,
+            16,
+            19,
+            23,
+            27,
+            31,
+            35
+          ],
+          "last_8": [
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095
+          ],
+          "zero_count": 0,
+          "white_4095_count": 496,
+          "first_4095_index": 3600,
+          "descending_steps": 0
+        }
+      },
+      {
+        "path": "alternate",
+        "case": "ascending_12bit",
+        "instructions": 92205,
+        "output": {
+          "minimum": 0,
+          "maximum": 4094,
+          "first_8": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "last_8": [
+            4088,
+            4089,
+            4090,
+            4091,
+            4092,
+            4093,
+            4094,
+            4094
+          ],
+          "zero_count": 1,
+          "white_4095_count": 0,
+          "first_4095_index": null,
+          "descending_steps": 0
+        }
+      },
+      {
+        "path": "alternate",
+        "case": "descending_12bit",
+        "instructions": 92205,
+        "output": {
+          "minimum": 1,
+          "maximum": 4095,
+          "first_8": [
+            4095,
+            4094,
+            4093,
+            4092,
+            4091,
+            4090,
+            4089,
+            4088
+          ],
+          "last_8": [
+            7,
+            6,
+            5,
+            4,
+            3,
+            2,
+            1,
+            1
+          ],
+          "zero_count": 0,
+          "white_4095_count": 1,
+          "first_4095_index": 0,
+          "descending_steps": 4094
+        }
+      },
+      {
+        "path": "alternate",
+        "case": "alternating_0_4095",
+        "instructions": 92205,
+        "output": {
+          "minimum": 0,
+          "maximum": 4095,
+          "first_8": [
+            0,
+            2047,
+            4095,
+            2047,
+            0,
+            2047,
+            4095,
+            2047
+          ],
+          "last_8": [
+            0,
+            2047,
+            4095,
+            2047,
+            0,
+            2047,
+            4095,
+            4095
+          ],
+          "zero_count": 1024,
+          "white_4095_count": 1025,
+          "first_4095_index": 2,
+          "descending_steps": 2046
+        }
+      },
+      {
+        "path": "alternate",
+        "case": "constant_white",
+        "instructions": 92205,
+        "output": {
+          "minimum": 4095,
+          "maximum": 4095,
+          "first_8": [
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095
+          ],
+          "last_8": [
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095
+          ],
+          "zero_count": 0,
+          "white_4095_count": 4096,
+          "first_4095_index": 0,
+          "descending_steps": 0
+        }
+      },
+      {
+        "path": "alternate",
+        "case": "constant_zero",
+        "instructions": 92205,
+        "output": {
+          "minimum": 0,
+          "maximum": 0,
+          "first_8": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "last_8": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "zero_count": 4096,
+          "white_4095_count": 0,
+          "first_4095_index": null,
+          "descending_steps": 0
+        }
+      },
+      {
+        "path": "alternate",
+        "case": "malformed_u16",
+        "instructions": 96300,
+        "output": {
+          "minimum": 0,
+          "maximum": 4095,
+          "first_8": [
+            0,
+            0,
+            1,
+            2047,
+            4094,
+            4094,
+            4095,
+            4095
+          ],
+          "last_8": [
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095
+          ],
+          "zero_count": 512,
+          "white_4095_count": 2560,
+          "first_4095_index": 6,
+          "descending_steps": 255
+        }
+      },
+      {
+        "path": "main",
+        "case": "fallback",
+        "headers": [
+          0,
+          0
+        ],
+        "instructions": 92193
+      },
+      {
+        "path": "main",
+        "case": "fallback",
+        "headers": [
+          1,
+          0
+        ],
+        "instructions": 92197
+      },
+      {
+        "path": "main",
+        "case": "fallback",
+        "headers": [
+          0,
+          1
+        ],
+        "instructions": 92193
+      },
+      {
+        "path": "alternate",
+        "case": "fallback",
+        "headers": [
+          0,
+          0
+        ],
+        "instructions": 92199
+      },
+      {
+        "path": "alternate",
+        "case": "fallback",
+        "headers": [
+          1,
+          0
+        ],
+        "instructions": 92203
+      },
+      {
+        "path": "alternate",
+        "case": "fallback",
+        "headers": [
+          0,
+          1
+        ],
+        "instructions": 92199
+      },
+      {
+        "path": "main",
+        "case": "synthetic_signed_correction_DATA_overlay",
+        "instructions": 96295,
+        "output": {
+          "minimum": 0,
+          "maximum": 4095,
+          "first_8": [
+            0,
+            0,
+            1,
+            2048,
+            4095,
+            4094,
+            4095,
+            4094
+          ],
+          "last_8": [
+            3968,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095
+          ],
+          "zero_count": 512,
+          "white_4095_count": 2304,
+          "first_4095_index": 4,
+          "descending_steps": 1023
+        }
+      },
+      {
+        "path": "alternate",
+        "case": "synthetic_signed_correction_DATA_overlay",
+        "instructions": 96300,
+        "output": {
+          "minimum": 0,
+          "maximum": 4095,
+          "first_8": [
+            0,
+            0,
+            1,
+            2048,
+            4095,
+            4094,
+            4095,
+            4094
+          ],
+          "last_8": [
+            3968,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095
+          ],
+          "zero_count": 512,
+          "white_4095_count": 2304,
+          "first_4095_index": 4,
+          "descending_steps": 1023
+        }
+      }
+    ],
+    "stock_records": [
+      {
+        "selector": 0,
+        "instructions": 167956,
+        "output": {
+          "minimum": 3,
+          "maximum": 4095,
+          "first_8": [
+            3,
+            11,
+            19,
+            27,
+            35,
+            43,
+            51,
+            59
+          ],
+          "last_8": [
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095
+          ],
+          "zero_count": 0,
+          "white_4095_count": 496,
+          "first_4095_index": 3600,
+          "descending_steps": 0
+        },
+        "decoded_outside_12bit": 0
+      },
+      {
+        "selector": 1,
+        "instructions": 167956,
+        "output": {
+          "minimum": 4,
+          "maximum": 4095,
+          "first_8": [
+            4,
+            11,
+            18,
+            25,
+            32,
+            39,
+            46,
+            53
+          ],
+          "last_8": [
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095
+          ],
+          "zero_count": 0,
+          "white_4095_count": 496,
+          "first_4095_index": 3600,
+          "descending_steps": 0
+        },
+        "decoded_outside_12bit": 0
+      },
+      {
+        "selector": 2,
+        "instructions": 167956,
+        "output": {
+          "minimum": 4,
+          "maximum": 4095,
+          "first_8": [
+            4,
+            11,
+            17,
+            24,
+            30,
+            37,
+            43,
+            50
+          ],
+          "last_8": [
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095
+          ],
+          "zero_count": 0,
+          "white_4095_count": 496,
+          "first_4095_index": 3600,
+          "descending_steps": 0
+        },
+        "decoded_outside_12bit": 0
+      },
+      {
+        "selector": 3,
+        "instructions": 167956,
+        "output": {
+          "minimum": 5,
+          "maximum": 4095,
+          "first_8": [
+            5,
+            11,
+            17,
+            23,
+            29,
+            35,
+            41,
+            47
+          ],
+          "last_8": [
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095
+          ],
+          "zero_count": 0,
+          "white_4095_count": 496,
+          "first_4095_index": 3600,
+          "descending_steps": 0
+        },
+        "decoded_outside_12bit": 0
+      },
+      {
+        "selector": 4,
+        "instructions": 167956,
+        "output": {
+          "minimum": 4,
+          "maximum": 4095,
+          "first_8": [
+            4,
+            10,
+            15,
+            20,
+            25,
+            31,
+            36,
+            41
+          ],
+          "last_8": [
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095
+          ],
+          "zero_count": 0,
+          "white_4095_count": 496,
+          "first_4095_index": 3600,
+          "descending_steps": 0
+        },
+        "decoded_outside_12bit": 0
+      },
+      {
+        "selector": 5,
+        "instructions": 167956,
+        "output": {
+          "minimum": 4,
+          "maximum": 4095,
+          "first_8": [
+            4,
+            8,
+            13,
+            18,
+            23,
+            27,
+            32,
+            37
+          ],
+          "last_8": [
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095
+          ],
+          "zero_count": 0,
+          "white_4095_count": 496,
+          "first_4095_index": 3600,
+          "descending_steps": 0
+        },
+        "decoded_outside_12bit": 0
+      },
+      {
+        "selector": 6,
+        "instructions": 167956,
+        "output": {
+          "minimum": 3,
+          "maximum": 4095,
+          "first_8": [
+            3,
+            7,
+            11,
+            15,
+            19,
+            23,
+            26,
+            30
+          ],
+          "last_8": [
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095
+          ],
+          "zero_count": 0,
+          "white_4095_count": 496,
+          "first_4095_index": 3600,
+          "descending_steps": 0
+        },
+        "decoded_outside_12bit": 0
+      },
+      {
+        "selector": 7,
+        "instructions": 167956,
+        "output": {
+          "minimum": 10,
+          "maximum": 4095,
+          "first_8": [
+            10,
+            19,
+            29,
+            38,
+            47,
+            56,
+            65,
+            74
+          ],
+          "last_8": [
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095
+          ],
+          "zero_count": 0,
+          "white_4095_count": 496,
+          "first_4095_index": 3600,
+          "descending_steps": 0
+        },
+        "decoded_outside_12bit": 0
+      },
+      {
+        "selector": 8,
+        "instructions": 167956,
+        "output": {
+          "minimum": 10,
+          "maximum": 4095,
+          "first_8": [
+            10,
+            17,
+            23,
+            30,
+            36,
+            43,
+            49,
+            56
+          ],
+          "last_8": [
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095
+          ],
+          "zero_count": 0,
+          "white_4095_count": 496,
+          "first_4095_index": 3600,
+          "descending_steps": 0
+        },
+        "decoded_outside_12bit": 0
+      },
+      {
+        "selector": 9,
+        "instructions": 167956,
+        "output": {
+          "minimum": 10,
+          "maximum": 4095,
+          "first_8": [
+            10,
+            16,
+            21,
+            27,
+            33,
+            39,
+            44,
+            50
+          ],
+          "last_8": [
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095
+          ],
+          "zero_count": 0,
+          "white_4095_count": 496,
+          "first_4095_index": 3600,
+          "descending_steps": 0
+        },
+        "decoded_outside_12bit": 0
+      },
+      {
+        "selector": 10,
+        "instructions": 167956,
+        "output": {
+          "minimum": 10,
+          "maximum": 4095,
+          "first_8": [
+            10,
+            15,
+            20,
+            25,
+            30,
+            35,
+            40,
+            45
+          ],
+          "last_8": [
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095
+          ],
+          "zero_count": 0,
+          "white_4095_count": 496,
+          "first_4095_index": 3600,
+          "descending_steps": 0
+        },
+        "decoded_outside_12bit": 0
+      },
+      {
+        "selector": 11,
+        "instructions": 167956,
+        "output": {
+          "minimum": 7,
+          "maximum": 4095,
+          "first_8": [
+            7,
+            12,
+            17,
+            21,
+            26,
+            30,
+            35,
+            39
+          ],
+          "last_8": [
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095
+          ],
+          "zero_count": 0,
+          "white_4095_count": 496,
+          "first_4095_index": 3600,
+          "descending_steps": 0
+        },
+        "decoded_outside_12bit": 0
+      },
+      {
+        "selector": 12,
+        "instructions": 167956,
+        "output": {
+          "minimum": 5,
+          "maximum": 4095,
+          "first_8": [
+            5,
+            9,
+            13,
+            17,
+            21,
+            26,
+            30,
+            34
+          ],
+          "last_8": [
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095
+          ],
+          "zero_count": 0,
+          "white_4095_count": 496,
+          "first_4095_index": 3600,
+          "descending_steps": 0
+        },
+        "decoded_outside_12bit": 0
+      },
+      {
+        "selector": 13,
+        "instructions": 167956,
+        "output": {
+          "minimum": 0,
+          "maximum": 4095,
+          "first_8": [
+            0,
+            3,
+            6,
+            10,
+            13,
+            17,
+            20,
+            24
+          ],
+          "last_8": [
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095
+          ],
+          "zero_count": 1,
+          "white_4095_count": 496,
+          "first_4095_index": 3600,
+          "descending_steps": 0
+        },
+        "decoded_outside_12bit": 0
+      },
+      {
+        "selector": 14,
+        "instructions": 167956,
+        "output": {
+          "minimum": 2,
+          "maximum": 4095,
+          "first_8": [
+            2,
+            9,
+            17,
+            25,
+            33,
+            40,
+            48,
+            56
+          ],
+          "last_8": [
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095
+          ],
+          "zero_count": 0,
+          "white_4095_count": 496,
+          "first_4095_index": 3600,
+          "descending_steps": 0
+        },
+        "decoded_outside_12bit": 0
+      },
+      {
+        "selector": 15,
+        "instructions": 167956,
+        "output": {
+          "minimum": 5,
+          "maximum": 4095,
+          "first_8": [
+            5,
+            10,
+            15,
+            21,
+            26,
+            31,
+            36,
+            41
+          ],
+          "last_8": [
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095
+          ],
+          "zero_count": 0,
+          "white_4095_count": 496,
+          "first_4095_index": 3600,
+          "descending_steps": 0
+        },
+        "decoded_outside_12bit": 0
+      },
+      {
+        "selector": 16,
+        "instructions": 167956,
+        "output": {
+          "minimum": 7,
+          "maximum": 4095,
+          "first_8": [
+            7,
+            11,
+            16,
+            20,
+            24,
+            29,
+            33,
+            38
+          ],
+          "last_8": [
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095
+          ],
+          "zero_count": 0,
+          "white_4095_count": 496,
+          "first_4095_index": 3600,
+          "descending_steps": 0
+        },
+        "decoded_outside_12bit": 0
+      },
+      {
+        "selector": 17,
+        "instructions": 167956,
+        "output": {
+          "minimum": 9,
+          "maximum": 4095,
+          "first_8": [
+            9,
+            12,
+            16,
+            20,
+            23,
+            27,
+            31,
+            35
+          ],
+          "last_8": [
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095
+          ],
+          "zero_count": 0,
+          "white_4095_count": 496,
+          "first_4095_index": 3600,
+          "descending_steps": 0
+        },
+        "decoded_outside_12bit": 0
+      },
+      {
+        "selector": 18,
+        "instructions": 167956,
+        "output": {
+          "minimum": 6,
+          "maximum": 4095,
+          "first_8": [
+            6,
+            10,
+            13,
+            17,
+            20,
+            24,
+            27,
+            31
+          ],
+          "last_8": [
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095
+          ],
+          "zero_count": 0,
+          "white_4095_count": 496,
+          "first_4095_index": 3600,
+          "descending_steps": 0
+        },
+        "decoded_outside_12bit": 0
+      },
+      {
+        "selector": 19,
+        "instructions": 167956,
+        "output": {
+          "minimum": 4,
+          "maximum": 4095,
+          "first_8": [
+            4,
+            7,
+            11,
+            14,
+            17,
+            20,
+            24,
+            27
+          ],
+          "last_8": [
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095
+          ],
+          "zero_count": 0,
+          "white_4095_count": 496,
+          "first_4095_index": 3600,
+          "descending_steps": 0
+        },
+        "decoded_outside_12bit": 0
+      },
+      {
+        "selector": 20,
+        "instructions": 167956,
+        "output": {
+          "minimum": 0,
+          "maximum": 4095,
+          "first_8": [
+            0,
+            2,
+            5,
+            8,
+            11,
+            14,
+            17,
+            20
+          ],
+          "last_8": [
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095
+          ],
+          "zero_count": 1,
+          "white_4095_count": 496,
+          "first_4095_index": 3600,
+          "descending_steps": 0
+        },
+        "decoded_outside_12bit": 0
+      },
+      {
+        "selector": 47,
+        "instructions": 167958,
+        "output": {
+          "minimum": 14,
+          "maximum": 4095,
+          "first_8": [
+            14,
+            22,
+            30,
+            38,
+            46,
+            54,
+            62,
+            70
+          ],
+          "last_8": [
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095
+          ],
+          "zero_count": 0,
+          "white_4095_count": 196,
+          "first_4095_index": 3900,
+          "descending_steps": 0
+        },
+        "decoded_outside_12bit": 0
+      },
+      {
+        "selector": 48,
+        "instructions": 167958,
+        "output": {
+          "minimum": 14,
+          "maximum": 4095,
+          "first_8": [
+            14,
+            20,
+            26,
+            32,
+            38,
+            44,
+            50,
+            56
+          ],
+          "last_8": [
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095
+          ],
+          "zero_count": 0,
+          "white_4095_count": 196,
+          "first_4095_index": 3900,
+          "descending_steps": 0
+        },
+        "decoded_outside_12bit": 0
+      },
+      {
+        "selector": 49,
+        "instructions": 167958,
+        "output": {
+          "minimum": 14,
+          "maximum": 4095,
+          "first_8": [
+            14,
+            19,
+            24,
+            29,
+            35,
+            40,
+            45,
+            51
+          ],
+          "last_8": [
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095
+          ],
+          "zero_count": 0,
+          "white_4095_count": 196,
+          "first_4095_index": 3900,
+          "descending_steps": 0
+        },
+        "decoded_outside_12bit": 0
+      },
+      {
+        "selector": 50,
+        "instructions": 167958,
+        "output": {
+          "minimum": 14,
+          "maximum": 4095,
+          "first_8": [
+            14,
+            18,
+            23,
+            27,
+            32,
+            37,
+            41,
+            46
+          ],
+          "last_8": [
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095
+          ],
+          "zero_count": 0,
+          "white_4095_count": 196,
+          "first_4095_index": 3900,
+          "descending_steps": 0
+        },
+        "decoded_outside_12bit": 0
+      },
+      {
+        "selector": 51,
+        "instructions": 167958,
+        "output": {
+          "minimum": 14,
+          "maximum": 4095,
+          "first_8": [
+            14,
+            17,
+            21,
+            25,
+            29,
+            33,
+            37,
+            41
+          ],
+          "last_8": [
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095
+          ],
+          "zero_count": 0,
+          "white_4095_count": 196,
+          "first_4095_index": 3900,
+          "descending_steps": 0
+        },
+        "decoded_outside_12bit": 0
+      },
+      {
+        "selector": 52,
+        "instructions": 167958,
+        "output": {
+          "minimum": 14,
+          "maximum": 4095,
+          "first_8": [
+            14,
+            17,
+            20,
+            24,
+            27,
+            30,
+            34,
+            37
+          ],
+          "last_8": [
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095
+          ],
+          "zero_count": 0,
+          "white_4095_count": 196,
+          "first_4095_index": 3900,
+          "descending_steps": 0
+        },
+        "decoded_outside_12bit": 0
+      },
+      {
+        "selector": 53,
+        "instructions": 167958,
+        "output": {
+          "minimum": 14,
+          "maximum": 4095,
+          "first_8": [
+            14,
+            16,
+            18,
+            21,
+            23,
+            26,
+            28,
+            30
+          ],
+          "last_8": [
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095,
+            4095
+          ],
+          "zero_count": 0,
+          "white_4095_count": 196,
+          "first_4095_index": 3900,
+          "descending_steps": 0
+        },
+        "decoded_outside_12bit": 0
+      }
+    ],
+    "stock_index_scope": "21+7 records from seed spacing; runtime reachability not proved",
+    "direct_byte_curve_ctx_1d_bit_20_path_tested": false,
+    "original_cpu_executions": 50,
+    "full_output_entries_compared": 204800
+  },
+  "matrices": {
+    "M1": {
+      "coefficient_min": -485,
+      "coefficient_max": 969,
+      "row_sums": [
+        [
+          512,
+          512,
+          512
+        ]
+      ],
+      "inferred_fixed_point_divisor_NOT_verified": 512,
+      "serialization_sign_bit": "0x400",
+      "mathematical_input_cube_0_4095_bounds_NOT_ASIC_measurement": [
+        {
+          "profile": 0,
+          "rows": [
+            {
+              "accumulator_min": -855855,
+              "accumulator_max": 2952495,
+              "after_ASSUMED_divisor_min": -1671.591796875,
+              "after_ASSUMED_divisor_max": 5766.591796875
+            },
+            {
+              "accumulator_min": -712530,
+              "accumulator_max": 2809170,
+              "after_ASSUMED_divisor_min": -1391.66015625,
+              "after_ASSUMED_divisor_max": 5486.66015625
+            },
+            {
+              "accumulator_min": -356265,
+              "accumulator_max": 2452905,
+              "after_ASSUMED_divisor_min": -695.830078125,
+              "after_ASSUMED_divisor_max": 4790.830078125
+            }
+          ]
+        },
+        {
+          "profile": 1,
+          "rows": [
+            {
+              "accumulator_min": -1253070,
+              "accumulator_max": 3349710,
+              "after_ASSUMED_divisor_min": -2447.40234375,
+              "after_ASSUMED_divisor_max": 6542.40234375
+            },
+            {
+              "accumulator_min": -782145,
+              "accumulator_max": 2878785,
+              "after_ASSUMED_divisor_min": -1527.626953125,
+              "after_ASSUMED_divisor_max": 5622.626953125
+            },
+            {
+              "accumulator_min": -282555,
+              "accumulator_max": 2379195,
+              "after_ASSUMED_divisor_min": -551.865234375,
+              "after_ASSUMED_divisor_max": 4646.865234375
+            }
+          ]
+        },
+        {
+          "profile": 2,
+          "rows": [
+            {
+              "accumulator_min": -1355445,
+              "accumulator_max": 3452085,
+              "after_ASSUMED_divisor_min": -2647.353515625,
+              "after_ASSUMED_divisor_max": 6742.353515625
+            },
+            {
+              "accumulator_min": -1253070,
+              "accumulator_max": 3349710,
+              "after_ASSUMED_divisor_min": -2447.40234375,
+              "after_ASSUMED_divisor_max": 6542.40234375
+            },
+            {
+              "accumulator_min": -298935,
+              "accumulator_max": 2395575,
+              "after_ASSUMED_divisor_min": -583.857421875,
+              "after_ASSUMED_divisor_max": 4678.857421875
+            }
+          ]
+        },
+        {
+          "profile": 3,
+          "rows": [
+            {
+              "accumulator_min": -1289925,
+              "accumulator_max": 3386565,
+              "after_ASSUMED_divisor_min": -2519.384765625,
+              "after_ASSUMED_divisor_max": 6614.384765625
+            },
+            {
+              "accumulator_min": -278460,
+              "accumulator_max": 2375100,
+              "after_ASSUMED_divisor_min": -543.8671875,
+              "after_ASSUMED_divisor_max": 4638.8671875
+            },
+            {
+              "accumulator_min": -364455,
+              "accumulator_max": 2461095,
+              "after_ASSUMED_divisor_min": -711.826171875,
+              "after_ASSUMED_divisor_max": 4806.826171875
+            }
+          ]
+        },
+        {
+          "profile": 4,
+          "rows": [
+            {
+              "accumulator_min": -1732185,
+              "accumulator_max": 3828825,
+              "after_ASSUMED_divisor_min": -3383.173828125,
+              "after_ASSUMED_divisor_max": 7478.173828125
+            },
+            {
+              "accumulator_min": -589680,
+              "accumulator_max": 2686320,
+              "after_ASSUMED_divisor_min": -1151.71875,
+              "after_ASSUMED_divisor_max": 5246.71875
+            },
+            {
+              "accumulator_min": -217035,
+              "accumulator_max": 2313675,
+              "after_ASSUMED_divisor_min": -423.896484375,
+              "after_ASSUMED_divisor_max": 4518.896484375
+            }
+          ]
+        },
+        {
+          "profile": 5,
+          "rows": [
+            {
+              "accumulator_min": -1253070,
+              "accumulator_max": 3349710,
+              "after_ASSUMED_divisor_min": -2447.40234375,
+              "after_ASSUMED_divisor_max": 6542.40234375
+            },
+            {
+              "accumulator_min": -782145,
+              "accumulator_max": 2878785,
+              "after_ASSUMED_divisor_min": -1527.626953125,
+              "after_ASSUMED_divisor_max": 5622.626953125
+            },
+            {
+              "accumulator_min": -282555,
+              "accumulator_max": 2379195,
+              "after_ASSUMED_divisor_min": -551.865234375,
+              "after_ASSUMED_divisor_max": 4646.865234375
+            }
+          ]
+        },
+        {
+          "profile": 6,
+          "rows": [
+            {
+              "accumulator_min": -319410,
+              "accumulator_max": 2416050,
+              "after_ASSUMED_divisor_min": -623.84765625,
+              "after_ASSUMED_divisor_max": 4718.84765625
+            },
+            {
+              "accumulator_min": -356265,
+              "accumulator_max": 2452905,
+              "after_ASSUMED_divisor_min": -695.830078125,
+              "after_ASSUMED_divisor_max": 4790.830078125
+            },
+            {
+              "accumulator_min": -163800,
+              "accumulator_max": 2260440,
+              "after_ASSUMED_divisor_min": -319.921875,
+              "after_ASSUMED_divisor_max": 4414.921875
+            }
+          ]
+        },
+        {
+          "profile": 7,
+          "rows": [
+            {
+              "accumulator_min": -126945,
+              "accumulator_max": 2223585,
+              "after_ASSUMED_divisor_min": -247.939453125,
+              "after_ASSUMED_divisor_max": 4342.939453125
+            },
+            {
+              "accumulator_min": -204750,
+              "accumulator_max": 2301390,
+              "after_ASSUMED_divisor_min": -399.90234375,
+              "after_ASSUMED_divisor_max": 4494.90234375
+            },
+            {
+              "accumulator_min": -217035,
+              "accumulator_max": 2313675,
+              "after_ASSUMED_divisor_min": -423.896484375,
+              "after_ASSUMED_divisor_max": 4518.896484375
+            }
+          ]
+        },
+        {
+          "profile": 8,
+          "rows": [
+            {
+              "accumulator_min": -245700,
+              "accumulator_max": 2342340,
+              "after_ASSUMED_divisor_min": -479.8828125,
+              "after_ASSUMED_divisor_max": 4574.8828125
+            },
+            {
+              "accumulator_min": -393120,
+              "accumulator_max": 2489760,
+              "after_ASSUMED_divisor_min": -767.8125,
+              "after_ASSUMED_divisor_max": 4862.8125
+            },
+            {
+              "accumulator_min": -135135,
+              "accumulator_max": 2231775,
+              "after_ASSUMED_divisor_min": -263.935546875,
+              "after_ASSUMED_divisor_max": 4358.935546875
+            }
+          ]
+        },
+        {
+          "profile": 9,
+          "rows": [
+            {
+              "accumulator_min": -81900,
+              "accumulator_max": 2178540,
+              "after_ASSUMED_divisor_min": -159.9609375,
+              "after_ASSUMED_divisor_max": 4254.9609375
+            },
+            {
+              "accumulator_min": -24570,
+              "accumulator_max": 2121210,
+              "after_ASSUMED_divisor_min": -47.98828125,
+              "after_ASSUMED_divisor_max": 4142.98828125
+            },
+            {
+              "accumulator_min": -151515,
+              "accumulator_max": 2248155,
+              "after_ASSUMED_divisor_min": -295.927734375,
+              "after_ASSUMED_divisor_max": 4390.927734375
+            }
+          ]
+        },
+        {
+          "profile": 10,
+          "rows": [
+            {
+              "accumulator_min": -614250,
+              "accumulator_max": 2710890,
+              "after_ASSUMED_divisor_min": -1199.70703125,
+              "after_ASSUMED_divisor_max": 5294.70703125
+            },
+            {
+              "accumulator_min": -118755,
+              "accumulator_max": 2215395,
+              "after_ASSUMED_divisor_min": -231.943359375,
+              "after_ASSUMED_divisor_max": 4326.943359375
+            },
+            {
+              "accumulator_min": -110565,
+              "accumulator_max": 2207205,
+              "after_ASSUMED_divisor_min": -215.947265625,
+              "after_ASSUMED_divisor_max": 4310.947265625
+            }
+          ]
+        },
+        {
+          "profile": 11,
+          "rows": [
+            {
+              "accumulator_min": -126945,
+              "accumulator_max": 2223585,
+              "after_ASSUMED_divisor_min": -247.939453125,
+              "after_ASSUMED_divisor_max": 4342.939453125
+            },
+            {
+              "accumulator_min": -204750,
+              "accumulator_max": 2301390,
+              "after_ASSUMED_divisor_min": -399.90234375,
+              "after_ASSUMED_divisor_max": 4494.90234375
+            },
+            {
+              "accumulator_min": -217035,
+              "accumulator_max": 2313675,
+              "after_ASSUMED_divisor_min": -423.896484375,
+              "after_ASSUMED_divisor_max": 4518.896484375
+            }
+          ]
+        },
+        {
+          "profile": 12,
+          "rows": [
+            {
+              "accumulator_min": -1228500,
+              "accumulator_max": 3325140,
+              "after_ASSUMED_divisor_min": -2399.4140625,
+              "after_ASSUMED_divisor_max": 6494.4140625
+            },
+            {
+              "accumulator_min": -577395,
+              "accumulator_max": 2674035,
+              "after_ASSUMED_divisor_min": -1127.724609375,
+              "after_ASSUMED_divisor_max": 5222.724609375
+            },
+            {
+              "accumulator_min": -57330,
+              "accumulator_max": 2153970,
+              "after_ASSUMED_divisor_min": -111.97265625,
+              "after_ASSUMED_divisor_max": 4206.97265625
+            }
+          ]
+        },
+        {
+          "profile": 13,
+          "rows": [
+            {
+              "accumulator_min": -1826370,
+              "accumulator_max": 3923010,
+              "after_ASSUMED_divisor_min": -3567.12890625,
+              "after_ASSUMED_divisor_max": 7662.12890625
+            },
+            {
+              "accumulator_min": -683865,
+              "accumulator_max": 2780505,
+              "after_ASSUMED_divisor_min": -1335.673828125,
+              "after_ASSUMED_divisor_max": 5430.673828125
+            },
+            {
+              "accumulator_min": -28665,
+              "accumulator_max": 2125305,
+              "after_ASSUMED_divisor_min": -55.986328125,
+              "after_ASSUMED_divisor_max": 4150.986328125
+            }
+          ]
+        },
+        {
+          "profile": 14,
+          "rows": [
+            {
+              "accumulator_min": -1986075,
+              "accumulator_max": 4082715,
+              "after_ASSUMED_divisor_min": -3879.052734375,
+              "after_ASSUMED_divisor_max": 7974.052734375
+            },
+            {
+              "accumulator_min": -1072890,
+              "accumulator_max": 3169530,
+              "after_ASSUMED_divisor_min": -2095.48828125,
+              "after_ASSUMED_divisor_max": 6190.48828125
+            },
+            {
+              "accumulator_min": -114660,
+              "accumulator_max": 2211300,
+              "after_ASSUMED_divisor_min": -223.9453125,
+              "after_ASSUMED_divisor_max": 4318.9453125
+            }
+          ]
+        },
+        {
+          "profile": 15,
+          "rows": [
+            {
+              "accumulator_min": -1859130,
+              "accumulator_max": 3955770,
+              "after_ASSUMED_divisor_min": -3631.11328125,
+              "after_ASSUMED_divisor_max": 7726.11328125
+            },
+            {
+              "accumulator_min": -274365,
+              "accumulator_max": 2371005,
+              "after_ASSUMED_divisor_min": -535.869140625,
+              "after_ASSUMED_divisor_max": 4630.869140625
+            },
+            {
+              "accumulator_min": -24570,
+              "accumulator_max": 2121210,
+              "after_ASSUMED_divisor_min": -47.98828125,
+              "after_ASSUMED_divisor_max": 4142.98828125
+            }
+          ]
+        },
+        {
+          "profile": 16,
+          "rows": [
+            {
+              "accumulator_min": -1928745,
+              "accumulator_max": 4025385,
+              "after_ASSUMED_divisor_min": -3767.080078125,
+              "after_ASSUMED_divisor_max": 7862.080078125
+            },
+            {
+              "accumulator_min": -524160,
+              "accumulator_max": 2620800,
+              "after_ASSUMED_divisor_min": -1023.75,
+              "after_ASSUMED_divisor_max": 5118.75
+            },
+            {
+              "accumulator_min": -159705,
+              "accumulator_max": 2256345,
+              "after_ASSUMED_divisor_min": -311.923828125,
+              "after_ASSUMED_divisor_max": 4406.923828125
+            }
+          ]
+        },
+        {
+          "profile": 17,
+          "rows": [
+            {
+              "accumulator_min": -1826370,
+              "accumulator_max": 3923010,
+              "after_ASSUMED_divisor_min": -3567.12890625,
+              "after_ASSUMED_divisor_max": 7662.12890625
+            },
+            {
+              "accumulator_min": -683865,
+              "accumulator_max": 2780505,
+              "after_ASSUMED_divisor_min": -1335.673828125,
+              "after_ASSUMED_divisor_max": 5430.673828125
+            },
+            {
+              "accumulator_min": -28665,
+              "accumulator_max": 2125305,
+              "after_ASSUMED_divisor_min": -55.986328125,
+              "after_ASSUMED_divisor_max": 4150.986328125
+            }
+          ]
+        }
+      ]
+    },
+    "M2": {
+      "coefficient_min": -132,
+      "coefficient_max": 187,
+      "row_sums": [
+        [
+          256,
+          0,
+          0
+        ]
+      ],
+      "inferred_fixed_point_divisor_NOT_verified": 256,
+      "serialization_sign_bit": "0x200",
+      "mathematical_input_cube_0_4095_bounds_NOT_ASIC_measurement": [
+        {
+          "profile": 0,
+          "rows": [
+            {
+              "accumulator_min": 0,
+              "accumulator_max": 1048320,
+              "after_ASSUMED_divisor_min": 0.0,
+              "after_ASSUMED_divisor_max": 4095.0
+            },
+            {
+              "accumulator_min": -610155,
+              "accumulator_max": 610155,
+              "after_ASSUMED_divisor_min": -2383.41796875,
+              "after_ASSUMED_divisor_max": 2383.41796875
+            },
+            {
+              "accumulator_min": -634725,
+              "accumulator_max": 634725,
+              "after_ASSUMED_divisor_min": -2479.39453125,
+              "after_ASSUMED_divisor_max": 2479.39453125
+            }
+          ]
+        },
+        {
+          "profile": 1,
+          "rows": [
+            {
+              "accumulator_min": 0,
+              "accumulator_max": 1048320,
+              "after_ASSUMED_divisor_min": 0.0,
+              "after_ASSUMED_divisor_max": 4095.0
+            },
+            {
+              "accumulator_min": -577395,
+              "accumulator_max": 577395,
+              "after_ASSUMED_divisor_min": -2255.44921875,
+              "after_ASSUMED_divisor_max": 2255.44921875
+            },
+            {
+              "accumulator_min": -614250,
+              "accumulator_max": 614250,
+              "after_ASSUMED_divisor_min": -2399.4140625,
+              "after_ASSUMED_divisor_max": 2399.4140625
+            }
+          ]
+        },
+        {
+          "profile": 2,
+          "rows": [
+            {
+              "accumulator_min": 0,
+              "accumulator_max": 1048320,
+              "after_ASSUMED_divisor_min": 0.0,
+              "after_ASSUMED_divisor_max": 4095.0
+            },
+            {
+              "accumulator_min": -565110,
+              "accumulator_max": 565110,
+              "after_ASSUMED_divisor_min": -2207.4609375,
+              "after_ASSUMED_divisor_max": 2207.4609375
+            },
+            {
+              "accumulator_min": -601965,
+              "accumulator_max": 601965,
+              "after_ASSUMED_divisor_min": -2351.42578125,
+              "after_ASSUMED_divisor_max": 2351.42578125
+            }
+          ]
+        },
+        {
+          "profile": 3,
+          "rows": [
+            {
+              "accumulator_min": 0,
+              "accumulator_max": 1048320,
+              "after_ASSUMED_divisor_min": 0.0,
+              "after_ASSUMED_divisor_max": 4095.0
+            },
+            {
+              "accumulator_min": -552825,
+              "accumulator_max": 552825,
+              "after_ASSUMED_divisor_min": -2159.47265625,
+              "after_ASSUMED_divisor_max": 2159.47265625
+            },
+            {
+              "accumulator_min": -589680,
+              "accumulator_max": 589680,
+              "after_ASSUMED_divisor_min": -2303.4375,
+              "after_ASSUMED_divisor_max": 2303.4375
+            }
+          ]
+        },
+        {
+          "profile": 4,
+          "rows": [
+            {
+              "accumulator_min": 0,
+              "accumulator_max": 1048320,
+              "after_ASSUMED_divisor_min": 0.0,
+              "after_ASSUMED_divisor_max": 4095.0
+            },
+            {
+              "accumulator_min": -528255,
+              "accumulator_max": 528255,
+              "after_ASSUMED_divisor_min": -2063.49609375,
+              "after_ASSUMED_divisor_max": 2063.49609375
+            },
+            {
+              "accumulator_min": -573300,
+              "accumulator_max": 573300,
+              "after_ASSUMED_divisor_min": -2239.453125,
+              "after_ASSUMED_divisor_max": 2239.453125
+            }
+          ]
+        },
+        {
+          "profile": 5,
+          "rows": [
+            {
+              "accumulator_min": 0,
+              "accumulator_max": 1048320,
+              "after_ASSUMED_divisor_min": 0.0,
+              "after_ASSUMED_divisor_max": 4095.0
+            },
+            {
+              "accumulator_min": -491400,
+              "accumulator_max": 491400,
+              "after_ASSUMED_divisor_min": -1919.53125,
+              "after_ASSUMED_divisor_max": 1919.53125
+            },
+            {
+              "accumulator_min": -540540,
+              "accumulator_max": 540540,
+              "after_ASSUMED_divisor_min": -2111.484375,
+              "after_ASSUMED_divisor_max": 2111.484375
+            }
+          ]
+        },
+        {
+          "profile": 6,
+          "rows": [
+            {
+              "accumulator_min": 0,
+              "accumulator_max": 1048320,
+              "after_ASSUMED_divisor_min": 0.0,
+              "after_ASSUMED_divisor_max": 4095.0
+            },
+            {
+              "accumulator_min": -450450,
+              "accumulator_max": 450450,
+              "after_ASSUMED_divisor_min": -1759.5703125,
+              "after_ASSUMED_divisor_max": 1759.5703125
+            },
+            {
+              "accumulator_min": -503685,
+              "accumulator_max": 503685,
+              "after_ASSUMED_divisor_min": -1967.51953125,
+              "after_ASSUMED_divisor_max": 1967.51953125
+            }
+          ]
+        },
+        {
+          "profile": 7,
+          "rows": [
+            {
+              "accumulator_min": 0,
+              "accumulator_max": 1048320,
+              "after_ASSUMED_divisor_min": 0.0,
+              "after_ASSUMED_divisor_max": 4095.0
+            },
+            {
+              "accumulator_min": -733005,
+              "accumulator_max": 733005,
+              "after_ASSUMED_divisor_min": -2863.30078125,
+              "after_ASSUMED_divisor_max": 2863.30078125
+            },
+            {
+              "accumulator_min": -622440,
+              "accumulator_max": 622440,
+              "after_ASSUMED_divisor_min": -2431.40625,
+              "after_ASSUMED_divisor_max": 2431.40625
+            }
+          ]
+        },
+        {
+          "profile": 8,
+          "rows": [
+            {
+              "accumulator_min": 0,
+              "accumulator_max": 1048320,
+              "after_ASSUMED_divisor_min": 0.0,
+              "after_ASSUMED_divisor_max": 4095.0
+            },
+            {
+              "accumulator_min": -696150,
+              "accumulator_max": 696150,
+              "after_ASSUMED_divisor_min": -2719.3359375,
+              "after_ASSUMED_divisor_max": 2719.3359375
+            },
+            {
+              "accumulator_min": -606060,
+              "accumulator_max": 606060,
+              "after_ASSUMED_divisor_min": -2367.421875,
+              "after_ASSUMED_divisor_max": 2367.421875
+            }
+          ]
+        },
+        {
+          "profile": 9,
+          "rows": [
+            {
+              "accumulator_min": 0,
+              "accumulator_max": 1048320,
+              "after_ASSUMED_divisor_min": 0.0,
+              "after_ASSUMED_divisor_max": 4095.0
+            },
+            {
+              "accumulator_min": -687960,
+              "accumulator_max": 687960,
+              "after_ASSUMED_divisor_min": -2687.34375,
+              "after_ASSUMED_divisor_max": 2687.34375
+            },
+            {
+              "accumulator_min": -597870,
+              "accumulator_max": 597870,
+              "after_ASSUMED_divisor_min": -2335.4296875,
+              "after_ASSUMED_divisor_max": 2335.4296875
+            }
+          ]
+        },
+        {
+          "profile": 10,
+          "rows": [
+            {
+              "accumulator_min": 0,
+              "accumulator_max": 1048320,
+              "after_ASSUMED_divisor_min": 0.0,
+              "after_ASSUMED_divisor_max": 4095.0
+            },
+            {
+              "accumulator_min": -692055,
+              "accumulator_max": 692055,
+              "after_ASSUMED_divisor_min": -2703.33984375,
+              "after_ASSUMED_divisor_max": 2703.33984375
+            },
+            {
+              "accumulator_min": -597870,
+              "accumulator_max": 597870,
+              "after_ASSUMED_divisor_min": -2335.4296875,
+              "after_ASSUMED_divisor_max": 2335.4296875
+            }
+          ]
+        },
+        {
+          "profile": 11,
+          "rows": [
+            {
+              "accumulator_min": 0,
+              "accumulator_max": 1048320,
+              "after_ASSUMED_divisor_min": 0.0,
+              "after_ASSUMED_divisor_max": 4095.0
+            },
+            {
+              "accumulator_min": -630630,
+              "accumulator_max": 630630,
+              "after_ASSUMED_divisor_min": -2463.3984375,
+              "after_ASSUMED_divisor_max": 2463.3984375
+            },
+            {
+              "accumulator_min": -556920,
+              "accumulator_max": 556920,
+              "after_ASSUMED_divisor_min": -2175.46875,
+              "after_ASSUMED_divisor_max": 2175.46875
+            }
+          ]
+        },
+        {
+          "profile": 12,
+          "rows": [
+            {
+              "accumulator_min": 0,
+              "accumulator_max": 1048320,
+              "after_ASSUMED_divisor_min": 0.0,
+              "after_ASSUMED_divisor_max": 4095.0
+            },
+            {
+              "accumulator_min": -593775,
+              "accumulator_max": 593775,
+              "after_ASSUMED_divisor_min": -2319.43359375,
+              "after_ASSUMED_divisor_max": 2319.43359375
+            },
+            {
+              "accumulator_min": -540540,
+              "accumulator_max": 540540,
+              "after_ASSUMED_divisor_min": -2111.484375,
+              "after_ASSUMED_divisor_max": 2111.484375
+            }
+          ]
+        },
+        {
+          "profile": 13,
+          "rows": [
+            {
+              "accumulator_min": 0,
+              "accumulator_max": 1048320,
+              "after_ASSUMED_divisor_min": 0.0,
+              "after_ASSUMED_divisor_max": 4095.0
+            },
+            {
+              "accumulator_min": -515970,
+              "accumulator_max": 515970,
+              "after_ASSUMED_divisor_min": -2015.5078125,
+              "after_ASSUMED_divisor_max": 2015.5078125
+            },
+            {
+              "accumulator_min": -483210,
+              "accumulator_max": 483210,
+              "after_ASSUMED_divisor_min": -1887.5390625,
+              "after_ASSUMED_divisor_max": 1887.5390625
+            }
+          ]
+        },
+        {
+          "profile": 14,
+          "rows": [
+            {
+              "accumulator_min": 0,
+              "accumulator_max": 1048320,
+              "after_ASSUMED_divisor_min": 0.0,
+              "after_ASSUMED_divisor_max": 4095.0
+            },
+            {
+              "accumulator_min": -765765,
+              "accumulator_max": 765765,
+              "after_ASSUMED_divisor_min": -2991.26953125,
+              "after_ASSUMED_divisor_max": 2991.26953125
+            },
+            {
+              "accumulator_min": -585585,
+              "accumulator_max": 585585,
+              "after_ASSUMED_divisor_min": -2287.44140625,
+              "after_ASSUMED_divisor_max": 2287.44140625
+            }
+          ]
+        },
+        {
+          "profile": 15,
+          "rows": [
+            {
+              "accumulator_min": 0,
+              "accumulator_max": 1048320,
+              "after_ASSUMED_divisor_min": 0.0,
+              "after_ASSUMED_divisor_max": 4095.0
+            },
+            {
+              "accumulator_min": -724815,
+              "accumulator_max": 724815,
+              "after_ASSUMED_divisor_min": -2831.30859375,
+              "after_ASSUMED_divisor_max": 2831.30859375
+            },
+            {
+              "accumulator_min": -569205,
+              "accumulator_max": 569205,
+              "after_ASSUMED_divisor_min": -2223.45703125,
+              "after_ASSUMED_divisor_max": 2223.45703125
+            }
+          ]
+        },
+        {
+          "profile": 16,
+          "rows": [
+            {
+              "accumulator_min": 0,
+              "accumulator_max": 1048320,
+              "after_ASSUMED_divisor_min": 0.0,
+              "after_ASSUMED_divisor_max": 4095.0
+            },
+            {
+              "accumulator_min": -708435,
+              "accumulator_max": 708435,
+              "after_ASSUMED_divisor_min": -2767.32421875,
+              "after_ASSUMED_divisor_max": 2767.32421875
+            },
+            {
+              "accumulator_min": -565110,
+              "accumulator_max": 565110,
+              "after_ASSUMED_divisor_min": -2207.4609375,
+              "after_ASSUMED_divisor_max": 2207.4609375
+            }
+          ]
+        },
+        {
+          "profile": 17,
+          "rows": [
+            {
+              "accumulator_min": 0,
+              "accumulator_max": 1048320,
+              "after_ASSUMED_divisor_min": 0.0,
+              "after_ASSUMED_divisor_max": 4095.0
+            },
+            {
+              "accumulator_min": -692055,
+              "accumulator_max": 692055,
+              "after_ASSUMED_divisor_min": -2703.33984375,
+              "after_ASSUMED_divisor_max": 2703.33984375
+            },
+            {
+              "accumulator_min": -556920,
+              "accumulator_max": 556920,
+              "after_ASSUMED_divisor_min": -2175.46875,
+              "after_ASSUMED_divisor_max": 2175.46875
+            }
+          ]
+        },
+        {
+          "profile": 18,
+          "rows": [
+            {
+              "accumulator_min": 0,
+              "accumulator_max": 1048320,
+              "after_ASSUMED_divisor_min": 0.0,
+              "after_ASSUMED_divisor_max": 4095.0
+            },
+            {
+              "accumulator_min": -659295,
+              "accumulator_max": 659295,
+              "after_ASSUMED_divisor_min": -2575.37109375,
+              "after_ASSUMED_divisor_max": 2575.37109375
+            },
+            {
+              "accumulator_min": -544635,
+              "accumulator_max": 544635,
+              "after_ASSUMED_divisor_min": -2127.48046875,
+              "after_ASSUMED_divisor_max": 2127.48046875
+            }
+          ]
+        },
+        {
+          "profile": 19,
+          "rows": [
+            {
+              "accumulator_min": 0,
+              "accumulator_max": 1048320,
+              "after_ASSUMED_divisor_min": 0.0,
+              "after_ASSUMED_divisor_max": 4095.0
+            },
+            {
+              "accumulator_min": -622440,
+              "accumulator_max": 622440,
+              "after_ASSUMED_divisor_min": -2431.40625,
+              "after_ASSUMED_divisor_max": 2431.40625
+            },
+            {
+              "accumulator_min": -536445,
+              "accumulator_max": 536445,
+              "after_ASSUMED_divisor_min": -2095.48828125,
+              "after_ASSUMED_divisor_max": 2095.48828125
+            }
+          ]
+        },
+        {
+          "profile": 20,
+          "rows": [
+            {
+              "accumulator_min": 0,
+              "accumulator_max": 1048320,
+              "after_ASSUMED_divisor_min": 0.0,
+              "after_ASSUMED_divisor_max": 4095.0
+            },
+            {
+              "accumulator_min": -556920,
+              "accumulator_max": 556920,
+              "after_ASSUMED_divisor_min": -2175.46875,
+              "after_ASSUMED_divisor_max": 2175.46875
+            },
+            {
+              "accumulator_min": -511875,
+              "accumulator_max": 511875,
+              "after_ASSUMED_divisor_min": -1999.51171875,
+              "after_ASSUMED_divisor_max": 1999.51171875
+            }
+          ]
+        }
+      ]
+    },
+    "serializer_boundary_executions": [
+      {
+        "M1_input": 1023,
+        "M1_packed": "0x3ff",
+        "M2_input": 511,
+        "M2_packed": "0x1ff"
+      },
+      {
+        "M1_input": 1024,
+        "M1_packed": "0x400",
+        "M2_input": 512,
+        "M2_packed": "0x200"
+      },
+      {
+        "M1_input": -1023,
+        "M1_packed": "0x7ff",
+        "M2_input": -511,
+        "M2_packed": "0x3ff"
+      },
+      {
+        "M1_input": -1024,
+        "M1_packed": "0x400",
+        "M2_input": -512,
+        "M2_packed": "0x200"
+      },
+      {
+        "M1_input": 65536,
+        "M1_packed": "0x0",
+        "M2_input": 65536,
+        "M2_packed": "0x0"
+      },
+      {
+        "M1_input": -65536,
+        "M1_packed": "0x400",
+        "M2_input": -65536,
+        "M2_packed": "0x200"
+      }
+    ],
+    "ASIC_rounding_clipping_and_accumulator_width": "unknown"
+  }
+}

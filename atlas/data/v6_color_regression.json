@@ -1,0 +1,16 @@
+{
+  "result": "PASS",
+  "firmware_sha256": "b9df48d461e875dce4ba84da88164af170dfc48ad9f7674859623bad0401032e",
+  "profile_expansions_original_code": 53,
+  "saturation_selector_prefix_executions": 1092,
+  "saturation_selector_full_executions": 192,
+  "matrix_transport_cases_two_fragments_each": 399,
+  "hue_executions_with_host_float32_hooks": 462,
+  "camera_connected": false,
+  "firmware_modified": false,
+  "limitations": [
+    "Synthetic memory only; no sensor/JPEG/hardware tests",
+    "Hue floating point runtime replaced with host operations; not a bit-exact FP validation",
+    "Matrix selection across all shooting and white-balance modes is not executed"
+  ]
+}

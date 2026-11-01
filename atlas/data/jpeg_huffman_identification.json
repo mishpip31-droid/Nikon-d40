@@ -1,0 +1,20 @@
+{
+  "source_url": "https://raw.githubusercontent.com/libjpeg-turbo/libjpeg-turbo/main/src/jstdhuff.c",
+  "source_sha256": "79e2cbf605326ce6349a60f58695b97d574510662f8b089474f30c07bf06be28",
+  "tables": [
+    {
+      "component": "luminance",
+      "rom": "0xc642e",
+      "bytes": 206,
+      "sha256": "c9a0352e67eed5c35996abc139851b841df774d0f7a3cc3b8f599e1aaf411ee1",
+      "match": true
+    },
+    {
+      "component": "chrominance",
+      "rom": "0xc6360",
+      "bytes": 206,
+      "sha256": "7f362f567484b20abbc6758472be2401ac339bf867e525c5204168f6ac2a4f25",
+      "match": true
+    }
+  ]
+}

@@ -1,3 +1,5 @@
 firmware/*.bin
 __pycache__/
 analysis/*/listing.txt.gz
+dist/
+atlas/**/*.bin

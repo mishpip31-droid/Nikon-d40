@@ -1,0 +1,96 @@
+{
+  "firmware_sha256": "b9df48d461e875dce4ba84da88164af170dfc48ad9f7674859623bad0401032e",
+  "status": "inferred_candidate_not_device_verified",
+  "candidate_order": [
+    "sqrt",
+    "demosaic",
+    "square",
+    "M1",
+    "tone",
+    "M2"
+  ],
+  "stages": [
+    {
+      "name": "sqrt",
+      "mmio": [
+        "0x40010400"
+      ],
+      "formula": "min(4095,floor(sqrt(4096*i)+0.5))",
+      "formula_verified": true
+    },
+    {
+      "name": "demosaic",
+      "mmio": [],
+      "location": "inferred inside ASIC; no separate function identified"
+    },
+    {
+      "name": "square",
+      "mmio": [
+        "0x40012400",
+        "0x40014400",
+        "0x40016400"
+      ],
+      "formula": "floor(i*i/4096+0.5)",
+      "formula_verified": true
+    },
+    {
+      "name": "M1",
+      "mmio": [
+        "0x40010022"
+      ],
+      "inferred_role": "linear RGB color correction",
+      "patent_EP2046067_Fig2_equivalent": "Matrix 3, not Matrix 1"
+    },
+    {
+      "name": "tone",
+      "mmio": [
+        "0x40018400",
+        "0x4001A400",
+        "0x4001C400"
+      ],
+      "inferred_role": "output RGB tone conversion"
+    },
+    {
+      "name": "M2",
+      "mmio": [
+        "0x40010034"
+      ],
+      "inferred_role": "nonlinear RGB to YCbCr"
+    }
+  ],
+  "unplaced_banks": [
+    "0x40010200",
+    "0x4001E400",
+    "0x4001E420",
+    "0x4001E440",
+    "0x4001E460",
+    "0x4001E600",
+    "0x4001E800",
+    "0x4001EA00",
+    "0x4001EC00",
+    "0x4001FC00"
+  ],
+  "sources": [
+    {
+      "url": "https://patents.google.com/patent/US7957588B2/en",
+      "scope": "First embodiment, Fig.2, S2-S7, equations 2 and 17",
+      "D40_implementation_proof": false
+    },
+    {
+      "url": "https://patents.google.com/patent/EP2046067A1/en",
+      "scope": "Standard Digital Camera, Fig.2, STEP1-7; not microscope Fig.3",
+      "D40_implementation_proof": false
+    }
+  ],
+  "new_execution_evidence": "../VALIDATION_v5.json",
+  "pixel_order_proven": false,
+  "unknowns": [
+    "stage bypass bits",
+    "exact channel order",
+    "offsets and clipping",
+    "LUT input axes",
+    "mode-specific alternative paths"
+  ],
+  "v6_numeric_evidence": "../VALIDATION_v6.json",
+  "v6_pixel_order_proven": false
+}

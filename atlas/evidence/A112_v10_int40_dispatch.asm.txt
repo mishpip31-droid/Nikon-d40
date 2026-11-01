@@ -1,0 +1,39 @@
+Original A 1.12. Static listing; execution/model boundaries in A_MEMORY_TASKS_RU.md.
+0003eecc 000feecc 170e         ST        r14,@-r15
+0003eece 000feece 8bfe         MOV       r15,r14
+0003eed0 000feed0 a49e         ADD       #0x9,r14
+0003eed2 000feed2 98fe         BEORL     #0xf,@r14
+0003eed4 000feed4 88fe         BTSTL     #0xf,@r14
+0003eed6 000feed6 e301         BNE       0xfeeda
+0003eed8 000feed8 871e         STILM     #0x1e
+0003eeda 000feeda 98fe         BEORL     #0xf,@r14
+0003eedc 000feedc 1781         ST        RP,@-r15
+0003eede 000feede 9f8e000fed48 LDI:32    #0xfed48,r14
+0003eee4 000feee4 971e         CALL      @r14
+0003eee6 000feee6 0781         LD        @r15+,RP
+0003eee8 000feee8 070e         LD        @r15+,r14
+0003eeea 000feeea 9310         ORCCR     #0x10
+0003eeec 000feeec 1784         ST        MDH,@-r15
+0003eeee 000feeee 1785         ST        MDL,@-r15
+0003eef0 000feef0 1781         ST        RP,@-r15
+0003eef2 000feef2 8ffe         STM1      (r14,r13,r12,r11,r10,r9,r8)
+0003eef4 000feef4 8eff         STM0      (r7,r6,r5,r4,r3,r2,r1,r0)
+0003eef6 000feef6 8bfe         MOV       r15,r14
+0003eef8 000feef8 b41c         LSL       #1,r12
+0003eefa 000feefa 9f8d000feec4 LDI:32    #0xfeec4,r13
+0003ef00 000fef00 01cc         LDUH      @(r13+r12),r12
+0003ef02 000fef02 97ac         EXTSH     r12
+0003ef04 000fef04 a6dc         ADD       r13,r12
+0003ef06 000fef06 971c         CALL      @r12
+0003ef08 000fef08 9fa0         NOP       
+0003ef0a 000fef0a 9f8b000fed4c LDI:32    #0xfed4c,r11
+0003ef10 000fef10 971b         CALL      @r11
+0003ef12 000fef12 978c         EXTSB     r12
+0003ef14 000fef14 8cff         LDM0      (r0,r1,r2,r3,r4,r5,r6,r7)
+0003ef16 000fef16 8d0f         LDM1      (r8,r9,r10,r11)
+0003ef18 000fef18 a301         ADDSP     #4
+0003ef1a 000fef1a 8d60         LDM1      (r13,r14)
+0003ef1c 000fef1c 0781         LD        @r15+,RP
+0003ef1e 000fef1e 0785         LD        @r15+,MDL
+0003ef20 000fef20 0784         LD        @r15+,MDH
+0003ef22 000fef22 9730         RETI      

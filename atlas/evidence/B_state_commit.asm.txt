@@ -1,0 +1,28 @@
+File offset, CPU/ROM address, bytes, mnemonic, operands. Linear listing, not full CFG.
+001068ae 001468ae 1781         ST        RP,@-r15
+001068b0 001468b0 0f02         ENTER     #0x8
+001068b2 001468b2 8b46         MOV       r4,r6
+001068b4 001468b4 c094         LDI:8     #0x9,r4
+001068b6 001468b6 9f85fbffffff LDI:32    #0xfbffffff,r5
+001068bc 001468bc cd1c         LDI:8     #0xd1,r12
+001068be 001468be 978c         EXTSB     r12
+001068c0 001468c0 1f40         INT       #0x40
+001068c2 001468c2 c020         LDI:8     #0x2,r0
+001068c4 001468c4 8206         AND       r0,r6
+001068c6 001468c6 e210         BEQ       0x1468e8
+001068c8 001468c8 c074         LDI:8     #0x7,r4
+001068ca 001468ca 9f8500c00000 LDI:32    #0xc00000,r5
+001068d0 001468d0 9f8683ce957b LDI:32    #0x83ce957b,r6
+001068d6 001468d6 9f8783ce9572 LDI:32    #0x83ce9572,r7
+001068dc 001468dc c090         LDI:8     #0x9,r0
+001068de 001468de 9f8c00132c3e LDI:32    #0x132c3e,r12
+001068e4 001468e4 9f1c         CALL:D    @r12
+001068e6 001468e6 1300         ST        r0,@(r15+0x0)
+001068e8 001468e8 9f8504000000 LDI:32    #0x4000000,r5
+001068ee 001468ee cd0c         LDI:8     #0xd0,r12
+001068f0 001468f0 c094         LDI:8     #0x9,r4
+001068f2 001468f2 978c         EXTSB     r12
+001068f4 001468f4 1f40         INT       #0x40
+001068f6 001468f6 9f90         LEAVE     
+001068f8 001468f8 0781         LD        @r15+,RP
+001068fa 001468fa 9720         RET       

@@ -1,0 +1,69 @@
+{
+  "firmware_sha256": "b9df48d461e875dce4ba84da88164af170dfc48ad9f7674859623bad0401032e",
+  "status": "static; not camera-tested",
+  "upload": {
+    "ptp_operation": "0x90c6",
+    "handler_cpu": "0x8510e",
+    "ram": "0x83e89310",
+    "bytes": 4164,
+    "header_bytes": 68,
+    "sample_count": 2048,
+    "consumer_sample_type": "big-endian uint16",
+    "full_transport_format_verified": false,
+    "first_two_header_bytes": "both must be nonzero in observed consumers",
+    "full_header_semantics_known": false,
+    "immediate_flash_commit_in_handler": false
+  },
+  "fallback": {
+    "full_blob_rom": "0xdc250",
+    "samples_rom": "0xdc294",
+    "samples_file": "0x9c294"
+  },
+  "simple_expanders_cpu": [
+    "0x4bf06",
+    "0x4bf58"
+  ],
+  "output": {
+    "ram": "0x83eb586c",
+    "entries": 4096,
+    "bytes": 8192,
+    "builder_cpu": "0x323c22",
+    "custom_branch_value": "0x17",
+    "selector_context_offset": "0x466",
+    "correction_context_offset": "0x6ae",
+    "correction_table_rom": "0x33692e",
+    "correction_table_all_zero_in_this_original": true,
+    "formula": "clamp(interpolate_2048_to_4096(curve)[i]+signed8(correction[9*i+column]),0,4095)",
+    "interpolation_rounding": "floor((C[j]+C[j+1])/2) before signed correction and clamp; final node duplicated",
+    "v6_original_builder_executed": true,
+    "v6_ASIC_pixel_execution_verified": false
+  },
+  "hardware_copy": {
+    "caller_cpu": "0x4b41c",
+    "copy_loop_cpu": "0x4bef6",
+    "destinations": [
+      "0x40018400",
+      "0x4001a400",
+      "0x4001c400"
+    ],
+    "uint16_entries_each": 4096,
+    "same_table_copied_to_all_three": true,
+    "channel_names": "not established from code alone"
+  },
+  "alternate_curve": {
+    "ram": "0x83e882cc",
+    "storage_record": 8,
+    "fallback_rom": "0xdb250",
+    "condition": "selector==0x17, !(context[0x1d]&0x20), context[0x5a]>>4 < 4, ((context[0x2d]>>2)&15)==6"
+  },
+  "unresolved": [
+    "All 0x44 header fields",
+    "Precise transfer functions and pipeline color space",
+    "All context copies and shot-mode overrides",
+    "Color-matrix / 3D-LUT integration",
+    "Independent new style ID storage and menu dispatch",
+    "Hardware image validation"
+  ],
+  "v3_followup": "Color configuration path recovered separately; see color_pipeline.json and COLOR_PROCESSING_RU.md. Pixel stage order and 3D-LUT feasibility remain unresolved.",
+  "v6_numeric_followup": "../NUMERIC_PIPELINE_RU.md"
+}

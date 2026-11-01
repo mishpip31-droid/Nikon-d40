@@ -1,0 +1,37 @@
+[
+  {
+    "name": "rescale_8_to_12",
+    "rom": "0xca60c",
+    "entries": 256,
+    "hardware": [
+      "0x40010200"
+    ],
+    "formula": "floor(i*4095/255+0.5)",
+    "all_entries_match": true,
+    "sha256": "23fac6e32be9d15c6712207b17c873c8b272b9b21e67253b59f64cdf92586c89"
+  },
+  {
+    "name": "square_root",
+    "rom": "0xc860c",
+    "entries": 4096,
+    "hardware": [
+      "0x40010400"
+    ],
+    "formula": "min(4095,floor(sqrt(4096*i)+0.5))",
+    "all_entries_match": true,
+    "sha256": "2275c52016ce70643f3d6eecd632c727fd4764119a476a59ded7b826c647849d"
+  },
+  {
+    "name": "square",
+    "rom": "0xc660c",
+    "entries": 4096,
+    "hardware": [
+      "0x40012400",
+      "0x40014400",
+      "0x40016400"
+    ],
+    "formula": "floor(i*i/4096+0.5)",
+    "all_entries_match": true,
+    "sha256": "cde7743e2006b145c4b9ee92b4767ca91544297fc0e25f93b2136e7b19fe6415"
+  }
+]

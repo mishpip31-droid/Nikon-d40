@@ -1,0 +1,107 @@
+[
+  {
+    "file_offset": "0x2b53e",
+    "cpu": "0x6b53e",
+    "register": 12,
+    "value": "0x2948b4",
+    "confidence": "LDI:32 byte-pattern candidate; code/data role needs control-flow evidence"
+  },
+  {
+    "file_offset": "0x3cb78",
+    "cpu": "0x7cb78",
+    "register": 12,
+    "value": "0x83ce3fec",
+    "confidence": "LDI:32 byte-pattern candidate; code/data role needs control-flow evidence"
+  },
+  {
+    "file_offset": "0x5b168",
+    "cpu": "0x9b168",
+    "register": 2,
+    "value": "0x2948b4",
+    "confidence": "LDI:32 byte-pattern candidate; code/data role needs control-flow evidence"
+  },
+  {
+    "file_offset": "0xf1816",
+    "cpu": "0x131816",
+    "register": 1,
+    "value": "0x83ce58ac",
+    "confidence": "LDI:32 byte-pattern candidate; code/data role needs control-flow evidence"
+  },
+  {
+    "file_offset": "0xf1822",
+    "cpu": "0x131822",
+    "register": 4,
+    "value": "0x83ce593c",
+    "confidence": "LDI:32 byte-pattern candidate; code/data role needs control-flow evidence"
+  },
+  {
+    "file_offset": "0x103b90",
+    "cpu": "0x143b90",
+    "register": 11,
+    "value": "0x83ce58cc",
+    "confidence": "LDI:32 byte-pattern candidate; code/data role needs control-flow evidence"
+  },
+  {
+    "file_offset": "0x103ef6",
+    "cpu": "0x143ef6",
+    "register": 5,
+    "value": "0x83ce58ac",
+    "confidence": "LDI:32 byte-pattern candidate; code/data role needs control-flow evidence"
+  },
+  {
+    "file_offset": "0x103efc",
+    "cpu": "0x143efc",
+    "register": 6,
+    "value": "0x83ce58cc",
+    "confidence": "LDI:32 byte-pattern candidate; code/data role needs control-flow evidence"
+  },
+  {
+    "file_offset": "0x103fd2",
+    "cpu": "0x143fd2",
+    "register": 4,
+    "value": "0x83ce58cc",
+    "confidence": "LDI:32 byte-pattern candidate; code/data role needs control-flow evidence"
+  },
+  {
+    "file_offset": "0x103fe4",
+    "cpu": "0x143fe4",
+    "register": 0,
+    "value": "0x83ce593c",
+    "confidence": "LDI:32 byte-pattern candidate; code/data role needs control-flow evidence"
+  },
+  {
+    "file_offset": "0x1041ae",
+    "cpu": "0x1441ae",
+    "register": 5,
+    "value": "0x83ce5abc",
+    "confidence": "LDI:32 byte-pattern candidate; code/data role needs control-flow evidence"
+  },
+  {
+    "file_offset": "0x1045d8",
+    "cpu": "0x1445d8",
+    "register": 0,
+    "value": "0x83ce593c",
+    "confidence": "LDI:32 byte-pattern candidate; code/data role needs control-flow evidence"
+  },
+  {
+    "file_offset": "0x1045e2",
+    "cpu": "0x1445e2",
+    "register": 6,
+    "value": "0x83ce5abc",
+    "confidence": "LDI:32 byte-pattern candidate; code/data role needs control-flow evidence"
+  },
+  {
+    "file_offset": "0x104696",
+    "cpu": "0x144696",
+    "register": 5,
+    "value": "0x83ce5abc",
+    "confidence": "LDI:32 byte-pattern candidate; code/data role needs control-flow evidence"
+  },
+  {
+    "file_offset": "0x104832",
+    "cpu": "0x144832",
+    "register": 0,
+    "value": "0x83ce593c",
+    "confidence": "LDI:32 byte-pattern candidate; code/data role needs control-flow evidence"
+  }
+]

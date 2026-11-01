@@ -1,0 +1,30 @@
+Incomplete CPU-only prototype. NOT an installable firmware.
+00103ef6 00143ef6 1781         ST        RP,@-r15
+00103ef8 00143ef8 9f8083ce957f LDI:32    #0x83ce957f,r0
+00103efe 00143efe 0604         LDUB      @r0,r4
+00103f00 00143f00 b044         LSR       #4,r4
+00103f02 00143f02 a874         CMP       #0x7,r4
+00103f04 00143f04 ea02         BLT       0x143f0a
+00103f06 00143f06 c004         LDI:8     #0x0,r4
+00103f08 00143f08 e011         BRA       0x143f2c
+00103f0a 00143f0a a854         CMP       #0x5,r4
+00103f0c 00143f0c e204         BEQ       0x143f16
+00103f0e 00143f0e a864         CMP       #0x6,r4
+00103f10 00143f10 e30d         BNE       0x143f2c
+00103f12 00143f12 c054         LDI:8     #0x5,r4
+00103f14 00143f14 e00b         BRA       0x143f2c
+00103f16 00143f16 c064         LDI:8     #0x6,r4
+00103f18 00143f18 9f8083ced224 LDI:32    #0x83ced224,r0
+00103f1e 00143f1e 0600         LDUB      @r0,r0
+00103f20 00143f20 c1c1         LDI:8     #0x1c,r1
+00103f22 00143f22 8210         AND       r1,r0
+00103f24 00143f24 c181         LDI:8     #0x18,r1
+00103f26 00143f26 aa10         CMP       r1,r0
+00103f28 00143f28 e301         BNE       0x143f2c
+00103f2a 00143f2a c074         LDI:8     #0x7,r4
+00103f2c 00143f2c 9f8c00132d0c LDI:32    #0x132d0c,r12
+00103f32 00143f32 971c         CALL      @r12
+00103f34 00143f34 9f8083ce98f4 LDI:32    #0x83ce98f4,r0
+00103f3a 00143f3a 9140         BORH      #0x4,@r0
+00103f3c 00143f3c 0781         LD        @r15+,RP
+00103f3e 00143f3e 9720         RET       

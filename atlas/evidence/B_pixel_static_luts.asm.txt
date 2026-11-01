@@ -1,0 +1,51 @@
+Bounded static listing; not a complete CFG or ASIC model.
+Firmware SHA256: b9df48d461e875dce4ba84da88164af170dfc48ad9f7674859623bad0401032e
+FILE     CPU_PC   BYTES        MNEMONIC  OPERANDS
+0000be82 0004be82 8fc0         STM1      (r9,r8)
+0000be84 0004be84 9f8840010000 LDI:32    #0x40010000,r8
+0000be8a 0004be8a 9f84000ca60c LDI:32    #0xca60c,r4
+0000be90 0004be90 9b050200     LDI:20    #0x200,r5
+0000be94 0004be94 9b060100     LDI:20    #0x100,r6
+0000be98 0004be98 1781         ST        RP,@-r15
+0000be9a 0004be9a d82d         CALL:D    0x4bef6
+0000be9c 0004be9c a685         ADD       r8,r5
+0000be9e 0004be9e 9f84000c860c LDI:32    #0xc860c,r4
+0000bea4 0004bea4 9b050400     LDI:20    #0x400,r5
+0000bea8 0004bea8 9b061000     LDI:20    #0x1000,r6
+0000beac 0004beac d824         CALL:D    0x4bef6
+0000beae 0004beae a685         ADD       r8,r5
+0000beb0 0004beb0 9f89000c660c LDI:32    #0xc660c,r9
+0000beb6 0004beb6 9b052400     LDI:20    #0x2400,r5
+0000beba 0004beba 9b061000     LDI:20    #0x1000,r6
+0000bebe 0004bebe 8b94         MOV       r9,r4
+0000bec0 0004bec0 d81a         CALL:D    0x4bef6
+0000bec2 0004bec2 a685         ADD       r8,r5
+0000bec4 0004bec4 9b054400     LDI:20    #0x4400,r5
+0000bec8 0004bec8 9b061000     LDI:20    #0x1000,r6
+0000becc 0004becc 8b94         MOV       r9,r4
+0000bece 0004bece d813         CALL:D    0x4bef6
+0000bed0 0004bed0 a685         ADD       r8,r5
+0000bed2 0004bed2 9b056400     LDI:20    #0x6400,r5
+0000bed6 0004bed6 9b061000     LDI:20    #0x1000,r6
+0000beda 0004beda 8b94         MOV       r9,r4
+0000bedc 0004bedc d80c         CALL:D    0x4bef6
+0000bede 0004bede a685         ADD       r8,r5
+0000bee0 0004bee0 0781         LD        @r15+,RP
+0000bee2 0004bee2 8d03         LDM1      (r8,r9)
+0000bee4 0004bee4 9720         RET       
+0000bee6 0004bee6 0640         LDUB      @r4,r0
+0000bee8 0004bee8 1550         STH       r0,@r5
+0000beea 0004beea a425         ADD       #0x2,r5
+0000beec 0004beec a5f6         ADD2      #-1,r6
+0000beee 0004beee a806         CMP       #0x0,r6
+0000bef0 0004bef0 fdfa         BGT:D     0x4bee6
+0000bef2 0004bef2 a414         ADD       #0x1,r4
+0000bef4 0004bef4 9720         RET       
+0000bef6 0004bef6 0540         LDUH      @r4,r0
+0000bef8 0004bef8 1550         STH       r0,@r5
+0000befa 0004befa a425         ADD       #0x2,r5
+0000befc 0004befc a5f6         ADD2      #-1,r6
+0000befe 0004befe a806         CMP       #0x0,r6
+0000bf00 0004bf00 fdfa         BGT:D     0x4bef6
+0000bf02 0004bf02 a424         ADD       #0x2,r4
+0000bf04 0004bf04 9720         RET       

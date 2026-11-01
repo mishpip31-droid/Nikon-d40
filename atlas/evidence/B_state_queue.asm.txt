@@ -1,0 +1,43 @@
+File offset, CPU/ROM address, bytes, mnemonic, operands. Linear listing, not full CFG.
+00069a50 000a9a50 8fc0         STM1      (r9,r8)
+00069a52 000a9a52 1781         ST        RP,@-r15
+00069a54 000a9a54 0f01         ENTER     #0x4
+00069a56 000a9a56 9f8968000ad0 LDI:32    #0x68000ad0,r9
+00069a5c 000a9a5c 9189         BORH      #0x8,@r9
+00069a5e 000a9a5e c0c0         LDI:8     #0xc,r0
+00069a60 000a9a60 af04         MUL       r0,r4
+00069a62 000a9a62 b750         MOV       MDL,r0
+00069a64 000a9a64 9f8883cee504 LDI:32    #0x83cee504,r8
+00069a6a 000a9a6a a608         ADD       r0,r8
+00069a6c 000a9a6c c0e4         LDI:8     #0xe,r4
+00069a6e 000a9a6e ccbc         LDI:8     #0xcb,r12
+00069a70 000a9a70 978c         EXTSB     r12
+00069a72 000a9a72 1f40         INT       #0x40
+00069a74 000a9a74 8b80         MOV       r8,r0
+00069a76 000a9a76 a490         ADD       #0x9,r0
+00069a78 000a9a78 8980         BTSTH     #0x8,@r0
+00069a7a 000a9a7a e311         BNE       0xa9a9e
+00069a7c 000a9a7c 9f8483cee4fc LDI:32    #0x83cee4fc,r4
+00069a82 000a9a82 9f8c00044b8a LDI:32    #0x44b8a,r12
+00069a88 000a9a88 9f1c         CALL:D    @r12
+00069a8a 000a9a8a 8b85         MOV       r8,r5
+00069a8c 000a9a8c a498         ADD       #0x9,r8
+00069a8e 000a9a8e 9188         BORH      #0x8,@r8
+00069a90 000a9a90 c034         LDI:8     #0x3,r4
+00069a92 000a9a92 c085         LDI:8     #0x8,r5
+00069a94 000a9a94 cd0c         LDI:8     #0xd0,r12
+00069a96 000a9a96 978c         EXTSB     r12
+00069a98 000a9a98 1f40         INT       #0x40
+00069a9a 000a9a9a 9fa0         NOP       
+00069a9c 000a9a9c e002         BRA       0xa9aa2
+00069a9e 000a9a9e a498         ADD       #0x9,r8
+00069aa0 000a9aa0 9148         BORH      #0x4,@r8
+00069aa2 000a9aa2 cc9c         LDI:8     #0xc9,r12
+00069aa4 000a9aa4 c0e4         LDI:8     #0xe,r4
+00069aa6 000a9aa6 978c         EXTSB     r12
+00069aa8 000a9aa8 1f40         INT       #0x40
+00069aaa 000a9aaa 8179         BANDH     #0x7,@r9
+00069aac 000a9aac 9f90         LEAVE     
+00069aae 000a9aae 0781         LD        @r15+,RP
+00069ab0 000a9ab0 8d03         LDM1      (r8,r9)
+00069ab2 000a9ab2 9720         RET       

@@ -1,0 +1,49 @@
+index,descriptor_file,ram,length,kind,callback_cpu,meaning
+0,0xa482c,0x0,0,2,0xa9ab4,special; interpretation depends on command
+1,0xa483c,0x83ce958b,3,1,0xa9ab4,send/copy from descriptor RAM
+2,0xa484c,0x83ce9769,6,0,0xa9ab4,receive/copy to descriptor RAM
+3,0xa485c,0x83ce950c,2,0,0xa9ab6,receive/copy to descriptor RAM
+4,0xa486c,0x83ce9723,21,0,0xa9b52,receive/copy to descriptor RAM
+5,0xa487c,0x83ce974d,14,1,0xa9b82,send/copy from descriptor RAM
+6,0xa488c,0x83ce975b,14,0,0xa9bf4,receive/copy to descriptor RAM
+7,0xa489c,0x83ce957b,9,1,0xa9cba,send/copy from descriptor RAM
+8,0xa48ac,0x83ce9572,9,0,0xa9e64,receive/copy to descriptor RAM
+9,0xa48bc,0x83ce950e,4,1,0xa9f8e,send/copy from descriptor RAM
+10,0xa48cc,0x83ce9512,4,0,0xa9f9c,receive/copy to descriptor RAM
+11,0xa48dc,0x83ce971d,4,1,0xa9fb8,send/copy from descriptor RAM
+12,0xa48ec,0x83ce9814,2,0,0xaa0ba,receive/copy to descriptor RAM
+13,0xa48fc,0x83ce950b,1,1,0xa9ab4,send/copy from descriptor RAM
+14,0xa490c,0x83ce9508,3,0,0xaa1ec,receive/copy to descriptor RAM
+15,0xa491c,0x0,0,2,0xa9ab4,special; interpretation depends on command
+16,0xa492c,0x83ce9721,1,1,0xa9ab4,send/copy from descriptor RAM
+17,0xa493c,0x83ce9830,9,0,0xaa286,receive/copy to descriptor RAM
+18,0xa494c,0x83ce9716,7,1,0xaa2be,send/copy from descriptor RAM
+19,0xa495c,0x83ce9816,13,1,0xa9ab4,send/copy from descriptor RAM
+20,0xa496c,0x83ce9823,13,0,0xaa2c8,receive/copy to descriptor RAM
+21,0xa497c,0x83ce9802,18,0,0xaa34e,receive/copy to descriptor RAM
+22,0xa498c,0x83ce9585,3,0,0xaa380,receive/copy to descriptor RAM
+23,0xa499c,0x83ce9584,1,0,0xa9ab4,receive/copy to descriptor RAM
+24,0xa49ac,0x83ce9722,1,1,0xaa38a,send/copy from descriptor RAM
+25,0xa49bc,0x83ce9839,2,0,0xaa38c,receive/copy to descriptor RAM
+26,0xa49cc,0x83ce9308,1,0,0xaa432,receive/copy to descriptor RAM
+27,0xa49dc,0x83ce97f3,15,0,0xa9ab4,receive/copy to descriptor RAM
+28,0xa49ec,0x83ce976f,132,0,0xa9ab4,receive/copy to descriptor RAM
+29,0xa49fc,0x83ce9589,2,0,0xa9ab4,receive/copy to descriptor RAM
+30,0xa4a0c,0x0,0,0,0xaa498,receive/copy to descriptor RAM
+31,0xa4a1c,0x83ce9588,1,1,0xaa516,send/copy from descriptor RAM
+32,0xa4a2c,0x83ce9409,255,2,0xaa52c,special; interpretation depends on command
+33,0xa4a3c,0x83ce930a,255,2,0xaa53c,special; interpretation depends on command
+34,0xa4a4c,0x83ce9309,1,1,0xaa54c,send/copy from descriptor RAM
+35,0xa4a5c,0x83ce9122,54,0,0xaa55c,receive/copy to descriptor RAM
+36,0xa4a6c,0x83ce9652,196,0,0xaa55e,receive/copy to descriptor RAM
+37,0xa4a7c,0x83ce956a,8,0,0xaa56c,receive/copy to descriptor RAM
+38,0xa4a8c,0x83ce9560,10,0,0xaa6ee,receive/copy to descriptor RAM
+39,0xa4a9c,0x83ce9516,45,0,0xa9ab4,receive/copy to descriptor RAM
+40,0xa4aac,0x83ce9551,15,0,0xaa82c,receive/copy to descriptor RAM
+41,0xa4abc,0x83ce9543,14,0,0xa9ab4,receive/copy to descriptor RAM
+42,0xa4acc,0x83ce9120,2,1,0xa9ab4,send/copy from descriptor RAM
+43,0xa4adc,0x0,0,0,0xa9ab4,receive/copy to descriptor RAM
+44,0xa4aec,0x83ce9307,1,1,0xa9ab4,send/copy from descriptor RAM
+45,0xa4afc,0x83ce92ed,26,0,0xaa89a,receive/copy to descriptor RAM
+46,0xa4b0c,0x83ce92e7,6,1,0xaa8be,send/copy from descriptor RAM
+47,0xa4b1c,0x83ce92e6,1,1,0xa9ab4,send/copy from descriptor RAM

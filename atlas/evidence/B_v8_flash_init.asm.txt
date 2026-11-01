@@ -1,0 +1,43 @@
+0011cb6c 83ce8658 9f8483cea3e8 LDI:32    #0x83cea3e8,r4
+0011cb72 83ce865e 9f8583cea3d0 LDI:32    #0x83cea3d0,r5
+0011cb78 83ce8664 c000         LDI:8     #0x0,r0
+0011cb7a 83ce8666 1640         STB       r0,@r4
+0011cb7c 83ce8668 0450         LD        @r5,r0
+0011cb7e 83ce866a 9f8683cea3cc LDI:32    #0x83cea3cc,r6
+0011cb84 83ce8670 a800         CMP       #0x0,r0
+0011cb86 83ce8672 e304         BNE       0x83ce867c
+0011cb88 83ce8674 cf8c         LDI:8     #0xf8,r12
+0011cb8a 83ce8676 978c         EXTSB     r12
+0011cb8c 83ce8678 1f40         INT       #0x40
+0011cb8e 83ce867a 9fa0         NOP       
+0011cb90 83ce867c 9b40aaaa     LDI:20    #0x4aaaa,r0
+0011cb94 83ce8680 caa1         LDI:8     #0xaa,r1
+0011cb96 83ce8682 1501         STH       r1,@r0
+0011cb98 83ce8684 9b405554     LDI:20    #0x45554,r0
+0011cb9c 83ce8688 c551         LDI:8     #0x55,r1
+0011cb9e 83ce868a 1501         STH       r1,@r0
+0011cba0 83ce868c 9b40aaaa     LDI:20    #0x4aaaa,r0
+0011cba4 83ce8690 c901         LDI:8     #0x90,r1
+0011cba6 83ce8692 1501         STH       r1,@r0
+0011cba8 83ce8694 9b400000     LDI:20    #0x40000,r0
+0011cbac 83ce8698 0400         LD        @r0,r0
+0011cbae 83ce869a 1460         ST        r0,@r6
+0011cbb0 83ce869c 9f81ffff0000 LDI:32    #0xffff0000,r1
+0011cbb6 83ce86a2 8210         AND       r1,r0
+0011cbb8 83ce86a4 9f8100bf0000 LDI:32    #0xbf0000,r1
+0011cbbe 83ce86aa aa10         CMP       r1,r0
+0011cbc0 83ce86ac f202         BEQ:D     0x83ce86b2
+0011cbc2 83ce86ae c010         LDI:8     #0x1,r0
+0011cbc4 83ce86b0 c000         LDI:8     #0x0,r0
+0011cbc6 83ce86b2 1640         STB       r0,@r4
+0011cbc8 83ce86b4 9f8000400aaa LDI:32    #0x400aaa,r0
+0011cbce 83ce86ba cf01         LDI:8     #0xf0,r1
+0011cbd0 83ce86bc 1501         STH       r1,@r0
+0011cbd2 83ce86be 0450         LD        @r5,r0
+0011cbd4 83ce86c0 a800         CMP       #0x0,r0
+0011cbd6 83ce86c2 e304         BNE       0x83ce86cc
+0011cbd8 83ce86c4 cf9c         LDI:8     #0xf9,r12
+0011cbda 83ce86c6 978c         EXTSB     r12
+0011cbdc 83ce86c8 1f40         INT       #0x40
+0011cbde 83ce86ca 9fa0         NOP       
+0011cbe0 83ce86cc 9720         RET       

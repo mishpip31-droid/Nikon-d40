@@ -1,0 +1,434 @@
+[
+  {
+    "index": 0,
+    "descriptor_file": "0xa482c",
+    "ram": "0x0",
+    "length": 0,
+    "kind": 2,
+    "callback_cpu": "0xa9ab4",
+    "meaning": "special; interpretation depends on command"
+  },
+  {
+    "index": 1,
+    "descriptor_file": "0xa483c",
+    "ram": "0x83ce958b",
+    "length": 3,
+    "kind": 1,
+    "callback_cpu": "0xa9ab4",
+    "meaning": "send/copy from descriptor RAM"
+  },
+  {
+    "index": 2,
+    "descriptor_file": "0xa484c",
+    "ram": "0x83ce9769",
+    "length": 6,
+    "kind": 0,
+    "callback_cpu": "0xa9ab4",
+    "meaning": "receive/copy to descriptor RAM"
+  },
+  {
+    "index": 3,
+    "descriptor_file": "0xa485c",
+    "ram": "0x83ce950c",
+    "length": 2,
+    "kind": 0,
+    "callback_cpu": "0xa9ab6",
+    "meaning": "receive/copy to descriptor RAM"
+  },
+  {
+    "index": 4,
+    "descriptor_file": "0xa486c",
+    "ram": "0x83ce9723",
+    "length": 21,
+    "kind": 0,
+    "callback_cpu": "0xa9b52",
+    "meaning": "receive/copy to descriptor RAM"
+  },
+  {
+    "index": 5,
+    "descriptor_file": "0xa487c",
+    "ram": "0x83ce974d",
+    "length": 14,
+    "kind": 1,
+    "callback_cpu": "0xa9b82",
+    "meaning": "send/copy from descriptor RAM"
+  },
+  {
+    "index": 6,
+    "descriptor_file": "0xa488c",
+    "ram": "0x83ce975b",
+    "length": 14,
+    "kind": 0,
+    "callback_cpu": "0xa9bf4",
+    "meaning": "receive/copy to descriptor RAM"
+  },
+  {
+    "index": 7,
+    "descriptor_file": "0xa489c",
+    "ram": "0x83ce957b",
+    "length": 9,
+    "kind": 1,
+    "callback_cpu": "0xa9cba",
+    "meaning": "send/copy from descriptor RAM"
+  },
+  {
+    "index": 8,
+    "descriptor_file": "0xa48ac",
+    "ram": "0x83ce9572",
+    "length": 9,
+    "kind": 0,
+    "callback_cpu": "0xa9e64",
+    "meaning": "receive/copy to descriptor RAM"
+  },
+  {
+    "index": 9,
+    "descriptor_file": "0xa48bc",
+    "ram": "0x83ce950e",
+    "length": 4,
+    "kind": 1,
+    "callback_cpu": "0xa9f8e",
+    "meaning": "send/copy from descriptor RAM"
+  },
+  {
+    "index": 10,
+    "descriptor_file": "0xa48cc",
+    "ram": "0x83ce9512",
+    "length": 4,
+    "kind": 0,
+    "callback_cpu": "0xa9f9c",
+    "meaning": "receive/copy to descriptor RAM"
+  },
+  {
+    "index": 11,
+    "descriptor_file": "0xa48dc",
+    "ram": "0x83ce971d",
+    "length": 4,
+    "kind": 1,
+    "callback_cpu": "0xa9fb8",
+    "meaning": "send/copy from descriptor RAM"
+  },
+  {
+    "index": 12,
+    "descriptor_file": "0xa48ec",
+    "ram": "0x83ce9814",
+    "length": 2,
+    "kind": 0,
+    "callback_cpu": "0xaa0ba",
+    "meaning": "receive/copy to descriptor RAM"
+  },
+  {
+    "index": 13,
+    "descriptor_file": "0xa48fc",
+    "ram": "0x83ce950b",
+    "length": 1,
+    "kind": 1,
+    "callback_cpu": "0xa9ab4",
+    "meaning": "send/copy from descriptor RAM"
+  },
+  {
+    "index": 14,
+    "descriptor_file": "0xa490c",
+    "ram": "0x83ce9508",
+    "length": 3,
+    "kind": 0,
+    "callback_cpu": "0xaa1ec",
+    "meaning": "receive/copy to descriptor RAM"
+  },
+  {
+    "index": 15,
+    "descriptor_file": "0xa491c",
+    "ram": "0x0",
+    "length": 0,
+    "kind": 2,
+    "callback_cpu": "0xa9ab4",
+    "meaning": "special; interpretation depends on command"
+  },
+  {
+    "index": 16,
+    "descriptor_file": "0xa492c",
+    "ram": "0x83ce9721",
+    "length": 1,
+    "kind": 1,
+    "callback_cpu": "0xa9ab4",
+    "meaning": "send/copy from descriptor RAM"
+  },
+  {
+    "index": 17,
+    "descriptor_file": "0xa493c",
+    "ram": "0x83ce9830",
+    "length": 9,
+    "kind": 0,
+    "callback_cpu": "0xaa286",
+    "meaning": "receive/copy to descriptor RAM"
+  },
+  {
+    "index": 18,
+    "descriptor_file": "0xa494c",
+    "ram": "0x83ce9716",
+    "length": 7,
+    "kind": 1,
+    "callback_cpu": "0xaa2be",
+    "meaning": "send/copy from descriptor RAM"
+  },
+  {
+    "index": 19,
+    "descriptor_file": "0xa495c",
+    "ram": "0x83ce9816",
+    "length": 13,
+    "kind": 1,
+    "callback_cpu": "0xa9ab4",
+    "meaning": "send/copy from descriptor RAM"
+  },
+  {
+    "index": 20,
+    "descriptor_file": "0xa496c",
+    "ram": "0x83ce9823",
+    "length": 13,
+    "kind": 0,
+    "callback_cpu": "0xaa2c8",
+    "meaning": "receive/copy to descriptor RAM"
+  },
+  {
+    "index": 21,
+    "descriptor_file": "0xa497c",
+    "ram": "0x83ce9802",
+    "length": 18,
+    "kind": 0,
+    "callback_cpu": "0xaa34e",
+    "meaning": "receive/copy to descriptor RAM"
+  },
+  {
+    "index": 22,
+    "descriptor_file": "0xa498c",
+    "ram": "0x83ce9585",
+    "length": 3,
+    "kind": 0,
+    "callback_cpu": "0xaa380",
+    "meaning": "receive/copy to descriptor RAM"
+  },
+  {
+    "index": 23,
+    "descriptor_file": "0xa499c",
+    "ram": "0x83ce9584",
+    "length": 1,
+    "kind": 0,
+    "callback_cpu": "0xa9ab4",
+    "meaning": "receive/copy to descriptor RAM"
+  },
+  {
+    "index": 24,
+    "descriptor_file": "0xa49ac",
+    "ram": "0x83ce9722",
+    "length": 1,
+    "kind": 1,
+    "callback_cpu": "0xaa38a",
+    "meaning": "send/copy from descriptor RAM"
+  },
+  {
+    "index": 25,
+    "descriptor_file": "0xa49bc",
+    "ram": "0x83ce9839",
+    "length": 2,
+    "kind": 0,
+    "callback_cpu": "0xaa38c",
+    "meaning": "receive/copy to descriptor RAM"
+  },
+  {
+    "index": 26,
+    "descriptor_file": "0xa49cc",
+    "ram": "0x83ce9308",
+    "length": 1,
+    "kind": 0,
+    "callback_cpu": "0xaa432",
+    "meaning": "receive/copy to descriptor RAM"
+  },
+  {
+    "index": 27,
+    "descriptor_file": "0xa49dc",
+    "ram": "0x83ce97f3",
+    "length": 15,
+    "kind": 0,
+    "callback_cpu": "0xa9ab4",
+    "meaning": "receive/copy to descriptor RAM"
+  },
+  {
+    "index": 28,
+    "descriptor_file": "0xa49ec",
+    "ram": "0x83ce976f",
+    "length": 132,
+    "kind": 0,
+    "callback_cpu": "0xa9ab4",
+    "meaning": "receive/copy to descriptor RAM"
+  },
+  {
+    "index": 29,
+    "descriptor_file": "0xa49fc",
+    "ram": "0x83ce9589",
+    "length": 2,
+    "kind": 0,
+    "callback_cpu": "0xa9ab4",
+    "meaning": "receive/copy to descriptor RAM"
+  },
+  {
+    "index": 30,
+    "descriptor_file": "0xa4a0c",
+    "ram": "0x0",
+    "length": 0,
+    "kind": 0,
+    "callback_cpu": "0xaa498",
+    "meaning": "receive/copy to descriptor RAM"
+  },
+  {
+    "index": 31,
+    "descriptor_file": "0xa4a1c",
+    "ram": "0x83ce9588",
+    "length": 1,
+    "kind": 1,
+    "callback_cpu": "0xaa516",
+    "meaning": "send/copy from descriptor RAM"
+  },
+  {
+    "index": 32,
+    "descriptor_file": "0xa4a2c",
+    "ram": "0x83ce9409",
+    "length": 255,
+    "kind": 2,
+    "callback_cpu": "0xaa52c",
+    "meaning": "special; interpretation depends on command"
+  },
+  {
+    "index": 33,
+    "descriptor_file": "0xa4a3c",
+    "ram": "0x83ce930a",
+    "length": 255,
+    "kind": 2,
+    "callback_cpu": "0xaa53c",
+    "meaning": "special; interpretation depends on command"
+  },
+  {
+    "index": 34,
+    "descriptor_file": "0xa4a4c",
+    "ram": "0x83ce9309",
+    "length": 1,
+    "kind": 1,
+    "callback_cpu": "0xaa54c",
+    "meaning": "send/copy from descriptor RAM"
+  },
+  {
+    "index": 35,
+    "descriptor_file": "0xa4a5c",
+    "ram": "0x83ce9122",
+    "length": 54,
+    "kind": 0,
+    "callback_cpu": "0xaa55c",
+    "meaning": "receive/copy to descriptor RAM"
+  },
+  {
+    "index": 36,
+    "descriptor_file": "0xa4a6c",
+    "ram": "0x83ce9652",
+    "length": 196,
+    "kind": 0,
+    "callback_cpu": "0xaa55e",
+    "meaning": "receive/copy to descriptor RAM"
+  },
+  {
+    "index": 37,
+    "descriptor_file": "0xa4a7c",
+    "ram": "0x83ce956a",
+    "length": 8,
+    "kind": 0,
+    "callback_cpu": "0xaa56c",
+    "meaning": "receive/copy to descriptor RAM"
+  },
+  {
+    "index": 38,
+    "descriptor_file": "0xa4a8c",
+    "ram": "0x83ce9560",
+    "length": 10,
+    "kind": 0,
+    "callback_cpu": "0xaa6ee",
+    "meaning": "receive/copy to descriptor RAM"
+  },
+  {
+    "index": 39,
+    "descriptor_file": "0xa4a9c",
+    "ram": "0x83ce9516",
+    "length": 45,
+    "kind": 0,
+    "callback_cpu": "0xa9ab4",
+    "meaning": "receive/copy to descriptor RAM"
+  },
+  {
+    "index": 40,
+    "descriptor_file": "0xa4aac",
+    "ram": "0x83ce9551",
+    "length": 15,
+    "kind": 0,
+    "callback_cpu": "0xaa82c",
+    "meaning": "receive/copy to descriptor RAM"
+  },
+  {
+    "index": 41,
+    "descriptor_file": "0xa4abc",
+    "ram": "0x83ce9543",
+    "length": 14,
+    "kind": 0,
+    "callback_cpu": "0xa9ab4",
+    "meaning": "receive/copy to descriptor RAM"
+  },
+  {
+    "index": 42,
+    "descriptor_file": "0xa4acc",
+    "ram": "0x83ce9120",
+    "length": 2,
+    "kind": 1,
+    "callback_cpu": "0xa9ab4",
+    "meaning": "send/copy from descriptor RAM"
+  },
+  {
+    "index": 43,
+    "descriptor_file": "0xa4adc",
+    "ram": "0x0",
+    "length": 0,
+    "kind": 0,
+    "callback_cpu": "0xa9ab4",
+    "meaning": "receive/copy to descriptor RAM"
+  },
+  {
+    "index": 44,
+    "descriptor_file": "0xa4aec",
+    "ram": "0x83ce9307",
+    "length": 1,
+    "kind": 1,
+    "callback_cpu": "0xa9ab4",
+    "meaning": "send/copy from descriptor RAM"
+  },
+  {
+    "index": 45,
+    "descriptor_file": "0xa4afc",
+    "ram": "0x83ce92ed",
+    "length": 26,
+    "kind": 0,
+    "callback_cpu": "0xaa89a",
+    "meaning": "receive/copy to descriptor RAM"
+  },
+  {
+    "index": 46,
+    "descriptor_file": "0xa4b0c",
+    "ram": "0x83ce92e7",
+    "length": 6,
+    "kind": 1,
+    "callback_cpu": "0xaa8be",
+    "meaning": "send/copy from descriptor RAM"
+  },
+  {
+    "index": 47,
+    "descriptor_file": "0xa4b1c",
+    "ram": "0x83ce92e6",
+    "length": 1,
+    "kind": 1,
+    "callback_cpu": "0xa9ab4",
+    "meaning": "send/copy from descriptor RAM"
+  }
+]

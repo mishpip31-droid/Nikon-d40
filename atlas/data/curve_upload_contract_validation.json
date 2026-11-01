@@ -1,0 +1,21 @@
+{
+  "result": "PASS_CPU_CALLER_BUILDER_MMIO_COPY",
+  "EXP03_regression": {
+    "binary_sha256": "3a48b641ecda06afbbfe38e2fa245b249958fd0134b9fa9203932f72617c80e2",
+    "computed_curve_correct": true,
+    "return_pointer_actual": "0x20000000",
+    "return_pointer_required": "0x83eb586c",
+    "all_three_banks_copy_context": true,
+    "mismatches_per_bank": 4096,
+    "entries_above_4095_per_bank": 3851
+  },
+  "fixed_sha256": "7adc8ac1223c84faa3d3dcdfdb2ca67c9b2ed1649098a0d794c44dbb2b29a722",
+  "upload_path_cases": 32,
+  "Cinema_MMIO_u16_writes_checked": 196608,
+  "tone_builder_hooked": false,
+  "upload_loops_hooked": false,
+  "scope_end_cpu": "0x4b5f8",
+  "scope": "through all three tone-bank copies; later configuration not executed",
+  "physical_camera_tested": false,
+  "ASIC_pixels_emulated": false
+}

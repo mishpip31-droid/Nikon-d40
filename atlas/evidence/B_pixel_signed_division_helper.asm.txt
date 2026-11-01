@@ -1,0 +1,42 @@
+Bounded static listing; not a complete CFG or ASIC model.
+Firmware SHA256: b9df48d461e875dce4ba84da88164af170dfc48ad9f7674859623bad0401032e
+FILE     CPU_PC   BYTES        MNEMONIC  OPERANDS
+0007e78c 000be78c b354         MOV       r4,MDL
+0007e78e 000be78e 9745         DIV0S     r5
+0007e790 000be790 9765         DIV1      r5
+0007e792 000be792 9765         DIV1      r5
+0007e794 000be794 9765         DIV1      r5
+0007e796 000be796 9765         DIV1      r5
+0007e798 000be798 9765         DIV1      r5
+0007e79a 000be79a 9765         DIV1      r5
+0007e79c 000be79c 9765         DIV1      r5
+0007e79e 000be79e 9765         DIV1      r5
+0007e7a0 000be7a0 9765         DIV1      r5
+0007e7a2 000be7a2 9765         DIV1      r5
+0007e7a4 000be7a4 9765         DIV1      r5
+0007e7a6 000be7a6 9765         DIV1      r5
+0007e7a8 000be7a8 9765         DIV1      r5
+0007e7aa 000be7aa 9765         DIV1      r5
+0007e7ac 000be7ac 9765         DIV1      r5
+0007e7ae 000be7ae 9765         DIV1      r5
+0007e7b0 000be7b0 9765         DIV1      r5
+0007e7b2 000be7b2 9765         DIV1      r5
+0007e7b4 000be7b4 9765         DIV1      r5
+0007e7b6 000be7b6 9765         DIV1      r5
+0007e7b8 000be7b8 9765         DIV1      r5
+0007e7ba 000be7ba 9765         DIV1      r5
+0007e7bc 000be7bc 9765         DIV1      r5
+0007e7be 000be7be 9765         DIV1      r5
+0007e7c0 000be7c0 9765         DIV1      r5
+0007e7c2 000be7c2 9765         DIV1      r5
+0007e7c4 000be7c4 9765         DIV1      r5
+0007e7c6 000be7c6 9765         DIV1      r5
+0007e7c8 000be7c8 9765         DIV1      r5
+0007e7ca 000be7ca 9765         DIV1      r5
+0007e7cc 000be7cc 9765         DIV1      r5
+0007e7ce 000be7ce 9765         DIV1      r5
+0007e7d0 000be7d0 9775         DIV2      r5
+0007e7d2 000be7d2 9f60         DIV3      
+0007e7d4 000be7d4 9f70         DIV4S     
+0007e7d6 000be7d6 9f20         RET:D     
+0007e7d8 000be7d8 b754         MOV       MDL,r4

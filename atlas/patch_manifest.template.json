@@ -1,0 +1,13 @@
+{
+  "base_sha256": "b9df48d461e875dce4ba84da88164af170dfc48ad9f7674859623bad0401032e",
+  "status": "UNIMPLEMENTED_TEMPLATE_DO_NOT_FLASH",
+  "patches": [],
+  "required_patch_fields": [
+    "file_offset (hex string)",
+    "before_hex",
+    "after_hex (same length)",
+    "reason",
+    "evidence"
+  ],
+  "note": "Empty template is deliberately rejected. It contains no firmware changes."
+}

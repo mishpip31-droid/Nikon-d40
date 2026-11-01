@@ -1,0 +1,96 @@
+{
+  "date": "2026-10-28",
+  "user_report": "Работает",
+  "scope": "User report and received JPEG files; installed firmware identity and paired settings unconfirmed",
+  "photos": [
+    {
+      "name": "01-IMG_20261028_181503_183.JPG",
+      "sha256": "33fa69b03d9ba16fcaf0bbe9564ff7928c7a99f9014451b4269fa2033abb7272",
+      "size": [
+        1536,
+        1021
+      ],
+      "exif_present": false,
+      "decodes_fully": true,
+      "claimed_mode": null
+    },
+    {
+      "name": "02-IMG_20261028_181503_330.JPG",
+      "sha256": "c0001ed3e5a56050d593775347c9fbbecc019df405c344c4edef644518d05cf1",
+      "size": [
+        1536,
+        1021
+      ],
+      "exif_present": false,
+      "decodes_fully": true,
+      "claimed_mode": null
+    },
+    {
+      "name": "03-IMG_20261028_181502_818.JPG",
+      "sha256": "1e2f98bb29c464a72cd83dbf967e2c0e1cb44bb4687ae6912182ebc6bcdb4cc7",
+      "size": [
+        1536,
+        1021
+      ],
+      "exif_present": false,
+      "decodes_fully": true,
+      "claimed_mode": null
+    },
+    {
+      "name": "04-IMG_20261028_181502_742.JPG",
+      "sha256": "36b6f35805afa2d0b3ff44629548c28c70e4a342d1290c3429ad1eb842da9f41",
+      "size": [
+        1021,
+        1536
+      ],
+      "exif_present": false,
+      "decodes_fully": true,
+      "claimed_mode": null
+    },
+    {
+      "name": "05-IMG_20261028_181503_410.JPG",
+      "sha256": "2d5f90e0ebe2872d830453b5e42b0a192022817016c8eb59421e4210329d223d",
+      "size": [
+        1536,
+        1021
+      ],
+      "exif_present": false,
+      "decodes_fully": true,
+      "claimed_mode": null
+    },
+    {
+      "name": "06-IMG_20261028_181503_301.JPG",
+      "sha256": "f0a17024131840e3727274fdbe0264cdf44aa204183c2433f6cb89576427c650",
+      "size": [
+        1536,
+        1021
+      ],
+      "exif_present": false,
+      "decodes_fully": true,
+      "claimed_mode": null
+    },
+    {
+      "name": "07-IMG_20261028_181503_657.JPG",
+      "sha256": "d4b015f874633ea9bd7d4cf6a24020f28f43a90438b60f06af239fe9c7f35d0f",
+      "size": [
+        1536,
+        1021
+      ],
+      "exif_present": false,
+      "decodes_fully": true,
+      "claimed_mode": null
+    },
+    {
+      "name": "08-IMG_20261028_181503_337.JPG",
+      "sha256": "190d976c774464ca225186a06821cd18783eb64ee679a79672840e4d1780bae2",
+      "size": [
+        1536,
+        1021
+      ],
+      "exif_present": false,
+      "decodes_fully": true,
+      "claimed_mode": null
+    }
+  ],
+  "new_menu_camera_tested": false
+}

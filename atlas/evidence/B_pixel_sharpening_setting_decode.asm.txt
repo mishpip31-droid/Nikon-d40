@@ -1,0 +1,9 @@
+Bounded static listing; not a complete CFG or ASIC model.
+Firmware SHA256: b9df48d461e875dce4ba84da88164af170dfc48ad9f7674859623bad0401032e
+FILE     CPU_PC   BYTES        MNEMONIC  OPERANDS
+002def16 0031ef16 0480         LD        @r8,r0
+002def18 0031ef18 c2cd         LDI:8     #0x2c,r13
+002def1a 0031ef1a 0200         LDUB      @(r13+r0),r0
+002def1c 0031ef1c 9f8c83eb3d20 LDI:32    #0x83eb3d20,r12
+002def22 0031ef22 b050         LSR       #5,r0
+002def24 0031ef24 14c0         ST        r0,@r12

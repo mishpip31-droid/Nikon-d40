@@ -1,0 +1,63 @@
+{
+  "rom": "0x33692e",
+  "file": "0x2f692e",
+  "size_bytes": 36864,
+  "layout": "4096 rows x 9 signed int8 columns; row stride initialized to 9 at CPU 0x31b6c6",
+  "columns": [
+    {
+      "index": 0,
+      "min": 0,
+      "max": 0,
+      "nonzero": 0
+    },
+    {
+      "index": 1,
+      "min": 0,
+      "max": 0,
+      "nonzero": 0
+    },
+    {
+      "index": 2,
+      "min": 0,
+      "max": 0,
+      "nonzero": 0
+    },
+    {
+      "index": 3,
+      "min": 0,
+      "max": 0,
+      "nonzero": 0
+    },
+    {
+      "index": 4,
+      "min": 0,
+      "max": 0,
+      "nonzero": 0
+    },
+    {
+      "index": 5,
+      "min": 0,
+      "max": 0,
+      "nonzero": 0
+    },
+    {
+      "index": 6,
+      "min": 0,
+      "max": 0,
+      "nonzero": 0
+    },
+    {
+      "index": 7,
+      "min": 0,
+      "max": 0,
+      "nonzero": 0
+    },
+    {
+      "index": 8,
+      "min": 0,
+      "max": 0,
+      "nonzero": 0
+    }
+  ],
+  "column_selection": "context[0x6ae]; selected earlier via CPU 0x31f7b6; not a free style ID"
+}

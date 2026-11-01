@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-27",
+  "result": "PASS",
+  "scope": "Static analysis, 448 selector executions, 48 curve executions, 20 journal scanner executions; no camera or flash hardware tests",
+  "tests": [
+    {
+      "command": "python3 Nikon_D40_Firmware_Atlas_v2/tools/extract_v2.py d40_research/BD400111.bin Nikon_D40_Firmware_Atlas_v2",
+      "exit_code": 0,
+      "stdout": "{\"storage_records\": 12, \"transport_commands\": 48, \"evidence_ranges\": 22, \"firmware_modified\": false}\n",
+      "stderr": ""
+    },
+    {
+      "command": "python3 Nikon_D40_Firmware_Atlas_v2/tools/test_atlas.py d40_research",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "..........\n----------------------------------------------------------------------\nRan 10 tests in 0.045s\n\nOK\n"
+    },
+    {
+      "command": "python3 Nikon_D40_Firmware_Atlas_v2/tools/check_selector.py d40_research/BD400111.bin",
+      "exit_code": 0,
+      "stdout": "PASS: 448 bounded executions of original selector; all seven entries and preserved bits checked.\nFirmware bytes unchanged. Persistence, JPEG output, hardware execution and update acceptance are not tested.\n",
+      "stderr": ""
+    },
+    {
+      "command": "python3 Nikon_D40_Firmware_Atlas_v2/tools/check_storage_curve.py d40_research/BD400111.bin",
+      "exit_code": 0,
+      "stdout": "{\n  \"curve_original_code_executions\": 48,\n  \"journal_scanner_original_code_executions\": 20,\n  \"result\": \"PASS\",\n  \"camera_connected\": false,\n  \"firmware_modified\": false,\n  \"scope\": \"Synthetic host memory; no flash erase/program, image sensor, JPEG or power-loss hardware tests\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "check": "12 record descriptors; 48 transport commands; two reserved sectors; original B unchanged",
+      "result": "PASS"
+    }
+  ]
+}

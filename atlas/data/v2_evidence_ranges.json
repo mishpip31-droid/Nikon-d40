@@ -1,0 +1,178 @@
+[
+  {
+    "name": "B_settings_commit",
+    "start_file": "0x3fa",
+    "end_file_exclusive": "0x44c",
+    "cpu_start": "0x403fa",
+    "address_delta": "0x40000",
+    "sha256": "13c9fd83f1225f5b16a6821842a5dd9e6ea896cc37671aad422946af87c64ef5"
+  },
+  {
+    "name": "B_settings_restore_mirror",
+    "start_file": "0x514",
+    "end_file_exclusive": "0x530",
+    "cpu_start": "0x40514",
+    "address_delta": "0x40000",
+    "sha256": "a1f38116bdc3b22997e189f46a2a8dcd1d7ad0d3e80d4a256fb88833b9fba92b"
+  },
+  {
+    "name": "B_storage_restore",
+    "start_file": "0x2b44c",
+    "end_file_exclusive": "0x2b654",
+    "cpu_start": "0x6b44c",
+    "address_delta": "0x40000",
+    "sha256": "00d0433f4a094061feeb1712474855f4ecb64434a90fd7251aa39a53a0355d34"
+  },
+  {
+    "name": "B_storage_scan",
+    "start_file": "0x2b654",
+    "end_file_exclusive": "0x2b708",
+    "cpu_start": "0x6b654",
+    "address_delta": "0x40000",
+    "sha256": "5ceed2a79bbc9a60afd9fe97086c56d7e57c05356b094f85e9d101607be0ccad"
+  },
+  {
+    "name": "B_storage_commit_and_compare",
+    "start_file": "0x2b708",
+    "end_file_exclusive": "0x2ba9a",
+    "cpu_start": "0x6b708",
+    "address_delta": "0x40000",
+    "sha256": "64c83bd6dfc4adb69231902223ade16ea28de52de0a60f7a6a0302e6b2010071"
+  },
+  {
+    "name": "B_storage_flash_wrappers",
+    "start_file": "0x2b40c",
+    "end_file_exclusive": "0x2b44c",
+    "cpu_start": "0x6b40c",
+    "address_delta": "0x40000",
+    "sha256": "b2c0daa3c1a587e1241606765b3ecb273b6a8a543e5962240fbb0058b1ce88ed"
+  },
+  {
+    "name": "B_flash_erase_program_runtime",
+    "start_file": "0x11ce68",
+    "end_file_exclusive": "0x11d1c4",
+    "cpu_start": "0x83ce8954",
+    "address_delta": "0x83bcbaec",
+    "sha256": "1205434a2052e96a57f8b0a69dcaa0648a505d60c4ccc8a92b96b9cde33804fa"
+  },
+  {
+    "name": "B_transport_prepare",
+    "start_file": "0x694e0",
+    "end_file_exclusive": "0x69724",
+    "cpu_start": "0xa94e0",
+    "address_delta": "0x40000",
+    "sha256": "1a979927fab554b5ac35f0f5d2904233909fd32b1e3b527ce3b3fdb5f2a31629"
+  },
+  {
+    "name": "B_transport_receive",
+    "start_file": "0x69724",
+    "end_file_exclusive": "0x697e6",
+    "cpu_start": "0xa9724",
+    "address_delta": "0x40000",
+    "sha256": "88d3e4dd9952f08cf9d6c2c07311bdc315d9c63f421894c710be950784272234"
+  },
+  {
+    "name": "B_transport_queue",
+    "start_file": "0x6995a",
+    "end_file_exclusive": "0x69ab4",
+    "cpu_start": "0xa995a",
+    "address_delta": "0x40000",
+    "sha256": "09cde35d56f5d5ba1ffbe5aa2bd447cf30b6fe43ed1dc4b06f26ad8ce728d394"
+  },
+  {
+    "name": "B_transport_settings_callbacks",
+    "start_file": "0x69cba",
+    "end_file_exclusive": "0x69f8e",
+    "cpu_start": "0xa9cba",
+    "address_delta": "0x40000",
+    "sha256": "d7815b8f803b7206a98d346cda48c2615bf77ef69705febc4c3b36772c90a9dc"
+  },
+  {
+    "name": "B_ptp_tone_transfer",
+    "start_file": "0x45072",
+    "end_file_exclusive": "0x451de",
+    "cpu_start": "0x85072",
+    "address_delta": "0x40000",
+    "sha256": "03929b7e1adb8fac3b7012a5043fe0b75ca244c0bc72f0f150f74af22087703d"
+  },
+  {
+    "name": "B_tone_simple_expanders",
+    "start_file": "0xbf06",
+    "end_file_exclusive": "0xbfaa",
+    "cpu_start": "0x4bf06",
+    "address_delta": "0x40000",
+    "sha256": "9bb19c207e9155987d870ffa11fe219c3653c1ff99bb938711799b6efd163297"
+  },
+  {
+    "name": "B_tone_builder",
+    "start_file": "0x2e3c22",
+    "end_file_exclusive": "0x2e4020",
+    "cpu_start": "0x323c22",
+    "address_delta": "0x40000",
+    "sha256": "1acc6aee414b7481d821fdab355901309eea4d29b0f1bb760c04b9bc420116c1"
+  },
+  {
+    "name": "B_tone_hardware_setup",
+    "start_file": "0xb41c",
+    "end_file_exclusive": "0xb5f8",
+    "cpu_start": "0x4b41c",
+    "address_delta": "0x40000",
+    "sha256": "e5cdba6d993e0f5a556b4a5503ab84a8988d5cf56bfcec1990f5992293f17f79"
+  },
+  {
+    "name": "B_tone_copy_loop",
+    "start_file": "0xbef6",
+    "end_file_exclusive": "0xbf06",
+    "cpu_start": "0x4bef6",
+    "address_delta": "0x40000",
+    "sha256": "9b0119076ac5f96225629f8c9fec92423f77bf915fec96c720d4c4a4e45d4447"
+  },
+  {
+    "name": "B_frame_settings_copy_call",
+    "start_file": "0x5682",
+    "end_file_exclusive": "0x569c",
+    "cpu_start": "0x45682",
+    "address_delta": "0x40000",
+    "sha256": "8b30904f64b8be66299d9bde067f775d80cf7e302a65a89fb5791831ad5104ec"
+  },
+  {
+    "name": "B_frame_settings_copy",
+    "start_file": "0x793a",
+    "end_file_exclusive": "0x797e",
+    "cpu_start": "0x4793a",
+    "address_delta": "0x40000",
+    "sha256": "23265acbd054157978f148b86ebeb963ac535f2a747b94d215f231947f87f1b2"
+  },
+  {
+    "name": "B_tone_context_decode_prefix",
+    "start_file": "0x2ded1a",
+    "end_file_exclusive": "0x2ded6a",
+    "cpu_start": "0x31ed1a",
+    "address_delta": "0x40000",
+    "sha256": "30ff6e0dd69bb3f0ec335b184d1c11171f67608e3a91f89e0a1bcb59bdd9c828"
+  },
+  {
+    "name": "B_tone_selector_and_correction",
+    "start_file": "0x2df7b6",
+    "end_file_exclusive": "0x2dfb3c",
+    "cpu_start": "0x31f7b6",
+    "address_delta": "0x40000",
+    "sha256": "8826c8cdb58954275f94d944d85212a26c72c1bc87c8320d5b22c4892eb41502"
+  },
+  {
+    "name": "B_tone_context_result",
+    "start_file": "0x2e34be",
+    "end_file_exclusive": "0x2e3562",
+    "cpu_start": "0x3234be",
+    "address_delta": "0x40000",
+    "sha256": "3d5d3ec9637d6c1c3ddc46e703d1e62d908d2d05d04bf85dd2624eee21cdfa20"
+  },
+  {
+    "name": "B_tone_correction_stride",
+    "start_file": "0x2db6c6",
+    "end_file_exclusive": "0x2db6d2",
+    "cpu_start": "0x31b6c6",
+    "address_delta": "0x40000",
+    "sha256": "a116fc10fa4b59a7fc15555c84c1521484a82bcc26fb37c54c2287d89e51ebc8"
+  }
+]

@@ -1,0 +1,37 @@
+[
+  {
+    "title": "Nikon D40 Repair Manual",
+    "document": "VBA15001-R.3701.A",
+    "date_on_cover": "2006-11",
+    "pages": 87,
+    "verified_pdf_pages": [
+      1,
+      67,
+      77
+    ],
+    "section": "A49",
+    "sha256": "fe2091d852486c975057f95aa71a84ef15e78c1d4b4a833691cd9c2d63f3aa39",
+    "url": "https://lens-club.ru/public/files/pdfs/45f735c3f4b5982ab1778810e56331c1.pdf",
+    "page_url": "https://www.manualslib.com/manual/844720/Nikon-Vba15001-Black.html?page=77",
+    "classification": "Primary Nikon-authored document hosted on third-party mirrors; text extracted and pages visually inspected; not redistributed"
+  },
+  {
+    "title": "Nikon official D40 firmware update guide",
+    "url": "https://cdn-10.nikon-cdn.com/software/firmware/D40/111/D40fw111WIN.pdf",
+    "classification": "Primary official source; ordinary updates and post-update switch-off"
+  },
+  {
+    "title": "Fujitsu FR family instruction manual",
+    "url": "https://www.manualslib.com/manual/575109/Fujitsu-Fr-Family.html",
+    "sections": [
+      "7.26 BANDL",
+      "7.124 ADDSP"
+    ],
+    "classification": "Primary manufacturer instruction definitions, mirrored source; not proof of D40 chip model"
+  },
+  {
+    "title": "SST/Microchip DS25028A",
+    "url": "https://ww1.microchip.com/downloads/en/devicedoc/25028a.pdf",
+    "classification": "Indexed primary manufacturer excerpt supports 00BF vendor identifier only; full PDF retrieval unavailable; exact D40 flash model not inferred"
+  }
+]

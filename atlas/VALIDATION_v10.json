@@ -1,0 +1,41 @@
+{
+  "version": 10,
+  "date": "2026-10-28",
+  "result": "PASS",
+  "report": "data/a_memory_validation.json",
+  "camera_tested": false,
+  "recovery_proven": false,
+  "coverage_completed": 15,
+  "coverage_total": 48,
+  "originals_and_EXP01_unchanged": {
+    "d40_research/BD400111.bin": "b9df48d461e875dce4ba84da88164af170dfc48ad9f7674859623bad0401032e",
+    "d40_research/AD400111.bin": "ff96a874d3a22f9c18c610bd5bf55f4e6a53603c865fdb8e913a1d53591db5c9",
+    "d40_research/AD400112.bin": "0cc92921d6b2ad5d5cfa070abeebdd9aaca224d326e42a26339e3ac384270394",
+    "D40_Cinema2383_Firmware_EXP01/firmware/D40_Cinema2383_EXP01_NOT_CAMERA_TESTED.bin": "8abfda8cc67f787be867fd3d348fd38fcc27b8e041702625d182a968052148a8"
+  },
+  "models": [
+    "serial send and receive/DMA replacement",
+    "instant abstract memory writes",
+    "explicit status bytes",
+    "immediate OS mailbox/event success",
+    "delay logging with no time unit",
+    "nonnegative remainder-by-32 helper"
+  ],
+  "counts": {
+    "write_boundary_cases": 320,
+    "read_cases": 16,
+    "scratch_clobber_cases": 24,
+    "status_decode_cases": 256,
+    "startup_checksum_cases": 60,
+    "byte_callback_cases": 14,
+    "hardware_transfer_setup_cases": 5,
+    "btstl_cases": 1024
+  },
+  "busy_boundary_cases": 7,
+  "task1_activation_cases": 2,
+  "task1_gate_prefix_cases": 1,
+  "static_syscall_targets": 8,
+  "previous_results": "Historical v1-v9 results retained, not rerun; previous tools unchanged",
+  "new_test_sha256": "dc8e768e6de68179ff2535a2ff214e78542494cba72997dc2787bdd93dec7958",
+  "task_interpreter_sha256": "147d36d31250c2530a82a65df812c038dd21afa93ca7fd8e590df24c98747dde"
+}

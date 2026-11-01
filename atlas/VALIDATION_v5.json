@@ -1,0 +1,241 @@
+{
+  "firmware_sha256": "b9df48d461e875dce4ba84da88164af170dfc48ad9f7674859623bad0401032e",
+  "result": "PASS",
+  "routine": "0x4B41C",
+  "instructions": 138736,
+  "MMIO_write_count": 14439,
+  "context": "synthetic, ctx+0x73C=0; small and saturation selectors=0",
+  "hooks": {
+    "0x323C22": "returns synthetic 4096-element curve at 0x83EB586C"
+  },
+  "matrix_writes": [
+    {
+      "write_index": 13,
+      "address": "0x40010022",
+      "value": 420
+    },
+    {
+      "write_index": 14,
+      "address": "0x40010034",
+      "value": 438
+    },
+    {
+      "write_index": 15,
+      "address": "0x40010024",
+      "value": 422
+    },
+    {
+      "write_index": 16,
+      "address": "0x40010036",
+      "value": 440
+    },
+    {
+      "write_index": 17,
+      "address": "0x40010026",
+      "value": 424
+    },
+    {
+      "write_index": 18,
+      "address": "0x40010038",
+      "value": 442
+    },
+    {
+      "write_index": 19,
+      "address": "0x40010028",
+      "value": 426
+    },
+    {
+      "write_index": 20,
+      "address": "0x4001003a",
+      "value": 444
+    },
+    {
+      "write_index": 21,
+      "address": "0x4001002a",
+      "value": 428
+    },
+    {
+      "write_index": 22,
+      "address": "0x4001003c",
+      "value": 446
+    },
+    {
+      "write_index": 23,
+      "address": "0x4001002c",
+      "value": 430
+    },
+    {
+      "write_index": 24,
+      "address": "0x4001003e",
+      "value": 448
+    },
+    {
+      "write_index": 25,
+      "address": "0x4001002e",
+      "value": 432
+    },
+    {
+      "write_index": 26,
+      "address": "0x40010040",
+      "value": 450
+    },
+    {
+      "write_index": 27,
+      "address": "0x40010030",
+      "value": 434
+    },
+    {
+      "write_index": 28,
+      "address": "0x40010042",
+      "value": 452
+    },
+    {
+      "write_index": 29,
+      "address": "0x40010032",
+      "value": 436
+    },
+    {
+      "write_index": 30,
+      "address": "0x40010044",
+      "value": 454
+    }
+  ],
+  "tone_banks": [
+    {
+      "bank": "0x40018400",
+      "first_write_index": 103,
+      "last_write_index": 4198,
+      "entries": 4096
+    },
+    {
+      "bank": "0x4001a400",
+      "first_write_index": 4199,
+      "last_write_index": 8294,
+      "entries": 4096
+    },
+    {
+      "bank": "0x4001c400",
+      "first_write_index": 8295,
+      "last_write_index": 12390,
+      "entries": 4096
+    }
+  ],
+  "scalar_writes": [
+    {
+      "register": "0x40010006",
+      "bytes": 2,
+      "value": 396
+    },
+    {
+      "register": "0x40010008",
+      "bytes": 4,
+      "value": 324478056
+    },
+    {
+      "register": "0x4001000c",
+      "bytes": 2,
+      "value": 398
+    },
+    {
+      "register": "0x4001000e",
+      "bytes": 2,
+      "value": 400
+    },
+    {
+      "register": "0x40010010",
+      "bytes": 2,
+      "value": 402
+    },
+    {
+      "register": "0x40010012",
+      "bytes": 2,
+      "value": 404
+    },
+    {
+      "register": "0x40010014",
+      "bytes": 2,
+      "value": 406
+    },
+    {
+      "register": "0x40010016",
+      "bytes": 2,
+      "value": 408
+    },
+    {
+      "register": "0x40010018",
+      "bytes": 2,
+      "value": 410
+    },
+    {
+      "register": "0x4001001a",
+      "bytes": 2,
+      "value": 412
+    },
+    {
+      "register": "0x4001001c",
+      "bytes": 2,
+      "value": 414
+    },
+    {
+      "register": "0x4001001e",
+      "bytes": 2,
+      "value": 416
+    },
+    {
+      "register": "0x40010020",
+      "bytes": 2,
+      "value": 418
+    },
+    {
+      "register": "0x40010046",
+      "bytes": 2,
+      "value": 456
+    },
+    {
+      "register": "0x40010048",
+      "bytes": 2,
+      "value": 458
+    },
+    {
+      "register": "0x4001004a",
+      "bytes": 2,
+      "value": 460
+    },
+    {
+      "register": "0x4001004c",
+      "bytes": 2,
+      "value": 462
+    },
+    {
+      "register": "0x4001004e",
+      "bytes": 2,
+      "value": 464
+    },
+    {
+      "register": "0x40010050",
+      "bytes": 4,
+      "value": 610800471
+    },
+    {
+      "register": "0x40010054",
+      "bytes": 2,
+      "value": 472
+    },
+    {
+      "register": "0x40010056",
+      "bytes": 2,
+      "value": 474
+    }
+  ],
+  "static_sqrt_square_rescale_banks_written_by_this_routine": false,
+  "camera_connected": false,
+  "firmware_modified": false,
+  "hardware_emulated": false,
+  "ASIC_pixel_order_proven": false,
+  "limitations": [
+    "MMIO is ordinary memory; no pixel arithmetic is executed.",
+    "Only one synthetic configuration path is executed.",
+    "The tone builder is a declared hook, not executed here.",
+    "This test proves CPU upload order, not ASIC signal routing."
+  ]
+}

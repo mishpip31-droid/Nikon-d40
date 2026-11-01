@@ -1,0 +1,501 @@
+{
+  "result": "PASS_WITH_MODELED_LCD_OS_AND_SYNC",
+  "image_sha256": "56de8eda261cd13655a09a981ede0f2e56dd5236b308714c5fafe3ebc413d22b",
+  "layout": {
+    "initializer": "0x143ef6",
+    "initializer_bytes": 74,
+    "action": "0x143fa4",
+    "action_bytes": 154,
+    "measurement_wrapper": "0x143f40",
+    "measurement_bytes": 50,
+    "drawing_wrapper": "0x14403e",
+    "drawing_bytes": 80,
+    "rows_ROM": "0x144090",
+    "rows_bytes": 128,
+    "label_ROM": "0x144110",
+    "label_bytes": 10
+  },
+  "physical_camera_test": false,
+  "read_only_rows": true,
+  "models": [
+    "LCD rectangle/glyph painting",
+    "divide-by-two helper",
+    "palette and a menu visual-state query",
+    "event-set/delay OS calls",
+    "settings synchronization 0x1468ae"
+  ],
+  "new_instruction_cases": 1664,
+  "all_language_span_cases": 18060,
+  "actual_font_measurements": [
+    {
+      "language_selector": 0,
+      "table": "0x2e1184",
+      "width_in_original_wrapper_units": 108,
+      "height": 20
+    },
+    {
+      "language_selector": 1,
+      "table": "0x2a7938",
+      "width_in_original_wrapper_units": 108,
+      "height": 20
+    },
+    {
+      "language_selector": 2,
+      "table": "0x289be4",
+      "width_in_original_wrapper_units": 108,
+      "height": 20
+    },
+    {
+      "language_selector": 3,
+      "table": "0x2948b4",
+      "width_in_original_wrapper_units": 108,
+      "height": 20
+    },
+    {
+      "language_selector": 4,
+      "table": "0x29d200",
+      "width_in_original_wrapper_units": 108,
+      "height": 20
+    },
+    {
+      "language_selector": 5,
+      "table": "0x2b124c",
+      "width_in_original_wrapper_units": 108,
+      "height": 20
+    },
+    {
+      "language_selector": 6,
+      "table": "0x2bbaa4",
+      "width_in_original_wrapper_units": 108,
+      "height": 20
+    },
+    {
+      "language_selector": 7,
+      "table": "0x2d751c",
+      "width_in_original_wrapper_units": 108,
+      "height": 20
+    },
+    {
+      "language_selector": 8,
+      "table": "0x2eb45c",
+      "width_in_original_wrapper_units": 108,
+      "height": 20
+    },
+    {
+      "language_selector": 9,
+      "table": "0x2f4d18",
+      "width_in_original_wrapper_units": 108,
+      "height": 20
+    },
+    {
+      "language_selector": 10,
+      "table": "0x304e0c",
+      "width_in_original_wrapper_units": 108,
+      "height": 20
+    },
+    {
+      "language_selector": 11,
+      "table": "0x313f60",
+      "width_in_original_wrapper_units": 108,
+      "height": 20
+    },
+    {
+      "language_selector": 12,
+      "table": "0x30da34",
+      "width_in_original_wrapper_units": 108,
+      "height": 20
+    },
+    {
+      "language_selector": 13,
+      "table": "0x2c5a28",
+      "width_in_original_wrapper_units": 108,
+      "height": 20
+    },
+    {
+      "language_selector": 14,
+      "table": "0x2ceff4",
+      "width_in_original_wrapper_units": 108,
+      "height": 20
+    }
+  ],
+  "original_compositor_runs": [
+    {
+      "viewport": 0,
+      "spans": [
+        {
+          "start": "0x2c652c",
+          "end": "0x2c6530",
+          "hex": "8bc68bdd",
+          "text": "\\x8b\\xc6\\x8b\\xdd"
+        },
+        {
+          "start": "0x2c6530",
+          "end": "0x2c6538",
+          "hex": "9a179a299a1f9b22",
+          "text": "\\x9a\u0017\\x9a)\\x9a\u001f\\x9b\""
+        },
+        {
+          "start": "0x2c6538",
+          "end": "0x2c6540",
+          "hex": "8c809b339b059b22",
+          "text": "\\x8c\\x80\\x9b3\\x9b\u0005\\x9b\""
+        },
+        {
+          "start": "0x2c6540",
+          "end": "0x2c654c",
+          "hex": "9b349b368c809b339b059b22",
+          "text": "\\x9b4\\x9b6\\x8c\\x80\\x9b3\\x9b\u0005\\x9b\""
+        },
+        {
+          "start": "0x2c654c",
+          "end": "0x2c6558",
+          "hex": "9a2e9a419a1f9a3c9a419a1f",
+          "text": "\\x9a.\\x9aA\\x9a\u001f\\x9a<\\x9aA\\x9a\u001f"
+        },
+        {
+          "start": "0x2c7072",
+          "end": "0x2c7076",
+          "hex": "8bf58c83",
+          "text": "\\x8b\\xf5\\x8c\\x83"
+        },
+        {
+          "start": "0x2c6558",
+          "end": "0x2c6564",
+          "hex": "9a099a149a189a2f9a039a15",
+          "text": "\\x9a\t\\x9a\u0014\\x9a\u0018\\x9a/\\x9a\u0003\\x9a\u0015"
+        }
+      ]
+    },
+    {
+      "viewport": 1,
+      "spans": [
+        {
+          "start": "0x2c6530",
+          "end": "0x2c6538",
+          "hex": "9a179a299a1f9b22",
+          "text": "\\x9a\u0017\\x9a)\\x9a\u001f\\x9b\""
+        },
+        {
+          "start": "0x2c6538",
+          "end": "0x2c6540",
+          "hex": "8c809b339b059b22",
+          "text": "\\x8c\\x80\\x9b3\\x9b\u0005\\x9b\""
+        },
+        {
+          "start": "0x2c6540",
+          "end": "0x2c654c",
+          "hex": "9b349b368c809b339b059b22",
+          "text": "\\x9b4\\x9b6\\x8c\\x80\\x9b3\\x9b\u0005\\x9b\""
+        },
+        {
+          "start": "0x2c654c",
+          "end": "0x2c6558",
+          "hex": "9a2e9a419a1f9a3c9a419a1f",
+          "text": "\\x9a.\\x9aA\\x9a\u001f\\x9a<\\x9aA\\x9a\u001f"
+        },
+        {
+          "start": "0x2c7072",
+          "end": "0x2c7076",
+          "hex": "8bf58c83",
+          "text": "\\x8b\\xf5\\x8c\\x83"
+        },
+        {
+          "start": "0x2c6558",
+          "end": "0x2c6564",
+          "hex": "9a099a149a189a2f9a039a15",
+          "text": "\\x9a\t\\x9a\u0014\\x9a\u0018\\x9a/\\x9a\u0003\\x9a\u0015"
+        },
+        {
+          "start": "0x144110",
+          "end": "0x14411a",
+          "hex": "43696e656d6132333833",
+          "text": "Cinema2383"
+        }
+      ]
+    }
+  ],
+  "event_dispatch_cases": [
+    {
+      "row": 0,
+      "menu": "0x83ce53cc",
+      "saved": 9,
+      "work": 66,
+      "tone": 165,
+      "events": [
+        {
+          "kind": "syscall_model",
+          "code": "0xffffffd0",
+          "r4": 9,
+          "r5": 2
+        },
+        {
+          "kind": "syscall_model",
+          "code": "0xffffffdb",
+          "r4": 50,
+          "r5": 2
+        },
+        {
+          "kind": "sync_model",
+          "arg": 2
+        }
+      ]
+    },
+    {
+      "row": 1,
+      "menu": "0x83ce53cc",
+      "saved": 25,
+      "work": 70,
+      "tone": 165,
+      "events": [
+        {
+          "kind": "syscall_model",
+          "code": "0xffffffd0",
+          "r4": 9,
+          "r5": 2
+        },
+        {
+          "kind": "syscall_model",
+          "code": "0xffffffdb",
+          "r4": 50,
+          "r5": 2
+        },
+        {
+          "kind": "sync_model",
+          "arg": 2
+        }
+      ]
+    },
+    {
+      "row": 2,
+      "menu": "0x83ce53cc",
+      "saved": 41,
+      "work": 74,
+      "tone": 165,
+      "events": [
+        {
+          "kind": "syscall_model",
+          "code": "0xffffffd0",
+          "r4": 9,
+          "r5": 2
+        },
+        {
+          "kind": "syscall_model",
+          "code": "0xffffffdb",
+          "r4": 50,
+          "r5": 2
+        },
+        {
+          "kind": "sync_model",
+          "arg": 2
+        }
+      ]
+    },
+    {
+      "row": 3,
+      "menu": "0x83ce53cc",
+      "saved": 57,
+      "work": 78,
+      "tone": 165,
+      "events": [
+        {
+          "kind": "syscall_model",
+          "code": "0xffffffd0",
+          "r4": 9,
+          "r5": 2
+        },
+        {
+          "kind": "syscall_model",
+          "code": "0xffffffdb",
+          "r4": 50,
+          "r5": 2
+        },
+        {
+          "kind": "sync_model",
+          "arg": 2
+        }
+      ]
+    },
+    {
+      "row": 4,
+      "menu": "0x83ce53cc",
+      "saved": 73,
+      "work": 82,
+      "tone": 165,
+      "events": [
+        {
+          "kind": "syscall_model",
+          "code": "0xffffffd0",
+          "r4": 9,
+          "r5": 2
+        },
+        {
+          "kind": "syscall_model",
+          "code": "0xffffffdb",
+          "r4": 50,
+          "r5": 2
+        },
+        {
+          "kind": "sync_model",
+          "arg": 2
+        }
+      ]
+    },
+    {
+      "row": 5,
+      "menu": "0x83ce53cc",
+      "saved": 105,
+      "work": 90,
+      "tone": 165,
+      "events": [
+        {
+          "kind": "syscall_model",
+          "code": "0xffffffd0",
+          "r4": 9,
+          "r5": 2
+        },
+        {
+          "kind": "syscall_model",
+          "code": "0xffffffdb",
+          "r4": 50,
+          "r5": 2
+        },
+        {
+          "kind": "sync_model",
+          "arg": 2
+        }
+      ]
+    },
+    {
+      "row": 6,
+      "menu": "0x83ce593c",
+      "saved": 41,
+      "work": 74,
+      "tone": 165,
+      "events": [
+        {
+          "kind": "syscall_model",
+          "code": "0xffffffd0",
+          "r4": 9,
+          "r5": 2
+        },
+        {
+          "kind": "syscall_model",
+          "code": "0xffffffdb",
+          "r4": 50,
+          "r5": 2
+        }
+      ]
+    },
+    {
+      "row": 7,
+      "menu": "0x83ce53cc",
+      "saved": 89,
+      "work": 86,
+      "tone": 185,
+      "events": [
+        {
+          "kind": "syscall_model",
+          "code": "0xffffffd0",
+          "r4": 9,
+          "r5": 2
+        },
+        {
+          "kind": "syscall_model",
+          "code": "0xffffffdb",
+          "r4": 50,
+          "r5": 2
+        },
+        {
+          "kind": "sync_model",
+          "arg": 2
+        }
+      ]
+    }
+  ],
+  "navigation_sequences": [
+    {
+      "event": "0x1000",
+      "start_row": 0,
+      "steps": 16
+    },
+    {
+      "event": "0x1000",
+      "start_row": 1,
+      "steps": 16
+    },
+    {
+      "event": "0x1000",
+      "start_row": 2,
+      "steps": 16
+    },
+    {
+      "event": "0x1000",
+      "start_row": 3,
+      "steps": 16
+    },
+    {
+      "event": "0x1000",
+      "start_row": 4,
+      "steps": 16
+    },
+    {
+      "event": "0x1000",
+      "start_row": 5,
+      "steps": 16
+    },
+    {
+      "event": "0x1000",
+      "start_row": 6,
+      "steps": 16
+    },
+    {
+      "event": "0x1000",
+      "start_row": 7,
+      "steps": 16
+    },
+    {
+      "event": "0x2000",
+      "start_row": 0,
+      "steps": 16
+    },
+    {
+      "event": "0x2000",
+      "start_row": 1,
+      "steps": 16
+    },
+    {
+      "event": "0x2000",
+      "start_row": 2,
+      "steps": 16
+    },
+    {
+      "event": "0x2000",
+      "start_row": 3,
+      "steps": 16
+    },
+    {
+      "event": "0x2000",
+      "start_row": 4,
+      "steps": 16
+    },
+    {
+      "event": "0x2000",
+      "start_row": 5,
+      "steps": 16
+    },
+    {
+      "event": "0x2000",
+      "start_row": 6,
+      "steps": 16
+    },
+    {
+      "event": "0x2000",
+      "start_row": 7,
+      "steps": 16
+    }
+  ],
+  "navigation_steps": 256,
+  "exit_without_apply_cases": 8,
+  "pre_save_reload_prefix_cases": 256,
+  "journal_write_and_real_power_cycle_executed": false
+}

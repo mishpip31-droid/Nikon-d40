@@ -1,0 +1,111 @@
+{
+  "version": 14,
+  "date": "2026-10-28",
+  "result": "PASS_CPU_CONTRACT_AND_INDEPENDENT_PROFILE_CHECKS",
+  "EXP03_confirmed_fault": "curve return pointer left as input context",
+  "EXP04_sha256": "7adc8ac1223c84faa3d3dcdfdb2ca67c9b2ed1649098a0d794c44dbb2b29a722",
+  "size": 3997696,
+  "crc": "f859",
+  "camera_tested": false,
+  "upload_contract": {
+    "result": "PASS_CPU_CALLER_BUILDER_MMIO_COPY",
+    "EXP03_regression": {
+      "binary_sha256": "3a48b641ecda06afbbfe38e2fa245b249958fd0134b9fa9203932f72617c80e2",
+      "computed_curve_correct": true,
+      "return_pointer_actual": "0x20000000",
+      "return_pointer_required": "0x83eb586c",
+      "all_three_banks_copy_context": true,
+      "mismatches_per_bank": 4096,
+      "entries_above_4095_per_bank": 3851
+    },
+    "fixed_sha256": "7adc8ac1223c84faa3d3dcdfdb2ca67c9b2ed1649098a0d794c44dbb2b29a722",
+    "upload_path_cases": 32,
+    "Cinema_MMIO_u16_writes_checked": 196608,
+    "tone_builder_hooked": false,
+    "upload_loops_hooked": false,
+    "scope_end_cpu": "0x4b5f8",
+    "scope": "through all three tone-bank copies; later configuration not executed",
+    "physical_camera_tested": false,
+    "ASIC_pixels_emulated": false
+  },
+  "independent_counts": {
+    "menu_cases": 2048,
+    "custom_done_cases": 256,
+    "capture_snapshot_cases": 512,
+    "decoder_cases": 256,
+    "packing_cases": 96,
+    "curve_cases": 48,
+    "save_load_cases": 224
+  },
+  "update_precheck": {
+    "accepted": true,
+    "kind_flag": 1,
+    "version_prefix": "Ver.1.11A",
+    "instructions": 384,
+    "file_calls": [
+      {
+        "operation": "open",
+        "index": 1,
+        "path": "A:\\BD400111.BIN"
+      },
+      {
+        "operation": "seek",
+        "index": 1,
+        "offset": 719860
+      },
+      {
+        "operation": "read",
+        "index": 1,
+        "offset": 719860,
+        "count": 4
+      },
+      {
+        "operation": "seek",
+        "index": 2,
+        "offset": 611616
+      },
+      {
+        "operation": "read",
+        "index": 2,
+        "offset": 611616,
+        "count": 32
+      },
+      {
+        "operation": "seek",
+        "index": 3,
+        "offset": 719856
+      },
+      {
+        "operation": "read",
+        "index": 3,
+        "offset": 719856,
+        "count": 4
+      },
+      {
+        "operation": "seek",
+        "index": 4,
+        "offset": 611640
+      },
+      {
+        "operation": "read",
+        "index": 4,
+        "offset": 611640,
+        "count": 9
+      },
+      {
+        "operation": "close",
+        "index": 1,
+        "handle": 7
+      }
+    ]
+  },
+  "coverage_completed": 15,
+  "coverage_total": 48,
+  "base_atlas_regressions": 10,
+  "originals_and_EXP01_unchanged": {
+    "d40_research/BD400111.bin": "b9df48d461e875dce4ba84da88164af170dfc48ad9f7674859623bad0401032e",
+    "d40_research/AD400111.bin": "ff96a874d3a22f9c18c610bd5bf55f4e6a53603c865fdb8e913a1d53591db5c9",
+    "d40_research/AD400112.bin": "0cc92921d6b2ad5d5cfa070abeebdd9aaca224d326e42a26339e3ac384270394",
+    "D40_Cinema2383_Firmware_EXP01/firmware/D40_Cinema2383_EXP01_NOT_CAMERA_TESTED.bin": "8abfda8cc67f787be867fd3d348fd38fcc27b8e041702625d182a968052148a8"
+  }
+}

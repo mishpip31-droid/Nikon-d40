@@ -1,0 +1,9 @@
+002f8a7c 00338a7c 9f8b83eb3d50 LDI:32    #0x83eb3d50,r11
+002f8a82 00338a82 b5b0         LSL       #27,r0
+002f8a84 00338a84 b1d0         LSR       #29,r0
+002f8a86 00338a86 a870         CMP       #0x7,r0
+002f8a88 00338a88 e301         BNE       0x338a8c
+002f8a8a 00338a8a c060         LDI:8     #0x6,r0
+002f8a8c 00338a8c 14b0         ST        r0,@r11
+002f8a8e 00338a8e 9f8c0031ed3c LDI:32    #0x31ed3c,r12
+002f8a94 00338a94 970c         JMP       @r12

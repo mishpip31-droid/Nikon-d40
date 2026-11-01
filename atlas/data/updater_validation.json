@@ -1,0 +1,543 @@
+{
+  "base_sha256": "b9df48d461e875dce4ba84da88164af170dfc48ad9f7674859623bad0401032e",
+  "scope": "Offline CPU research with explicit external-operation models",
+  "camera_tested": false,
+  "installability_proven": false,
+  "recovery_proven": false,
+  "B_precheck": {
+    "images": {
+      "original_B": {
+        "accepted": true,
+        "kind_flag": 1,
+        "version_prefix": "Ver.1.11A",
+        "instructions": 384,
+        "file_calls": [
+          {
+            "operation": "open",
+            "index": 1,
+            "path": "A:\\BD400111.BIN"
+          },
+          {
+            "operation": "seek",
+            "index": 1,
+            "offset": 719860
+          },
+          {
+            "operation": "read",
+            "index": 1,
+            "offset": 719860,
+            "count": 4
+          },
+          {
+            "operation": "seek",
+            "index": 2,
+            "offset": 611616
+          },
+          {
+            "operation": "read",
+            "index": 2,
+            "offset": 611616,
+            "count": 32
+          },
+          {
+            "operation": "seek",
+            "index": 3,
+            "offset": 719856
+          },
+          {
+            "operation": "read",
+            "index": 3,
+            "offset": 719856,
+            "count": 4
+          },
+          {
+            "operation": "seek",
+            "index": 4,
+            "offset": 611640
+          },
+          {
+            "operation": "read",
+            "index": 4,
+            "offset": 611640,
+            "count": 9
+          },
+          {
+            "operation": "close",
+            "index": 1,
+            "handle": 7
+          }
+        ]
+      },
+      "EXP01": {
+        "accepted": true,
+        "kind_flag": 1,
+        "version_prefix": "Ver.1.11A",
+        "instructions": 384,
+        "file_calls": [
+          {
+            "operation": "open",
+            "index": 1,
+            "path": "A:\\BD400111.BIN"
+          },
+          {
+            "operation": "seek",
+            "index": 1,
+            "offset": 719860
+          },
+          {
+            "operation": "read",
+            "index": 1,
+            "offset": 719860,
+            "count": 4
+          },
+          {
+            "operation": "seek",
+            "index": 2,
+            "offset": 611616
+          },
+          {
+            "operation": "read",
+            "index": 2,
+            "offset": 611616,
+            "count": 32
+          },
+          {
+            "operation": "seek",
+            "index": 3,
+            "offset": 719856
+          },
+          {
+            "operation": "read",
+            "index": 3,
+            "offset": 719856,
+            "count": 4
+          },
+          {
+            "operation": "seek",
+            "index": 4,
+            "offset": 611640
+          },
+          {
+            "operation": "read",
+            "index": 4,
+            "offset": 611640,
+            "count": 9
+          },
+          {
+            "operation": "close",
+            "index": 1,
+            "handle": 7
+          }
+        ]
+      }
+    },
+    "version_prefix_tests": {
+      "Ver.1.00A": true,
+      "Ver.1.11A": true,
+      "Ver.9.99A": true,
+      "XXXXXXXXX": true
+    },
+    "negative_cases": [
+      "B_size_0",
+      "B_size_262146",
+      "B_size_3997695",
+      "B_size_3997697",
+      "wrong_identification_string",
+      "open_failure_1",
+      "seek_failure_1",
+      "seek_failure_2",
+      "seek_failure_3",
+      "seek_failure_4",
+      "read_failure_1",
+      "read_failure_2",
+      "read_failure_3",
+      "read_failure_4",
+      "short_read_1",
+      "short_read_2",
+      "short_read_3",
+      "short_read_4"
+    ],
+    "crc_checked_here": false,
+    "meaning": "Size/signature/reads pass; version prefix is copied, not ordered or compared in this path"
+  },
+  "A_precheck": {
+    "cases": [
+      {
+        "size": 262146,
+        "accepted": true
+      },
+      {
+        "size": 262144,
+        "accepted": true
+      },
+      {
+        "size": 262145,
+        "accepted": false
+      },
+      {
+        "size": 262147,
+        "accepted": false
+      }
+    ],
+    "scope": "B-side size/header reader for A; not A firmware execution"
+  },
+  "file_names": {
+    "pattern": "BD40????.BIN",
+    "cases": {
+      "D40_Cinema2383_EXP01_NOT_CAMERA_TESTED.bin": {
+        "matched": false,
+        "name": null,
+        "visited": [
+          "D40_Cinema2383_EXP01_NOT_CAMERA_TESTED.bin"
+        ]
+      },
+      "BD400111.bin": {
+        "matched": true,
+        "name": "BD400111.bin",
+        "visited": [
+          "BD400111.bin"
+        ]
+      },
+      "BD400000.BIN": {
+        "matched": true,
+        "name": "BD400000.BIN",
+        "visited": [
+          "BD400000.BIN"
+        ]
+      },
+      "BD40ABCD.BIN": {
+        "matched": true,
+        "name": "BD40ABCD.BIN",
+        "visited": [
+          "BD40ABCD.BIN"
+        ]
+      },
+      "BD40011.BIN": {
+        "matched": false,
+        "name": null,
+        "visited": [
+          "BD40011.BIN"
+        ]
+      },
+      "BD4001111.BIN": {
+        "matched": false,
+        "name": null,
+        "visited": [
+          "BD4001111.BIN"
+        ]
+      },
+      "AD400111.BIN": {
+        "matched": false,
+        "name": null,
+        "visited": [
+          "AD400111.BIN"
+        ]
+      },
+      "BD40.111.BIN": {
+        "matched": true,
+        "name": "BD40.111.BIN",
+        "visited": [
+          "BD40.111.BIN"
+        ]
+      }
+    },
+    "first_match": {
+      "matched": true,
+      "name": "BD400111.BIN",
+      "visited": [
+        "readme.txt",
+        "BD400111.BIN"
+      ]
+    },
+    "meaning": "Case-insensitive exact-length match; question marks accept any non-NUL byte, not just digits"
+  },
+  "CRC": {
+    "original_cpu_test_vectors": 265,
+    "instructions": 197865,
+    "ROM_table_entries_verified": 256,
+    "whole_images": {
+      "original_B": {
+        "whole_image_residual": 0,
+        "one_bit_error_rejected": true,
+        "sha256": "b9df48d461e875dce4ba84da88164af170dfc48ad9f7674859623bad0401032e"
+      },
+      "EXP01": {
+        "whole_image_residual": 0,
+        "one_bit_error_rejected": true,
+        "sha256": "8abfda8cc67f787be867fd3d348fd38fcc27b8e041702625d182a968052148a8"
+      }
+    },
+    "whole_image_method": "Exact integer loop model plus independent binascii; whole images not instruction-by-instruction emulated"
+  },
+  "EXP01_program_coverage": {
+    "changed_bytes": 4435,
+    "all_in_scheduled_program_ranges": true,
+    "physical_programming_tested": false
+  },
+  "flash_supervisor": {
+    "keep_wallpaper": {
+      "instructions": 264,
+      "attempts_remaining": 3,
+      "commands": [
+        {
+          "op": "erase",
+          "address": "0xe0000",
+          "length": "0x10000"
+        },
+        {
+          "op": "erase",
+          "address": "0x40000",
+          "length": "0xa0000"
+        },
+        {
+          "op": "erase",
+          "address": "0x120000",
+          "length": "0x40000"
+        },
+        {
+          "op": "erase",
+          "address": "0x1b0000",
+          "length": "0x260000"
+        },
+        {
+          "op": "program",
+          "address": "0x120000",
+          "source": "0x810e0000",
+          "length": "0x40000"
+        },
+        {
+          "op": "program",
+          "address": "0x1b0000",
+          "source": "0x81170000",
+          "length": "0x260000"
+        },
+        {
+          "op": "program",
+          "address": "0x40000",
+          "source": "0x81000000",
+          "length": "0xb0000"
+        }
+      ],
+      "installed_tag_hex": "4e494b4f4e4434305f57505645523031",
+      "comparison_routine": "Original CPU code executed",
+      "scope": "Original supervisor and tag comparisons; physical erase/program calls are stubs"
+    },
+    "keep_user_wallpaper": {
+      "instructions": 420,
+      "attempts_remaining": 3,
+      "commands": [
+        {
+          "op": "erase",
+          "address": "0xe0000",
+          "length": "0x10000"
+        },
+        {
+          "op": "erase",
+          "address": "0x40000",
+          "length": "0xa0000"
+        },
+        {
+          "op": "erase",
+          "address": "0x120000",
+          "length": "0x40000"
+        },
+        {
+          "op": "erase",
+          "address": "0x1b0000",
+          "length": "0x260000"
+        },
+        {
+          "op": "program",
+          "address": "0x120000",
+          "source": "0x810e0000",
+          "length": "0x40000"
+        },
+        {
+          "op": "program",
+          "address": "0x1b0000",
+          "source": "0x81170000",
+          "length": "0x260000"
+        },
+        {
+          "op": "program",
+          "address": "0x40000",
+          "source": "0x81000000",
+          "length": "0xb0000"
+        }
+      ],
+      "installed_tag_hex": "4e494b4f4e4434305f57505f55534552",
+      "comparison_routine": "Original CPU code executed",
+      "scope": "Original supervisor and tag comparisons; physical erase/program calls are stubs"
+    },
+    "replace_wallpaper": {
+      "instructions": 124,
+      "attempts_remaining": 3,
+      "commands": [
+        {
+          "op": "erase",
+          "address": "0xe0000",
+          "length": "0x10000"
+        },
+        {
+          "op": "erase",
+          "address": "0x40000",
+          "length": "0xa0000"
+        },
+        {
+          "op": "erase",
+          "address": "0x160000",
+          "length": "0x10000"
+        },
+        {
+          "op": "erase",
+          "address": "0x120000",
+          "length": "0x40000"
+        },
+        {
+          "op": "erase",
+          "address": "0x1b0000",
+          "length": "0x260000"
+        },
+        {
+          "op": "program",
+          "address": "0x160000",
+          "source": "0x81120000",
+          "length": "0x10000"
+        },
+        {
+          "op": "program",
+          "address": "0x120000",
+          "source": "0x810e0000",
+          "length": "0x40000"
+        },
+        {
+          "op": "program",
+          "address": "0x1b0000",
+          "source": "0x81170000",
+          "length": "0x260000"
+        },
+        {
+          "op": "program",
+          "address": "0x40000",
+          "source": "0x81000000",
+          "length": "0xb0000"
+        }
+      ],
+      "installed_tag_hex": "a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5",
+      "comparison_routine": "Original CPU code executed",
+      "scope": "Original supervisor and tag comparisons; physical erase/program calls are stubs"
+    },
+    "erase_fails": {
+      "instructions": 43,
+      "attempts_remaining": 0,
+      "commands": [
+        {
+          "op": "erase",
+          "address": "0xe0000",
+          "length": "0x10000"
+        },
+        {
+          "op": "erase",
+          "address": "0xe0000",
+          "length": "0x10000"
+        },
+        {
+          "op": "erase",
+          "address": "0xe0000",
+          "length": "0x10000"
+        }
+      ],
+      "installed_tag_hex": "4e494b4f4e4434305f57505645523031",
+      "comparison_routine": "Original CPU code executed",
+      "scope": "Original supervisor and tag comparisons; physical erase/program calls are stubs"
+    },
+    "program_fails": {
+      "instructions": 751,
+      "attempts_remaining": 0,
+      "commands": [
+        {
+          "op": "erase",
+          "address": "0xe0000",
+          "length": "0x10000"
+        },
+        {
+          "op": "erase",
+          "address": "0x40000",
+          "length": "0xa0000"
+        },
+        {
+          "op": "erase",
+          "address": "0x120000",
+          "length": "0x40000"
+        },
+        {
+          "op": "erase",
+          "address": "0x1b0000",
+          "length": "0x260000"
+        },
+        {
+          "op": "program",
+          "address": "0x120000",
+          "source": "0x810e0000",
+          "length": "0x40000"
+        },
+        {
+          "op": "erase",
+          "address": "0xe0000",
+          "length": "0x10000"
+        },
+        {
+          "op": "erase",
+          "address": "0x40000",
+          "length": "0xa0000"
+        },
+        {
+          "op": "erase",
+          "address": "0x120000",
+          "length": "0x40000"
+        },
+        {
+          "op": "erase",
+          "address": "0x1b0000",
+          "length": "0x260000"
+        },
+        {
+          "op": "program",
+          "address": "0x120000",
+          "source": "0x810e0000",
+          "length": "0x40000"
+        },
+        {
+          "op": "erase",
+          "address": "0xe0000",
+          "length": "0x10000"
+        },
+        {
+          "op": "erase",
+          "address": "0x40000",
+          "length": "0xa0000"
+        },
+        {
+          "op": "erase",
+          "address": "0x120000",
+          "length": "0x40000"
+        },
+        {
+          "op": "erase",
+          "address": "0x1b0000",
+          "length": "0x260000"
+        },
+        {
+          "op": "program",
+          "address": "0x120000",
+          "source": "0x810e0000",
+          "length": "0x40000"
+        }
+      ],
+      "installed_tag_hex": "4e494b4f4e4434305f57505645523031",
+      "comparison_routine": "Original CPU code executed",
+      "scope": "Original supervisor and tag comparisons; physical erase/program calls are stubs"
+    }
+  },
+  "result": "PASS"
+}

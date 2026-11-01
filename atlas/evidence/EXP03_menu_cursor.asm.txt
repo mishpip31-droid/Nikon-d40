@@ -1,0 +1,26 @@
+002f89e8 003389e8 1781         ST        RP,@-r15
+002f89ea 003389ea 9f8083ce957f LDI:32    #0x83ce957f,r0
+002f89f0 003389f0 0604         LDUB      @r0,r4
+002f89f2 003389f2 b044         LSR       #4,r4
+002f89f4 003389f4 a874         CMP       #0x7,r4
+002f89f6 003389f6 ea02         BLT       0x3389fc
+002f89f8 003389f8 c004         LDI:8     #0x0,r4
+002f89fa 003389fa e00e         BRA       0x338a18
+002f89fc 003389fc a854         CMP       #0x5,r4
+002f89fe 003389fe e204         BEQ       0x338a08
+002f8a00 00338a00 a864         CMP       #0x6,r4
+002f8a02 00338a02 e30a         BNE       0x338a18
+002f8a04 00338a04 c054         LDI:8     #0x5,r4
+002f8a06 00338a06 e008         BRA       0x338a18
+002f8a08 00338a08 c064         LDI:8     #0x6,r4
+002f8a0a 00338a0a 9f8083ce58db LDI:32    #0x83ce58db,r0
+002f8a10 00338a10 0600         LDUB      @r0,r0
+002f8a12 00338a12 a810         CMP       #0x1,r0
+002f8a14 00338a14 e301         BNE       0x338a18
+002f8a16 00338a16 c074         LDI:8     #0x7,r4
+002f8a18 00338a18 9f8c00132d0c LDI:32    #0x132d0c,r12
+002f8a1e 00338a1e 971c         CALL      @r12
+002f8a20 00338a20 9f8083ce98f4 LDI:32    #0x83ce98f4,r0
+002f8a26 00338a26 9140         BORH      #0x4,@r0
+002f8a28 00338a28 0781         LD        @r15+,RP
+002f8a2a 00338a2a 9720         RET       

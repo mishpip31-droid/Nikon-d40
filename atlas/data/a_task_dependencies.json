@@ -1,0 +1,83 @@
+{
+  "version": 10,
+  "firmware": "AD400112.bin",
+  "address_space": "A",
+  "hardware_verified": false,
+  "edges": [
+    {
+      "from_task": 1,
+      "to_task": 5,
+      "transport": "mailbox 1",
+      "producer_cpu": "0xC11A4",
+      "consumer_cpu": "0xD4622",
+      "request_hex": "00000000000000008000c00004002000",
+      "completion": "event group 3 mask 0x2000",
+      "confidence": "CPU execution under explicit OS and transfer models"
+    },
+    {
+      "from_task": 1,
+      "to_task": 5,
+      "transport": "event group 2 mask 0x4000",
+      "producer_cpu": "0xC0F4C",
+      "consumer_cpu": "0xD4674",
+      "meaning": "initial admission flag; task 5 clears and restores it",
+      "confidence": "bounded CPU execution"
+    }
+  ],
+  "startup_memory": {
+    "ram_start": "0x3C000",
+    "read_length": 1024,
+    "checked_length": 896,
+    "checksum": "sum modulo 256 must be zero; all-zero/all-FF blocks rejected",
+    "content_fields": "not mapped"
+  },
+  "readiness_note": "Completion event is also emitted on tested busy error; last write has no separate final status/readback check in this path",
+  "task1_launch_helper": "0xC137C; tested with RAM[0x3C371]=0 only",
+  "task1_launches": [
+    {
+      "initial_3cc9a": 0,
+      "starts": [
+        [
+          10,
+          0
+        ],
+        [
+          9,
+          257
+        ],
+        [
+          4,
+          4294967041
+        ]
+      ]
+    },
+    {
+      "initial_3cc9a": 8,
+      "starts": [
+        [
+          10,
+          0
+        ],
+        [
+          9,
+          257
+        ],
+        [
+          4,
+          4294967041
+        ],
+        [
+          2,
+          0
+        ]
+      ]
+    }
+  ],
+  "unresolved": [
+    "all sender constraints",
+    "all calibration fields",
+    "exact memory part/capacity",
+    "A/B communication task",
+    "physical write/power loss behavior"
+  ]
+}

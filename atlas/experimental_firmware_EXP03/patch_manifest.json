@@ -1,0 +1,97 @@
+{
+  "build": "EXP03_INDEPENDENT_PRESET_CANDIDATE",
+  "sha256": "3a48b641ecda06afbbfe38e2fa245b249958fd0134b9fa9203932f72617c80e2",
+  "size": 3997696,
+  "crc": "ec67",
+  "camera_tested": false,
+  "flag_RAM": "0x83ce58db",
+  "arena_used": 9144,
+  "arena": [
+    {
+      "name": "cinema_matrices",
+      "cpu": "0x33692e",
+      "bytes": 36
+    },
+    {
+      "name": "cinema_curve_4096",
+      "cpu": "0x336952",
+      "bytes": 8192
+    },
+    {
+      "name": "menu_action",
+      "cpu": "0x338952",
+      "bytes": 150
+    },
+    {
+      "name": "menu_cursor",
+      "cpu": "0x3389e8",
+      "bytes": 68
+    },
+    {
+      "name": "capture",
+      "cpu": "0x338a2c",
+      "bytes": 80
+    },
+    {
+      "name": "tone_decoder",
+      "cpu": "0x338a7c",
+      "bytes": 26
+    },
+    {
+      "name": "custom_done",
+      "cpu": "0x338a96",
+      "bytes": 48
+    },
+    {
+      "name": "save",
+      "cpu": "0x338ac6",
+      "bytes": 88
+    },
+    {
+      "name": "load",
+      "cpu": "0x338b1e",
+      "bytes": 68
+    },
+    {
+      "name": "packing",
+      "cpu": "0x338b62",
+      "bytes": 318
+    },
+    {
+      "name": "curve",
+      "cpu": "0x338ca0",
+      "bytes": 70
+    }
+  ],
+  "entry_addresses": {
+    "menu_action": "0x338952",
+    "menu_cursor": "0x3389e8",
+    "capture": "0x338a2c",
+    "tone_decoder": "0x338a7c",
+    "custom_done": "0x338a96",
+    "save": "0x338ac6",
+    "load": "0x338b1e",
+    "packing": "0x338b62",
+    "curve": "0x338ca0"
+  },
+  "zero_correction_loads": [
+    "0x2e3ca4",
+    "0x2e3d12",
+    "0x2e3d68",
+    "0x2e3df8",
+    "0x2e3e40",
+    "0x2e3e7e",
+    "0x2e3ec0",
+    "0x2e3f28",
+    "0x2e3f70",
+    "0x2e3fae",
+    "0x2e3ff0"
+  ],
+  "on_disk_mode_tag": 7,
+  "runtime_mode": 5,
+  "Cinema_snapshot_bytes": "3d5400",
+  "Custom_parameters_overwritten": false,
+  "stock_Custom_curve_bytes_restored": true,
+  "stock_curve_getters_restored": true,
+  "independent_parameters_are_fixed_ROM_preset": true
+}

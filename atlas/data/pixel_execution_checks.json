@@ -1,0 +1,30 @@
+{
+  "firmware_sha256": "b9df48d461e875dce4ba84da88164af170dfc48ad9f7674859623bad0401032e",
+  "camera_connected": false,
+  "firmware_modified": false,
+  "hardware_emulated": false,
+  "date": "2026-10-28",
+  "formula_entries_checked": 8448,
+  "original_static_initializer": {
+    "executions": 1,
+    "instructions": 116517,
+    "halfword_copies_checked": 16640
+  },
+  "small_original_expander_executions": 40,
+  "small_original_upload_executions": 40,
+  "auxiliary_18_profiles_all_identity_pattern": true,
+  "geometry_write_fragments": 10,
+  "start_write_fragments_no_OS_or_hardware": 10,
+  "plane_address_fragment": 1,
+  "jpeg_register_handoff_fragment": 1,
+  "external_standard_huffman_bytes_compared": 412,
+  "evidence_ranges": 14,
+  "result": "PASS",
+  "limitations": [
+    "No actual pixels produced; synthetic MMIO is plain RAM",
+    "Geometry record selector, interrupt handlers, OS waits and JPEG codec not executed",
+    "Internal ASIC stage order, rounding and LUT input axes unresolved",
+    "Ten small-LUT records identified from seed-table spacing; reachability of all indices not proved",
+    "V1-v3 validation reports preserved as historical results, not all rerun"
+  ]
+}

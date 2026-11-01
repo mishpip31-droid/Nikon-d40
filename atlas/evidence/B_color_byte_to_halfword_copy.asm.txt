@@ -1,0 +1,11 @@
+Static bounded listing; not a complete CFG or proof of reachability.
+Original B SHA256: b9df48d461e875dce4ba84da88164af170dfc48ad9f7674859623bad0401032e
+FILE     CPU_PC   BYTES        MNEMONIC  OPERANDS
+0000bee6 0004bee6 0640         LDUB      @r4,r0
+0000bee8 0004bee8 1550         STH       r0,@r5
+0000beea 0004beea a425         ADD       #0x2,r5
+0000beec 0004beec a5f6         ADD2      #-1,r6
+0000beee 0004beee a806         CMP       #0x0,r6
+0000bef0 0004bef0 fdfa         BGT:D     0x4bee6
+0000bef2 0004bef2 a414         ADD       #0x1,r4
+0000bef4 0004bef4 9720         RET       

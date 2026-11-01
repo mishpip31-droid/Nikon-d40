@@ -1,0 +1,17 @@
+{
+  "original_hashes_and_crcs": "PASS",
+  "menu_descriptors": 205,
+  "element_references": 608,
+  "unique_element_records": 604,
+  "unresolved_submenu_links": [],
+  "english_entries_with_bounded_length": 601,
+  "raw_ldi32_candidates": 33966,
+  "all_input_bytes_scanned": true,
+  "all_instructions_understood": false,
+  "hardware_tested": false,
+  "flashable_patch_created": false,
+  "language_tables": 15,
+  "ptp_property_records": 92,
+  "ptp_operation_records": 35,
+  "direct_call_patterns": 13704
+}

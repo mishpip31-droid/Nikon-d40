@@ -1,0 +1,59 @@
+{
+  "version": 16,
+  "date": "2026-11-01",
+  "new_firmware_built": false,
+  "EXP04_unchanged": true,
+  "camera_tested_by_research": false,
+  "inputs_sha256": {
+    "AD400111.bin": "ff96a874d3a22f9c18c610bd5bf55f4e6a53603c865fdb8e913a1d53591db5c9",
+    "BD400111.bin": "b9df48d461e875dce4ba84da88164af170dfc48ad9f7674859623bad0401032e",
+    "EXP04": "7adc8ac1223c84faa3d3dcdfdb2ca67c9b2ed1649098a0d794c44dbb2b29a722",
+    "AD400112.bin": "not provided"
+  },
+  "regression_reruns": {
+    "test_atlas.py": {
+      "tests": 10,
+      "passed": 9,
+      "failed": 1,
+      "failure": "AD400112.bin not provided; all other checks pass"
+    },
+    "check_curve_upload_contract.py (EXP04 part only)": {
+      "cases": 32,
+      "result": "PASS",
+      "note": "EXP03 regression not rerun: EXP03 binary not in archive"
+    },
+    "check_spatial_handoff.py": {
+      "cases": 6,
+      "result": "PASS_BOUNDED_JPEG_HANDOFF"
+    }
+  },
+  "static_function_map": {
+    "tool": "tools/frdis/analyze.py",
+    "B": {
+      "functions": 4672,
+      "bad_decode": 0,
+      "switch_tables": 77,
+      "unresolved_indirect_jumps": 64,
+      "code_bytes": 811094
+    },
+    "A": {
+      "functions": 1539,
+      "bad_decode": 1,
+      "bad_decode_note": "0xFEB0C from symbols.csv is a table",
+      "switch_tables": 28,
+      "unresolved_indirect_jumps": 2,
+      "code_bytes": 211122
+    }
+  },
+  "frame_pipeline_static": {
+    "irq_block_event_map": "IRQ35..43 -> blocks 0x4000_8000,0x4006,0x400A,0x400E,0x4003,0x4002,0x4009,0x4001,0x400D; event group 4",
+    "task_table": "0xEA868, 24 tasks, format verified against sta_tsk handler 0xC23E6",
+    "raw_pool": "0x40FE0: 1..3 x 0x8DE400 at 0x80048000",
+    "ycbcr_pool": "0x41834: 1..2 x 0xC0ED80; preview +0xB9BB80; thumbnail +0xC05780",
+    "sdram_layout_consistent": true,
+    "data_cache_maintenance_found": false,
+    "preview_writer": "task 10 (0x47E86), started after JPEG handler",
+    "full_range_ycbcr": "inference from thumbnail bands Y=0/C=0x80; not measured"
+  },
+  "progress_score": "15/48 unchanged; task table and IRQ map advance but do not close criteria"
+}

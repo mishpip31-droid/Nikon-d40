@@ -1,0 +1,158 @@
+{
+  "firmware_sha256": "b9df48d461e875dce4ba84da88164af170dfc48ad9f7674859623bad0401032e",
+  "address_domains": "CPU addresses including copied RAM code; no physical flash chip identification claimed",
+  "symbols": [
+    {
+      "name": "flash_identify_and_select_protocol",
+      "firmware": "B_111",
+      "cpu_pc": "0x83ce8658",
+      "file_offset": "0x11cb6c",
+      "confidence": "bounded_execution",
+      "note": "Eight identity/locking cases; flash ID and OS effects modeled"
+    },
+    {
+      "name": "flash_erase_range_geometry",
+      "firmware": "B_111",
+      "cpu_pc": "0x83ce8954",
+      "file_offset": "0x11ce68",
+      "confidence": "bounded_execution",
+      "note": "Software grouping and blank-check invocation tested with recorded calls"
+    },
+    {
+      "name": "flash_program_range_and_verify",
+      "firmware": "B_111",
+      "cpu_pc": "0x83ce89e0",
+      "file_offset": "0x11cef4",
+      "confidence": "bounded_execution",
+      "note": "Original writer and full readback; immediate host-memory word commit model"
+    },
+    {
+      "name": "flash_verify_halfwords",
+      "firmware": "B_111",
+      "cpu_pc": "0x83ce8a2e",
+      "file_offset": "0x11cf42",
+      "confidence": "bounded_execution",
+      "note": "Compares entire programmed range to source, rejects injected low-bit corruption"
+    },
+    {
+      "name": "flash_verify_erased",
+      "firmware": "B_111",
+      "cpu_pc": "0x83ce8a9e",
+      "file_offset": "0x11cfb2",
+      "confidence": "bounded_execution",
+      "note": "Rejects any non-FFFF halfword in tested range"
+    },
+    {
+      "name": "flash_issue_erase_commands",
+      "firmware": "B_111",
+      "cpu_pc": "0x83ce8b02",
+      "file_offset": "0x11d016",
+      "confidence": "bounded_execution",
+      "note": "Both protocols tested with synthetic ready/error responses"
+    },
+    {
+      "name": "flash_program_halfword",
+      "firmware": "B_111",
+      "cpu_pc": "0x83ce8be8",
+      "file_offset": "0x11d0fc",
+      "confidence": "bounded_execution",
+      "note": "Command sequence, FFFF skip and failure handling"
+    },
+    {
+      "name": "flash_poll_DQ7_DQ5",
+      "firmware": "B_111",
+      "cpu_pc": "0x83ce8c7a",
+      "file_offset": "0x11d18e",
+      "confidence": "bounded_execution",
+      "note": "1024 ready-transition cases, 2 errors, 4 bounded persistent-busy cases"
+    },
+    {
+      "name": "flash_error_read_mode_reset",
+      "firmware": "B_111",
+      "cpu_pc": "0x83ce8cb0",
+      "file_offset": "0x11d1c4",
+      "confidence": "bounded_execution",
+      "note": "F0 issued only for protocol kind 0"
+    },
+    {
+      "name": "update_success_failure_tail",
+      "firmware": "B_111",
+      "cpu_pc": "0x83ce8892",
+      "file_offset": "0x11cda6",
+      "confidence": "bounded_execution",
+      "note": "Four output cases; delay hooks; stops at terminal self-loop"
+    },
+    {
+      "name": "update_peripheral_finish_sequence",
+      "firmware": "B_111",
+      "cpu_pc": "0x83ce8ec0",
+      "file_offset": "0x11d3d4",
+      "confidence": "bounded_execution",
+      "note": "Original MMIO writes; peripheral meanings not fully established"
+    },
+    {
+      "name": "update_serial_word_output",
+      "firmware": "B_111",
+      "cpu_pc": "0x83ce8fc8",
+      "file_offset": "0x11d4dc",
+      "confidence": "bounded_execution",
+      "note": "Sixteen clock-high writes for FC04; no physical bus simulation"
+    },
+    {
+      "name": "update_extra_area_writer",
+      "firmware": "B_111",
+      "cpu_pc": "0x83ce88e0",
+      "file_offset": "0x11cdf4",
+      "confidence": "static",
+      "note": "Separate writer for CPU F0000..120000; caller activation unresolved"
+    },
+    {
+      "name": "update_admission_full_predicate",
+      "firmware": "B_111",
+      "cpu_pc": "0xab646",
+      "file_offset": "0x6b646",
+      "confidence": "bounded_execution",
+      "note": "128 boolean input combinations with original 40DDA; OS/MMIO input models"
+    },
+    {
+      "name": "update_busy_state_predicate",
+      "firmware": "B_111",
+      "cpu_pc": "0x40dda",
+      "file_offset": "0xdda",
+      "confidence": "bounded_execution",
+      "note": "Three RAM halfwords and MMIO50000107 bit5; meanings not fully known"
+    },
+    {
+      "name": "update_request_ack_timeout",
+      "firmware": "B_111",
+      "cpu_pc": "0xab9f8",
+      "file_offset": "0x6b9f8",
+      "confidence": "bounded_execution",
+      "note": "Nine scenarios including deadline and uint32 wrap; OS/command/MMIO models"
+    },
+    {
+      "name": "update_ack_event_callback",
+      "firmware": "B_111",
+      "cpu_pc": "0xaa1ec",
+      "file_offset": "0x6a1ec",
+      "confidence": "bounded_execution",
+      "note": "Four request/ack combinations; event, MMIO bit clear and modeled task exit"
+    },
+    {
+      "name": "clock_read_68000114",
+      "firmware": "B_111",
+      "cpu_pc": "0xc13f2",
+      "file_offset": "0x813f2",
+      "confidence": "bounded_execution",
+      "note": "Real accessor; synthetic MMIO values in handshake tests"
+    },
+    {
+      "name": "extra_version_metadata_reader",
+      "firmware": "B_111",
+      "cpu_pc": "0xab6c8",
+      "file_offset": "0x6b6c8",
+      "confidence": "static",
+      "note": "Reads optional metadata pointer at FFBC0; actual device contents unavailable"
+    }
+  ]
+}

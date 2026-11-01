@@ -20,7 +20,7 @@ base = 0x40000 if kind == 'B' else 0xC0000
 
 # confidence: high = reachable from vectors/atlas code via resolved calls;
 # medium = otherwise has callers, or >= 20 insns; low = rest
-roots = [r['entry'] for r in rows if 'vector' in r['source'] or
+roots = [r['entry'] for r in rows if 'vector' in r['source'] or 'task' in r['source'] or
          ('atlas' in r['source'] and not r['bad_at'])]
 reach = set(roots)
 stack = list(roots)
@@ -61,7 +61,7 @@ for k, label in [('functions', 'Функций'), ('instructions', 'Инстру
                  ('strings', 'ASCII-строк')]:
     P(f'| {label} | {summ[k]} |')
 P('\nДостоверность функций: ' + ', '.join(f'{k}: {v}' for k, v in conf.most_common()) +
-  '. high — достижима от векторов/адресов атласа по разрешённым вызовам; medium — '
+  '. high — достижима от векторов, таблицы задач или адресов атласа по разрешённым вызовам; medium — '
   'есть вызывающие или не меньше 20 инструкций; low — короткая, без вызывающих '
   '(возможны данные); invalid — обход упёрся в недопустимую инструкцию.')
 P('\nИсточник обнаружения функций (функция может иметь несколько):\n')

@@ -1,0 +1,40 @@
+Original A 1.12. Static listing; execution/model boundaries in A_MEMORY_TASKS_RU.md.
+000322b4 000f22b4 b354         MOV       r4,MDL
+000322b6 000f22b6 9745         DIV0S     r5
+000322b8 000f22b8 9765         DIV1      r5
+000322ba 000f22ba 9765         DIV1      r5
+000322bc 000f22bc 9765         DIV1      r5
+000322be 000f22be 9765         DIV1      r5
+000322c0 000f22c0 9765         DIV1      r5
+000322c2 000f22c2 9765         DIV1      r5
+000322c4 000f22c4 9765         DIV1      r5
+000322c6 000f22c6 9765         DIV1      r5
+000322c8 000f22c8 9765         DIV1      r5
+000322ca 000f22ca 9765         DIV1      r5
+000322cc 000f22cc 9765         DIV1      r5
+000322ce 000f22ce 9765         DIV1      r5
+000322d0 000f22d0 9765         DIV1      r5
+000322d2 000f22d2 9765         DIV1      r5
+000322d4 000f22d4 9765         DIV1      r5
+000322d6 000f22d6 9765         DIV1      r5
+000322d8 000f22d8 9765         DIV1      r5
+000322da 000f22da 9765         DIV1      r5
+000322dc 000f22dc 9765         DIV1      r5
+000322de 000f22de 9765         DIV1      r5
+000322e0 000f22e0 9765         DIV1      r5
+000322e2 000f22e2 9765         DIV1      r5
+000322e4 000f22e4 9765         DIV1      r5
+000322e6 000f22e6 9765         DIV1      r5
+000322e8 000f22e8 9765         DIV1      r5
+000322ea 000f22ea 9765         DIV1      r5
+000322ec 000f22ec 9765         DIV1      r5
+000322ee 000f22ee 9765         DIV1      r5
+000322f0 000f22f0 9765         DIV1      r5
+000322f2 000f22f2 9765         DIV1      r5
+000322f4 000f22f4 9765         DIV1      r5
+000322f6 000f22f6 9765         DIV1      r5
+000322f8 000f22f8 9775         DIV2      r5
+000322fa 000f22fa 9f60         DIV3      
+000322fc 000f22fc 9f70         DIV4S     
+000322fe 000f22fe 9f20         RET:D     
+00032300 000f2300 b744         MOV       MDH,r4

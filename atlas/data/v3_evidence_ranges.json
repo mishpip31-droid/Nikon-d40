@@ -1,0 +1,82 @@
+[
+  {
+    "name": "B_color_context_decode",
+    "cpu_start": "0x31ed1a",
+    "cpu_end_exclusive": "0x31f380",
+    "file_start": "0x2ded1a",
+    "file_end_exclusive": "0x2df380",
+    "sha256": "e16ba59d958d76b41b9aa53849e56d58f8ac9b84003e4dfc7d4145c042f1c601"
+  },
+  {
+    "name": "B_color_stride_initialization",
+    "cpu_start": "0x31b608",
+    "cpu_end_exclusive": "0x31b6b2",
+    "file_start": "0x2db608",
+    "file_end_exclusive": "0x2db6b2",
+    "sha256": "d9700fbf52bd6a626b9efa743d8b76f479d3747e5865a1f7834b2baa41daffe1"
+  },
+  {
+    "name": "B_color_matrix_selection",
+    "cpu_start": "0x320cd8",
+    "cpu_end_exclusive": "0x322504",
+    "file_start": "0x2e0cd8",
+    "file_end_exclusive": "0x2e2504",
+    "sha256": "97980a2ee6a6e5588c1f37d4b4b5777d7993269808bd2c65d5e94c6413fc883f"
+  },
+  {
+    "name": "B_color_hue_adjustment",
+    "cpu_start": "0x322606",
+    "cpu_end_exclusive": "0x3229ca",
+    "file_start": "0x2e2606",
+    "file_end_exclusive": "0x2e29ca",
+    "sha256": "8422dc0c735126866d7d53a0e068dbb295b860c537d673976641b3d183c26a91"
+  },
+  {
+    "name": "B_color_saturation_selection",
+    "cpu_start": "0x3232d8",
+    "cpu_end_exclusive": "0x3234be",
+    "file_start": "0x2e32d8",
+    "file_end_exclusive": "0x2e34be",
+    "sha256": "4d63370a80adb943b6e8c62cbd649761295312070e5ac79deb2cdd26520d0cbb"
+  },
+  {
+    "name": "B_color_context_serialization",
+    "cpu_start": "0x3234be",
+    "cpu_end_exclusive": "0x3236da",
+    "file_start": "0x2e34be",
+    "file_end_exclusive": "0x2e36da",
+    "sha256": "a28c5cc1a88790bc41252c2b3c4a3fc51116db052c6f5c4f73c396cc245ba681"
+  },
+  {
+    "name": "B_color_hardware_configuration",
+    "cpu_start": "0x4b41c",
+    "cpu_end_exclusive": "0x4b6a0",
+    "file_start": "0xb41c",
+    "file_end_exclusive": "0xb6a0",
+    "sha256": "020770900a36935fd7910ea7d2d328bd69618d1bb9854163fdb3bfbd58fa9a76"
+  },
+  {
+    "name": "B_color_byte_to_halfword_copy",
+    "cpu_start": "0x4bee6",
+    "cpu_end_exclusive": "0x4bef6",
+    "file_start": "0xbee6",
+    "file_end_exclusive": "0xbef6",
+    "sha256": "52f887d45243a2f65b1373ef248045ffcca309529b93b6bac6cd9529684ed333"
+  },
+  {
+    "name": "B_color_profile_expanders",
+    "cpu_start": "0x324124",
+    "cpu_end_exclusive": "0x3243d6",
+    "file_start": "0x2e4124",
+    "file_end_exclusive": "0x2e43d6",
+    "sha256": "e338065d552ecd85f00bf9a15ab536daa820812608acff8854f40b8763a2a20c"
+  },
+  {
+    "name": "B_integer_absolute_value",
+    "cpu_start": "0xbecc2",
+    "cpu_end_exclusive": "0xbecd0",
+    "file_start": "0x7ecc2",
+    "file_end_exclusive": "0x7ecd0",
+    "sha256": "0c2f4e19f364dea1406a181c2456b89db67a8e38cca3e068e1f4dc39b2b63ac7"
+  }
+]

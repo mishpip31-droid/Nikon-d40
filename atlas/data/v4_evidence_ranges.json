@@ -1,0 +1,114 @@
+[
+  {
+    "name": "B_pixel_frame_driver",
+    "cpu_start": "0x4b260",
+    "cpu_end_exclusive": "0x4b41c",
+    "file_start": "0xb260",
+    "file_end_exclusive": "0xb41c",
+    "sha256": "cc0f61097ba72062988c9d02fd7f74e228f782d3c3d13d8eaa6ede1cddcb7ca7"
+  },
+  {
+    "name": "B_pixel_complete_configuration",
+    "cpu_start": "0x4b41c",
+    "cpu_end_exclusive": "0x4b6a0",
+    "file_start": "0xb41c",
+    "file_end_exclusive": "0xb6a0",
+    "sha256": "020770900a36935fd7910ea7d2d328bd69618d1bb9854163fdb3bfbd58fa9a76"
+  },
+  {
+    "name": "B_pixel_static_luts",
+    "cpu_start": "0x4be82",
+    "cpu_end_exclusive": "0x4bf06",
+    "file_start": "0xbe82",
+    "file_end_exclusive": "0xbf06",
+    "sha256": "a0844c94220ff76f87b928992018685d1986d66c4bde7509d9f441456798e69e"
+  },
+  {
+    "name": "B_pixel_completion_interrupt",
+    "cpu_start": "0x47874",
+    "cpu_end_exclusive": "0x478aa",
+    "file_start": "0x7874",
+    "file_end_exclusive": "0x78aa",
+    "sha256": "5d99bd8c4a81bff376c2f09f91140146c9af0d6f176b1d23952f588733cb5db1"
+  },
+  {
+    "name": "B_pixel_process_callers",
+    "cpu_start": "0x4ae0e",
+    "cpu_end_exclusive": "0x4af0c",
+    "file_start": "0xae0e",
+    "file_end_exclusive": "0xaf0c",
+    "sha256": "9c868396779b2ad495628de7a0fcd0f254aaf75edb81c779956405e60deed1b4"
+  },
+  {
+    "name": "B_pixel_resize_callers_and_jpeg_handoff",
+    "cpu_start": "0x485ec",
+    "cpu_end_exclusive": "0x48900",
+    "file_start": "0x85ec",
+    "file_end_exclusive": "0x8900",
+    "sha256": "3f9dbde5cede23c48a4c98a20940cbe6dd568417e27834de0a6c0d437b68aee7"
+  },
+  {
+    "name": "B_pixel_scaler_setup",
+    "cpu_start": "0x494f2",
+    "cpu_end_exclusive": "0x4966c",
+    "file_start": "0x94f2",
+    "file_end_exclusive": "0x966c",
+    "sha256": "65c0bec8efee5922eb9e745f7312c792c958dd6dec7eab925efe292d1247999b"
+  },
+  {
+    "name": "B_pixel_jpeg_setup",
+    "cpu_start": "0x49a7c",
+    "cpu_end_exclusive": "0x49bc0",
+    "file_start": "0x9a7c",
+    "file_end_exclusive": "0x9bc0",
+    "sha256": "82dc70097ac9f92d172ede44dd8327b6f6aa9a9799f916edf0dd5443c6e48503"
+  },
+  {
+    "name": "B_pixel_jpeg_huffman_setup",
+    "cpu_start": "0x49f74",
+    "cpu_end_exclusive": "0x4a066",
+    "file_start": "0x9f74",
+    "file_end_exclusive": "0xa066",
+    "sha256": "4f9fbdbf17485053d2cc80002da1b90a45385b7697faca3c3fdad0a370007ddf"
+  },
+  {
+    "name": "B_pixel_small_lut_expanders",
+    "cpu_start": "0x324020",
+    "cpu_end_exclusive": "0x324124",
+    "file_start": "0x2e4020",
+    "file_end_exclusive": "0x2e4124",
+    "sha256": "1e268e91a83306320387e8268c09dcf7d3b0f61ec6d991a60d07caeebb7bba72"
+  },
+  {
+    "name": "B_pixel_sharpening_lut_selectors",
+    "cpu_start": "0x3229ca",
+    "cpu_end_exclusive": "0x322d34",
+    "file_start": "0x2e29ca",
+    "file_end_exclusive": "0x2e2d34",
+    "sha256": "f6fe541729c1faa08a76b62610a85d741c1939973f9f9b1c2f5fc20d8a0ceb6d"
+  },
+  {
+    "name": "B_pixel_scene_inputs",
+    "cpu_start": "0x31b6d2",
+    "cpu_end_exclusive": "0x31b77c",
+    "file_start": "0x2db6d2",
+    "file_end_exclusive": "0x2db77c",
+    "sha256": "bcef9921c7d9533097df808625a917f93d305096951acaa5e8889c94b09f2e21"
+  },
+  {
+    "name": "B_pixel_sharpening_setting_decode",
+    "cpu_start": "0x31ef16",
+    "cpu_end_exclusive": "0x31ef26",
+    "file_start": "0x2def16",
+    "file_end_exclusive": "0x2def26",
+    "sha256": "2db79b32994cc61e2ce535cd3782fdc449e9cf5a8169ce2ff3a880015053404f"
+  },
+  {
+    "name": "B_pixel_signed_division_helper",
+    "cpu_start": "0xbe78c",
+    "cpu_end_exclusive": "0xbe7da",
+    "file_start": "0x7e78c",
+    "file_end_exclusive": "0x7e7da",
+    "sha256": "d235de2c4f704e9efd6cb518effcca8637bdc2b0ff26a20356c740aa9c48e4c4"
+  }
+]

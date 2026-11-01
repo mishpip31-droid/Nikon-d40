@@ -1,0 +1,81 @@
+Original A 1.12. Static listing; execution/model boundaries in A_MEMORY_TASKS_RU.md.
+0003f9d0 000ff9d0 1781         ST        RP,@-r15
+0003f9d2 000ff9d2 9f8e000fed24 LDI:32    #0xfed24,r14
+0003f9d8 000ff9d8 d6d6         CALL      0xff786
+0003f9da 000ff9da a80c         CMP       #0x0,r12
+0003f9dc 000ff9dc e344         BNE       0xffa66
+0003f9de 000ff9de 04ee         LD        @r14,r14
+0003f9e0 000ff9e0 8be4         MOV       r14,r4
+0003f9e2 000ff9e2 83ef         ANDCCR    #0xef
+0003f9e4 000ff9e4 04ee         LD        @r14,r14
+0003f9e6 000ff9e6 aa4e         CMP       r4,r14
+0003f9e8 000ff9e8 e210         BEQ       0xffa0a
+0003f9ea 000ff9ea d04c         CALL      0xffa84
+0003f9ec 000ff9ec 9f880003eb60 LDI:32    #0x3eb60,r8
+0003f9f2 000ff9f2 0488         LD        @r8,r8
+0003f9f4 000ff9f4 aa8e         CMP       r8,r14
+0003f9f6 000ff9f6 e306         BNE       0xffa04
+0003f9f8 000ff9f8 9f880003ebd0 LDI:32    #0x3ebd0,r8
+0003f9fe 000ff9fe 9118         BORH      #0x1,@r8
+0003fa00 000ffa00 f00b         BRA:D     0xffa18
+0003fa02 000ffa02 3055         ST        r5,@(r14+20)
+0003fa04 000ffa04 206e         LD        @(r14+24),r14
+0003fa06 000ffa06 f008         BRA:D     0xffa18
+0003fa08 000ffa08 3125         ST        r5,@(r14+72)
+0003fa0a 000ffa0a a48e         ADD       #0x8,r14
+0003fa0c 000ffa0c 2016         LD        @(r14+4),r6
+0003fa0e 000ffa0e 3015         ST        r5,@(r14+4)
+0003fa10 000ffa10 1465         ST        r5,@r6
+0003fa12 000ffa12 145e         ST        r14,@r5
+0003fa14 000ffa14 a445         ADD       #0x4,r5
+0003fa16 000ffa16 1456         ST        r6,@r5
+0003fa18 000ffa18 9310         ORCCR     #0x10
+0003fa1a 000ffa1a 0781         LD        @r15+,RP
+0003fa1c 000ffa1c 9f20         RET:D     
+0003fa1e 000ffa1e c00c         LDI:8     #0x0,r12
+0003fa20 000ffa20 e022         BRA       0xffa66
+0003fa22 000ffa22 1781         ST        RP,@-r15
+0003fa24 000ffa24 64d6         LDUB      @(r14+77),r6
+0003fa26 000ffa26 c1f7         LDI:8     #0x1f,r7
+0003fa28 000ffa28 aa76         CMP       r7,r6
+0003fa2a 000ffa2a e31f         BNE       0xffa6a
+0003fa2c 000ffa2c 20cd         LD        @(r14+48),r13
+0003fa2e 000ffa2e 8b54         MOV       r5,r4
+0003fa30 000ffa30 9f8e000fed24 LDI:32    #0xfed24,r14
+0003fa36 000ffa36 d6a7         CALL      0xff786
+0003fa38 000ffa38 a80c         CMP       #0x0,r12
+0003fa3a 000ffa3a e315         BNE       0xffa66
+0003fa3c 000ffa3c 04ee         LD        @r14,r14
+0003fa3e 000ffa3e 83ef         ANDCCR    #0xef
+0003fa40 000ffa40 a48e         ADD       #0x8,r14
+0003fa42 000ffa42 2005         LD        @(r14+0),r5
+0003fa44 000ffa44 aae5         CMP       r14,r5
+0003fa46 000ffa46 e306         BNE       0xffa54
+0003fa48 000ffa48 a58e         ADD2      #-8,r14
+0003fa4a 000ffa4a 9f8800400004 LDI:32    #0x400004,r8
+0003fa50 000ffa50 d029         CALL      0xffaa4
+0003fa52 000ffa52 e005         BRA       0xffa5e
+0003fa54 000ffa54 0456         LD        @r5,r6
+0003fa56 000ffa56 14e6         ST        r6,@r14
+0003fa58 000ffa58 a446         ADD       #0x4,r6
+0003fa5a 000ffa5a 146e         ST        r14,@r6
+0003fa5c 000ffa5c 13e5         ST        r5,@(r15+0x38)
+0003fa5e 000ffa5e 9310         ORCCR     #0x10
+0003fa60 000ffa60 0781         LD        @r15+,RP
+0003fa62 000ffa62 9f20         RET:D     
+0003fa64 000ffa64 c00c         LDI:8     #0x0,r12
+0003fa66 000ffa66 0781         LD        @r15+,RP
+0003fa68 000ffa68 9720         RET       
+0003fa6a 000ffa6a 0781         LD        @r15+,RP
+0003fa6c 000ffa6c 9f20         RET:D     
+0003fa6e 000ffa6e cbbc         LDI:8     #0xbb,r12
+0003fa70 000ffa70 9310         ORCCR     #0x10
+0003fa72 000ffa72 0781         LD        @r15+,RP
+0003fa74 000ffa74 9f20         RET:D     
+0003fa76 000ffa76 cabc         LDI:8     #0xab,r12
+0003fa78 000ffa78 0781         LD        @r15+,RP
+0003fa7a 000ffa7a 9f20         RET:D     
+0003fa7c 000ffa7c cdfc         LDI:8     #0xdf,r12
+0003fa7e 000ffa7e 0781         LD        @r15+,RP
+0003fa80 000ffa80 9f20         RET:D     
+0003fa82 000ffa82 cefc         LDI:8     #0xef,r12

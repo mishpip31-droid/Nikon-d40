@@ -1,0 +1,13 @@
+id,descriptor_file,ram,length,trailing_u16,known_role
+0,0x95364,0x83cea524,20,0,Not assigned
+1,0x9536c,0x83ced0f8,72,0,Not assigned
+2,0x95374,0x83ced21a,18,0,Settings including Optimize/Custom
+3,0x9537c,0x83ced254,14,0,Not assigned
+4,0x95384,0x83ceb124,52,0,Not assigned
+5,0x9538c,0x83cee068,68,0,Not assigned
+6,0x95394,0x83e89310,4164,0,PTP-uploaded tone-curve structure
+7,0x9539c,0x83cee0b4,16,0,Not assigned
+8,0x953a4,0x83e882cc,4164,0,Alternate tone-curve structure; not a proven extra user slot
+9,0x953ac,0x83cee040,40,0,Not assigned
+10,0x953b4,0x83ced248,12,0,Not assigned
+11,0x953bc,0x83ce901c,4,0,Not assigned

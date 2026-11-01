@@ -1,0 +1,10 @@
+Original A 1.12. Static listing; execution/model boundaries in A_MEMORY_TASKS_RU.md.
+00003a78 000c3a78 c010         LDI:8     #0x1,r0
+00003a7a 000c3a7a 9b3ce1f1     LDI:20    #0x3e1f1,r12
+00003a7e 000c3a7e 16c0         STB       r0,@r12
+00003a80 000c3a80 c044         LDI:8     #0x4,r4
+00003a82 000c3a82 9f85ffffff01 LDI:32    #0xffffff01,r5
+00003a88 000c3a88 ce9c         LDI:8     #0xe9,r12
+00003a8a 000c3a8a 978c         EXTSB     r12
+00003a8c 000c3a8c 1f40         INT       #0x40
+00003a8e 000c3a8e 9720         RET       

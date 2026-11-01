@@ -1,0 +1,43 @@
+Original A 1.12. Static listing; execution/model boundaries in A_MEMORY_TASKS_RU.md.
+0000137c 000c137c 1708         ST        r8,@-r15
+0000137e 000c137e 1781         ST        RP,@-r15
+00001380 000c1380 9b38cc9a     LDI:20    #0x3cc9a,r8
+00001384 000c1384 d025         CALL      0xc13d0
+00001386 000c1386 c0a4         LDI:8     #0xa,r4
+00001388 000c1388 c005         LDI:8     #0x0,r5
+0000138a 000c138a ce9c         LDI:8     #0xe9,r12
+0000138c 000c138c 978c         EXTSB     r12
+0000138e 000c138e 1f40         INT       #0x40
+00001390 000c1390 c094         LDI:8     #0x9,r4
+00001392 000c1392 9b050101     LDI:20    #0x101,r5
+00001396 000c1396 ce9c         LDI:8     #0xe9,r12
+00001398 000c1398 978c         EXTSB     r12
+0000139a 000c139a 1f40         INT       #0x40
+0000139c 000c139c 9bcc3a78     LDI:20    #0xc3a78,r12
+000013a0 000c13a0 971c         CALL      @r12
+000013a2 000c13a2 9bfc9df6     LDI:20    #0xf9df6,r12
+000013a6 000c13a6 971c         CALL      @r12
+000013a8 000c13a8 8888         BTSTL     #0x8,@r8
+000013aa 000c13aa e205         BEQ       0xc13b6
+000013ac 000c13ac c024         LDI:8     #0x2,r4
+000013ae 000c13ae c005         LDI:8     #0x0,r5
+000013b0 000c13b0 ce9c         LDI:8     #0xe9,r12
+000013b2 000c13b2 978c         EXTSB     r12
+000013b4 000c13b4 1f40         INT       #0x40
+000013b6 000c13b6 9b30cf9b     LDI:20    #0x3cf9b,r0
+000013ba 000c13ba 9020         BORL      #0x2,@r0
+000013bc 000c13bc 8b80         MOV       r8,r0
+000013be 000c13be a410         ADD       #0x1,r0
+000013c0 000c13c0 9020         BORL      #0x2,@r0
+000013c2 000c13c2 8b80         MOV       r8,r0
+000013c4 000c13c4 a410         ADD       #0x1,r0
+000013c6 000c13c6 9010         BORL      #0x1,@r0
+000013c8 000c13c8 80e8         BANDL     #0xe,@r8
+000013ca 000c13ca 0781         LD        @r15+,RP
+000013cc 000c13cc 9f20         RET:D     
+000013ce 000c13ce 0708         LD        @r15+,r8
+000013d0 000c13d0 9b30cf94     LDI:20    #0x3cf94,r0
+000013d4 000c13d4 9010         BORL      #0x1,@r0
+000013d6 000c13d6 9b30cf99     LDI:20    #0x3cf99,r0
+000013da 000c13da 9010         BORL      #0x1,@r0
+000013dc 000c13dc 9720         RET       

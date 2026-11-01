@@ -1,0 +1,95 @@
+{
+  "result": "PASS_BOUNDED_JPEG_HANDOFF",
+  "cases": [
+    {
+      "geometry_record": 0,
+      "width": 3008,
+      "height": 2000,
+      "y_stride": 3040,
+      "chroma_stride": 1520,
+      "pointer_shift_bytes": 0,
+      "pointers": [
+        "0x21002f90",
+        "0x215cf590",
+        "0x218b5890"
+      ]
+    },
+    {
+      "geometry_record": 0,
+      "width": 3008,
+      "height": 2000,
+      "y_stride": 3040,
+      "chroma_stride": 1520,
+      "pointer_shift_bytes": 16,
+      "pointers": [
+        "0x21002f80",
+        "0x215cf580",
+        "0x218b5880"
+      ]
+    },
+    {
+      "geometry_record": 1,
+      "width": 2256,
+      "height": 1496,
+      "y_stride": 2304,
+      "chroma_stride": 1152,
+      "pointer_shift_bytes": 0,
+      "pointers": [
+        "0x21002f90",
+        "0x215cf590",
+        "0x218b5890"
+      ]
+    },
+    {
+      "geometry_record": 1,
+      "width": 2256,
+      "height": 1496,
+      "y_stride": 2304,
+      "chroma_stride": 1152,
+      "pointer_shift_bytes": 16,
+      "pointers": [
+        "0x21002f80",
+        "0x215cf580",
+        "0x218b5880"
+      ]
+    },
+    {
+      "geometry_record": 2,
+      "width": 1504,
+      "height": 1000,
+      "y_stride": 1536,
+      "chroma_stride": 768,
+      "pointer_shift_bytes": 0,
+      "pointers": [
+        "0x21002f90",
+        "0x215cf590",
+        "0x218b5890"
+      ]
+    },
+    {
+      "geometry_record": 2,
+      "width": 1504,
+      "height": 1000,
+      "y_stride": 1536,
+      "chroma_stride": 768,
+      "pointer_shift_bytes": 16,
+      "pointers": [
+        "0x21002f80",
+        "0x215cf580",
+        "0x218b5880"
+      ]
+    }
+  ],
+  "candidate_entry": "0x488ce (requires separate wrapper preserving arguments/stack and original call)",
+  "known_problem": "base offsets alone are insufficient: source pointers may be shifted by 16 bytes",
+  "helper_calls_modeled": [
+    "0x44be8",
+    "0x4a164",
+    "0x49f74",
+    "0x4a086"
+  ],
+  "CPU_pixels_processed": false,
+  "format_range_verified": false,
+  "DMA_cache_ownership_verified": false,
+  "firmware_modified": false
+}

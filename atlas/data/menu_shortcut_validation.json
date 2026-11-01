@@ -1,0 +1,102 @@
+{
+  "result": "PASS_WITH_EXPLICIT_INCOMPLETE_DEPLOYMENT",
+  "input_sha256": "b9df48d461e875dce4ba84da88164af170dfc48ad9f7674859623bad0401032e",
+  "prototype_kind": "incomplete CPU-only action handler; not an installable firmware",
+  "prototype_code_bytes": 154,
+  "original_function_bytes": 516,
+  "prototype_code_hex": "170817819f8883cee49c04809f8183ce58acaa10e33fc0cd010197a1c0ed010097a0a610a800ea36a870ed34a860e22ea870e30b9f8583ced2240651ce328221c18292211651c050e003a850e301c0608b039f8583ce957f0651c0f282218b02b442922116519f8583ced2250651cc3282218b32b42292211651c0249f8c001468ae971c9f8083ce53cce0039f8083ce593c1480078107089720",
+  "prototype_labels": {
+    "preset": "0x143fee",
+    "apply": "0x143ff4",
+    "custom": "0x144030",
+    "set_menu": "0x144036",
+    "return": "0x144038"
+  },
+  "hooks": [
+    "0x1468ae synchronization and external responses are recorded, not executed"
+  ],
+  "synthetic_row_address": "0x20000000",
+  "real_ram_allocation_proven": false,
+  "invalid_original_inputs_rejected": 4,
+  "nibble_instruction_cases": 16384,
+  "original_vs_prototype_valid_row_cases": 5376,
+  "cinema_synthetic_row_cases": 1024,
+  "relocated_existing_row_cases": 7,
+  "original_custom_tone_done_cases": 256,
+  "shortcut_to_original_tone_selector_cases": 18,
+  "switch_out_of_shortcut_cases": 6,
+  "invalid_synthetic_indices_rejected": 5,
+  "original_mode_validation_prefix_cases": 256,
+  "original_cursor_results": [
+    {
+      "mode": 0,
+      "selected_row": 0
+    },
+    {
+      "mode": 1,
+      "selected_row": 1
+    },
+    {
+      "mode": 2,
+      "selected_row": 2
+    },
+    {
+      "mode": 3,
+      "selected_row": 3
+    },
+    {
+      "mode": 4,
+      "selected_row": 4
+    },
+    {
+      "mode": 5,
+      "selected_row": 6
+    },
+    {
+      "mode": 6,
+      "selected_row": 5
+    }
+  ],
+  "known_unresolved_cursor_after_shortcut": {
+    "original_row_array": "Unchanged initializer selects row 6 Custom, not proposed row 7 Cinema2383.",
+    "relocated_synthetic_row_array": {
+      "selected_sum": 146,
+      "viewport_start": 1,
+      "row_within_viewport": 145,
+      "meaning": "Invalid cursor: initializer subtracts the new row base from a hardcoded old row address."
+    }
+  },
+  "prototype_cursor_restore_cases": 8192,
+  "prototype_initializer_bytes": 74,
+  "prototype_initializer_hex": "17819f8083ce957f0604b044a874ea02c004e011a854e204a864e30dc054e00bc0649f8083ced2240600c1c18210c181aa10e301c0749f8c00132d0c971c9f8083ce98f4914007819720",
+  "prototype_initializer_labels": {
+    "valid": "0x143f0a",
+    "custom": "0x143f16",
+    "position": "0x143f2c"
+  },
+  "original_label_span_prefix_cases": 240,
+  "language_tables_tested": 15,
+  "new_label_index_601_without_extension_is_invalid": true,
+  "count_only_eighth_row": {
+    "file_offset": "0x00119e50",
+    "aliases": "Custom menu header",
+    "fields": [
+      "0x22",
+      "0x2d",
+      "0x0",
+      "0x1",
+      "0x6",
+      "0x6",
+      "0x0"
+    ],
+    "is_valid_added_item": false
+  },
+  "unresolved": [
+    "Physical RAM placement and initializer for 8 contiguous mutable rows",
+    "Cinema2383 string span in every supported language and both string consumers",
+    "Parent menu indication for Custom/tone=6; prototype cursor tested only in synthetic layout",
+    "Actual button dispatcher, scrolling and row visibility",
+    "Synchronization success/errors, persistence across power cycles",
+    "Full-frame paired camera samples with EXIF and scene settings"
+  ]
+}

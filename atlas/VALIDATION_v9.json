@@ -1,0 +1,26 @@
+{
+  "version": 9,
+  "date": "2026-10-28",
+  "result": "PASS",
+  "report": "data/a_startup_validation.json",
+  "startup_runs": 12,
+  "added_opcode_cases": 256,
+  "initialized_task_records": 13,
+  "active_initial_contexts_per_run": 3,
+  "real_camera_tests": 0,
+  "rejected_wrong_inputs": 4,
+  "camera_tested": false,
+  "recovery_proven": false,
+  "coverage_completed": 15,
+  "coverage_total": 48,
+  "originals_and_EXP01_unchanged": {
+    "d40_research/BD400111.bin": "b9df48d461e875dce4ba84da88164af170dfc48ad9f7674859623bad0401032e",
+    "d40_research/AD400111.bin": "ff96a874d3a22f9c18c610bd5bf55f4e6a53603c865fdb8e913a1d53591db5c9",
+    "d40_research/AD400112.bin": "0cc92921d6b2ad5d5cfa070abeebdd9aaca224d326e42a26339e3ac384270394",
+    "D40_Cinema2383_Firmware_EXP01/firmware/D40_Cinema2383_EXP01_NOT_CAMERA_TESTED.bin": "8abfda8cc67f787be867fd3d348fd38fcc27b8e041702625d182a968052148a8"
+  },
+  "new_test_sha256": "4c88385d6e40fe89338c02d170ccc00bac7bc65d69837087ab5732cb9c07b7f9",
+  "startup_interpreter_sha256": "a90540cc6d35b0121e1934559d1c523051c2c90f9e80dc6f5d2bb54726fa85bb",
+  "previous_results": "v1-v8 retained, not rerun; previous test and interpreter files unchanged",
+  "scope": "Original A FEF32 to FEFEA excluded, no hooks; shadow MMIO writes; no interrupts, scheduler or tasks executed"
+}

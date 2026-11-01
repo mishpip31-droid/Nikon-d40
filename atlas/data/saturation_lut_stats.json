@@ -1,0 +1,426 @@
+[
+  {
+    "profile": 0,
+    "generated_count": 1024,
+    "hardware_count": 1024,
+    "minimum": 90,
+    "maximum": 128,
+    "sha256_generated_bytes": "aa319087ddb17a4e46db777c61cf13e5228ff36529e117003b5f582fcf00f489"
+  },
+  {
+    "profile": 1,
+    "generated_count": 1024,
+    "hardware_count": 1024,
+    "minimum": 90,
+    "maximum": 133,
+    "sha256_generated_bytes": "9969e04c692cc304c57fc6d5540be9472dc2616a857ebd4eb61e8f668c0249e3"
+  },
+  {
+    "profile": 2,
+    "generated_count": 1024,
+    "hardware_count": 1024,
+    "minimum": 90,
+    "maximum": 138,
+    "sha256_generated_bytes": "0e2a0fb91c64df92ea9690b77e4b63bb4be47a12194f54c38d9331a2cc13be6b"
+  },
+  {
+    "profile": 3,
+    "generated_count": 1024,
+    "hardware_count": 1024,
+    "minimum": 90,
+    "maximum": 143,
+    "sha256_generated_bytes": "09a868b145db6c778d1c6a9e6ea6dd1e167bb9e67614b22eaa4ba903d79c1b15"
+  },
+  {
+    "profile": 4,
+    "generated_count": 1024,
+    "hardware_count": 1024,
+    "minimum": 90,
+    "maximum": 148,
+    "sha256_generated_bytes": "9eaa7e0371952a955a2eeedb8ff592b6ec499f692cd88a6dcb373b7ca43a73c1"
+  },
+  {
+    "profile": 5,
+    "generated_count": 1024,
+    "hardware_count": 1024,
+    "minimum": 90,
+    "maximum": 154,
+    "sha256_generated_bytes": "9cc359f04d7fed77f2483b5a4ef8721e07ce5d3d5898c8b0c220412f3d8efc95"
+  },
+  {
+    "profile": 6,
+    "generated_count": 1024,
+    "hardware_count": 1024,
+    "minimum": 90,
+    "maximum": 159,
+    "sha256_generated_bytes": "2b717d1f7475364f01ecc932b236e02418d3489d1e13953597afbaa8a0c2aea9"
+  },
+  {
+    "profile": 7,
+    "generated_count": 1024,
+    "hardware_count": 1024,
+    "minimum": 90,
+    "maximum": 109,
+    "sha256_generated_bytes": "cfada4ac267595cdbf472fcc609fcf20995dd3a82adfcab36fa4d80f427fdcca"
+  },
+  {
+    "profile": 8,
+    "generated_count": 1024,
+    "hardware_count": 1024,
+    "minimum": 83,
+    "maximum": 128,
+    "sha256_generated_bytes": "682e3e6df7a13d3bb6366284b71d3dcadc7c28b4efc8ef3736f376f4e9534868"
+  },
+  {
+    "profile": 9,
+    "generated_count": 1024,
+    "hardware_count": 1024,
+    "minimum": 83,
+    "maximum": 133,
+    "sha256_generated_bytes": "3fe95948744a2585dde7c1bc05688f2f98e99d2770437809a9fb107c879c0b9e"
+  },
+  {
+    "profile": 10,
+    "generated_count": 1024,
+    "hardware_count": 1024,
+    "minimum": 83,
+    "maximum": 138,
+    "sha256_generated_bytes": "79b1033fa508449f1e067b0e66f7af8e327713e5e317e0a1857b683577ced19b"
+  },
+  {
+    "profile": 11,
+    "generated_count": 1024,
+    "hardware_count": 1024,
+    "minimum": 83,
+    "maximum": 143,
+    "sha256_generated_bytes": "5044d649220b255ed2079594a615027fc7993fdf8fadab96e615302755376f8f"
+  },
+  {
+    "profile": 12,
+    "generated_count": 1024,
+    "hardware_count": 1024,
+    "minimum": 83,
+    "maximum": 148,
+    "sha256_generated_bytes": "18932fb280a26adf2ab6a7cd3472406a032b241a2b42e04432107fe8b1641be1"
+  },
+  {
+    "profile": 13,
+    "generated_count": 1024,
+    "hardware_count": 1024,
+    "minimum": 83,
+    "maximum": 154,
+    "sha256_generated_bytes": "8d49d6ced230ca48cf3033efa551d8cadc466554384fb6f37235ae9fef3af740"
+  },
+  {
+    "profile": 14,
+    "generated_count": 1024,
+    "hardware_count": 1024,
+    "minimum": 83,
+    "maximum": 159,
+    "sha256_generated_bytes": "0ffae1366d3e2562b3f9c1cd162aaf8f76c353fa9b485174c5b3c02516af4f0b"
+  },
+  {
+    "profile": 15,
+    "generated_count": 1024,
+    "hardware_count": 1024,
+    "minimum": 83,
+    "maximum": 109,
+    "sha256_generated_bytes": "bcfc4a31d29c78518d70f74cf1a0a13d52e754087a4651ad474529e94ad656bd"
+  },
+  {
+    "profile": 16,
+    "generated_count": 1024,
+    "hardware_count": 1024,
+    "minimum": 77,
+    "maximum": 128,
+    "sha256_generated_bytes": "ab9078a5b464970516fa5d8df21cd0681b9f629bca4f1457641cf56e92371490"
+  },
+  {
+    "profile": 17,
+    "generated_count": 1024,
+    "hardware_count": 1024,
+    "minimum": 77,
+    "maximum": 133,
+    "sha256_generated_bytes": "d92e8da3bd64f8aea1fba9673a0f222f72f63950c3d2c62beae45e7f95ee57f5"
+  },
+  {
+    "profile": 18,
+    "generated_count": 1024,
+    "hardware_count": 1024,
+    "minimum": 77,
+    "maximum": 138,
+    "sha256_generated_bytes": "6df7c6e238c51f1369690e4dca327c074ce0863aaffc5583729c2a4f1f633d10"
+  },
+  {
+    "profile": 19,
+    "generated_count": 1024,
+    "hardware_count": 1024,
+    "minimum": 77,
+    "maximum": 143,
+    "sha256_generated_bytes": "432e183dfe2d5fe8d042e2da54da3ae90f49cbb644fe030bd7b1a85c86f4c2f9"
+  },
+  {
+    "profile": 20,
+    "generated_count": 1024,
+    "hardware_count": 1024,
+    "minimum": 77,
+    "maximum": 148,
+    "sha256_generated_bytes": "e4dc8780f0f618ddcb70f68ce39204dcfe5a2ed75446dd88d6761dc1ad4ec807"
+  },
+  {
+    "profile": 21,
+    "generated_count": 1024,
+    "hardware_count": 1024,
+    "minimum": 77,
+    "maximum": 154,
+    "sha256_generated_bytes": "7ed0dca4b34a87b7232d8ba17b111951351de31c47cf6ec9294d7c63acc89dbe"
+  },
+  {
+    "profile": 22,
+    "generated_count": 1024,
+    "hardware_count": 1024,
+    "minimum": 77,
+    "maximum": 159,
+    "sha256_generated_bytes": "e97b5f6b9fbd7eb890b00b09b0a9172b4d66f62d476d1441946618a9969ffb36"
+  },
+  {
+    "profile": 23,
+    "generated_count": 1024,
+    "hardware_count": 1024,
+    "minimum": 77,
+    "maximum": 109,
+    "sha256_generated_bytes": "61b3ca6b1aa01b1a6a445189188cc1eb58509331a9643a11bb9bae7b625a7166"
+  },
+  {
+    "profile": 24,
+    "generated_count": 1024,
+    "hardware_count": 1024,
+    "minimum": 69,
+    "maximum": 128,
+    "sha256_generated_bytes": "f8b2af1507b10e39ba65ff285da6a5e3fbfcaf3116804e9cf91ce2cee53255a1"
+  },
+  {
+    "profile": 25,
+    "generated_count": 1024,
+    "hardware_count": 1024,
+    "minimum": 69,
+    "maximum": 133,
+    "sha256_generated_bytes": "9c46129809d24e4e79083289179e5cf2208b3d5ea8eb031f66ddf7cd01c3748b"
+  },
+  {
+    "profile": 26,
+    "generated_count": 1024,
+    "hardware_count": 1024,
+    "minimum": 69,
+    "maximum": 138,
+    "sha256_generated_bytes": "4d1c02b9967aa804de92051195ffa9cbe42ac89f516861f2bff578ddf583742a"
+  },
+  {
+    "profile": 27,
+    "generated_count": 1024,
+    "hardware_count": 1024,
+    "minimum": 69,
+    "maximum": 143,
+    "sha256_generated_bytes": "4ce072b5ee59459eda5de329280455899ab9577d118888b077139532b48253dc"
+  },
+  {
+    "profile": 28,
+    "generated_count": 1024,
+    "hardware_count": 1024,
+    "minimum": 69,
+    "maximum": 148,
+    "sha256_generated_bytes": "33c7508613e30b7ca49f37fe0d97266306c2e8ca7311decfb732f5b430d31659"
+  },
+  {
+    "profile": 29,
+    "generated_count": 1024,
+    "hardware_count": 1024,
+    "minimum": 69,
+    "maximum": 154,
+    "sha256_generated_bytes": "db6a8f7c7e6850aa25821f285cc8353389c1e499b660235cbfc927c61078c883"
+  },
+  {
+    "profile": 30,
+    "generated_count": 1024,
+    "hardware_count": 1024,
+    "minimum": 69,
+    "maximum": 159,
+    "sha256_generated_bytes": "8dbcfb6c1d8c7d7528da183e1ff49da0b4a9b1e5619dce58782e32d68f46890f"
+  },
+  {
+    "profile": 31,
+    "generated_count": 1024,
+    "hardware_count": 1024,
+    "minimum": 69,
+    "maximum": 109,
+    "sha256_generated_bytes": "c82f820b8c0b9368b379d6225fbe2e8fb91adf60b73396221381305a9e5a8a20"
+  },
+  {
+    "profile": 32,
+    "generated_count": 1024,
+    "hardware_count": 1024,
+    "minimum": 61,
+    "maximum": 128,
+    "sha256_generated_bytes": "76e6878f5cbdd2a45287022e7fda50e73887f3ef622e307aef19321d04562dfa"
+  },
+  {
+    "profile": 33,
+    "generated_count": 1024,
+    "hardware_count": 1024,
+    "minimum": 61,
+    "maximum": 133,
+    "sha256_generated_bytes": "ba55d42d54156ac1f8990121afa9d6d7b465934f930d4a33f01c3fcb4bcebb21"
+  },
+  {
+    "profile": 34,
+    "generated_count": 1024,
+    "hardware_count": 1024,
+    "minimum": 61,
+    "maximum": 138,
+    "sha256_generated_bytes": "b811f10df15a9ad930ab884e31182ffac229bb12ebb11dcf772dae686c33911e"
+  },
+  {
+    "profile": 35,
+    "generated_count": 1024,
+    "hardware_count": 1024,
+    "minimum": 61,
+    "maximum": 143,
+    "sha256_generated_bytes": "8e0394f23c42b1a493bcecf73e4bf2a6cb9e330f6e88113f176d675476865a30"
+  },
+  {
+    "profile": 36,
+    "generated_count": 1024,
+    "hardware_count": 1024,
+    "minimum": 61,
+    "maximum": 148,
+    "sha256_generated_bytes": "7765c68321a33daca775eaf18816f0777e07e6d4107bfa0d8078b465a12be93d"
+  },
+  {
+    "profile": 37,
+    "generated_count": 1024,
+    "hardware_count": 1024,
+    "minimum": 61,
+    "maximum": 154,
+    "sha256_generated_bytes": "b1460124ddc7934ad2a2726c0b2b4eaf073530458b9cb1e6af1d09a0738a8cb5"
+  },
+  {
+    "profile": 38,
+    "generated_count": 1024,
+    "hardware_count": 1024,
+    "minimum": 61,
+    "maximum": 159,
+    "sha256_generated_bytes": "873b2b737164a709df32167895596830346bcc9c50a6cd99476a311a763e6562"
+  },
+  {
+    "profile": 39,
+    "generated_count": 1024,
+    "hardware_count": 1024,
+    "minimum": 61,
+    "maximum": 109,
+    "sha256_generated_bytes": "60697b449f32566f9fce4bf6f35af41326509a82c2015373f5677c4430f077d2"
+  },
+  {
+    "profile": 40,
+    "generated_count": 1024,
+    "hardware_count": 1024,
+    "minimum": 54,
+    "maximum": 128,
+    "sha256_generated_bytes": "8a87b685ed28ce90c72fe0b9468f804bbf6f99664f8049b28dafeca8982c1ce9"
+  },
+  {
+    "profile": 41,
+    "generated_count": 1024,
+    "hardware_count": 1024,
+    "minimum": 54,
+    "maximum": 133,
+    "sha256_generated_bytes": "8f1b50898b6db81070a177180f4075202f921ae90c4a273bc3b72cec257ab32c"
+  },
+  {
+    "profile": 42,
+    "generated_count": 1024,
+    "hardware_count": 1024,
+    "minimum": 54,
+    "maximum": 138,
+    "sha256_generated_bytes": "a21ddbf481a41b633fac8ea673b3adb89511a19ca7e71d96959bb261a1fd342a"
+  },
+  {
+    "profile": 43,
+    "generated_count": 1024,
+    "hardware_count": 1024,
+    "minimum": 54,
+    "maximum": 143,
+    "sha256_generated_bytes": "8a8ac804f503cf1a19e957ca0471a92913b5584c3678a1d91c87e17acb91144f"
+  },
+  {
+    "profile": 44,
+    "generated_count": 1024,
+    "hardware_count": 1024,
+    "minimum": 54,
+    "maximum": 148,
+    "sha256_generated_bytes": "3cb6ba61712b6843d16eaa74c53389e9ebc4a92afaa4831eac2250aae2b38896"
+  },
+  {
+    "profile": 45,
+    "generated_count": 1024,
+    "hardware_count": 1024,
+    "minimum": 54,
+    "maximum": 154,
+    "sha256_generated_bytes": "721ead204ca6b960acafcacf2e20a1d05a0d3a8fe2d2937caa3a621278fb8854"
+  },
+  {
+    "profile": 46,
+    "generated_count": 1024,
+    "hardware_count": 1024,
+    "minimum": 54,
+    "maximum": 159,
+    "sha256_generated_bytes": "710861e0f9e0aec8344b832d27e9cc4c7ffa3589c29597e3a6326583a4a7251f"
+  },
+  {
+    "profile": 47,
+    "generated_count": 1024,
+    "hardware_count": 1024,
+    "minimum": 54,
+    "maximum": 109,
+    "sha256_generated_bytes": "2dd9fb5dd41a313a48995a0ba907b65e1aef2f2ac1748fda34afb46e4208d230"
+  },
+  {
+    "profile": 1000,
+    "generated_count": 1026,
+    "hardware_count": 1024,
+    "minimum": 25,
+    "maximum": 128,
+    "sha256_generated_bytes": "2b847fd3694cc9cb242ec52ce0bcbb3566ecc31a6d5b0030734ffdd003e584d6"
+  },
+  {
+    "profile": 1001,
+    "generated_count": 1026,
+    "hardware_count": 1024,
+    "minimum": 25,
+    "maximum": 128,
+    "sha256_generated_bytes": "2b847fd3694cc9cb242ec52ce0bcbb3566ecc31a6d5b0030734ffdd003e584d6"
+  },
+  {
+    "profile": 1002,
+    "generated_count": 1026,
+    "hardware_count": 1024,
+    "minimum": 25,
+    "maximum": 128,
+    "sha256_generated_bytes": "2b847fd3694cc9cb242ec52ce0bcbb3566ecc31a6d5b0030734ffdd003e584d6"
+  },
+  {
+    "profile": 1003,
+    "generated_count": 1026,
+    "hardware_count": 1024,
+    "minimum": 25,
+    "maximum": 128,
+    "sha256_generated_bytes": "2b847fd3694cc9cb242ec52ce0bcbb3566ecc31a6d5b0030734ffdd003e584d6"
+  },
+  {
+    "profile": 1004,
+    "generated_count": 1026,
+    "hardware_count": 1024,
+    "minimum": 25,
+    "maximum": 128,
+    "sha256_generated_bytes": "2b847fd3694cc9cb242ec52ce0bcbb3566ecc31a6d5b0030734ffdd003e584d6"
+  }
+]

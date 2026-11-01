@@ -1,0 +1,36 @@
+0006b646 000ab646 1781         ST        RP,@-r15
+0006b648 000ab648 0f02         ENTER     #0x8
+0006b64a 000ab64a 9f8c00040dda LDI:32    #0x40dda,r12
+0006b650 000ab650 971c         CALL      @r12
+0006b652 000ab652 a804         CMP       #0x0,r4
+0006b654 000ab654 e202         BEQ       0xab65a
+0006b656 000ab656 f020         BRA:D     0xab698
+0006b658 000ab658 c004         LDI:8     #0x0,r4
+0006b65a 000ab65a 9f8083ce971e LDI:32    #0x83ce971e,r0
+0006b660 000ab660 8940         BTSTH     #0x4,@r0
+0006b662 000ab662 e202         BEQ       0xab668
+0006b664 000ab664 f019         BRA:D     0xab698
+0006b666 000ab666 c004         LDI:8     #0x0,r4
+0006b668 000ab668 9f8c83ceb168 LDI:32    #0x83ceb168,r12
+0006b66e 000ab66e 06c0         LDUB      @r12,r0
+0006b670 000ab670 a800         CMP       #0x0,r0
+0006b672 000ab672 f212         BEQ:D     0xab698
+0006b674 000ab674 c004         LDI:8     #0x0,r4
+0006b676 000ab676 8be4         MOV       r14,r4
+0006b678 000ab678 a5c4         ADD2      #-4,r4
+0006b67a 000ab67a c065         LDI:8     #0x6,r5
+0006b67c 000ab67c 9f8620000000 LDI:32    #0x20000000,r6
+0006b682 000ab682 c027         LDI:8     #0x2,r7
+0006b684 000ab684 c96c         LDI:8     #0x96,r12
+0006b686 000ab686 978c         EXTSB     r12
+0006b688 000ab688 1f40         INT       #0x40
+0006b68a 000ab68a 9fa0         NOP       
+0006b68c 000ab68c 144d         ST        r13,@r4
+0006b68e 000ab68e 8bc4         MOV       r12,r4
+0006b690 000ab690 a804         CMP       #0x0,r4
+0006b692 000ab692 f302         BNE:D     0xab698
+0006b694 000ab694 c004         LDI:8     #0x0,r4
+0006b696 000ab696 c014         LDI:8     #0x1,r4
+0006b698 000ab698 9f90         LEAVE     
+0006b69a 000ab69a 0781         LD        @r15+,RP
+0006b69c 000ab69c 9720         RET       

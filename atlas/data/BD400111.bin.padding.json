@@ -1,0 +1,100 @@
+[
+  {
+    "start": "0x0009578f",
+    "end_exclusive": "0x00095890",
+    "size": 257,
+    "fill": "ff",
+    "usable_for_patch": false
+  },
+  {
+    "start": "0x0009d87c",
+    "end_exclusive": "0x0009dcf8",
+    "size": 1148,
+    "fill": "ff",
+    "usable_for_patch": false
+  },
+  {
+    "start": "0x000a8323",
+    "end_exclusive": "0x000a84a4",
+    "size": 385,
+    "fill": "ff",
+    "usable_for_patch": false
+  },
+  {
+    "start": "0x000aae08",
+    "end_exclusive": "0x000afbf0",
+    "size": 19944,
+    "fill": "ff",
+    "usable_for_patch": false
+  },
+  {
+    "start": "0x000b0000",
+    "end_exclusive": "0x000e0000",
+    "size": 196608,
+    "fill": "ff",
+    "usable_for_patch": false
+  },
+  {
+    "start": "0x0011d52a",
+    "end_exclusive": "0x00120000",
+    "size": 10966,
+    "fill": "ff",
+    "usable_for_patch": false
+  },
+  {
+    "start": "0x00130000",
+    "end_exclusive": "0x00170000",
+    "size": 262144,
+    "fill": "ff",
+    "usable_for_patch": false
+  },
+  {
+    "start": "0x00182406",
+    "end_exclusive": "0x0018251a",
+    "size": 276,
+    "fill": "ff",
+    "usable_for_patch": false
+  },
+  {
+    "start": "0x00184e36",
+    "end_exclusive": "0x00184f49",
+    "size": 275,
+    "fill": "ff",
+    "usable_for_patch": false
+  },
+  {
+    "start": "0x0018715e",
+    "end_exclusive": "0x0018728f",
+    "size": 305,
+    "fill": "ff",
+    "usable_for_patch": false
+  },
+  {
+    "start": "0x00187753",
+    "end_exclusive": "0x00187866",
+    "size": 275,
+    "fill": "ff",
+    "usable_for_patch": false
+  },
+  {
+    "start": "0x00190c0e",
+    "end_exclusive": "0x00190d21",
+    "size": 275,
+    "fill": "ff",
+    "usable_for_patch": false
+  },
+  {
+    "start": "0x0031780f",
+    "end_exclusive": "0x003179e9",
+    "size": 474,
+    "fill": "ff",
+    "usable_for_patch": false
+  },
+  {
+    "start": "0x003a66ec",
+    "end_exclusive": "0x003cfffe",
+    "size": 170258,
+    "fill": "ff",
+    "usable_for_patch": false
+  }
+]

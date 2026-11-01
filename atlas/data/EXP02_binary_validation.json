@@ -1,0 +1,158 @@
+{
+  "result": "PASS",
+  "image_sha256": "56de8eda261cd13655a09a981ede0f2e56dd5236b308714c5fafe3ebc413d22b",
+  "size": 3997696,
+  "stored_crc": "3e70",
+  "whole_image_crc_residual": 0,
+  "reproducible_build": true,
+  "precheck": {
+    "accepted": true,
+    "kind_flag": 1,
+    "version_prefix": "Ver.1.11A",
+    "instructions": 384,
+    "file_calls": [
+      {
+        "operation": "open",
+        "index": 1,
+        "path": "A:\\BD400111.BIN"
+      },
+      {
+        "operation": "seek",
+        "index": 1,
+        "offset": 719860
+      },
+      {
+        "operation": "read",
+        "index": 1,
+        "offset": 719860,
+        "count": 4
+      },
+      {
+        "operation": "seek",
+        "index": 2,
+        "offset": 611616
+      },
+      {
+        "operation": "read",
+        "index": 2,
+        "offset": 611616,
+        "count": 32
+      },
+      {
+        "operation": "seek",
+        "index": 3,
+        "offset": 719856
+      },
+      {
+        "operation": "read",
+        "index": 3,
+        "offset": 719856,
+        "count": 4
+      },
+      {
+        "operation": "seek",
+        "index": 4,
+        "offset": 611640
+      },
+      {
+        "operation": "read",
+        "index": 4,
+        "offset": 611640,
+        "count": 9
+      },
+      {
+        "operation": "close",
+        "index": 1,
+        "handle": 7
+      }
+    ]
+  },
+  "changed_bytes_from_original": 5124,
+  "changed_bytes_from_EXP01": 691,
+  "all_changes_in_scheduled_program_ranges": true,
+  "known_aligned_literal_references": [
+    {
+      "file_offset": "0x995fc",
+      "value": "0x143f22"
+    },
+    {
+      "file_offset": "0x99600",
+      "value": "0x143f30"
+    },
+    {
+      "file_offset": "0x99604",
+      "value": "0x143f40"
+    },
+    {
+      "file_offset": "0x99608",
+      "value": "0x143f50"
+    },
+    {
+      "file_offset": "0x9960c",
+      "value": "0x143f60"
+    },
+    {
+      "file_offset": "0x99610",
+      "value": "0x143f70"
+    },
+    {
+      "file_offset": "0x99614",
+      "value": "0x143f80"
+    },
+    {
+      "file_offset": "0x114e64",
+      "value": "0x143fa4"
+    },
+    {
+      "file_offset": "0x114e70",
+      "value": "0x143fa4"
+    },
+    {
+      "file_offset": "0x114e7c",
+      "value": "0x143fa4"
+    },
+    {
+      "file_offset": "0x114e88",
+      "value": "0x143fa4"
+    },
+    {
+      "file_offset": "0x114e94",
+      "value": "0x143fa4"
+    },
+    {
+      "file_offset": "0x114ea0",
+      "value": "0x143fa4"
+    },
+    {
+      "file_offset": "0x114eac",
+      "value": "0x143fa4"
+    },
+    {
+      "file_offset": "0x1166fc",
+      "value": "0x143ef6"
+    },
+    {
+      "file_offset": "0x11be72",
+      "value": "0x14405e"
+    },
+    {
+      "file_offset": "0x1b97b0",
+      "value": "0x144040"
+    },
+    {
+      "file_offset": "0x1bcec4",
+      "value": "0x144000"
+    }
+  ],
+  "reference_classification": {
+    "0x995fc..0x99618": "old initializer jump table, only literal consumer replaced",
+    "action_and_screen_records": "entry points retained at same addresses",
+    "0x11be72": "adjacent u16 text index 0x14 and field 0x405e in Small picture item",
+    "0x1b97b0,0x1bcec4": "font bitmap bytes, not code pointers"
+  },
+  "limits": [
+    "Literal scan is not a proof against all computed jumps or data accesses",
+    "File/flash operations use previous bounded models; no physical write",
+    "CRC and precheck acceptance do not establish successful installation or recovery"
+  ]
+}

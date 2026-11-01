@@ -1,0 +1,141 @@
+name,firmware,cpu_pc,file_offset,confidence,note
+B_reset,B_111,0xc0f90,0x80f90,static,Reset vector and initialization
+A_reset,A_111_or_112,0xc0042,0x42,static_A,A startup; different address space
+menu_restore_optimize_selection,B_111,0x143ef6,0x103ef6,static,Restores selection among original modes
+menu_select_optimize,B_111,0x143fa4,0x103fa4,bounded_execution,448 bounded executions; system side effects stubbed
+menu_custom_display_values,B_111,0x1441a8,0x1041a8,static,Reads and displays working custom parameters
+menu_custom_done_or_submenu,B_111,0x144302,0x104302,static,Done sets internal mode 5; other rows enter submenus
+menu_select_sharpness,B_111,0x144432,0x104432,table_plus_static,Action-table link
+menu_select_tone,B_111,0x144696,0x104696,table_plus_static,Action-table link
+menu_select_color,B_111,0x1448b0,0x1048b0,table_plus_static,Action-table link
+menu_select_saturation,B_111,0x1449f2,0x1049f2,table_plus_static,Action-table link
+menu_hue_handler,B_111,0x144ac8,0x104ac8,table_plus_static,Screen callback
+notify_settings_update,B_111,0x1468ae,0x1068ae,static,Event flags and comparison path
+compare_settings_and_wait,B_111,0x132c3e,0xf2c3e,partial_static,Comparison and synchronization; persistent storage unproven
+enqueue_state_action,B_111,0xa9a50,0x69a50,partial_static,Queue and semaphore/event operations
+copy_settings_snapshot,B_111,0x4793a,0x793a,partial_static,Copies working bytes; ultimate destination role unproven
+language_selector,B_111,0x9b14e,0x5b14e,static,Selects one of 15 menu string tables
+ptp_sharpness_set,B_111,0x398698,0x358698,static,Updates working sharpness bits
+ptp_sharpness_refresh,B_111,0x3987ae,0x3587ae,static,Synchronizes property representation
+ptp_curve_upload_handler,B_111,0x8510e,0x4510e,table_plus_static,PTP 90C6 handler; USB upload not tested
+flash_service_rom_source,B_111,0x15cb6c,0x11cb6c,partial_static,Copied to RAM 83CE8658; not a proven recovery entry
+B_settings_commit,B_111,0x403fa,0x3fa,static_v2,See STORAGE_AND_TONE_RU.md; hardware not tested
+B_settings_restore,B_111,0x6b44c,0x2b44c,static_v2,See STORAGE_AND_TONE_RU.md; hardware not tested
+B_journal_scan,B_111,0x6b654,0x2b654,static_v2,See STORAGE_AND_TONE_RU.md; hardware not tested
+B_journal_commit_choose,B_111,0x6b708,0x2b708,static_v2,See STORAGE_AND_TONE_RU.md; hardware not tested
+B_journal_rewrite_all,B_111,0x6b77c,0x2b77c,static_v2,See STORAGE_AND_TONE_RU.md; hardware not tested
+B_journal_append_changed,B_111,0x6b8a0,0x2b8a0,static_v2,See STORAGE_AND_TONE_RU.md; hardware not tested
+B_journal_compare,B_111,0x6ba04,0x2ba04,static_v2,See STORAGE_AND_TONE_RU.md; hardware not tested
+B_transport_queue_init,B_111,0xa995a,0x6995a,static_v2,See STORAGE_AND_TONE_RU.md; hardware not tested
+B_tone_expand,B_111,0x4bf06,0xbf06,static_v2,See STORAGE_AND_TONE_RU.md; hardware not tested
+B_tone_expand_variant,B_111,0x4bf58,0xbf58,static_v2,See STORAGE_AND_TONE_RU.md; hardware not tested
+B_tone_build,B_111,0x323c22,0x2e3c22,static_v2,See STORAGE_AND_TONE_RU.md; hardware not tested
+B_tone_hardware_setup,B_111,0x4b41c,0xb41c,static_v2,See STORAGE_AND_TONE_RU.md; hardware not tested
+B_tone_u16_copy,B_111,0x4bef6,0xbef6,static_v2,See STORAGE_AND_TONE_RU.md; hardware not tested
+color_context_decode,B_111,0x31ed1a,0x2ded1a,static,Initial frame field decode plus scene/Optimize overrides
+color_matrix_select_load,B_111,0x320cd8,0x2e0cd8,static,Select M1/M2 and auxiliary tables; full branch coverage not claimed
+color_hue_adjust_M2,B_111,0x322606,0x2e2606,bounded_execution_fp_hooks,462 runs; original FP runtime substituted by host float32
+color_saturation_select,B_111,0x3232d8,0x2e32d8,bounded_execution,1092 prefix and 192 full runs; x/q physical semantics unresolved
+color_saturation_remainder,B_111,0x32340e,0x2e340e,bounded_execution,Second candidate only for remainder 6/8/10; odd remainders use first
+color_context_serialize,B_111,0x3234be,0x2e34be,static,Includes matrix loops tested separately; full function not executed
+color_matrix_sign_magnitude,B_111,0x323566,0x2e3566,bounded_execution,399 matrix pairs; negative sign bits M1=0x400 M2=0x200
+color_matrix_hardware_copy,B_111,0x4b4ca,0xb4ca,bounded_execution,399 matrix pairs copied to synthetic register banks
+color_profile_expand_dispatch,B_111,0x324124,0x2e4124,bounded_execution,All 48 color and 5 monochrome profiles executed
+color_profile_expand_4bit,B_111,0x324306,0x2e4306,bounded_execution,511 packed bytes plus 2 seeds produce 1024 uint8 values
+color_profile_expand_2bit,B_111,0x3241a0,0x2e41a0,bounded_execution,Mono branch: 256 packed bytes plus 2 seeds produce 1026 uint8 values
+color_byte_to_halfword_copy,B_111,0x4bee6,0xbee6,static,"Reads uint8, writes uint16 to hardware table"
+pixel_frame_driver,B_111,0x4b260,0xb260,static_and_bounded_fragments,"Frame input/output geometry, parameter upload, start and completion wait; no ASIC emulation"
+pixel_static_lut_init,B_111,0x4be82,0xbe82,bounded_execution,"16640 halfword writes; rescale, sqrt and three copies of square LUT"
+pixel_complete_interrupt,B_111,0x47874,0x7874,static,Checks 4001FF18 bit 0 and signals group 4 bit 00400000
+pixel_jpeg_driver,B_111,0x49a7c,0x9a7c,static_and_bounded_fragment,Three plane input; standard Huffman tables identified; codec itself not emulated
+pixel_jpeg_huffman_init,B_111,0x49f74,0x9f74,static_and_bytes,Loads standard DC/AC tables from ROM C642E and C6360
+pixel_resize_driver,B_111,0x494f2,0x94f2,static,40020000 engine; ratios and per-plane input/output addresses
+pixel_lut_E600_expand,B_111,0x324020,0x2e4020,bounded_execution,10 records decoded and 256-value uploads verified; signal axis unknown
+pixel_lut_E800_expand,B_111,0x3240a2,0x2e40a2,bounded_execution,Sharpening-setting-linked index; signal axis unknown
+pixel_lut_EA00_expand,B_111,0x324062,0x2e4062,bounded_execution,"258 generated values, 256 uploaded; sharpening-setting-linked index"
+pixel_lut_FC00_expand,B_111,0x3240e4,0x2e40e4,bounded_execution,"258 generated values, 256 uploaded; sharpening-setting-linked index"
+pixel_scene_inputs,B_111,0x31b6d2,0x2db6d2,static,q from 15 signed words; x from ctx+6D; physical units unresolved
+update_menu_availability,B_111,0x140fe4,0x100fe4,static,Calls candidate selection and adjusts menu count
+update_choose_B_then_A,B_111,0xab5cc,0x6b5cc,static,B name match takes precedence; searches A only if no matching B filename
+update_entry_preconditions,B_111,0xab646,0x6b646,partial_static,Physical meanings and full hardware prerequisites remain unresolved
+update_match_directory_name,B_111,0xabe82,0x6be82,bounded_execution,Original matching code; directory operations modeled in memory
+update_B_size_gate,B_111,0xabbfe,0x6bbfe,bounded_execution,Requires exact 0x3D0000 byte size
+update_B_identity_and_version,B_111,0xabce4,0x6bce4,bounded_execution,Plain identity string and copied version prefix; file operations modeled
+update_A_size_gate_in_B,B_111,0xabc6e,0x6bc6e,bounded_execution,Accepts 0x40000 or 0x40002; not an execution of A firmware
+update_A_header_reader_in_B,B_111,0xabe28,0x6be28,bounded_execution,Reads six bytes from A file through modeled file operations
+update_menu_yes_action,B_111,0x1416dc,0x1016dc,static,Calls the update coordinator after menu preparation
+update_coordinator,B_111,0xab88e,0x6b88e,static,"Checks state, reads image, checks CRC, synchronizes and invokes writer"
+update_load_B_image,B_111,0xab97c,0x6b97c,static,Reads 0x3D0000 bytes to 0x81000000 and checks count
+update_hardware_handshake,B_111,0xab9f8,0x6b9f8,partial_static,Command and waits found; physical protocol not established
+crc16_xmodem_original,B_111,0x44ccc,0x4ccc,bounded_execution,265 CPU test vectors; full images use exact loop model and independent CRC
+update_RAM_writer_wrapper,B_111,0x6b430,0x2b430,static,Transfers to RAM 0x83CE86CE
+update_RAM_writer_entry,B_111,0x83ce86ce,0x11cbe2,static,RAM copy of file 0x11CBE2; full entry preamble not emulated
+update_RAM_supervisor,B_111,0x83ce877c,0x11cc90,bounded_execution,Executed through 0x83CE8892; physical erase/program calls stubbed
+update_RAM_flash_erase,B_111,0x83ce8954,0x11ce68,partial_static,Physical flash command function; not executed in v7 tests
+update_RAM_flash_program,B_111,0x83ce89e0,0x11cef4,partial_static,Physical flash command function; not executed in v7 tests
+update_RAM_compare_tag16,B_111,0x83ce8e96,0x11d3aa,bounded_execution,Original comparison executed in wallpaper branch tests
+flash_identify_and_select_protocol,B_111,0x83ce8658,0x11cb6c,bounded_execution,Eight identity/locking cases; flash ID and OS effects modeled
+flash_erase_range_geometry,B_111,0x83ce8954,0x11ce68,bounded_execution,Software grouping and blank-check invocation tested with recorded calls
+flash_program_range_and_verify,B_111,0x83ce89e0,0x11cef4,bounded_execution,Original writer and full readback; immediate host-memory word commit model
+flash_verify_halfwords,B_111,0x83ce8a2e,0x11cf42,bounded_execution,"Compares entire programmed range to source, rejects injected low-bit corruption"
+flash_verify_erased,B_111,0x83ce8a9e,0x11cfb2,bounded_execution,Rejects any non-FFFF halfword in tested range
+flash_issue_erase_commands,B_111,0x83ce8b02,0x11d016,bounded_execution,Both protocols tested with synthetic ready/error responses
+flash_program_halfword,B_111,0x83ce8be8,0x11d0fc,bounded_execution,"Command sequence, FFFF skip and failure handling"
+flash_poll_DQ7_DQ5,B_111,0x83ce8c7a,0x11d18e,bounded_execution,"1024 ready-transition cases, 2 errors, 4 bounded persistent-busy cases"
+flash_error_read_mode_reset,B_111,0x83ce8cb0,0x11d1c4,bounded_execution,F0 issued only for protocol kind 0
+update_success_failure_tail,B_111,0x83ce8892,0x11cda6,bounded_execution,Four output cases; delay hooks; stops at terminal self-loop
+update_peripheral_finish_sequence,B_111,0x83ce8ec0,0x11d3d4,bounded_execution,Original MMIO writes; peripheral meanings not fully established
+update_serial_word_output,B_111,0x83ce8fc8,0x11d4dc,bounded_execution,Sixteen clock-high writes for FC04; no physical bus simulation
+update_extra_area_writer,B_111,0x83ce88e0,0x11cdf4,static,Separate writer for CPU F0000..120000; caller activation unresolved
+update_admission_full_predicate,B_111,0xab646,0x6b646,bounded_execution,128 boolean input combinations with original 40DDA; OS/MMIO input models
+update_busy_state_predicate,B_111,0x40dda,0xdda,bounded_execution,Three RAM halfwords and MMIO50000107 bit5; meanings not fully known
+update_request_ack_timeout,B_111,0xab9f8,0x6b9f8,bounded_execution,Nine scenarios including deadline and uint32 wrap; OS/command/MMIO models
+update_ack_event_callback,B_111,0xaa1ec,0x6a1ec,bounded_execution,"Four request/ack combinations; event, MMIO bit clear and modeled task exit"
+clock_read_68000114,B_111,0xc13f2,0x813f2,bounded_execution,Real accessor; synthetic MMIO values in handshake tests
+extra_version_metadata_reader,B_111,0xab6c8,0x6b6c8,static,Reads optional metadata pointer at FFBC0; actual device contents unavailable
+A_rtos_init,A_111_or_112,0xfef32,0x3ef32,bounded_execution_A,Executed to FEFEA excluded; no IRQ or physical MMIO
+A_application_clear,A_111_or_112,0xc040e,0x40e,bounded_execution_A,Version dependent endpoint; bounded execution
+A_os_clear,A_111_or_112,0xff01e,0x3f01e,bounded_execution_A,Three nonempty and three empty clear intervals
+A_init_tasks,A_111_or_112,0xff0e8,0x3f0e8,bounded_execution_A,12 task descriptors plus idle; bounded execution
+A_prepare_tcb,A_111_or_112,0xff5dc,0x3f5dc,bounded_execution_A,Initialize 44-byte task structure
+A_prepare_initial_context,A_111_or_112,0xff59c,0x3f59c,bounded_execution_A,Ready context and links; bounded execution
+A_ready_enqueue,A_111_or_112,0xff7a2,0x3f7a2,bounded_execution_A,Queue list and bitmap; MMIO shadow model
+A_task_table,A_111_or_112,0xfeb0c,0x3eb0c,static_A,"Count 12, stride 28; loop consumes one extra idle record"
+A_idle,A_111_or_112,0xff01c,0x3f01c,static_A,"Self branch; static, task not executed"
+A_task5_memory,A_112,0xd4622,0x14622,bounded_execution_A,One iteration executed with serial/OS models
+A_memory_status_retry,A_112,0xd479e,0x1479e,bounded_execution_A,Six polls; ready on sixth also sets error flag
+A_memory_write_pages,A_112,0xd4714,0x14714,bounded_execution_A,32-byte boundaries; remainder helper modeled
+A_memory_read,A_112,0xd498a,0x1498a,bounded_execution_A,Read command and receive under transfer model
+A_memory_byte_callback,A_112,0xd4a5e,0x14a5e,bounded_execution_A,Original callback executed; external byte events injected
+A_memory_receive_setup,A_112,0xd4b0c,0x14b0c,bounded_execution_A,Original setup writes; hardware transfer not modeled
+A_startup_memory_load,A_112,0xc1164,0x1164,bounded_execution_A,Read 1024 and check sum of 896 through explicit mailbox model
+A_memory_request,A_112,0xc11a4,0x11a4,bounded_execution_A,16-byte request producer
+A_startup_data_checksum,A_112,0xc1214,0x1214,bounded_execution_A,"8-bit additive sum, empty/FF flags"
+A_task1_launch_helper,A_112,0xc137c,0x137c,bounded_execution_A,Conditional starts; tested C371=0
+A_int40_dispatch,A_112,0xfeecc,0x3eecc,static_A,Static signed-offset dispatch to selected OS handlers
+os_int40_dispatcher,B_111,0xc1586,0x81586,static_v16,INT 0x40 entry; handler offsets table relative to 0xC157E indexed by code in r12
+os_task_table,B_111,0xea868,0xaa868,static_v16,Data: u16 count 24 / u16 record size 0x1C; records TCB/id/priority/0/attr/entry/stack/0
+resource_lock,B_111,0x44be8,0x4be8,static_v16,get_tid + wai_sem(id); owner in 0x83CE9064[id]
+resource_unlock,B_111,0x44c26,0x4c26,static_v16,sig_sem(id)
+irq42_imgproc_done,B_111,0x47874,0x7874,static_v16,IRQ 42: 0x4001FF18 bit0 -> set_flg(4 0x400000)
+irq39_jpeg,B_111,0x47786,0x7786,static_v16,IRQ 39: JPEG block 0x40030FF6 -> group 4 bits 0x20000/0x10000
+irq40_resize,B_111,0x47806,0x7806,static_v16,IRQ 40: resize block 0x40021FFE -> set_flg(4 0x800000)
+irq35_readout,B_111,0x4765c,0x765c,static_v16,IRQ 35: block 0x40008010 -> set_flg(4 0x4000)
+raw_frame_pool_init,B_111,0x40fe0,0xfe0,static_v16,1-3 raw frame buffers 0x80048000+i*0x8DE400; descriptors 0x83D21248+i*0x2760
+ycbcr_pool_init,B_111,0x41834,0x1834,static_v16,1-2 output buffers base+i*0xC0ED80; +0x0C planes +0x10 preview +0x14 thumbnail
+ycbcr_acquire,B_111,0x431fe,0x31fe,static_v16,Returns output descriptor for the current frame (waits)
+ycbcr_release,B_111,0x41992,0x1992,static_v16,Returns output descriptor to free list 0x83D1D34C
+readout_setup,B_111,0x4621e,0x621e,static_v16,Task 5: programs 0x40008000 (+0x48 raw buffer +0x68/+0x6C readout data)
+pipeline_job_submit,B_111,0x441c6,0x41c6,static_v16,Job with three callbacks and context under resource 15
+frame_pass_wrapper_preview,B_111,0x4ae0e,0xae0e,static_v16,params 0x4B168 -> pass 0x4B260 -> screen resize 0x4867E
+frame_pass_wrapper_preview2,B_111,0x4ae5e,0xae5e,static_v16,params -> pass -> screen resize 0x48704
+frame_pass_wrapper,B_111,0x4aeae,0xaeae,static_v16,params -> pass without screen resize
+task8_frame_processing,B_111,0x4a8a6,0xa8a6,static_v16,Task 8 entry; starts task 9
+task9_jpeg,B_111,0x47d10,0x7d10,static_v16,Task 9 entry; handler by desc+0x41&7 from table 0xC6220
+task10_preview_thumbnail,B_111,0x47e86,0x7e86,static_v16,Task 10 entry; builds 570x375 preview and 160x120 thumbnail; ext_tsk
+jpeg_start_helpers,B_111,0x48548,0x8548,static_v16,sta_tsk(10) and sta_tsk(11) from JPEG handlers
+thumbnail_bands_fill,B_111,0x485ec,0x85ec,static_v16,Y=0 and C=0x80 letterbox bands of the thumbnail
+exif_tag_table,B_111,0xd743c,0x9743c,static_v16,Data: EXIF tag descriptors 16 bytes (tag type count default writer)
+exif_usercomment_writer,B_111,0x741f6,0x341f6,static_v16,ASCII prefix + 36 bytes from 0x83CED112 / spaces / 0x83D288A0
+exif_software_writer,B_111,0x73904,0x33904,static_v16,Copies version string via pointer 0xEFBF0
+exif_usercomment_reader,B_111,0x572bc,0x172bc,static_v16,Playback: tag 0x9286 of existing file -> 0x83D288A0

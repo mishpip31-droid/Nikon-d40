@@ -1,0 +1,27 @@
+Static bounded listing; code/data boundaries and delay slots require review.
+Original B SHA256: b9df48d461e875dce4ba84da88164af170dfc48ad9f7674859623bad0401032e
+FILE     CPU_PC   BYTES        MNEMONIC  OPERANDS
+0000793a 0004793a 9f8583ce97f3 LDI:32    #0x83ce97f3,r5
+00007940 00047940 9f86000ca818 LDI:32    #0xca818,r6
+00007946 00047946 9f8083ced224 LDI:32    #0x83ced224,r0
+0000794c 0004794c c08d         LDI:8     #0x8,r13
+0000794e 0004794e a5fd         ADD2      #-1,r13
+00007950 00047950 020c         LDUB      @(r13+r0),r12
+00007952 00047952 fdfd         BGT:D     0x4794e
+00007954 00047954 124c         STB       r12,@(r13+r4)
+00007956 00047956 8b40         MOV       r4,r0
+00007958 00047958 a480         ADD       #0x8,r0
+0000795a 0004795a 9f8183ce957b LDI:32    #0x83ce957b,r1
+00007960 00047960 c09d         LDI:8     #0x9,r13
+00007962 00047962 a5fd         ADD2      #-1,r13
+00007964 00047964 021c         LDUB      @(r13+r1),r12
+00007966 00047966 fdfd         BGT:D     0x47962
+00007968 00047968 120c         STB       r12,@(r13+r0)
+0000796a 0004796a c110         LDI:8     #0x11,r0
+0000796c 0004796c a640         ADD       r4,r0
+0000796e 0004796e 9f8183ce974d LDI:32    #0x83ce974d,r1
+00007974 00047974 c0ed         LDI:8     #0xe,r13
+00007976 00047976 a5fd         ADD2      #-1,r13
+00007978 00047978 021c         LDUB      @(r13+r1),r12
+0000797a 0004797a fdfd         BGT:D     0x47976
+0000797c 0004797c 120c         STB       r12,@(r13+r0)

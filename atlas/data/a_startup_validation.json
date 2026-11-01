@@ -1,0 +1,667 @@
+{
+  "status": "PASS",
+  "version": 9,
+  "hardware_runs": 0,
+  "scope": "Original A FEF32 to FEFEA excluded, no hooks; shadow MMIO writes; no interrupts, scheduler or tasks executed",
+  "models": [
+    "RAM byte arrays",
+    "shadow MMIO registers, no physical effects",
+    "bounded FR subset, not a complete CPU"
+  ],
+  "variants": {
+    "AD400111.bin": {
+      "sha256": "ff96a874d3a22f9c18c610bd5bf55f4e6a53603c865fdb8e913a1d53591db5c9",
+      "bss_range": [
+        245760,
+        256588
+      ],
+      "rtos_clear_ranges": [
+        [
+          256864,
+          257740
+        ],
+        [
+          257740,
+          258668
+        ],
+        [
+          258668,
+          258764
+        ]
+      ],
+      "tasks": [
+        {
+          "record_cpu": 1043216,
+          "tcb": 256988,
+          "id": 1,
+          "queue_level": 4,
+          "unknown_u32_08": 0,
+          "flags": 2147483648,
+          "entry": 790146,
+          "initial_frame": 259068,
+          "initial_r4": 0,
+          "ready_at_init": true
+        },
+        {
+          "record_cpu": 1043244,
+          "tcb": 257032,
+          "id": 2,
+          "queue_level": 4,
+          "unknown_u32_08": 0,
+          "flags": 0,
+          "entry": 1016118,
+          "initial_frame": 259420,
+          "initial_r4": 0,
+          "ready_at_init": false
+        },
+        {
+          "record_cpu": 1043272,
+          "tcb": 257076,
+          "id": 3,
+          "queue_level": 4,
+          "unknown_u32_08": 0,
+          "flags": 0,
+          "entry": 1021496,
+          "initial_frame": 259628,
+          "initial_r4": 0,
+          "ready_at_init": false
+        },
+        {
+          "record_cpu": 1043300,
+          "tcb": 257120,
+          "id": 4,
+          "queue_level": 4,
+          "unknown_u32_08": 0,
+          "flags": 0,
+          "entry": 800284,
+          "initial_frame": 259916,
+          "initial_r4": 0,
+          "ready_at_init": false
+        },
+        {
+          "record_cpu": 1043328,
+          "tcb": 257164,
+          "id": 5,
+          "queue_level": 2,
+          "unknown_u32_08": 0,
+          "flags": 2147483648,
+          "entry": 869676,
+          "initial_frame": 260156,
+          "initial_r4": 0,
+          "ready_at_init": true
+        },
+        {
+          "record_cpu": 1043356,
+          "tcb": 257208,
+          "id": 6,
+          "queue_level": 4,
+          "unknown_u32_08": 0,
+          "flags": 0,
+          "entry": 871172,
+          "initial_frame": 260444,
+          "initial_r4": 0,
+          "ready_at_init": false
+        },
+        {
+          "record_cpu": 1043384,
+          "tcb": 257252,
+          "id": 7,
+          "queue_level": 4,
+          "unknown_u32_08": 0,
+          "flags": 0,
+          "entry": 882684,
+          "initial_frame": 260732,
+          "initial_r4": 0,
+          "ready_at_init": false
+        },
+        {
+          "record_cpu": 1043412,
+          "tcb": 257296,
+          "id": 8,
+          "queue_level": 4,
+          "unknown_u32_08": 0,
+          "flags": 0,
+          "entry": 892816,
+          "initial_frame": 260940,
+          "initial_r4": 0,
+          "ready_at_init": false
+        },
+        {
+          "record_cpu": 1043440,
+          "tcb": 257340,
+          "id": 9,
+          "queue_level": 3,
+          "unknown_u32_08": 0,
+          "flags": 0,
+          "entry": 895224,
+          "initial_frame": 261196,
+          "initial_r4": 0,
+          "ready_at_init": false
+        },
+        {
+          "record_cpu": 1043468,
+          "tcb": 257384,
+          "id": 10,
+          "queue_level": 6,
+          "unknown_u32_08": 0,
+          "flags": 0,
+          "entry": 917634,
+          "initial_frame": 261564,
+          "initial_r4": 0,
+          "ready_at_init": false
+        },
+        {
+          "record_cpu": 1043496,
+          "tcb": 257428,
+          "id": 11,
+          "queue_level": 1,
+          "unknown_u32_08": 0,
+          "flags": 0,
+          "entry": 964308,
+          "initial_frame": 261884,
+          "initial_r4": 0,
+          "ready_at_init": false
+        },
+        {
+          "record_cpu": 1043524,
+          "tcb": 257472,
+          "id": 12,
+          "queue_level": 3,
+          "unknown_u32_08": 0,
+          "flags": 0,
+          "entry": 989408,
+          "initial_frame": 262060,
+          "initial_r4": 0,
+          "ready_at_init": false
+        },
+        {
+          "record_cpu": 1043552,
+          "tcb": 257516,
+          "id": 0,
+          "queue_level": 9,
+          "unknown_u32_08": 0,
+          "flags": 2147483648,
+          "entry": 1044508,
+          "initial_frame": 258684,
+          "initial_r4": 0,
+          "ready_at_init": true
+        }
+      ],
+      "ready_ids": [
+        1,
+        5,
+        0
+      ],
+      "ready_bitmap": 1350565888,
+      "run_results": [
+        {
+          "pattern": "zero",
+          "steps": 20109,
+          "unique_pcs": 273,
+          "write_operations": 4869,
+          "status": "PASS"
+        },
+        {
+          "pattern": "ff",
+          "steps": 20109,
+          "unique_pcs": 273,
+          "write_operations": 4869,
+          "status": "PASS"
+        },
+        {
+          "pattern": "a5",
+          "steps": 20109,
+          "unique_pcs": 273,
+          "write_operations": 4869,
+          "status": "PASS"
+        },
+        {
+          "pattern": "5a",
+          "steps": 20109,
+          "unique_pcs": 273,
+          "write_operations": 4869,
+          "status": "PASS"
+        },
+        {
+          "pattern": "ascending",
+          "steps": 20109,
+          "unique_pcs": 273,
+          "write_operations": 4869,
+          "status": "PASS"
+        },
+        {
+          "pattern": "random_seed_330",
+          "steps": 20109,
+          "unique_pcs": 273,
+          "write_operations": 4869,
+          "status": "PASS"
+        }
+      ],
+      "written_ram_ranges": [
+        [
+          245760,
+          256588
+        ],
+        [
+          256864,
+          258764
+        ],
+        [
+          259068,
+          259080
+        ],
+        [
+          259104,
+          259108
+        ],
+        [
+          260156,
+          260168
+        ],
+        [
+          260192,
+          260196
+        ]
+      ],
+      "mmio_writes": [
+        [
+          1135,
+          30,
+          1
+        ],
+        [
+          68,
+          1,
+          1
+        ],
+        [
+          68,
+          1,
+          1
+        ],
+        [
+          68,
+          1,
+          1
+        ],
+        [
+          1060,
+          6,
+          1
+        ],
+        [
+          1066,
+          1,
+          1
+        ],
+        [
+          1067,
+          115,
+          1
+        ],
+        [
+          1070,
+          193,
+          1
+        ]
+      ],
+      "entry_prefix_hex": {
+        "1": "8fc017810f028b489b39cc9a8b90a410",
+        "2": "8fc017810f019b38d0a89b39e1b7d014",
+        "3": "8fc017810f019b38c36a9b39cf99d90e",
+        "4": "8ff017810f038b499b3ae1e19b3be1c8",
+        "5": "8fe017810f039b38e23d9b39d4f89b3a",
+        "6": "8ff017810f029b38e2459b39ccdc9b3a",
+        "7": "17048ff017810f019b38d17d9b39d17f",
+        "8": "8ff017819b38e5109b39e5159b3ae517",
+        "9": "8ff017810f029b38d9ee9b3ae0529b3b",
+        "10": "8fc017810f019b38e7cd9b39d3719b35",
+        "11": "8fc017810f018b489b39d3779189d02f",
+        "12": "8fc017810f029b38d38c9b0901129b34",
+        "0": "e0ffc0009f8d0003eb609f810003eecc"
+      },
+      "new_instruction_cases": 128
+    },
+    "AD400112.bin": {
+      "sha256": "0cc92921d6b2ad5d5cfa070abeebdd9aaca224d326e42a26339e3ac384270394",
+      "bss_range": [
+        245760,
+        256604
+      ],
+      "rtos_clear_ranges": [
+        [
+          256864,
+          257740
+        ],
+        [
+          257740,
+          258668
+        ],
+        [
+          258668,
+          258764
+        ]
+      ],
+      "tasks": [
+        {
+          "record_cpu": 1043216,
+          "tcb": 256988,
+          "id": 1,
+          "queue_level": 4,
+          "unknown_u32_08": 0,
+          "flags": 2147483648,
+          "entry": 790146,
+          "initial_frame": 259068,
+          "initial_r4": 0,
+          "ready_at_init": true
+        },
+        {
+          "record_cpu": 1043244,
+          "tcb": 257032,
+          "id": 2,
+          "queue_level": 4,
+          "unknown_u32_08": 0,
+          "flags": 0,
+          "entry": 1016118,
+          "initial_frame": 259420,
+          "initial_r4": 0,
+          "ready_at_init": false
+        },
+        {
+          "record_cpu": 1043272,
+          "tcb": 257076,
+          "id": 3,
+          "queue_level": 4,
+          "unknown_u32_08": 0,
+          "flags": 0,
+          "entry": 1021496,
+          "initial_frame": 259628,
+          "initial_r4": 0,
+          "ready_at_init": false
+        },
+        {
+          "record_cpu": 1043300,
+          "tcb": 257120,
+          "id": 4,
+          "queue_level": 4,
+          "unknown_u32_08": 0,
+          "flags": 0,
+          "entry": 800530,
+          "initial_frame": 259916,
+          "initial_r4": 0,
+          "ready_at_init": false
+        },
+        {
+          "record_cpu": 1043328,
+          "tcb": 257164,
+          "id": 5,
+          "queue_level": 2,
+          "unknown_u32_08": 0,
+          "flags": 2147483648,
+          "entry": 869922,
+          "initial_frame": 260156,
+          "initial_r4": 0,
+          "ready_at_init": true
+        },
+        {
+          "record_cpu": 1043356,
+          "tcb": 257208,
+          "id": 6,
+          "queue_level": 4,
+          "unknown_u32_08": 0,
+          "flags": 0,
+          "entry": 871418,
+          "initial_frame": 260444,
+          "initial_r4": 0,
+          "ready_at_init": false
+        },
+        {
+          "record_cpu": 1043384,
+          "tcb": 257252,
+          "id": 7,
+          "queue_level": 4,
+          "unknown_u32_08": 0,
+          "flags": 0,
+          "entry": 882930,
+          "initial_frame": 260732,
+          "initial_r4": 0,
+          "ready_at_init": false
+        },
+        {
+          "record_cpu": 1043412,
+          "tcb": 257296,
+          "id": 8,
+          "queue_level": 4,
+          "unknown_u32_08": 0,
+          "flags": 0,
+          "entry": 893062,
+          "initial_frame": 260940,
+          "initial_r4": 0,
+          "ready_at_init": false
+        },
+        {
+          "record_cpu": 1043440,
+          "tcb": 257340,
+          "id": 9,
+          "queue_level": 3,
+          "unknown_u32_08": 0,
+          "flags": 0,
+          "entry": 895470,
+          "initial_frame": 261196,
+          "initial_r4": 0,
+          "ready_at_init": false
+        },
+        {
+          "record_cpu": 1043468,
+          "tcb": 257384,
+          "id": 10,
+          "queue_level": 6,
+          "unknown_u32_08": 0,
+          "flags": 0,
+          "entry": 917880,
+          "initial_frame": 261564,
+          "initial_r4": 0,
+          "ready_at_init": false
+        },
+        {
+          "record_cpu": 1043496,
+          "tcb": 257428,
+          "id": 11,
+          "queue_level": 1,
+          "unknown_u32_08": 0,
+          "flags": 0,
+          "entry": 964554,
+          "initial_frame": 261884,
+          "initial_r4": 0,
+          "ready_at_init": false
+        },
+        {
+          "record_cpu": 1043524,
+          "tcb": 257472,
+          "id": 12,
+          "queue_level": 3,
+          "unknown_u32_08": 0,
+          "flags": 0,
+          "entry": 989654,
+          "initial_frame": 262060,
+          "initial_r4": 0,
+          "ready_at_init": false
+        },
+        {
+          "record_cpu": 1043552,
+          "tcb": 257516,
+          "id": 0,
+          "queue_level": 9,
+          "unknown_u32_08": 0,
+          "flags": 2147483648,
+          "entry": 1044508,
+          "initial_frame": 258684,
+          "initial_r4": 0,
+          "ready_at_init": true
+        }
+      ],
+      "ready_ids": [
+        1,
+        5,
+        0
+      ],
+      "ready_bitmap": 1350565888,
+      "run_results": [
+        {
+          "pattern": "zero",
+          "steps": 20129,
+          "unique_pcs": 273,
+          "write_operations": 4873,
+          "status": "PASS"
+        },
+        {
+          "pattern": "ff",
+          "steps": 20129,
+          "unique_pcs": 273,
+          "write_operations": 4873,
+          "status": "PASS"
+        },
+        {
+          "pattern": "a5",
+          "steps": 20129,
+          "unique_pcs": 273,
+          "write_operations": 4873,
+          "status": "PASS"
+        },
+        {
+          "pattern": "5a",
+          "steps": 20129,
+          "unique_pcs": 273,
+          "write_operations": 4873,
+          "status": "PASS"
+        },
+        {
+          "pattern": "ascending",
+          "steps": 20129,
+          "unique_pcs": 273,
+          "write_operations": 4873,
+          "status": "PASS"
+        },
+        {
+          "pattern": "random_seed_330",
+          "steps": 20129,
+          "unique_pcs": 273,
+          "write_operations": 4873,
+          "status": "PASS"
+        }
+      ],
+      "written_ram_ranges": [
+        [
+          245760,
+          256604
+        ],
+        [
+          256864,
+          258764
+        ],
+        [
+          259068,
+          259080
+        ],
+        [
+          259104,
+          259108
+        ],
+        [
+          260156,
+          260168
+        ],
+        [
+          260192,
+          260196
+        ]
+      ],
+      "mmio_writes": [
+        [
+          1135,
+          30,
+          1
+        ],
+        [
+          68,
+          1,
+          1
+        ],
+        [
+          68,
+          1,
+          1
+        ],
+        [
+          68,
+          1,
+          1
+        ],
+        [
+          1060,
+          6,
+          1
+        ],
+        [
+          1066,
+          1,
+          1
+        ],
+        [
+          1067,
+          115,
+          1
+        ],
+        [
+          1070,
+          193,
+          1
+        ]
+      ],
+      "entry_prefix_hex": {
+        "1": "8fc017810f028b489b39cc9a8b90a410",
+        "2": "8fc017810f019b38d0a89b39e1c7d014",
+        "3": "8fc017810f019b38c36a9b39cf99d90e",
+        "4": "8ff017810f038b499b3ae1f19b3be1d8",
+        "5": "8fe017810f039b38e24d9b39d5089b3a",
+        "6": "8ff017810f029b38e2559b39ccdc9b3a",
+        "7": "17048ff017810f019b38d17d9b39d17f",
+        "8": "8ff017819b38e5209b39e5259b3ae527",
+        "9": "8ff017810f029b38d9fe9b3ae0629b3b",
+        "10": "8fc017810f019b38e7dd9b39d3719b35",
+        "11": "8fc017810f018b489b39d3779189d02f",
+        "12": "8fc017810f029b38d38c9b0901129b34",
+        "0": "e0ffc0009f8d0003eb609f810003eecc"
+      },
+      "new_instruction_cases": 128
+    }
+  },
+  "sources": [
+    "https://www.manualsdir.com/manuals/103548/fujitsu-fr-family-32-bit-microcontroller-instruction-manuel-cm71-00101-5e.html?page=246",
+    "https://manualsdump.com/en/manuals/fujitsu-cm71-00101-5e/119873/117"
+  ],
+  "version_comparison": {
+    "changed_byte_count": 195960,
+    "a112_bss_growth": 16,
+    "task_entries_changed": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "warning": "Same-offset byte differences are not semantic change coverage; task correspondence follows stable table IDs."
+  },
+  "totals": {
+    "startup_runs": 12,
+    "added_opcode_cases": 256,
+    "initialized_task_records": 13,
+    "active_initial_contexts_per_run": 3,
+    "real_camera_tests": 0,
+    "rejected_wrong_inputs": 4
+  }
+}

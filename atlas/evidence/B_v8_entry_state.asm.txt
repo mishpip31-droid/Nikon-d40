@@ -1,0 +1,90 @@
+00000d60 00040d60 1f40         INT       #0x40
+00000d62 00040d62 9fa0         NOP       
+00000d64 00040d64 9f8c00044c26 LDI:32    #0x44c26,r12
+00000d6a 00040d6a 9f1c         CALL:D    @r12
+00000d6c 00040d6c c0f4         LDI:8     #0xf,r4
+00000d6e 00040d6e c014         LDI:8     #0x1,r4
+00000d70 00040d70 9f90         LEAVE     
+00000d72 00040d72 0781         LD        @r15+,RP
+00000d74 00040d74 9f20         RET:D     
+00000d76 00040d76 0708         LD        @r15+,r8
+00000d78 00040d78 1781         ST        RP,@-r15
+00000d7a 00040d7a 9f8c00044be8 LDI:32    #0x44be8,r12
+00000d80 00040d80 9f1c         CALL:D    @r12
+00000d82 00040d82 c0f4         LDI:8     #0xf,r4
+00000d84 00040d84 9f8c83ce9061 LDI:32    #0x83ce9061,r12
+00000d8a 00040d8a 06c0         LDUB      @r12,r0
+00000d8c 00040d8c a800         CMP       #0x0,r0
+00000d8e 00040d8e e306         BNE       0x40d9c
+00000d90 00040d90 9f8c00044c26 LDI:32    #0x44c26,r12
+00000d96 00040d96 9f1c         CALL:D    @r12
+00000d98 00040d98 c0f4         LDI:8     #0xf,r4
+00000d9a 00040d9a e00e         BRA       0x40db8
+00000d9c 00040d9c d0ef         CALL      0x40f7c
+00000d9e 00040d9e a814         CMP       #0x1,r4
+00000da0 00040da0 f306         BNE:D     0x40dae
+00000da2 00040da2 c0f4         LDI:8     #0xf,r4
+00000da4 00040da4 9f8c00044c26 LDI:32    #0x44c26,r12
+00000daa 00040daa 971c         CALL      @r12
+00000dac 00040dac e005         BRA       0x40db8
+00000dae 00040dae 9f8c00044c26 LDI:32    #0x44c26,r12
+00000db4 00040db4 971c         CALL      @r12
+00000db6 00040db6 d746         CALL      0x40c44
+00000db8 00040db8 0781         LD        @r15+,RP
+00000dba 00040dba 9720         RET       
+00000dbc 00040dbc 0f02         ENTER     #0x8
+00000dbe 00040dbe 8be4         MOV       r14,r4
+00000dc0 00040dc0 a5c4         ADD2      #-4,r4
+00000dc2 00040dc2 c015         LDI:8     #0x1,r5
+00000dc4 00040dc4 9f8608000000 LDI:32    #0x8000000,r6
+00000dca 00040dca c027         LDI:8     #0x2,r7
+00000dcc 00040dcc cd2c         LDI:8     #0xd2,r12
+00000dce 00040dce 978c         EXTSB     r12
+00000dd0 00040dd0 1f40         INT       #0x40
+00000dd2 00040dd2 9fa0         NOP       
+00000dd4 00040dd4 144d         ST        r13,@r4
+00000dd6 00040dd6 9f90         LEAVE     
+00000dd8 00040dd8 9720         RET       
+00000dda 00040dda 9f8c83ce905e LDI:32    #0x83ce905e,r12
+00000de0 00040de0 05c0         LDUH      @r12,r0
+00000de2 00040de2 a800         CMP       #0x0,r0
+00000de4 00040de4 e202         BEQ       0x40dea
+00000de6 00040de6 f018         BRA:D     0x40e18
+00000de8 00040de8 c014         LDI:8     #0x1,r4
+00000dea 00040dea 9f8c83ce905a LDI:32    #0x83ce905a,r12
+00000df0 00040df0 05c0         LDUH      @r12,r0
+00000df2 00040df2 a800         CMP       #0x0,r0
+00000df4 00040df4 e202         BEQ       0x40dfa
+00000df6 00040df6 f010         BRA:D     0x40e18
+00000df8 00040df8 c014         LDI:8     #0x1,r4
+00000dfa 00040dfa 9f8c83ce9054 LDI:32    #0x83ce9054,r12
+00000e00 00040e00 05c0         LDUH      @r12,r0
+00000e02 00040e02 a800         CMP       #0x0,r0
+00000e04 00040e04 e202         BEQ       0x40e0a
+00000e06 00040e06 f008         BRA:D     0x40e18
+00000e08 00040e08 c014         LDI:8     #0x1,r4
+00000e0a 00040e0a 9f8050000107 LDI:32    #0x50000107,r0
+00000e10 00040e10 8920         BTSTH     #0x2,@r0
+00000e12 00040e12 f302         BNE:D     0x40e18
+00000e14 00040e14 c014         LDI:8     #0x1,r4
+00000e16 00040e16 c004         LDI:8     #0x0,r4
+00000e18 00040e18 9720         RET       
+00000e1a 00040e1a 9f8c83ce905e LDI:32    #0x83ce905e,r12
+00000e20 00040e20 05c0         LDUH      @r12,r0
+00000e22 00040e22 a800         CMP       #0x0,r0
+00000e24 00040e24 e202         BEQ       0x40e2a
+00000e26 00040e26 f010         BRA:D     0x40e48
+00000e28 00040e28 c014         LDI:8     #0x1,r4
+00000e2a 00040e2a 9f8c83ce905a LDI:32    #0x83ce905a,r12
+00000e30 00040e30 05c0         LDUH      @r12,r0
+00000e32 00040e32 a800         CMP       #0x0,r0
+00000e34 00040e34 e202         BEQ       0x40e3a
+00000e36 00040e36 f008         BRA:D     0x40e48
+00000e38 00040e38 c014         LDI:8     #0x1,r4
+00000e3a 00040e3a 9f8050000107 LDI:32    #0x50000107,r0
+00000e40 00040e40 8920         BTSTH     #0x2,@r0
+00000e42 00040e42 f302         BNE:D     0x40e48
+00000e44 00040e44 c014         LDI:8     #0x1,r4
+00000e46 00040e46 c004         LDI:8     #0x0,r4
+00000e48 00040e48 9720         RET       
+00000e4a 00040e4a 9f8c83ce9054 LDI:32    #0x83ce9054,r12

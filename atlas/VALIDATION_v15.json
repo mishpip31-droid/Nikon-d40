@@ -1,0 +1,35 @@
+{
+  "version": 15,
+  "new_firmware_built": false,
+  "EXP04_user_reported_working": true,
+  "camera_memory_format_verified": false,
+  "host_effects": {
+    "result": "PASS_HOST_REFERENCE",
+    "checks": 107,
+    "full_size": [
+      3008,
+      2000
+    ],
+    "scratch_bytes_all_effects": 24816,
+    "host_full_size_seconds": 0.293,
+    "camera_speed_measured": false,
+    "firmware_modified": false,
+    "assumed_format": "planar 8-bit YCbCr 4:2:2; range supplied by caller",
+    "limitations": [
+      "no camera memory ownership/cache validation",
+      "glow uses low-resolution max mask and has block-grid bias",
+      "grain uses small constant cells, not calibrated film statistics",
+      "no target FR build or installed effect"
+    ]
+  },
+  "JPEG_handoff_cases": 6,
+  "ASan_UBSan_dimension_cases": 42,
+  "LeakSanitizer_disabled_due_to_ptrace": true,
+  "remaining": [
+    "buffer format and range",
+    "DMA/cache ownership",
+    "scratch allocator",
+    "FR port and timing",
+    "per-frame state and menu"
+  ]
+}

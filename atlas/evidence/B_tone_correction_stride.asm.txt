@@ -1,0 +1,7 @@
+Static bounded listing; code/data boundaries and delay slots require review.
+Original B SHA256: b9df48d461e875dce4ba84da88164af170dfc48ad9f7674859623bad0401032e
+FILE     CPU_PC   BYTES        MNEMONIC  OPERANDS
+002db6c6 0031b6c6 c090         LDI:8     #0x9,r0
+002db6c8 0031b6c8 9f8c83ce8344 LDI:32    #0x83ce8344,r12
+002db6ce 0031b6ce 9f20         RET:D     
+002db6d0 0031b6d0 16c0         STB       r0,@r12

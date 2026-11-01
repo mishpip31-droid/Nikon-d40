@@ -1,0 +1,107 @@
+[
+  {
+    "table_file": "0x00249be4",
+    "table_rom": "0x00289be4",
+    "entries": 601,
+    "sample": "WIEDERGABE",
+    "encoding": "custom byte/glyph encoding"
+  },
+  {
+    "table_file": "0x002548b4",
+    "table_rom": "0x002948b4",
+    "entries": 601,
+    "sample": "PLAYBACK MENU",
+    "encoding": "custom byte/glyph encoding"
+  },
+  {
+    "table_file": "0x0025d200",
+    "table_rom": "0x0029d200",
+    "entries": 601,
+    "sample": "REPRODUCCI\\x81\\x12N",
+    "encoding": "custom byte/glyph encoding"
+  },
+  {
+    "table_file": "0x00267938",
+    "table_rom": "0x002a7938",
+    "entries": 601,
+    "sample": "TOISTOVALIKKO",
+    "encoding": "custom byte/glyph encoding"
+  },
+  {
+    "table_file": "0x0027124c",
+    "table_rom": "0x002b124c",
+    "entries": 601,
+    "sample": "MENU VISUALISATION",
+    "encoding": "custom byte/glyph encoding"
+  },
+  {
+    "table_file": "0x0027baa4",
+    "table_rom": "0x002bbaa4",
+    "entries": 601,
+    "sample": "MENU PLAY",
+    "encoding": "custom byte/glyph encoding"
+  },
+  {
+    "table_file": "0x00285a28",
+    "table_rom": "0x002c5a28",
+    "entries": 601,
+    "sample": "\\x8b'\\x8b\\xee\\x9a2\\x9a\"\\x9a6\\x9aA",
+    "encoding": "custom byte/glyph encoding"
+  },
+  {
+    "table_file": "0x0028eff4",
+    "table_rom": "0x002ceff4",
+    "entries": 601,
+    "sample": "\\x0f\\x03\\x8e7\\x8d\\xd2 \\x8d\\x9c\\x8d>",
+    "encoding": "custom byte/glyph encoding"
+  },
+  {
+    "table_file": "0x0029751c",
+    "table_rom": "0x002d751c",
+    "entries": 601,
+    "sample": "WEERGAVEMENU",
+    "encoding": "custom byte/glyph encoding"
+  },
+  {
+    "table_file": "0x002a1184",
+    "table_rom": "0x002e1184",
+    "entries": 601,
+    "sample": "MENU ODTWARZANIA",
+    "encoding": "custom byte/glyph encoding"
+  },
+  {
+    "table_file": "0x002ab45c",
+    "table_rom": "0x002eb45c",
+    "entries": 601,
+    "sample": "MENU REPRODU\\x81\\x0d\\x81\\x0aO",
+    "encoding": "custom byte/glyph encoding"
+  },
+  {
+    "table_file": "0x002b4d18",
+    "table_rom": "0x002f4d18",
+    "entries": 601,
+    "sample": "\\x80\\x0c\\x80\\x05\\x80\\x0d\\x80\\x1d \\x80\\x0f\\x80\\x10\\x80\\x0e\\x80\\x11\\x80\\x0c\\x80\\x0e\\x80\\x12\\x80\\x10\\x80\\x00",
+    "encoding": "custom byte/glyph encoding"
+  },
+  {
+    "table_file": "0x002c4e0c",
+    "table_rom": "0x00304e0c",
+    "entries": 601,
+    "sample": "PLAYBACK-MENY",
+    "encoding": "custom byte/glyph encoding"
+  },
+  {
+    "table_file": "0x002cda34",
+    "table_rom": "0x0030da34",
+    "entries": 601,
+    "sample": "\\xab\\x0a\\xab\\x0d\\xab\\xb7\\xaae",
+    "encoding": "custom byte/glyph encoding"
+  },
+  {
+    "table_file": "0x002d3f60",
+    "table_rom": "0x00313f60",
+    "entries": 601,
+    "sample": "\\x88\\xf4\\x88\\xfb\\x88U\\x89\\xac\\x89\\xc0",
+    "encoding": "custom byte/glyph encoding"
+  }
+]

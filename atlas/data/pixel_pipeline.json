@@ -1,0 +1,171 @@
+{
+  "firmware_sha256": "b9df48d461e875dce4ba84da88164af170dfc48ad9f7674859623bad0401032e",
+  "cpu_to_file_offset": "ROM CPU address - 0x40000",
+  "scope": "Selected processing and JPEG/resize paths, not all modes or NEF writing",
+  "driver_cpu": "0x4b260",
+  "configuration_cpu": "0x4b41c",
+  "engine_mmio": "0x40010000",
+  "completion_event": {
+    "group": 4,
+    "mask": "0x00400000"
+  },
+  "interrupt_handler_cpu": "0x47874",
+  "dataflow": [
+    {
+      "from": "context input buffer",
+      "to": "0x40010000",
+      "evidence": "address and geometry writes"
+    },
+    {
+      "from": "0x40010000",
+      "to": "three memory planes",
+      "evidence": "producer writes and downstream consumers"
+    },
+    {
+      "from": "three memory planes",
+      "to": "0x40030000 JPEG",
+      "evidence": "same addresses; 412-byte Huffman identification"
+    },
+    {
+      "from": "three memory planes",
+      "to": "0x40020000 resize",
+      "evidence": "same addresses and ratio setup"
+    }
+  ],
+  "input_format": {
+    "hypothesis": "packed 12-bit samples",
+    "confidence": "geometry inference only"
+  },
+  "output_format": {
+    "hypothesis": "8-bit planar YCbCr 4:2:2",
+    "confidence": "strong converging static evidence",
+    "unresolved": [
+      "Cb/Cr order",
+      "range",
+      "chroma siting"
+    ]
+  },
+  "plane_offsets_from_descriptor_base": [
+    "0x2f90",
+    "0x5cf590",
+    "0x8b5890"
+  ],
+  "static_lut_definitions": [
+    {
+      "name": "rescale_8_to_12",
+      "rom": "0xca60c",
+      "entries": 256,
+      "hardware": [
+        "0x40010200"
+      ],
+      "formula": "floor(i*4095/255+0.5)",
+      "all_entries_match": true,
+      "sha256": "23fac6e32be9d15c6712207b17c873c8b272b9b21e67253b59f64cdf92586c89"
+    },
+    {
+      "name": "square_root",
+      "rom": "0xc860c",
+      "entries": 4096,
+      "hardware": [
+        "0x40010400"
+      ],
+      "formula": "min(4095,floor(sqrt(4096*i)+0.5))",
+      "all_entries_match": true,
+      "sha256": "2275c52016ce70643f3d6eecd632c727fd4764119a476a59ded7b826c647849d"
+    },
+    {
+      "name": "square",
+      "rom": "0xc660c",
+      "entries": 4096,
+      "hardware": [
+        "0x40012400",
+        "0x40014400",
+        "0x40016400"
+      ],
+      "formula": "floor(i*i/4096+0.5)",
+      "all_entries_match": true,
+      "sha256": "cde7743e2006b145c4b9ee92b4767ca91544297fc0e25f93b2136e7b19fe6415"
+    }
+  ],
+  "small_luts": [
+    {
+      "name": "E600",
+      "function_cpu": "0x324020",
+      "output_ram": "0x83eb7ffc",
+      "hardware": "0x4001e600",
+      "packed_rom": "0x3472fc",
+      "seed0_rom": "0x3472f2",
+      "seed1_rom": "0x3472e8",
+      "compressed_bytes_per_profile": 127,
+      "delta_bits": 4,
+      "context_offset": "0x467",
+      "records_by_layout": 10,
+      "hardware_entries": 256,
+      "role": "signal axis and role unknown"
+    },
+    {
+      "name": "E800",
+      "function_cpu": "0x3240a2",
+      "output_ram": "0x83eb7df8",
+      "hardware": "0x4001e800",
+      "packed_rom": "0x346a37",
+      "seed0_rom": "0x346a2d",
+      "seed1_rom": "0x346a23",
+      "compressed_bytes_per_profile": 127,
+      "delta_bits": 4,
+      "context_offset": "0x469",
+      "records_by_layout": 10,
+      "hardware_entries": 256,
+      "role": "sharpening-setting-linked; signal axis unknown"
+    },
+    {
+      "name": "EA00",
+      "function_cpu": "0x324062",
+      "output_ram": "0x83eb7efa",
+      "hardware": "0x4001ea00",
+      "packed_rom": "0x34650f",
+      "seed0_rom": "0x346505",
+      "seed1_rom": "0x3464fb",
+      "compressed_bytes_per_profile": 64,
+      "delta_bits": 2,
+      "context_offset": "0x468",
+      "records_by_layout": 10,
+      "hardware_entries": 256,
+      "role": "sharpening-setting-linked; signal axis unknown"
+    },
+    {
+      "name": "FC00",
+      "function_cpu": "0x3240e4",
+      "output_ram": "0x83eb7cf6",
+      "hardware": "0x4001fc00",
+      "packed_rom": "0x3467a3",
+      "seed0_rom": "0x346799",
+      "seed1_rom": "0x34678f",
+      "compressed_bytes_per_profile": 64,
+      "delta_bits": 2,
+      "context_offset": "0x46a",
+      "records_by_layout": 10,
+      "hardware_entries": 256,
+      "role": "sharpening-setting-linked; signal axis unknown"
+    }
+  ],
+  "auxiliary_4x16": {
+    "rom": "0x331e0e",
+    "all_18_profiles_identical": true,
+    "values_per_block": [
+      256,
+      0,
+      0,
+      256
+    ],
+    "interpretation": "possible 16 identity 2x2 transforms at scale 256; unproved"
+  },
+  "selector_inputs": {
+    "x": "u8(context+0x6d)",
+    "q": "clamp(128 + ((3 * trunc(sum(s16(context+0x104+2*i),i=0..14)/15)) >> 5),0,255)",
+    "physical_units": "unresolved",
+    "evidence_cpu": "0x31b6d2"
+  },
+  "internal_pixel_stage_order": "UNRESOLVED; CPU upload sequence is not ASIC topology",
+  "camera_tested": false
+}

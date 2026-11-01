@@ -1,0 +1,45 @@
+{
+  "version": "v3",
+  "date": "2026-10-27",
+  "result": "PASS",
+  "previous_validation": "VALIDATION_v2.json; retained results, no unrelated v2 checks repeated",
+  "tests": [
+    {
+      "command": "python3 tools/check_color.py /path/to/BD400111.bin",
+      "exit_code": 0,
+      "result": {
+        "result": "PASS",
+        "firmware_sha256": "b9df48d461e875dce4ba84da88164af170dfc48ad9f7674859623bad0401032e",
+        "profile_expansions_original_code": 53,
+        "saturation_selector_prefix_executions": 1092,
+        "saturation_selector_full_executions": 192,
+        "matrix_transport_cases_two_fragments_each": 399,
+        "hue_executions_with_host_float32_hooks": 462,
+        "camera_connected": false,
+        "firmware_modified": false,
+        "limitations": [
+          "Synthetic memory only; no sensor/JPEG/hardware tests",
+          "Hue floating point runtime replaced with host operations; not a bit-exact FP validation",
+          "Matrix selection across all shooting and white-balance modes is not executed"
+        ]
+      }
+    },
+    {
+      "command": "python3 tools/extract_v3.py /path/to/BD400111.bin /path/to/output",
+      "exit_code": 0,
+      "result": {
+        "matrix_records": 74,
+        "color_profiles": 48,
+        "mono_profiles": 5,
+        "evidence_ranges": 10,
+        "firmware_modified": false
+      }
+    },
+    {
+      "check": "All JSON readable; Markdown local links resolve; table counts; hue families identical; mono expanded profiles identical; original B SHA256 unchanged",
+      "result": "PASS"
+    }
+  ],
+  "hardware_validation": false,
+  "flashable_patch_produced": false
+}

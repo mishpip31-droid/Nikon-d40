@@ -1,0 +1,98 @@
+[
+  {
+    "id": 0,
+    "descriptor_file": "0x95364",
+    "ram": "0x83cea524",
+    "length": 20,
+    "trailing_u16": 0,
+    "known_role": "Not assigned"
+  },
+  {
+    "id": 1,
+    "descriptor_file": "0x9536c",
+    "ram": "0x83ced0f8",
+    "length": 72,
+    "trailing_u16": 0,
+    "known_role": "Not assigned"
+  },
+  {
+    "id": 2,
+    "descriptor_file": "0x95374",
+    "ram": "0x83ced21a",
+    "length": 18,
+    "trailing_u16": 0,
+    "known_role": "Settings including Optimize/Custom"
+  },
+  {
+    "id": 3,
+    "descriptor_file": "0x9537c",
+    "ram": "0x83ced254",
+    "length": 14,
+    "trailing_u16": 0,
+    "known_role": "Not assigned"
+  },
+  {
+    "id": 4,
+    "descriptor_file": "0x95384",
+    "ram": "0x83ceb124",
+    "length": 52,
+    "trailing_u16": 0,
+    "known_role": "Not assigned"
+  },
+  {
+    "id": 5,
+    "descriptor_file": "0x9538c",
+    "ram": "0x83cee068",
+    "length": 68,
+    "trailing_u16": 0,
+    "known_role": "Not assigned"
+  },
+  {
+    "id": 6,
+    "descriptor_file": "0x95394",
+    "ram": "0x83e89310",
+    "length": 4164,
+    "trailing_u16": 0,
+    "known_role": "PTP-uploaded tone-curve structure"
+  },
+  {
+    "id": 7,
+    "descriptor_file": "0x9539c",
+    "ram": "0x83cee0b4",
+    "length": 16,
+    "trailing_u16": 0,
+    "known_role": "Not assigned"
+  },
+  {
+    "id": 8,
+    "descriptor_file": "0x953a4",
+    "ram": "0x83e882cc",
+    "length": 4164,
+    "trailing_u16": 0,
+    "known_role": "Alternate tone-curve structure; not a proven extra user slot"
+  },
+  {
+    "id": 9,
+    "descriptor_file": "0x953ac",
+    "ram": "0x83cee040",
+    "length": 40,
+    "trailing_u16": 0,
+    "known_role": "Not assigned"
+  },
+  {
+    "id": 10,
+    "descriptor_file": "0x953b4",
+    "ram": "0x83ced248",
+    "length": 12,
+    "trailing_u16": 0,
+    "known_role": "Not assigned"
+  },
+  {
+    "id": 11,
+    "descriptor_file": "0x953bc",
+    "ram": "0x83ce901c",
+    "length": 4,
+    "trailing_u16": 0,
+    "known_role": "Not assigned"
+  }
+]
