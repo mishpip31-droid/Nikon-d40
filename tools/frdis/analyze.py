@@ -97,6 +97,7 @@ class Analyzer:
             a = start
             regs = dict(regs)
             pending = None  # (insn) control transfer waiting for delay slot
+            in_slot = False  # previous insn was CALL:D
             while True:
                 if a != start and a in seen and pending is None:
                     break  # fell into an already explored block
@@ -104,7 +105,8 @@ class Analyzer:
                     f['tail'].add(a)  # fell through into another function
                     break
                 ins = fr.decode(img.read, a)
-                if ins is None:
+                if ins is None or self.illegal(ins, entry, pending if pending else
+                                               (True if in_slot else None)):
                     f['bad'] = a
                     break
                 if a in self.owner and self.owner[a] != entry and a == start:
@@ -115,6 +117,9 @@ class Analyzer:
                 f['bytes'] += ins.size
                 self.track(entry, ins, regs)
                 nxt = a + ins.size
+                if in_slot:
+                    in_slot = False
+                    self.clobber(regs)
                 if pending is not None:
                     # this insn is a delay slot; now resolve pending transfer
                     self.transfer(entry, pending, nxt, blocks, regs, f, known_entries)
@@ -126,6 +131,7 @@ class Analyzer:
                     self.do_call(entry, ins, regs)
                     if ins.delay:
                         # delay slot executes before the call; continue normally
+                        in_slot = True
                         a = nxt
                         continue
                     self.clobber(regs)
@@ -139,6 +145,18 @@ class Analyzer:
                 break
             # handle call:D clobber lazily (ignored precision)
         return f
+
+    @staticmethod
+    def illegal(ins, entry, pending):
+        """Patterns that compiled FR code does not contain."""
+        if pending is not None and (ins.flow != 'seq' or ins.size != 2
+                                    or ins.name in ('ENTER', 'LEAVE')):
+            return True  # control transfer / long insn in a delay slot
+        if ins.flow == 'int' and ins.imm < 0x40:
+            return True  # INT #0..#0x3F: reset/exception/IRQ vectors
+        if ins.name == 'ENTER' and ins.addr - entry > 12:
+            return True
+        return False
 
     def do_call(self, entry, ins, regs):
         if ins.flow == 'call':

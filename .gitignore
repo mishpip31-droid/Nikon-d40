@@ -1,2 +1,3 @@
 firmware/*.bin
 __pycache__/
+analysis/*/listing.txt.gz

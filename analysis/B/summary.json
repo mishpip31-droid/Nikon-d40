@@ -1,0 +1,23 @@
+{
+ "image": "B",
+ "file": "BD400111.bin",
+ "functions": 5039,
+ "instructions": 324084,
+ "code_bytes_covered": 789956,
+ "image_bytes": 3997696,
+ "functions_with_bad_decode": 0,
+ "unresolved_indirect_jumps": 247,
+ "sources": {
+  "vector": 44,
+  "call": 2206,
+  "tailjmp": 1002,
+  "atlas": 89,
+  "constptr": 71,
+  "ptrtable": 98,
+  "prologue": 1439,
+  "gapstart": 209
+ },
+ "strings": 806,
+ "memory_addresses_referenced": 4090,
+ "direct_io_addresses": 83
+}
