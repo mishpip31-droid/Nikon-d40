@@ -72,6 +72,7 @@ class Analyzer:
         self.dacc = defaultdict(lambda: defaultdict(set))  # direct I/O
         self.ijumps = defaultdict(list)
         self.icalls_unres = defaultdict(int)
+        self.os_calls = defaultdict(set)
         self.bad = {}
 
     def add_entry(self, a, src):
@@ -185,8 +186,25 @@ class Analyzer:
     def track(self, entry, ins, regs):
         name = ins.name
         if ins.flow == 'int':
-            self.ints[entry][ins.imm] += 1
+            code = regs.get(12)
+            if code is not None and code & 0x80000000:
+                code -= 1 << 32
+            key = ins.imm if ins.imm != 0x40 or code is None else f'40:{code}'
+            self.ints[entry][key] += 1
+            self.os_calls[key].add(entry)
             self.clobber(regs)
+            return
+        if name in ('EXTSB', 'EXTSH', 'EXTUB', 'EXTUH') and ins.reg_i in regs:
+            v = regs[ins.reg_i]
+            if name == 'EXTUB':
+                v &= 0xFF
+            elif name == 'EXTUH':
+                v &= 0xFFFF
+            elif name == 'EXTSB':
+                v = (v & 0xFF) | (0xFFFFFF00 if v & 0x80 else 0)
+            else:
+                v = (v & 0xFFFF) | (0xFFFF0000 if v & 0x8000 else 0)
+            regs[ins.reg_i] = v
             return
         if name in ('LDI:32', 'LDI:20', 'LDI:8'):
             regs[ins.reg_i] = ins.imm
@@ -266,7 +284,41 @@ class Analyzer:
             self.try_candidates(self.table_candidates(), 'ptrtable')
             if len(self.funcs) == n0:
                 break
+        for stage in range(20):
+            n0 = len(self.funcs)
+            self.try_candidates(self.gap_candidates(), 'gapstart')
+            cands = {c for cs in self.consts.values() for c in cs
+                     if self.img.is_code_addr(c) and c not in self.funcs}
+            self.try_candidates(cands, 'constptr')
+            if len(self.funcs) == n0:
+                break
         self.ptr_refs = self.ptr_scan()
+
+    def gap_candidates(self):
+        """First instruction address after the end of accepted code (skipping NOP/
+        zero/FF padding), inside the primary map."""
+        img = self.img
+        s, e, fo, _ = img.maps[0]
+        out = []
+        for a, ins in self.insns.items():
+            if not (s <= a < e):
+                continue
+            n = a + ins.size
+            if n in self.insns:
+                continue
+            k = 0
+            while n < e and k < 16:
+                w = int.from_bytes(img.read(n, 2), 'big')
+                if w in (0x9FA0, 0x0000, 0xFFFF):
+                    n += 2
+                    k += 1
+                else:
+                    break
+            if n < e and n not in self.insns and n not in self.rejected:
+                w = int.from_bytes(img.read(n, 2), 'big')
+                if w != 0xFFFF:
+                    out.append(n)
+        return out
 
     def fixpoint(self, label):
         for _round in range(200):
@@ -299,6 +351,8 @@ class Analyzer:
                 done.add(e)
                 f = tmp.explore(e, known)
                 if f['bad'] is not None or f['insns'] == 0:
+                    return False
+                if e == entry and not (f['ret'] or f['tail'] or f['ijump']):
                     return False
             for a in tmp.insns:
                 if a in self.insns:
@@ -443,7 +497,7 @@ def main():
             'insns': f['insns'], 'bytes': f['bytes'], 'blocks': f['blocks'],
             'returns': int(f['ret']), 'bad_at': '' if f['bad'] is None else f'0x{f["bad"]:x}',
             'callers': len(an.callers[e]), 'callees': len(an.calls[e]),
-            'os_ints': ' '.join(f'{k}x{v}' for k, v in sorted(an.ints[e].items())),
+            'os_ints': ' '.join(f'{k}*{v}' for k, v in sorted(an.ints[e].items(), key=str)),
             'unresolved_ijump': f['ijump'], 'unresolved_icall': an.icalls_unres[e],
             'ptr_refs': len(getattr(an, 'ptr_refs', {}).get(e, [])),
             'strings': ' | '.join(sorted(str_by_cpu[c][:40] for c in str_refs[e]))[:200],
@@ -460,6 +514,9 @@ def main():
                 for a, kinds in sorted(acc.items())}
     json.dump({'memory': accdump(an.acc), 'direct_io': accdump(an.dacc)},
               open(outdir / 'xrefs.json', 'w'), indent=0)
+    json.dump({str(k): sorted(f'0x{x:x}' for x in v) for k, v in
+               sorted(an.os_calls.items(), key=lambda kv: -len(kv[1]))},
+              open(outdir / 'os_calls.json', 'w'), indent=0)
     with open(outdir / 'strings.csv', 'w', newline='') as fh:
         w = csv.writer(fh)
         w.writerow(['file_off', 'cpu', 'text', 'referencing_functions'])
@@ -511,7 +568,7 @@ def main():
         'functions_with_bad_decode': sum(1 for f in an.funcs.values() if f['bad']),
         'unresolved_indirect_jumps': sum(f['ijump'] for f in an.funcs.values()),
         'sources': {s: sum(1 for v in an.sources.values() if any(x.startswith(s) for x in v))
-                    for s in ('vector', 'call', 'tailjmp', 'atlas', 'constptr', 'ptrtable', 'prologue')},
+                    for s in ('vector', 'call', 'tailjmp', 'atlas', 'constptr', 'ptrtable', 'prologue', 'gapstart')},
         'strings': len(str_by_cpu),
         'memory_addresses_referenced': len(an.acc),
         'direct_io_addresses': len(an.dacc),
