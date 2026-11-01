@@ -18,6 +18,33 @@ osc = json.load(open(out / 'os_calls.json'))
 strs = list(csv.DictReader(open(out / 'strings.csv')))
 base = 0x40000 if kind == 'B' else 0xC0000
 
+# confidence: high = reachable from vectors/atlas code via resolved calls;
+# medium = otherwise has callers, or >= 20 insns; low = rest
+roots = [r['entry'] for r in rows if 'vector' in r['source'] or
+         ('atlas' in r['source'] and not r['bad_at'])]
+reach = set(roots)
+stack = list(roots)
+while stack:
+    a = stack.pop()
+    for b in cg.get(a, []):
+        if b not in reach:
+            reach.add(b)
+            stack.append(b)
+for r in rows:
+    if r['bad_at']:
+        r['confidence'] = 'invalid'
+    elif r['entry'] in reach:
+        r['confidence'] = 'high'
+    elif int(r['callers']) > 0 or int(r['insns']) >= 20:
+        r['confidence'] = 'medium'
+    else:
+        r['confidence'] = 'low'
+with open(out / 'functions.csv', 'w', newline='') as fh:
+    w = csv.DictWriter(fh, fieldnames=list(rows[0]))
+    w.writeheader()
+    w.writerows(rows)
+conf = Counter(r['confidence'] for r in rows)
+
 P = print
 P(f'# Карта функций части {kind} ({fw.name})\n')
 P('Сгенерировано `tools/frdis/analyze.py` + `report.py`. Статический анализ, '
@@ -33,6 +60,10 @@ for k, label in [('functions', 'Функций'), ('instructions', 'Инстру
                  ('direct_io_addresses', 'Адресов прямой адресации I/O'),
                  ('strings', 'ASCII-строк')]:
     P(f'| {label} | {summ[k]} |')
+P('\nДостоверность функций: ' + ', '.join(f'{k}: {v}' for k, v in conf.most_common()) +
+  '. high — достижима от векторов/адресов атласа по разрешённым вызовам; medium — '
+  'есть вызывающие или не меньше 20 инструкций; low — короткая, без вызывающих '
+  '(возможны данные); invalid — обход упёрся в недопустимую инструкцию.')
 P('\nИсточник обнаружения функций (функция может иметь несколько):\n')
 P('| Источник | Смысл | Кол-во |\n|---|---|---:|')
 expl = {'vector': 'таблица векторов', 'call': 'цель прямого/разрешённого вызова',
