@@ -414,8 +414,11 @@ class Analyzer:
         return out
 
     def find_task_tables(self):
-        """Static REALOS task records, 28 bytes: attr, entry, stack top, 0,
-        exinf, u16 id, u16 priority, 0. Runs of >= 3 records."""
+        """Static REALOS task table: header u16 count, u16 record size (0x1C),
+        then records: TCB pointer, u16 id, u16 priority, 0, attr, entry,
+        stack top, 0 (the kernel's sta_tsk handler 0xC23E6 indexes it by id-1).
+        Detected by runs of >= 3 attr/entry/stack triples; id, priority and TCB
+        are read from the 12 bytes before each attr word."""
         img = self.img
         d = img.data
         out = []
@@ -429,10 +432,12 @@ class Analyzer:
                     return None
                 if not (0x80000000 <= stk < 0x84000000 or 0x1000 <= stk < 0x100000) or stk & 7:
                     return None
-                return {'file_off': o, 'attr': atr, 'entry': ent, 'stack': stk,
-                        'exinf': int.from_bytes(d[o + 16:o + 20], 'big'),
-                        'id': int.from_bytes(d[o + 20:o + 22], 'big'),
-                        'priority': int.from_bytes(d[o + 22:o + 24], 'big')}
+                if o < 12:
+                    return None
+                return {'file_off': o - 12, 'attr': atr, 'entry': ent, 'stack': stk,
+                        'exinf': int.from_bytes(d[o - 12:o - 8], 'big'),
+                        'id': int.from_bytes(d[o - 8:o - 6], 'big'),
+                        'priority': int.from_bytes(d[o - 6:o - 4], 'big')}
             if all(rec(off + k * 0x1C) for k in range(3)) and not (
                     off >= 0x1C and rec(off - 0x1C)):
                 o = off
@@ -647,7 +652,7 @@ def main():
         w.writerows(rows)
     with open(outdir / 'tasks.csv', 'w', newline='') as fh:
         w = csv.writer(fh)
-        w.writerow(['id', 'priority', 'entry', 'stack_top', 'attr', 'exinf', 'record_file_off'])
+        w.writerow(['id', 'priority', 'entry', 'stack_top', 'attr', 'tcb', 'record_file_off'])
         for t in an.tasks:
             w.writerow([t['id'], t['priority'], f"0x{t['entry']:x}", f"0x{t['stack']:x}",
                         f"0x{t['attr']:x}", f"0x{t['exinf']:x}", f"0x{t['file_off']:x}"])
