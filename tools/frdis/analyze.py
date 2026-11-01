@@ -309,6 +309,9 @@ class Analyzer:
             self.add_entry(v, f'vector{k}')
         for a, src in extra:
             self.add_entry(a, src)
+        self.tasks = self.find_task_tables()
+        for t in self.tasks:
+            self.add_entry(t['entry'], f"task{t['id']}")
         self.done = set()
         self.rejected = set()
         self.fixpoint('trusted roots')
@@ -410,6 +413,37 @@ class Analyzer:
                     out.append(n)
         return out
 
+    def find_task_tables(self):
+        """Static REALOS task records, 28 bytes: attr, entry, stack top, 0,
+        exinf, u16 id, u16 priority, 0. Runs of >= 3 records."""
+        img = self.img
+        d = img.data
+        out = []
+        for off in range(0, len(d) - 0x1C * 3, 4):
+            def rec(o):
+                atr = int.from_bytes(d[o:o + 4], 'big')
+                ent = int.from_bytes(d[o + 4:o + 8], 'big')
+                stk = int.from_bytes(d[o + 8:o + 12], 'big')
+                z = int.from_bytes(d[o + 12:o + 16], 'big')
+                if atr & 0x3FFFFFFF or z or not img.is_code_addr(ent):
+                    return None
+                if not (0x80000000 <= stk < 0x84000000 or 0x1000 <= stk < 0x100000) or stk & 7:
+                    return None
+                return {'file_off': o, 'attr': atr, 'entry': ent, 'stack': stk,
+                        'exinf': int.from_bytes(d[o + 16:o + 20], 'big'),
+                        'id': int.from_bytes(d[o + 20:o + 22], 'big'),
+                        'priority': int.from_bytes(d[o + 22:o + 24], 'big')}
+            if all(rec(off + k * 0x1C) for k in range(3)) and not (
+                    off >= 0x1C and rec(off - 0x1C)):
+                o = off
+                while True:
+                    r = rec(o)
+                    if not r:
+                        break
+                    out.append(r)
+                    o += 0x1C
+        return out
+
     def fixpoint(self, label):
         for _round in range(200):
             todo = sorted(a for a in self.sources if a not in self.done)
@@ -421,7 +455,7 @@ class Analyzer:
                 self.funcs[e] = self.explore(e, known)
         print(f'{label}: {len(self.funcs)} funcs', file=sys.stderr, flush=True)
 
-    def closure_ok(self, entry, limit=400, strict=False):
+    def closure_ok(self, entry, limit=400, strict=False, need_end=True):
         """Tentatively explore entry and its new callees; reject on any invalid
         decode or overlap with already accepted instructions."""
         if entry in self.rejected or entry in self.insns:
@@ -442,7 +476,7 @@ class Analyzer:
                 f = tmp.explore(e, known)
                 if f['bad'] is not None or f['insns'] == 0:
                     return False
-                if e == entry and not (f['ret'] or f['tail'] or f['ijump']):
+                if e == entry and need_end and not (f['ret'] or f['tail'] or f['ijump']):
                     return False
                 if e == entry and strict and (not f['ret'] or f['insns'] < 3):
                     return False
@@ -455,7 +489,8 @@ class Analyzer:
         for c in sorted(cands):
             if c in self.funcs or c in self.rejected:
                 continue
-            if self.closure_ok(c, strict=(src == 'gapstart')):
+            if self.closure_ok(c, strict=(src == 'gapstart'),
+                               need_end=(src not in ('prologue', 'task'))):
                 self.add_entry(c, src)
                 acc += 1
                 self.explore_pending()
@@ -610,6 +645,12 @@ def main():
         w = csv.DictWriter(fh, fieldnames=list(rows[0]))
         w.writeheader()
         w.writerows(rows)
+    with open(outdir / 'tasks.csv', 'w', newline='') as fh:
+        w = csv.writer(fh)
+        w.writerow(['id', 'priority', 'entry', 'stack_top', 'attr', 'exinf', 'record_file_off'])
+        for t in an.tasks:
+            w.writerow([t['id'], t['priority'], f"0x{t['entry']:x}", f"0x{t['stack']:x}",
+                        f"0x{t['attr']:x}", f"0x{t['exinf']:x}", f"0x{t['file_off']:x}"])
     json.dump({f'0x{k:x}': sorted(f'0x{x:x}' for x in v) for k, v in an.calls.items()},
               open(outdir / 'callgraph.json', 'w'), indent=0)
 
@@ -672,7 +713,7 @@ def main():
         'functions_with_bad_decode': sum(1 for f in an.funcs.values() if f['bad']),
         'unresolved_indirect_jumps': sum(f['ijump'] for f in an.funcs.values()),
         'sources': {s: sum(1 for v in an.sources.values() if any(x.startswith(s) for x in v))
-                    for s in ('vector', 'call', 'tailjmp', 'atlas', 'constptr', 'ptrtable', 'prologue', 'gapstart', 'callsite')},
+                    for s in ('vector', 'task', 'call', 'tailjmp', 'atlas', 'constptr', 'ptrtable', 'prologue', 'gapstart', 'callsite')},
         'strings': len(str_by_cpu),
         'switch_tables_resolved': len(an.switch_tables),
         'memory_addresses_referenced': len(an.acc),
