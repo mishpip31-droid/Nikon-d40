@@ -1,0 +1,35 @@
+name,firmware,cpu_pc,file_offset,confidence,note
+A_reset,A_111_or_112,0xc0042,0x42,static_A,A startup; different address space
+A_rtos_init,A_111_or_112,0xfef32,0x3ef32,bounded_execution_A,Executed to FEFEA excluded; no IRQ or physical MMIO
+A_application_clear,A_111_or_112,0xc040e,0x40e,bounded_execution_A,Version dependent endpoint; bounded execution
+A_os_clear,A_111_or_112,0xff01e,0x3f01e,bounded_execution_A,Three nonempty and three empty clear intervals
+A_init_tasks,A_111_or_112,0xff0e8,0x3f0e8,bounded_execution_A,12 task descriptors plus idle; bounded execution
+A_prepare_tcb,A_111_or_112,0xff5dc,0x3f5dc,bounded_execution_A,Initialize 44-byte task structure
+A_prepare_initial_context,A_111_or_112,0xff59c,0x3f59c,bounded_execution_A,Ready context and links; bounded execution
+A_ready_enqueue,A_111_or_112,0xff7a2,0x3f7a2,bounded_execution_A,Queue list and bitmap; MMIO shadow model
+A_task_table,A_111_or_112,0xfeb0c,0x3eb0c,static_A,"Count 12, stride 28; loop consumes one extra idle record"
+A_idle,A_111_or_112,0xff01c,0x3f01c,static_A,"Self branch; static, task not executed"
+A_task5_memory,A_112,0xd4622,0x14622,bounded_execution_A,One iteration executed with serial/OS models
+A_memory_status_retry,A_112,0xd479e,0x1479e,bounded_execution_A,Six polls; ready on sixth also sets error flag
+A_memory_write_pages,A_112,0xd4714,0x14714,bounded_execution_A,32-byte boundaries; remainder helper modeled
+A_memory_read,A_112,0xd498a,0x1498a,bounded_execution_A,Read command and receive under transfer model
+A_memory_byte_callback,A_112,0xd4a5e,0x14a5e,bounded_execution_A,Original callback executed; external byte events injected
+A_memory_receive_setup,A_112,0xd4b0c,0x14b0c,bounded_execution_A,Original setup writes; hardware transfer not modeled
+A_startup_memory_load,A_112,0xc1164,0x1164,bounded_execution_A,Read 1024 and check sum of 896 through explicit mailbox model
+A_memory_request,A_112,0xc11a4,0x11a4,bounded_execution_A,16-byte request producer
+A_startup_data_checksum,A_112,0xc1214,0x1214,bounded_execution_A,"8-bit additive sum, empty/FF flags"
+A_task1_launch_helper,A_112,0xc137c,0x137c,bounded_execution_A,Conditional starts; tested C371=0
+A_int40_dispatch,A_112,0xfeecc,0x3eecc,static_A,Static signed-offset dispatch to selected OS handlers
+A112_task1,A_112,0xc0e82,0xe82,atlas_a_tasks,
+A112_task2,A_112,0xf8136,0x38136,atlas_a_tasks,
+A112_task3,A_112,0xf9638,0x39638,atlas_a_tasks,
+A112_task4,A_112,0xc3712,0x3712,atlas_a_tasks,
+A112_task5,A_112,0xd4622,0x14622,atlas_a_tasks,
+A112_task6,A_112,0xd4bfa,0x14bfa,atlas_a_tasks,
+A112_task7,A_112,0xd78f2,0x178f2,atlas_a_tasks,
+A112_task8,A_112,0xda086,0x1a086,atlas_a_tasks,
+A112_task9,A_112,0xda9ee,0x1a9ee,atlas_a_tasks,
+A112_task10,A_112,0xe0178,0x20178,atlas_a_tasks,
+A112_task11,A_112,0xeb7ca,0x2b7ca,atlas_a_tasks,
+A112_task12,A_112,0xf19d6,0x319d6,atlas_a_tasks,
+A112_task0,A_112,0xff01c,0x3f01c,atlas_a_tasks,

@@ -1,0 +1,24 @@
+name,firmware,cpu_pc,file_offset,confidence,note
+A_reset,A_111_or_112,0xc0042,0x42,static_A,A startup; different address space
+A_rtos_init,A_111_or_112,0xfef32,0x3ef32,bounded_execution_A,Executed to FEFEA excluded; no IRQ or physical MMIO
+A_application_clear,A_111_or_112,0xc040e,0x40e,bounded_execution_A,Version dependent endpoint; bounded execution
+A_os_clear,A_111_or_112,0xff01e,0x3f01e,bounded_execution_A,Three nonempty and three empty clear intervals
+A_init_tasks,A_111_or_112,0xff0e8,0x3f0e8,bounded_execution_A,12 task descriptors plus idle; bounded execution
+A_prepare_tcb,A_111_or_112,0xff5dc,0x3f5dc,bounded_execution_A,Initialize 44-byte task structure
+A_prepare_initial_context,A_111_or_112,0xff59c,0x3f59c,bounded_execution_A,Ready context and links; bounded execution
+A_ready_enqueue,A_111_or_112,0xff7a2,0x3f7a2,bounded_execution_A,Queue list and bitmap; MMIO shadow model
+A_task_table,A_111_or_112,0xfeb0c,0x3eb0c,static_A,"Count 12, stride 28; loop consumes one extra idle record"
+A_idle,A_111_or_112,0xff01c,0x3f01c,static_A,"Self branch; static, task not executed"
+A111_task1,A_111,0xc0e82,0xe82,atlas_a_tasks,
+A111_task2,A_111,0xf8136,0x38136,atlas_a_tasks,
+A111_task3,A_111,0xf9638,0x39638,atlas_a_tasks,
+A111_task4,A_111,0xc361c,0x361c,atlas_a_tasks,
+A111_task5,A_111,0xd452c,0x1452c,atlas_a_tasks,
+A111_task6,A_111,0xd4b04,0x14b04,atlas_a_tasks,
+A111_task7,A_111,0xd77fc,0x177fc,atlas_a_tasks,
+A111_task8,A_111,0xd9f90,0x19f90,atlas_a_tasks,
+A111_task9,A_111,0xda8f8,0x1a8f8,atlas_a_tasks,
+A111_task10,A_111,0xe0082,0x20082,atlas_a_tasks,
+A111_task11,A_111,0xeb6d4,0x2b6d4,atlas_a_tasks,
+A111_task12,A_111,0xf18e0,0x318e0,atlas_a_tasks,
+A111_task0,A_111,0xff01c,0x3f01c,atlas_a_tasks,
