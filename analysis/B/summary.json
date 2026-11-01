@@ -1,23 +1,25 @@
 {
  "image": "B",
  "file": "BD400111.bin",
- "functions": 4685,
- "instructions": 318846,
- "code_bytes_covered": 779480,
+ "functions": 4633,
+ "instructions": 330217,
+ "code_bytes_covered": 809456,
  "image_bytes": 3997696,
  "functions_with_bad_decode": 0,
- "unresolved_indirect_jumps": 201,
+ "unresolved_indirect_jumps": 64,
  "sources": {
   "vector": 44,
-  "call": 2180,
-  "tailjmp": 1002,
+  "call": 2310,
+  "tailjmp": 1044,
   "atlas": 89,
-  "constptr": 42,
-  "ptrtable": 72,
-  "prologue": 1433,
-  "gapstart": 209
+  "constptr": 40,
+  "ptrtable": 39,
+  "prologue": 1182,
+  "gapstart": 190,
+  "callsite": 24
  },
  "strings": 806,
- "memory_addresses_referenced": 4083,
+ "switch_tables_resolved": 75,
+ "memory_addresses_referenced": 4314,
  "direct_io_addresses": 32
 }

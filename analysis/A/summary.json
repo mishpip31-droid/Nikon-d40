@@ -1,23 +1,25 @@
 {
  "image": "A",
  "file": "AD400111.bin",
- "functions": 1575,
- "instructions": 92398,
- "code_bytes_covered": 212766,
+ "functions": 1537,
+ "instructions": 91615,
+ "code_bytes_covered": 211050,
  "image_bytes": 262146,
  "functions_with_bad_decode": 1,
- "unresolved_indirect_jumps": 36,
+ "unresolved_indirect_jumps": 2,
  "sources": {
   "vector": 42,
-  "call": 1009,
-  "tailjmp": 209,
+  "call": 1021,
+  "tailjmp": 207,
   "atlas": 21,
-  "constptr": 72,
-  "ptrtable": 31,
-  "prologue": 162,
-  "gapstart": 68
+  "constptr": 66,
+  "ptrtable": 7,
+  "prologue": 155,
+  "gapstart": 54,
+  "callsite": 0
  },
  "strings": 6,
- "memory_addresses_referenced": 2480,
- "direct_io_addresses": 90
+ "switch_tables_resolved": 28,
+ "memory_addresses_referenced": 2485,
+ "direct_io_addresses": 89
 }

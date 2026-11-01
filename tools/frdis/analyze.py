@@ -73,7 +73,8 @@ class Analyzer:
         self.ijumps = defaultdict(list)
         self.icalls_unres = defaultdict(int)
         self.os_calls = defaultdict(set)
-        self.fnptr = set()  # constants stored as values or passed as call args
+        self.fnptr = set()
+        self.switch_tables = {}  # constants stored as values or passed as call args
         self.bad = {}
 
     def add_entry(self, a, src):
@@ -99,6 +100,8 @@ class Analyzer:
             regs = dict(regs)
             pending = None  # (insn) control transfer waiting for delay slot
             in_slot = False  # previous insn was CALL:D
+            self._jt = None
+            self._cmp = None
             while True:
                 if a != start and a in seen and pending is None:
                     break  # fell into an already explored block
@@ -112,6 +115,10 @@ class Analyzer:
                     break
                 if a in self.owner and self.owner[a] != entry and a == start:
                     pass
+                if ins.name in ('CMP', 'CMP2') and ins.ops.startswith('#'):
+                    self._cmp = ins.imm
+                elif ins.name == 'LD' and ins.ops == '@(r13+r12),r12' and 12 in regs:
+                    self._jt = regs[12]
                 self.insns[a] = ins
                 self.owner.setdefault(a, entry)
                 f['insns'] += 1
@@ -183,6 +190,23 @@ class Analyzer:
         if ins.flow == 'ret':
             f['ret'] = True
             return
+        if ins.flow == 'ijump' and ins.reg_i == 12 and self._jt is not None:
+            tbl, n = self._jt, self._cmp
+            n = 256 if n is None or not 0 < n <= 512 else n + 1
+            got = 0
+            for k in range(n):
+                b = self.img.read(tbl + 4 * k, 4)
+                if b is None:
+                    break
+                t = int.from_bytes(b, 'big')
+                if not self.img.is_code_addr(t) or abs(t - ins.addr) > 0x8000:
+                    break
+                blocks.append((t, regs))
+                got += 1
+            if got:
+                f['switch'] = f.get('switch', 0) + 1
+                self.switch_tables[tbl] = got
+                return
         if ins.flow == 'ijump':
             t = regs.get(ins.reg_i)
             if t is not None and self.img.is_code_addr(t):
@@ -650,6 +674,7 @@ def main():
         'sources': {s: sum(1 for v in an.sources.values() if any(x.startswith(s) for x in v))
                     for s in ('vector', 'call', 'tailjmp', 'atlas', 'constptr', 'ptrtable', 'prologue', 'gapstart', 'callsite')},
         'strings': len(str_by_cpu),
+        'switch_tables_resolved': len(an.switch_tables),
         'memory_addresses_referenced': len(an.acc),
         'direct_io_addresses': len(an.dacc),
     }
